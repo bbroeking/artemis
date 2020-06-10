@@ -7,12 +7,12 @@ public class RoomSpawner : MonoBehaviour
     public int openingDirection;
     private RoomTemplate templates;
     private int rand;
-    private bool spawned = false;
+    public bool spawned = false;
 
     private void Start()
     {
         templates = GameObject.FindGameObjectWithTag("rooms").GetComponent<RoomTemplate>();
-        Invoke("Spawn", .5f);
+        Invoke("Spawn", 3f);
     }
     private void Spawn()
     {
@@ -48,7 +48,7 @@ public class RoomSpawner : MonoBehaviour
         {
             if(collision.GetComponent<RoomSpawner>().spawned == false && spawned == false)
             {
-                //Instantiate(templates.closedRoom, transform.position, Quaternion.identity);
+                Instantiate(templates.closedRoom, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
             spawned = true;

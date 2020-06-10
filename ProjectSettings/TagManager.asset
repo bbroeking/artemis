@@ -9,6 +9,7 @@ TagManager:
   - spawn point
   - rooms
   - player
+  - RoomMapper
   layers:
   - Default
   - TransparentFX
