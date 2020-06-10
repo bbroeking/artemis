@@ -7,9 +7,9 @@ TagManager:
   - enemy
   - ladder
   - spawn point
-  - rooms
   - player
   - RoomMapper
+  - Rooms
   layers:
   - Default
   - TransparentFX

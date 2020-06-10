@@ -36,6 +36,18 @@ public class Mapper : MonoBehaviour
                 }
                 return fTopBottomRoom;
             }
+            if (room.left)
+            {
+                if (room.right)
+                {
+                    return fLeftRightTopRoom;
+                }
+                return fLeftTopRoom;
+            }
+            if (room.right)
+            {
+                return fRightTopRoom;
+            }
             return fTopRoom;
         }
 
@@ -49,6 +61,10 @@ public class Mapper : MonoBehaviour
                     return fLeftRightBottomRoom;
                 }
                 return fLeftBottomRoom;
+            }
+            if (room.right)
+            {
+                return fRightBottomRoom;
             }
             return fBottomRoom;
         }

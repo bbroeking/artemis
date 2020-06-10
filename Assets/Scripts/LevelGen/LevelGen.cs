@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class LevelGen : MonoBehaviour
 {
-    int gridSizeX = 10; // number of squares in the positive and negative x direction
-    int gridSizeY = 10; // number of squares in the postive and negative y direction
-    int numberOfRooms = 20; // number of rooms to generate
-    Room[,] rooms; // location of Room in [0, gridSize * 2]
-    List<Vector2> takenPositions = new List<Vector2>(); // populated locations
-    List<Vector2> toBeGeneratedPositions = new List<Vector2>(); // locations that have yet to be placed
+    public int gridSizeX = 10; // number of squares in the positive and negative x direction
+    public int gridSizeY = 10; // number of squares in the postive and negative y direction
+    public int numberOfRooms = 20; // number of rooms to generate
+    public Room[,] rooms; // location of Room in [0, gridSize * 2]
+    public List<Vector2> takenPositions = new List<Vector2>(); // populated locations
+    public List<Vector2> toBeGeneratedPositions = new List<Vector2>(); // locations that have yet to be placed
     private Mapper map; // helper function for figuring out what tile to place
 
     void Awake()
@@ -22,7 +22,7 @@ public class LevelGen : MonoBehaviour
         takenPositions.Insert(0, Vector2.zero);
         AddToBeGeneratedPositions(room);
         
-        for (int i = 0; i < numberOfRooms; i++)
+        for (int i = 0; i <= numberOfRooms; i++)
         {
             if (toBeGeneratedPositions.Count == 0)
             {
@@ -98,7 +98,7 @@ public class LevelGen : MonoBehaviour
         }
 
         // if it doesn't fit, figure out what closes it
-        Room nr = selectRoomTile(vec, doorTop, wallTop, doorBot, wallBot, doorLeft, wallLeft, doorRight, wallRight);
+        Room nr = SelectRoomTile(vec, doorTop, wallTop, doorBot, wallBot, doorLeft, wallLeft, doorRight, wallRight);
 
         return nr;
     }
@@ -147,12 +147,12 @@ public class LevelGen : MonoBehaviour
             wallRight = true;
 
         // if it doesn't fit, figure out what closes it
-        Room nr = selectRoomTile(vec, doorTop, wallTop, doorBot, wallBot, doorLeft, wallLeft, doorRight, wallRight);
+        Room nr = SelectRoomTile(vec, doorTop, wallTop, doorBot, wallBot, doorLeft, wallLeft, doorRight, wallRight);
 
         return nr;
     }
 
-    Room selectRoomTile(Vector2 vec, bool doorTop, bool wallTop, bool doorBot, bool wallBot, 
+    Room SelectRoomTile(Vector2 vec, bool doorTop, bool wallTop, bool doorBot, bool wallBot, 
         bool doorLeft, bool wallLeft, bool doorRight, bool wallRight)
     {
         bool top, bottom, left, right;

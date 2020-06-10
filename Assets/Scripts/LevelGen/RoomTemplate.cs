@@ -4,24 +4,6 @@ using UnityEngine;
 
 public class RoomTemplate : MonoBehaviour
 {
-    public GameObject[] bottomRooms;
-    public GameObject[] topRooms;
-    public GameObject[] rightRooms;
-    public GameObject[] leftRooms;
-
-    public GameObject fRightRoom;
-    public GameObject fLeftRoom;
-    public GameObject fTopRoom;
-    public GameObject fBottomRoom;
-    public GameObject fRightTopRoom;
-    public GameObject fRightBottomRoom;
-    public GameObject fLeftTopRoom;
-    public GameObject fLeftBottomRoom;
-    public GameObject fLeftRightBottomRoom;
-    public GameObject fLeftRightTopRoom;
-
-    public GameObject closedRoom;
-
     // Rooms thats have been populated
     public List<GameObject> rooms;
 
