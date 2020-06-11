@@ -1,5 +1,6 @@
 ﻿using System.Numerics;
 using UnityEngine;
+using UnityEngine.Animations;
 using UnityEngine.SceneManagement;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
@@ -10,7 +11,12 @@ public class PlayerMovement : MonoBehaviour
     public Animator anim;
     private float enemyForce = 200f;
     public HealthBar healthbar;
+    public GameObject crosshair;
 
+    private void Start()
+    {
+        Cursor.visible = false;
+    }
     void Update()
     {
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
@@ -20,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
         anim.SetFloat("Magnitude", movement.magnitude);
 
         Move(movement);
+        Aim();
     }
 
     void Move(Vector3 movement)
@@ -46,5 +53,17 @@ public class PlayerMovement : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+    }
+
+    void Aim()
+    {
+        Vector2 screenPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        Vector2 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
+        crosshair.transform.localPosition = worldPosition;
+
+        // Look that way 
+        Vector2 lookDir = worldPosition - rb.position;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        rb.rotation = angle;
     }
 }
