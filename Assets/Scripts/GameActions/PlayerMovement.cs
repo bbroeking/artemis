@@ -9,13 +9,13 @@ public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Animator anim;
-    private float enemyForce = 200f;
     public HealthBar healthbar;
     public GameObject crosshair;
+    public GameObject inventory;
 
     private void Start()
     {
-        Cursor.visible = false;
+        //Cursor.visible = false;
     }
     void Update()
     {
@@ -27,22 +27,16 @@ public class PlayerMovement : MonoBehaviour
 
         Move(movement);
         Aim();
+
+        if (Input.GetKeyDown("i") == true)
+        {
+            inventory.SetActive(!inventory.activeSelf);
+        }
     }
 
     void Move(Vector3 movement)
     {
-        rb.velocity = new Vector2(movement.x * 6, movement.y * 6);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "enemy")
-        {
-            HandleHealth();
-            Rigidbody2D enemyRb = collision.gameObject.GetComponent<Rigidbody2D>();
-            enemyRb.velocity = new Vector2(10f, 10f);
-            rb.velocity = new Vector2(-enemyForce, -enemyForce);
-        }
+        rb.velocity = new Vector2(movement.x * 3, movement.y * 3);
     }
 
     private void HandleHealth()

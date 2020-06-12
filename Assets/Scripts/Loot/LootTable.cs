@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class LootTable : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public List<int> dropIds;
+    public List<int> dropWeights;
+    private int randomNumber;
+    private int total;
+    private int count;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public Item GenerateDrop(){
+        total = 0;
+        count = 0;
+
+        for (int i = 0; i < dropWeights.Count; i++){
+            total += dropWeights[i];
+        }
+        randomNumber = Random.Range(0, total);
+        for (int i = 0; i < dropWeights.Count; i++){
+            count += dropWeights[i];
+            if (randomNumber <= count){
+                return ItemDB.Instance.GetItem(dropIds[i]);
+            }
+        }
+        return null;
     }
 }

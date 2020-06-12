@@ -6,11 +6,15 @@ public class Bullet : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
-        if (collision.gameObject.tag == "enemy")
+        if (collision.gameObject.tag == "Enemy")
         {
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-            enemy.Hit();
+            if (enemy != null){
+                enemy.Hit();
+            }
+        }
+        else{
+            Destroy(gameObject);
         }
     }
 }

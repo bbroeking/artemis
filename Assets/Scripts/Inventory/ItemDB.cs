@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class ItemDB : MonoBehaviour
 {
-    public List<Item> items = new List<Item>();
+    public static ItemDB Instance {get; set;}
+    public List<Item> items;
 
     private void Awake()
     {
+        if(Instance != null && Instance != this)
+            Destroy(gameObject);
+        else
+            Instance = this;
         BuildMockDB();
     }
 

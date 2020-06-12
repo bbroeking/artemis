@@ -5,7 +5,6 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public List<Item> characterItems = new List<Item>();
-    public ItemDB itemDB;
     public InventoryUI inventoryUI;
 
     private void Start()
@@ -15,14 +14,14 @@ public class Inventory : MonoBehaviour
 
     public void GiveItem(int id)
     {
-        Item itemToAdd = itemDB.GetItem(id);
+        Item itemToAdd = ItemDB.Instance.GetItem(id);
         inventoryUI.AddNewItem(itemToAdd);
         characterItems.Add(itemToAdd);
     }
 
     public void GiveItem(string itemName)
     {
-        Item itemToAdd = itemDB.GetItem(itemName);
+        Item itemToAdd = ItemDB.Instance.GetItem(itemName);
         inventoryUI.AddNewItem(itemToAdd);
         characterItems.Add(itemToAdd);
     }

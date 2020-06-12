@@ -4,12 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - enemy
-  - ladder
-  - spawn point
   - player
   - RoomMapper
   - Rooms
+  - Enemy
+  - Loot
   layers:
   - Default
   - TransparentFX
