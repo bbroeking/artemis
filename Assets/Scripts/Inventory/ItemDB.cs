@@ -37,7 +37,7 @@ public class ItemDB : MonoBehaviour
                         {"damage", 10}
                     }),
             new Item(1,
-                    "bomb_ui_item", "It blows things",
+                    "Item__69", "It blows things",
                     new Dictionary<string, int>
                     {
                         {"damage", 10}

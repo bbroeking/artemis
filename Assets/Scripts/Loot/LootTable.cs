@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LootTable : MonoBehaviour
 {
-    public List<int> dropIds;
+    public List<Loot> lootIds;
     public List<int> dropWeights;
     private int randomNumber;
     private int total;
@@ -21,7 +21,8 @@ public class LootTable : MonoBehaviour
         for (int i = 0; i < dropWeights.Count; i++){
             count += dropWeights[i];
             if (randomNumber <= count){
-                return ItemDB.Instance.GetItem(dropIds[i]);
+                Debug.Log(lootIds[i].id);
+                return ItemDB.Instance.GetItem(lootIds[i].id);
             }
         }
         return null;

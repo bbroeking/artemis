@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 591319bba67cd03448725b8af26f7784, type: 3}
-  m_Name: Bones
+  m_Name: Ore
   m_EditorClassIdentifier: 
-  id: 0
-  lootName: Bones
-  description: these here are bones
-  sprite: {fileID: 3598024242438813033, guid: ee639f852642c3246b994b77794394ed, type: 3}
+  id: 1
+  lootName: Ore
+  description: we can craft things with this
+  sprite: {fileID: -854771278843338811, guid: 4ebd4fcd2b2a9ce429702810998691d8, type: 3}
