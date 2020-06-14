@@ -55,7 +55,6 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("enter");
         if(this.loot != null)
         {
             tooltip.GenerateTooltip(this.loot);

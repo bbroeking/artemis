@@ -56,8 +56,8 @@ public class PlayerMovement : MonoBehaviour
         crosshair.transform.localPosition = worldPosition;
 
         // Look that way 
-        Vector2 lookDir = worldPosition - rb.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-        rb.rotation = angle;
+        // Vector2 lookDir = worldPosition - rb.position;
+        // float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        // rb.rotation = angle;
     }
 }
