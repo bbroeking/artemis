@@ -15,7 +15,7 @@ public class ToolTip : MonoBehaviour
     public void GenerateTooltip(Loot loot)
     {
         string statText = "";
-        if(loot.stats.Count > 0)
+        if(loot.stats != null && loot.stats.Count > 0)
         {
             foreach(var stat in loot.stats)
             {

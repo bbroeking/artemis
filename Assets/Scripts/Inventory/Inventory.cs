@@ -8,9 +8,7 @@ public class Inventory : MonoBehaviour
     public InventoryUI inventoryUI;
 
     private void Start()
-    {
-        GiveItem(0);
-    }
+    {}
 
     public void GiveItem(int id)
     {

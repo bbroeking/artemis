@@ -14,9 +14,9 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
     private void Awake()
     {
         spriteImage = GetComponent<Image>();
-        UpdateItem(null);
         selectedItem = GameObject.Find("SelectedItem").GetComponent<UIItem>();
         tooltip = GameObject.Find("ToolTip").GetComponent<ToolTip>();
+        UpdateItem(null);
     }
 
     public void UpdateItem(Loot loot)
@@ -55,6 +55,7 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        Debug.Log("enter");
         if(this.loot != null)
         {
             tooltip.GenerateTooltip(this.loot);

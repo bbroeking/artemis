@@ -444,6 +444,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2a73b7382b76e44ba68c5177e2de5e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  items:
+  - {fileID: 11400000, guid: 3815756ff1d9d7f4da90f8f7d05ff572, type: 2}
+  - {fileID: 11400000, guid: e70eb072f88a9cb4b85e64046ef205f9, type: 2}
 --- !u!4 &229058204
 Transform:
   m_ObjectHideFlags: 0
@@ -1387,6 +1390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35e2a5f6eb0b3ea4d99ca14346112aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loot: {fileID: 0}
 --- !u!114 &1024121209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1913,6 +1917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 704c49ad76a094b4cb148d4dd7dfeb42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterItems: []
   inventoryUI: {fileID: 1143956462}
 --- !u!1 &1450660541
 GameObject:
@@ -2256,6 +2261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35e2a5f6eb0b3ea4d99ca14346112aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loot: {fileID: 0}
 --- !u!1 &1821789406
 GameObject:
   m_ObjectHideFlags: 0
@@ -2732,8 +2738,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df0c45ea9e7854640b555edef923ed4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropIds: 00000000
-  dropWeights: 0a000000
+  loot:
+  - {fileID: 11400000, guid: e70eb072f88a9cb4b85e64046ef205f9, type: 2}
+  - {fileID: 11400000, guid: 3815756ff1d9d7f4da90f8f7d05ff572, type: 2}
 --- !u!114 &2040962374
 MonoBehaviour:
   m_ObjectHideFlags: 0
