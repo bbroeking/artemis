@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public List<Item> characterItems = new List<Item>();
+    public List<Loot> characterItems = new List<Loot>();
     public InventoryUI inventoryUI;
 
     private void Start()
@@ -14,26 +14,26 @@ public class Inventory : MonoBehaviour
 
     public void GiveItem(int id)
     {
-        Item itemToAdd = ItemDB.Instance.GetItem(id);
+        Loot itemToAdd = ItemDB.Instance.GetItem(id);
         inventoryUI.AddNewItem(itemToAdd);
         characterItems.Add(itemToAdd);
     }
 
     public void GiveItem(string itemName)
     {
-        Item itemToAdd = ItemDB.Instance.GetItem(itemName);
+        Loot itemToAdd = ItemDB.Instance.GetItem(itemName);
         inventoryUI.AddNewItem(itemToAdd);
         characterItems.Add(itemToAdd);
     }
 
-    public Item CheckForItem(int id)
+    public Loot CheckForItem(int id)
     {
         return characterItems.Find(item => item.id == id);
     }
 
     public void RemoveItem(int id)
     {
-        Item itemToRemove = CheckForItem(id);
+        Loot itemToRemove = CheckForItem(id);
         if(itemToRemove != null)
         {
             characterItems.Remove(itemToRemove);

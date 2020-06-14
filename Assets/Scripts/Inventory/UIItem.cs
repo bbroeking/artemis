@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    public Item item;
+    public Loot loot;
     private Image spriteImage;
     private UIItem selectedItem;
     private ToolTip tooltip;
@@ -19,13 +19,13 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
         tooltip = GameObject.Find("ToolTip").GetComponent<ToolTip>();
     }
 
-    public void UpdateItem(Item item)
+    public void UpdateItem(Loot loot)
     {
-        this.item = item;
-        if(this.item != null)
+        this.loot = loot;
+        if(this.loot != null)
         {
             spriteImage.color = Color.white;
-            spriteImage.sprite = this.item.icon;
+            spriteImage.sprite = this.loot.sprite;
         } else
         {
             spriteImage.color = Color.clear;
@@ -34,30 +34,30 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
 
     public void OnPointerClick(PointerEventData eventData)
     {
-       if(this.item != null)
+       if(this.loot != null)
         {
-            if(selectedItem.item != null)
+            if(selectedItem.loot != null)
             {
-                Item clone = new Item(selectedItem.item);
-                selectedItem.UpdateItem(this.item);
+                Loot clone = new Loot(selectedItem.loot);
+                selectedItem.UpdateItem(this.loot);
                 UpdateItem(clone);
             } else
             {
-                selectedItem.UpdateItem(this.item);
+                selectedItem.UpdateItem(this.loot);
                 UpdateItem(null);
             }
-        } else if (selectedItem.item != null)
+        } else if (selectedItem.loot != null)
         {
-            UpdateItem(selectedItem.item);
+            UpdateItem(selectedItem.loot);
             selectedItem.UpdateItem(null);
         }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if(this.item != null)
+        if(this.loot != null)
         {
-            tooltip.GenerateTooltip(this.item);
+            tooltip.GenerateTooltip(this.loot);
         }
     }
 

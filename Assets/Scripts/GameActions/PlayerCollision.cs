@@ -13,7 +13,7 @@ public class PlayerCollision : MonoBehaviour
         }
         if(collision.gameObject.tag == "Loot")
         {
-            Item loot = collision.gameObject.GetComponent<LootInfo>().item;
+            Loot loot = collision.gameObject.GetComponent<LootInfo>().loot;
             GetComponent<Inventory>().GiveItem(loot.id);
             Destroy(collision.gameObject);
         }

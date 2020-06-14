@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemDB : MonoBehaviour
 {
     public static ItemDB Instance {get; set;}
-    public List<Item> items;
+    public List<Loot> items;
 
     private void Awake()
     {
@@ -13,35 +13,15 @@ public class ItemDB : MonoBehaviour
             Destroy(gameObject);
         else
             Instance = this;
-        BuildMockDB();
     }
 
-    public Item GetItem(int id)
+    public Loot GetItem(int id)
     {
         return items.Find(item => item.id == id);
     }
 
-    public Item GetItem(string itemName)
+    public Loot GetItem(string itemName)
     {
-        return items.Find(item => item.title == itemName);
-    }
-
-    void BuildMockDB()
-    {
-        items = new List<Item>()
-        {
-            new Item(0, 
-                    "bomb_ui_item", "It blows things",
-                    new Dictionary<string, int>
-                    {
-                        {"damage", 10}
-                    }),
-            new Item(1,
-                    "Item__69", "It blows things",
-                    new Dictionary<string, int>
-                    {
-                        {"damage", 10}
-                    })
-        };
+        return items.Find(item => item.lootName == itemName);
     }
 }

@@ -15,4 +15,5 @@ MonoBehaviour:
   id: 0
   lootName: Bones
   description: these here are bones
-  sprite: {fileID: 3598024242438813033, guid: ee639f852642c3246b994b77794394ed, type: 3}
+  sprite: {fileID: 7007010545437925719, guid: ee639f852642c3246b994b77794394ed, type: 3}
+  weight: 10

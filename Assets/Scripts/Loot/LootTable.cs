@@ -4,25 +4,23 @@ using UnityEngine;
 
 public class LootTable : MonoBehaviour
 {
-    public List<Loot> lootIds;
-    public List<int> dropWeights;
+    public List<Loot> loot;
     private int randomNumber;
     private int total;
     private int count;
 
-    public Item GenerateDrop(){
+    public Loot GenerateDrop(){
         total = 0;
         count = 0;
 
-        for (int i = 0; i < dropWeights.Count; i++){
-            total += dropWeights[i];
+        for (int i = 0; i < loot.Count; i++){
+            total += loot[i].weight;
         }
         randomNumber = Random.Range(0, total);
-        for (int i = 0; i < dropWeights.Count; i++){
-            count += dropWeights[i];
+        for (int i = 0; i < loot.Count; i++){
+            count += loot[i].weight;
             if (randomNumber <= count){
-                Debug.Log(lootIds[i].id);
-                return ItemDB.Instance.GetItem(lootIds[i].id);
+                return loot[i];
             }
         }
         return null;

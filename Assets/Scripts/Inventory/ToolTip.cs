@@ -12,18 +12,18 @@ public class ToolTip : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void GenerateTooltip(Item item)
+    public void GenerateTooltip(Loot loot)
     {
         string statText = "";
-        if(item.stats.Count > 0)
+        if(loot.stats.Count > 0)
         {
-            foreach(var stat in item.stats)
+            foreach(var stat in loot.stats)
             {
                 statText += stat.Key.ToString() + ": " + stat.Value.ToString() + "\n";
             }
         }
         string tooltip = string.Format("<b>{0}</b>\n{1}\n\n<b>{2}</b>",
-            item.title, item.description, statText);
+            loot.lootName, loot.description, statText);
         tooltipText.text = tooltip;
         gameObject.SetActive(true);
     }

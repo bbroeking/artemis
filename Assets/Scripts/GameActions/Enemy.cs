@@ -9,13 +9,12 @@ public class Enemy : MonoBehaviour
     public void Hit()
     {
 
-        Item drop = GetComponent<LootTable>().GenerateDrop();
+        Loot drop = GetComponent<LootTable>().GenerateDrop();
         GameObject d = Instantiate(item, transform.position, Quaternion.identity);
         SpriteRenderer sr = d.GetComponent<SpriteRenderer>();
-        sr.color = Color.cyan;
-        sr.sprite = drop.icon;
+        sr.sprite = drop.sprite;
         LootInfo li = d.GetComponent<LootInfo>();
-        li.item = drop;
+        li.loot = drop;
 
         Destroy(this.gameObject);
     }

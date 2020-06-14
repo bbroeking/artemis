@@ -5,5 +5,4 @@ using UnityEngine;
 public class LootInfo : MonoBehaviour
 {
     public Loot loot;
-    public Item item;
 }

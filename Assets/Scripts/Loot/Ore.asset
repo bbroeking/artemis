@@ -15,4 +15,5 @@ MonoBehaviour:
   id: 1
   lootName: Ore
   description: we can craft things with this
-  sprite: {fileID: -854771278843338811, guid: 4ebd4fcd2b2a9ce429702810998691d8, type: 3}
+  sprite: {fileID: 21300000, guid: 8fcb248715cb5c840ab2b421f1506c81, type: 3}
+  weight: 10

@@ -20,18 +20,18 @@ public class InventoryUI : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void UpdateSlot(int slot, Item item)
+    public void UpdateSlot(int slot, Loot loot)
     {
-        UIItems[slot].UpdateItem(item);
+        UIItems[slot].UpdateItem(loot);
     }
 
-    public void AddNewItem(Item item)
+    public void AddNewItem(Loot loot)
     {
-        UpdateSlot(UIItems.FindIndex(i => i.item == null), item);
+        UpdateSlot(UIItems.FindIndex(i => i.loot == null), loot);
     }
 
-    public void RemoveItem(Item item)
+    public void RemoveItem(Loot loot)
     {
-        UpdateSlot(UIItems.FindIndex(i => i.item == item), null);
+        UpdateSlot(UIItems.FindIndex(i => i.loot == loot), null);
     }
 }
