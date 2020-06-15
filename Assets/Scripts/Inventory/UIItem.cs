@@ -36,7 +36,10 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
     {
        if(this.loot != null)
         {
-            if(selectedItem.loot != null)
+            if(selectedItem.loot.lootType == LootType.Equipment){
+                
+            }
+            else if(selectedItem.loot != null)
             {
                 Loot clone = new Loot(selectedItem.loot);
                 selectedItem.UpdateItem(this.loot);

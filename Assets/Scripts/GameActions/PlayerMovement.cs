@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public HealthBar healthbar;
     public GameObject crosshair;
     public GameObject inventory;
+    private int speed = 6; 
 
     private void Start()
     {
@@ -36,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Move(Vector3 movement)
     {
-        rb.velocity = new Vector2(movement.x * 3, movement.y * 3);
+        rb.velocity = new Vector2(movement.x * speed, movement.y * speed);
     }
 
     private void HandleHealth()

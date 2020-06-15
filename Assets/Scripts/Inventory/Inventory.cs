@@ -6,9 +6,10 @@ public class Inventory : MonoBehaviour
 {
     public List<Loot> characterItems = new List<Loot>();
     public InventoryUI inventoryUI;
+    public CharacterUI characterUI;
+    public CharacterEquipment equipment;
 
-    private void Start()
-    {}
+    private void Start(){}
 
     public void GiveItem(int id)
     {
