@@ -17,8 +17,8 @@ public class Loot : ScriptableObject
     public int weight;
     public LootType lootType;
 
-    public Loot(int id, string lootName, string description, Dictionary<string, int> stats, int weight, LootType lootType)
-    {
+    // public abstract Loot(Loot item);
+    private void Init(int id, string lootName, string description, Dictionary<string, int> stats, int weight, LootType lootType){
         this.id = id;
         this.lootName = lootName;
         this.description = description;
@@ -27,13 +27,27 @@ public class Loot : ScriptableObject
         this.lootType = lootType;
     }
 
-    public Loot(Loot item)
-    {
-        id = item.id;
-        lootName = item.lootName;
-        description = item.description;
-        stats = item.stats;
-        weight = item.weight;
-        lootType = item.lootType;
+    private void Init(Loot item){
+        this.id = item.id;
+        this.lootName = item.lootName;
+        this.description = item.description;
+        this.stats = item.stats;
+        this.weight = item.weight;
+        this.lootType = item.lootType;
+    }
+    public static Loot CreateLoot(int id, string lootName, string description, Dictionary<string, int> stats, int weight, LootType lootType){
+        Loot loot = ScriptableObject.CreateInstance<Loot>();
+
+        loot.Init(id, lootName, description, stats, weight, lootType);
+
+        return loot;
+    }
+
+    public static Loot CreateLoot(Loot item){
+        Loot loot = ScriptableObject.CreateInstance<Loot>();
+
+        loot.Init(item);
+
+        return loot;
     }
 }

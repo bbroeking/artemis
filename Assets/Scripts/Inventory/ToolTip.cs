@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class ToolTip : MonoBehaviour
 {
     private Text tooltipText;
+    private CanvasGroup cvg;
     void Start()
     {
         tooltipText = GetComponentInChildren<Text>();
-        gameObject.SetActive(false);
+        cvg = gameObject.GetComponent<CanvasGroup>();
+        HideTooltip();
     }
 
     public void GenerateTooltip(Loot loot)
@@ -25,6 +27,15 @@ public class ToolTip : MonoBehaviour
         string tooltip = string.Format("<b>{0}</b>\n{1}\n\n<b>{2}</b>",
             loot.lootName, loot.description, statText);
         tooltipText.text = tooltip;
-        gameObject.SetActive(true);
+        ShowTooltip();
+    }
+
+    public void ShowTooltip(){
+        cvg.alpha = 1;
+        cvg.blocksRaycasts = true;
+    }
+    public void HideTooltip(){
+        cvg.alpha = 0;
+        cvg.blocksRaycasts = false;
     }
 }

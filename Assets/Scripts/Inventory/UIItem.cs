@@ -10,12 +10,14 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
     private Image spriteImage;
     private UIItem selectedItem;
     private ToolTip tooltip;
+    private Inventory inventory;
 
     private void Awake()
     {
         spriteImage = GetComponent<Image>();
-        selectedItem = GameObject.Find("SelectedItem").GetComponent<UIItem>();
         tooltip = GameObject.Find("ToolTip").GetComponent<ToolTip>();
+        selectedItem = GameObject.Find("SelectedItem").GetComponent<UIItem>();
+        inventory = GameObject.FindGameObjectWithTag("player").GetComponent<Inventory>();
         UpdateItem(null);
     }
 
@@ -36,12 +38,12 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
     {
        if(this.loot != null)
         {
-            if(selectedItem.loot.lootType == LootType.Equipment){
-                
+            if(this.loot.lootType == LootType.Equipment){
+                inventory.EquipItem((LootEquipment)this.loot);
             }
             else if(selectedItem.loot != null)
             {
-                Loot clone = new Loot(selectedItem.loot);
+                Loot clone = Loot.CreateLoot(selectedItem.loot);
                 selectedItem.UpdateItem(this.loot);
                 UpdateItem(clone);
             } else
@@ -66,7 +68,7 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        tooltip.gameObject.SetActive(false);
+        tooltip.HideTooltip();
     }
 
 

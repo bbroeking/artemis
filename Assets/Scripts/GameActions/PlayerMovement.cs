@@ -11,12 +11,13 @@ public class PlayerMovement : MonoBehaviour
     public Animator anim;
     public HealthBar healthbar;
     public GameObject crosshair;
-    public GameObject inventory;
+    public InventoryUI inventoryUI;
+    public CharacterUI characterUI;
     private int speed = 6; 
 
     private void Start()
     {
-        //Cursor.visible = false;
+        Cursor.visible = false;
     }
     void Update()
     {
@@ -31,8 +32,13 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown("i") == true)
         {
-            inventory.SetActive(!inventory.activeSelf);
+            inventoryUI.ToggleInventory();
         }
+        if (Input.GetKeyDown("c") == true)
+        {
+            characterUI.ToggleCharacter();
+        }
+
     }
 
     void Move(Vector3 movement)
@@ -55,10 +61,5 @@ public class PlayerMovement : MonoBehaviour
         Vector2 screenPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         Vector2 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
         crosshair.transform.localPosition = worldPosition;
-
-        // Look that way 
-        // Vector2 lookDir = worldPosition - rb.position;
-        // float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-        // rb.rotation = angle;
     }
 }

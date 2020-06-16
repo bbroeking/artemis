@@ -11,8 +11,32 @@ public class CharacterUI : MonoBehaviour
     public UIItem ringslot2;
     public UIItem trinketslot1;
     public UIItem trinketslot2;
+    public Inventory inventory;
+    private CanvasGroup cvg;
+    private bool active;
+
 
     void Awake(){
-        gameObject.SetActive(false);
+        inventory = GameObject.FindGameObjectWithTag("player").GetComponent<Inventory>();
+        cvg = gameObject.GetComponent<CanvasGroup>();
+        HideCharacter();
+        active = false;
+    }
+    public void ToggleCharacter(){
+        if(active){
+            HideCharacter();
+            active = false;
+        } else {
+            ShowCharacter();
+            active = true;
+        }
+    }
+    public void ShowCharacter(){
+        cvg.alpha = 1;
+        cvg.blocksRaycasts = true;
+    }
+    public void HideCharacter(){
+        cvg.alpha = 0;
+        cvg.blocksRaycasts = false;
     }
 }
