@@ -9,6 +9,7 @@ TagManager:
   - Rooms
   - Enemy
   - Loot
+  - NPC
   layers:
   - Default
   - TransparentFX

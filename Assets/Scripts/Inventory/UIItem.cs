@@ -62,7 +62,7 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
     {
         if(this.loot != null)
         {
-            tooltip.GenerateTooltip(this.loot);
+            tooltip.ShowTooltip();
         }
     }
 

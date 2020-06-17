@@ -1,0 +1,6746 @@
+fileFormatVersion: 2
+guid: f1d7d22837f0bf84191e4d007a225c67
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1607364717038568755
+    second: 2DRP CCArt RPG Town (32x32)_0
+  - first:
+      213: -8509545229269439709
+    second: 2DRP CCArt RPG Town (32x32)_1
+  - first:
+      213: -3170984278080028455
+    second: 2DRP CCArt RPG Town (32x32)_2
+  - first:
+      213: 753568970877356347
+    second: 2DRP CCArt RPG Town (32x32)_3
+  - first:
+      213: 1561967100246074165
+    second: 2DRP CCArt RPG Town (32x32)_4
+  - first:
+      213: 6405140397604984782
+    second: 2DRP CCArt RPG Town (32x32)_5
+  - first:
+      213: -7185922091495582272
+    second: 2DRP CCArt RPG Town (32x32)_6
+  - first:
+      213: 1388186685176764684
+    second: 2DRP CCArt RPG Town (32x32)_7
+  - first:
+      213: 7588493380237364334
+    second: 2DRP CCArt RPG Town (32x32)_8
+  - first:
+      213: -4087845401359524117
+    second: 2DRP CCArt RPG Town (32x32)_9
+  - first:
+      213: -3314976300670908508
+    second: 2DRP CCArt RPG Town (32x32)_10
+  - first:
+      213: 8180956514349295144
+    second: 2DRP CCArt RPG Town (32x32)_11
+  - first:
+      213: -1041045582323967716
+    second: 2DRP CCArt RPG Town (32x32)_12
+  - first:
+      213: -3413500789448433385
+    second: 2DRP CCArt RPG Town (32x32)_13
+  - first:
+      213: -7254802838702641023
+    second: 2DRP CCArt RPG Town (32x32)_14
+  - first:
+      213: -2419350387601149533
+    second: 2DRP CCArt RPG Town (32x32)_15
+  - first:
+      213: -1121441986558451117
+    second: 2DRP CCArt RPG Town (32x32)_16
+  - first:
+      213: -4817631743240112260
+    second: 2DRP CCArt RPG Town (32x32)_17
+  - first:
+      213: -5081031979122105670
+    second: 2DRP CCArt RPG Town (32x32)_18
+  - first:
+      213: -1052392629209528435
+    second: 2DRP CCArt RPG Town (32x32)_19
+  - first:
+      213: 2533980684096049540
+    second: 2DRP CCArt RPG Town (32x32)_20
+  - first:
+      213: -8348591504047570838
+    second: 2DRP CCArt RPG Town (32x32)_21
+  - first:
+      213: 1448214079479874708
+    second: 2DRP CCArt RPG Town (32x32)_22
+  - first:
+      213: 1859961622634710397
+    second: 2DRP CCArt RPG Town (32x32)_23
+  - first:
+      213: -5462487391397806157
+    second: 2DRP CCArt RPG Town (32x32)_24
+  - first:
+      213: 5504009934053576829
+    second: 2DRP CCArt RPG Town (32x32)_25
+  - first:
+      213: -879530008572618580
+    second: 2DRP CCArt RPG Town (32x32)_26
+  - first:
+      213: -8872442459957127496
+    second: 2DRP CCArt RPG Town (32x32)_27
+  - first:
+      213: 1378907355094463360
+    second: 2DRP CCArt RPG Town (32x32)_28
+  - first:
+      213: 2983536921122377848
+    second: 2DRP CCArt RPG Town (32x32)_29
+  - first:
+      213: 9063082176784397965
+    second: 2DRP CCArt RPG Town (32x32)_30
+  - first:
+      213: 6555901506384098956
+    second: 2DRP CCArt RPG Town (32x32)_31
+  - first:
+      213: 3510166944281465021
+    second: 2DRP CCArt RPG Town (32x32)_32
+  - first:
+      213: 6579402142806438502
+    second: 2DRP CCArt RPG Town (32x32)_33
+  - first:
+      213: 7561057552667737168
+    second: 2DRP CCArt RPG Town (32x32)_34
+  - first:
+      213: -9078791039595449605
+    second: 2DRP CCArt RPG Town (32x32)_35
+  - first:
+      213: 2521975075210940486
+    second: 2DRP CCArt RPG Town (32x32)_36
+  - first:
+      213: -2309191642738712222
+    second: 2DRP CCArt RPG Town (32x32)_37
+  - first:
+      213: -345629956282389309
+    second: 2DRP CCArt RPG Town (32x32)_38
+  - first:
+      213: -210415420923860680
+    second: 2DRP CCArt RPG Town (32x32)_39
+  - first:
+      213: -4605296066476512567
+    second: 2DRP CCArt RPG Town (32x32)_40
+  - first:
+      213: -5071733555891244829
+    second: 2DRP CCArt RPG Town (32x32)_41
+  - first:
+      213: -2510096267300573978
+    second: 2DRP CCArt RPG Town (32x32)_42
+  - first:
+      213: 906033592211153071
+    second: 2DRP CCArt RPG Town (32x32)_43
+  - first:
+      213: 503916155708810469
+    second: 2DRP CCArt RPG Town (32x32)_44
+  - first:
+      213: 1057323013656189363
+    second: 2DRP CCArt RPG Town (32x32)_45
+  - first:
+      213: -5641530800609229754
+    second: 2DRP CCArt RPG Town (32x32)_46
+  - first:
+      213: -4921370284237632613
+    second: 2DRP CCArt RPG Town (32x32)_47
+  - first:
+      213: 504075600628791842
+    second: 2DRP CCArt RPG Town (32x32)_48
+  - first:
+      213: 3443329816821493597
+    second: 2DRP CCArt RPG Town (32x32)_49
+  - first:
+      213: 5173919363641844665
+    second: 2DRP CCArt RPG Town (32x32)_50
+  - first:
+      213: -7111049749405592126
+    second: 2DRP CCArt RPG Town (32x32)_51
+  - first:
+      213: 6917643976173054213
+    second: 2DRP CCArt RPG Town (32x32)_52
+  - first:
+      213: 8707815719441538210
+    second: 2DRP CCArt RPG Town (32x32)_53
+  - first:
+      213: 3558697467006439006
+    second: 2DRP CCArt RPG Town (32x32)_54
+  - first:
+      213: 8360796026785817696
+    second: 2DRP CCArt RPG Town (32x32)_55
+  - first:
+      213: 6935104067923976009
+    second: 2DRP CCArt RPG Town (32x32)_56
+  - first:
+      213: -3996918402613977867
+    second: 2DRP CCArt RPG Town (32x32)_57
+  - first:
+      213: 5029232082942755248
+    second: 2DRP CCArt RPG Town (32x32)_58
+  - first:
+      213: -1831203096091864801
+    second: 2DRP CCArt RPG Town (32x32)_59
+  - first:
+      213: -803128366796885490
+    second: 2DRP CCArt RPG Town (32x32)_60
+  - first:
+      213: -5544917345310868054
+    second: 2DRP CCArt RPG Town (32x32)_61
+  - first:
+      213: -7483868642495428744
+    second: 2DRP CCArt RPG Town (32x32)_62
+  - first:
+      213: 1868379382628161039
+    second: 2DRP CCArt RPG Town (32x32)_63
+  - first:
+      213: -677276006703822399
+    second: 2DRP CCArt RPG Town (32x32)_64
+  - first:
+      213: 7644399677360837056
+    second: 2DRP CCArt RPG Town (32x32)_65
+  - first:
+      213: 1132297304198130540
+    second: 2DRP CCArt RPG Town (32x32)_66
+  - first:
+      213: 550672361209156557
+    second: 2DRP CCArt RPG Town (32x32)_67
+  - first:
+      213: 3799628305500571786
+    second: 2DRP CCArt RPG Town (32x32)_68
+  - first:
+      213: 7951450073587267992
+    second: 2DRP CCArt RPG Town (32x32)_69
+  - first:
+      213: -3729060554744612090
+    second: 2DRP CCArt RPG Town (32x32)_70
+  - first:
+      213: -5720855608937606087
+    second: 2DRP CCArt RPG Town (32x32)_71
+  - first:
+      213: -5173018869245057893
+    second: 2DRP CCArt RPG Town (32x32)_72
+  - first:
+      213: -4875333998339655672
+    second: 2DRP CCArt RPG Town (32x32)_73
+  - first:
+      213: 3451100405333280476
+    second: 2DRP CCArt RPG Town (32x32)_74
+  - first:
+      213: 7033202511660427172
+    second: 2DRP CCArt RPG Town (32x32)_75
+  - first:
+      213: -2839481959233451297
+    second: 2DRP CCArt RPG Town (32x32)_76
+  - first:
+      213: 1313505337194651858
+    second: 2DRP CCArt RPG Town (32x32)_77
+  - first:
+      213: 4140549902846968119
+    second: 2DRP CCArt RPG Town (32x32)_78
+  - first:
+      213: -5853930522850295564
+    second: 2DRP CCArt RPG Town (32x32)_79
+  - first:
+      213: 8892732726382466785
+    second: 2DRP CCArt RPG Town (32x32)_80
+  - first:
+      213: 5244265271308716127
+    second: 2DRP CCArt RPG Town (32x32)_81
+  - first:
+      213: 7604972542226108469
+    second: 2DRP CCArt RPG Town (32x32)_82
+  - first:
+      213: -6529232370494152821
+    second: 2DRP CCArt RPG Town (32x32)_83
+  - first:
+      213: 6326568596208413886
+    second: 2DRP CCArt RPG Town (32x32)_84
+  - first:
+      213: -6725943413066026971
+    second: 2DRP CCArt RPG Town (32x32)_85
+  - first:
+      213: -7790086883470461628
+    second: 2DRP CCArt RPG Town (32x32)_86
+  - first:
+      213: -8988382199006813597
+    second: 2DRP CCArt RPG Town (32x32)_87
+  - first:
+      213: 4919422453830082300
+    second: 2DRP CCArt RPG Town (32x32)_88
+  - first:
+      213: -6785916386786411105
+    second: 2DRP CCArt RPG Town (32x32)_89
+  - first:
+      213: 5150423519419595466
+    second: 2DRP CCArt RPG Town (32x32)_90
+  - first:
+      213: -2540390560081006642
+    second: 2DRP CCArt RPG Town (32x32)_91
+  - first:
+      213: -555421064565650313
+    second: 2DRP CCArt RPG Town (32x32)_92
+  - first:
+      213: -4384092192600574431
+    second: 2DRP CCArt RPG Town (32x32)_93
+  - first:
+      213: -78224259799602371
+    second: 2DRP CCArt RPG Town (32x32)_94
+  - first:
+      213: -854029329138397127
+    second: 2DRP CCArt RPG Town (32x32)_95
+  - first:
+      213: -3201346864342128419
+    second: 2DRP CCArt RPG Town (32x32)_96
+  - first:
+      213: 4151235758498871178
+    second: 2DRP CCArt RPG Town (32x32)_97
+  - first:
+      213: 7420220490403091288
+    second: 2DRP CCArt RPG Town (32x32)_98
+  - first:
+      213: 2481871785249087636
+    second: 2DRP CCArt RPG Town (32x32)_99
+  - first:
+      213: -7059148610407498594
+    second: 2DRP CCArt RPG Town (32x32)_100
+  - first:
+      213: -5462997133887299725
+    second: 2DRP CCArt RPG Town (32x32)_101
+  - first:
+      213: -2343327414209905053
+    second: 2DRP CCArt RPG Town (32x32)_102
+  - first:
+      213: 3203548661701533315
+    second: 2DRP CCArt RPG Town (32x32)_103
+  - first:
+      213: 1583473187237819298
+    second: 2DRP CCArt RPG Town (32x32)_104
+  - first:
+      213: 587927795744725181
+    second: 2DRP CCArt RPG Town (32x32)_105
+  - first:
+      213: 6713823660986420807
+    second: 2DRP CCArt RPG Town (32x32)_106
+  - first:
+      213: -4200472531143426682
+    second: 2DRP CCArt RPG Town (32x32)_107
+  - first:
+      213: -667382295378345987
+    second: 2DRP CCArt RPG Town (32x32)_108
+  - first:
+      213: 8543126320946162082
+    second: 2DRP CCArt RPG Town (32x32)_109
+  - first:
+      213: 6954844271914531925
+    second: 2DRP CCArt RPG Town (32x32)_110
+  - first:
+      213: -2940278002228356364
+    second: 2DRP CCArt RPG Town (32x32)_111
+  - first:
+      213: 5163136002669718791
+    second: 2DRP CCArt RPG Town (32x32)_112
+  - first:
+      213: 2430193360725435578
+    second: 2DRP CCArt RPG Town (32x32)_113
+  - first:
+      213: -8886558224303923593
+    second: 2DRP CCArt RPG Town (32x32)_114
+  - first:
+      213: -5644144845936609375
+    second: 2DRP CCArt RPG Town (32x32)_115
+  - first:
+      213: 6575771057249709195
+    second: 2DRP CCArt RPG Town (32x32)_116
+  - first:
+      213: 2218361393016707533
+    second: 2DRP CCArt RPG Town (32x32)_117
+  - first:
+      213: 6740947329190397161
+    second: 2DRP CCArt RPG Town (32x32)_118
+  - first:
+      213: -6327808664228665732
+    second: 2DRP CCArt RPG Town (32x32)_119
+  - first:
+      213: -6602183424167790160
+    second: 2DRP CCArt RPG Town (32x32)_120
+  - first:
+      213: 2782888171432515269
+    second: 2DRP CCArt RPG Town (32x32)_121
+  - first:
+      213: -8781123451957606797
+    second: 2DRP CCArt RPG Town (32x32)_122
+  - first:
+      213: 3412206120332095664
+    second: 2DRP CCArt RPG Town (32x32)_123
+  - first:
+      213: 7633903375387896713
+    second: 2DRP CCArt RPG Town (32x32)_124
+  - first:
+      213: -4495629672175737792
+    second: 2DRP CCArt RPG Town (32x32)_125
+  - first:
+      213: -2028939769664304004
+    second: 2DRP CCArt RPG Town (32x32)_126
+  - first:
+      213: -163927874244518293
+    second: 2DRP CCArt RPG Town (32x32)_127
+  - first:
+      213: 6140131404088289462
+    second: 2DRP CCArt RPG Town (32x32)_128
+  - first:
+      213: 263875083293136891
+    second: 2DRP CCArt RPG Town (32x32)_129
+  - first:
+      213: 1670086859975632839
+    second: 2DRP CCArt RPG Town (32x32)_130
+  - first:
+      213: -1309258157865314758
+    second: 2DRP CCArt RPG Town (32x32)_131
+  - first:
+      213: 4826864418682998393
+    second: 2DRP CCArt RPG Town (32x32)_132
+  - first:
+      213: 7413464605407838806
+    second: 2DRP CCArt RPG Town (32x32)_133
+  - first:
+      213: 4837081234773358141
+    second: 2DRP CCArt RPG Town (32x32)_134
+  - first:
+      213: -4300270582989143009
+    second: 2DRP CCArt RPG Town (32x32)_135
+  - first:
+      213: -881947098021146366
+    second: 2DRP CCArt RPG Town (32x32)_136
+  - first:
+      213: -5662561798489372256
+    second: 2DRP CCArt RPG Town (32x32)_137
+  - first:
+      213: 3574548031422282899
+    second: 2DRP CCArt RPG Town (32x32)_138
+  - first:
+      213: -2475849343538227538
+    second: 2DRP CCArt RPG Town (32x32)_139
+  - first:
+      213: 1949932849852396992
+    second: 2DRP CCArt RPG Town (32x32)_140
+  - first:
+      213: 3318176680951254572
+    second: 2DRP CCArt RPG Town (32x32)_141
+  - first:
+      213: -1717292929039102123
+    second: 2DRP CCArt RPG Town (32x32)_142
+  - first:
+      213: 4692653340834418534
+    second: 2DRP CCArt RPG Town (32x32)_143
+  - first:
+      213: -1443813515692644925
+    second: 2DRP CCArt RPG Town (32x32)_144
+  - first:
+      213: 7866074808278922299
+    second: 2DRP CCArt RPG Town (32x32)_145
+  - first:
+      213: -6700234296112098847
+    second: 2DRP CCArt RPG Town (32x32)_146
+  - first:
+      213: -226134334819925059
+    second: 2DRP CCArt RPG Town (32x32)_147
+  - first:
+      213: 7376348143895594117
+    second: 2DRP CCArt RPG Town (32x32)_148
+  - first:
+      213: -2890947743781645645
+    second: 2DRP CCArt RPG Town (32x32)_149
+  - first:
+      213: 873717119263739638
+    second: 2DRP CCArt RPG Town (32x32)_150
+  - first:
+      213: 5788129201718454621
+    second: 2DRP CCArt RPG Town (32x32)_151
+  - first:
+      213: -2225134865801746665
+    second: 2DRP CCArt RPG Town (32x32)_152
+  - first:
+      213: 5563307873740053555
+    second: 2DRP CCArt RPG Town (32x32)_153
+  - first:
+      213: -2889155877351470628
+    second: 2DRP CCArt RPG Town (32x32)_154
+  - first:
+      213: 3266910938974254634
+    second: 2DRP CCArt RPG Town (32x32)_155
+  - first:
+      213: -2310664219998615691
+    second: 2DRP CCArt RPG Town (32x32)_156
+  - first:
+      213: -5631002070699791596
+    second: 2DRP CCArt RPG Town (32x32)_157
+  - first:
+      213: -4545594125264877301
+    second: 2DRP CCArt RPG Town (32x32)_158
+  - first:
+      213: 4608951024546687342
+    second: 2DRP CCArt RPG Town (32x32)_159
+  - first:
+      213: 8198774111929937077
+    second: 2DRP CCArt RPG Town (32x32)_160
+  - first:
+      213: -8795797703356435327
+    second: 2DRP CCArt RPG Town (32x32)_161
+  - first:
+      213: -8932034214235484666
+    second: 2DRP CCArt RPG Town (32x32)_162
+  - first:
+      213: 7329453516746784449
+    second: 2DRP CCArt RPG Town (32x32)_163
+  - first:
+      213: -4291179912939574102
+    second: 2DRP CCArt RPG Town (32x32)_164
+  - first:
+      213: -1555785447793899693
+    second: 2DRP CCArt RPG Town (32x32)_165
+  - first:
+      213: 5882786221871068944
+    second: 2DRP CCArt RPG Town (32x32)_166
+  - first:
+      213: -5932823792194694816
+    second: 2DRP CCArt RPG Town (32x32)_167
+  - first:
+      213: 3049163035946050370
+    second: 2DRP CCArt RPG Town (32x32)_168
+  - first:
+      213: -488296857129894493
+    second: 2DRP CCArt RPG Town (32x32)_169
+  - first:
+      213: 8360537146756099593
+    second: 2DRP CCArt RPG Town (32x32)_170
+  - first:
+      213: -1679685317674935329
+    second: 2DRP CCArt RPG Town (32x32)_171
+  - first:
+      213: 7517184321687252927
+    second: 2DRP CCArt RPG Town (32x32)_172
+  - first:
+      213: 7625486823971223832
+    second: 2DRP CCArt RPG Town (32x32)_173
+  - first:
+      213: 8011958804399067952
+    second: 2DRP CCArt RPG Town (32x32)_174
+  - first:
+      213: -7900226399457490496
+    second: 2DRP CCArt RPG Town (32x32)_175
+  - first:
+      213: 6587658822208887209
+    second: 2DRP CCArt RPG Town (32x32)_176
+  - first:
+      213: -3573995911401311721
+    second: 2DRP CCArt RPG Town (32x32)_177
+  - first:
+      213: 6867925758539250700
+    second: 2DRP CCArt RPG Town (32x32)_178
+  - first:
+      213: -436169510958980249
+    second: 2DRP CCArt RPG Town (32x32)_179
+  - first:
+      213: -270734521876475116
+    second: 2DRP CCArt RPG Town (32x32)_180
+  - first:
+      213: 2645823425604264784
+    second: 2DRP CCArt RPG Town (32x32)_181
+  - first:
+      213: -4495637661667495734
+    second: 2DRP CCArt RPG Town (32x32)_182
+  - first:
+      213: -2546154543275785185
+    second: 2DRP CCArt RPG Town (32x32)_183
+  - first:
+      213: 4623824490307720298
+    second: 2DRP CCArt RPG Town (32x32)_184
+  - first:
+      213: 886971592533089192
+    second: 2DRP CCArt RPG Town (32x32)_185
+  - first:
+      213: 7936012650555816431
+    second: 2DRP CCArt RPG Town (32x32)_186
+  - first:
+      213: -8650628439157469443
+    second: 2DRP CCArt RPG Town (32x32)_187
+  - first:
+      213: -4563929340361267676
+    second: 2DRP CCArt RPG Town (32x32)_188
+  - first:
+      213: -3915197872786105425
+    second: 2DRP CCArt RPG Town (32x32)_189
+  - first:
+      213: 6120289926178985678
+    second: 2DRP CCArt RPG Town (32x32)_190
+  - first:
+      213: 7913535341984142302
+    second: 2DRP CCArt RPG Town (32x32)_191
+  - first:
+      213: 6302109014316242121
+    second: 2DRP CCArt RPG Town (32x32)_192
+  - first:
+      213: -7821677832407102388
+    second: 2DRP CCArt RPG Town (32x32)_193
+  - first:
+      213: 6893543593690056037
+    second: 2DRP CCArt RPG Town (32x32)_194
+  - first:
+      213: 7601551875082146846
+    second: 2DRP CCArt RPG Town (32x32)_195
+  - first:
+      213: 8290110684535598003
+    second: 2DRP CCArt RPG Town (32x32)_196
+  - first:
+      213: -6330473884152750239
+    second: 2DRP CCArt RPG Town (32x32)_197
+  - first:
+      213: -3527455686436083765
+    second: 2DRP CCArt RPG Town (32x32)_198
+  - first:
+      213: 4868640836193952123
+    second: 2DRP CCArt RPG Town (32x32)_199
+  - first:
+      213: 4706228791364528563
+    second: 2DRP CCArt RPG Town (32x32)_200
+  - first:
+      213: 7038544396723318057
+    second: 2DRP CCArt RPG Town (32x32)_201
+  - first:
+      213: -3854120127073933077
+    second: 2DRP CCArt RPG Town (32x32)_202
+  - first:
+      213: 5550859137379069500
+    second: 2DRP CCArt RPG Town (32x32)_203
+  - first:
+      213: 4720938140804332550
+    second: 2DRP CCArt RPG Town (32x32)_204
+  - first:
+      213: 888648287570542561
+    second: 2DRP CCArt RPG Town (32x32)_205
+  - first:
+      213: 2517755822377761098
+    second: 2DRP CCArt RPG Town (32x32)_206
+  - first:
+      213: -4387813132716243669
+    second: 2DRP CCArt RPG Town (32x32)_207
+  - first:
+      213: 8083779671756227265
+    second: 2DRP CCArt RPG Town (32x32)_208
+  - first:
+      213: 3291689641519390149
+    second: 2DRP CCArt RPG Town (32x32)_209
+  - first:
+      213: -2394545304894093429
+    second: 2DRP CCArt RPG Town (32x32)_210
+  - first:
+      213: -6645469618945831508
+    second: 2DRP CCArt RPG Town (32x32)_211
+  - first:
+      213: -9005660255127730850
+    second: 2DRP CCArt RPG Town (32x32)_212
+  - first:
+      213: 7995005154148552660
+    second: 2DRP CCArt RPG Town (32x32)_213
+  - first:
+      213: -2638122962663607647
+    second: 2DRP CCArt RPG Town (32x32)_214
+  - first:
+      213: 5569463446133833075
+    second: 2DRP CCArt RPG Town (32x32)_215
+  - first:
+      213: 2751008119105908869
+    second: 2DRP CCArt RPG Town (32x32)_216
+  - first:
+      213: 1994572131714363511
+    second: 2DRP CCArt RPG Town (32x32)_217
+  - first:
+      213: 4128219603509232021
+    second: 2DRP CCArt RPG Town (32x32)_218
+  - first:
+      213: 8768603502012479513
+    second: 2DRP CCArt RPG Town (32x32)_219
+  - first:
+      213: -6043005271341371391
+    second: 2DRP CCArt RPG Town (32x32)_220
+  - first:
+      213: -5950944151753099048
+    second: 2DRP CCArt RPG Town (32x32)_221
+  - first:
+      213: -8634355247686469434
+    second: 2DRP CCArt RPG Town (32x32)_222
+  - first:
+      213: -2388298600803614085
+    second: 2DRP CCArt RPG Town (32x32)_223
+  - first:
+      213: -1576572034864012413
+    second: 2DRP CCArt RPG Town (32x32)_224
+  - first:
+      213: -3384046655419863179
+    second: 2DRP CCArt RPG Town (32x32)_225
+  - first:
+      213: -995658642339265374
+    second: 2DRP CCArt RPG Town (32x32)_226
+  - first:
+      213: 7446944487691543645
+    second: 2DRP CCArt RPG Town (32x32)_227
+  - first:
+      213: 8189538698987982267
+    second: 2DRP CCArt RPG Town (32x32)_228
+  - first:
+      213: -3843040058716350703
+    second: 2DRP CCArt RPG Town (32x32)_229
+  - first:
+      213: 7521444034674093964
+    second: 2DRP CCArt RPG Town (32x32)_230
+  - first:
+      213: 3791341905422476366
+    second: 2DRP CCArt RPG Town (32x32)_231
+  - first:
+      213: -5696562386077044948
+    second: 2DRP CCArt RPG Town (32x32)_232
+  - first:
+      213: 692581066643582475
+    second: 2DRP CCArt RPG Town (32x32)_233
+  - first:
+      213: 7281932240357525310
+    second: 2DRP CCArt RPG Town (32x32)_234
+  - first:
+      213: -8181987788563942648
+    second: 2DRP CCArt RPG Town (32x32)_235
+  - first:
+      213: -1649895524331616477
+    second: 2DRP CCArt RPG Town (32x32)_236
+  - first:
+      213: -5852732463717572383
+    second: 2DRP CCArt RPG Town (32x32)_237
+  - first:
+      213: -994442753189492593
+    second: 2DRP CCArt RPG Town (32x32)_238
+  - first:
+      213: -6782741975903673628
+    second: 2DRP CCArt RPG Town (32x32)_239
+  - first:
+      213: -886290254163262502
+    second: 2DRP CCArt RPG Town (32x32)_240
+  - first:
+      213: 5797840194249670008
+    second: 2DRP CCArt RPG Town (32x32)_241
+  - first:
+      213: -8530121999548150321
+    second: 2DRP CCArt RPG Town (32x32)_242
+  - first:
+      213: -1472790325410229362
+    second: 2DRP CCArt RPG Town (32x32)_243
+  - first:
+      213: -4483604572682346999
+    second: 2DRP CCArt RPG Town (32x32)_244
+  - first:
+      213: -1890567658245242898
+    second: 2DRP CCArt RPG Town (32x32)_245
+  - first:
+      213: 6135994352396736624
+    second: 2DRP CCArt RPG Town (32x32)_0
+  - first:
+      213: -4521620689642759482
+    second: 2DRP CCArt RPG Town (32x32)_1
+  - first:
+      213: -3967593022608197399
+    second: 2DRP CCArt RPG Town (32x32)_2
+  - first:
+      213: 4531054158751587233
+    second: 2DRP CCArt RPG Town (32x32)_3
+  - first:
+      213: 6904324942835526155
+    second: 2DRP CCArt RPG Town (32x32)_4
+  - first:
+      213: 4858412029162576974
+    second: 2DRP CCArt RPG Town (32x32)_5
+  - first:
+      213: 7709453817974823094
+    second: 2DRP CCArt RPG Town (32x32)_6
+  - first:
+      213: -1489747749075629907
+    second: 2DRP CCArt RPG Town (32x32)_7
+  - first:
+      213: -243573991189191737
+    second: 2DRP CCArt RPG Town (32x32)_8
+  - first:
+      213: -4502419260088268468
+    second: 2DRP CCArt RPG Town (32x32)_9
+  - first:
+      213: -7864231422305622582
+    second: 2DRP CCArt RPG Town (32x32)_10
+  - first:
+      213: 7096558810600535305
+    second: 2DRP CCArt RPG Town (32x32)_11
+  - first:
+      213: 7413461976268838465
+    second: 2DRP CCArt RPG Town (32x32)_12
+  - first:
+      213: -8011547614381229285
+    second: 2DRP CCArt RPG Town (32x32)_13
+  - first:
+      213: 2869976034367909210
+    second: 2DRP CCArt RPG Town (32x32)_14
+  - first:
+      213: -8737444818548958137
+    second: 2DRP CCArt RPG Town (32x32)_15
+  - first:
+      213: -1885075315838764003
+    second: 2DRP CCArt RPG Town (32x32)_16
+  - first:
+      213: 1148501351186648845
+    second: 2DRP CCArt RPG Town (32x32)_17
+  - first:
+      213: 6613401686945825717
+    second: 2DRP CCArt RPG Town (32x32)_18
+  - first:
+      213: -8814438970746966793
+    second: 2DRP CCArt RPG Town (32x32)_19
+  - first:
+      213: -7098620855517992327
+    second: 2DRP CCArt RPG Town (32x32)_20
+  - first:
+      213: -1724122133187868606
+    second: 2DRP CCArt RPG Town (32x32)_21
+  - first:
+      213: 6398423352221703396
+    second: 2DRP CCArt RPG Town (32x32)_22
+  - first:
+      213: 871184235430245300
+    second: 2DRP CCArt RPG Town (32x32)_23
+  - first:
+      213: 7541273451551165875
+    second: 2DRP CCArt RPG Town (32x32)_24
+  - first:
+      213: -6752298229662643024
+    second: 2DRP CCArt RPG Town (32x32)_25
+  - first:
+      213: 4745490114421747841
+    second: 2DRP CCArt RPG Town (32x32)_26
+  - first:
+      213: -4412487080401067870
+    second: 2DRP CCArt RPG Town (32x32)_27
+  - first:
+      213: 2427597472026491092
+    second: 2DRP CCArt RPG Town (32x32)_28
+  - first:
+      213: 4478691144820791221
+    second: 2DRP CCArt RPG Town (32x32)_29
+  - first:
+      213: -5109727519470150465
+    second: 2DRP CCArt RPG Town (32x32)_30
+  - first:
+      213: -7321701059020071127
+    second: 2DRP CCArt RPG Town (32x32)_31
+  - first:
+      213: 3106834350131964710
+    second: 2DRP CCArt RPG Town (32x32)_32
+  - first:
+      213: 5061883422128838044
+    second: 2DRP CCArt RPG Town (32x32)_33
+  - first:
+      213: -4762829647948243909
+    second: 2DRP CCArt RPG Town (32x32)_34
+  - first:
+      213: 2588570786385143196
+    second: 2DRP CCArt RPG Town (32x32)_35
+  - first:
+      213: -1813997827710610522
+    second: 2DRP CCArt RPG Town (32x32)_36
+  - first:
+      213: 8817035722097045918
+    second: 2DRP CCArt RPG Town (32x32)_37
+  - first:
+      213: 5609663330889664529
+    second: 2DRP CCArt RPG Town (32x32)_38
+  - first:
+      213: 2830584046356480799
+    second: 2DRP CCArt RPG Town (32x32)_39
+  - first:
+      213: -1531890277222263557
+    second: 2DRP CCArt RPG Town (32x32)_40
+  - first:
+      213: 7292884014117590087
+    second: 2DRP CCArt RPG Town (32x32)_41
+  - first:
+      213: -1144427903444813301
+    second: 2DRP CCArt RPG Town (32x32)_42
+  - first:
+      213: 8881946940523276601
+    second: 2DRP CCArt RPG Town (32x32)_43
+  - first:
+      213: 896072518200419377
+    second: 2DRP CCArt RPG Town (32x32)_44
+  - first:
+      213: 2464200214806833285
+    second: 2DRP CCArt RPG Town (32x32)_45
+  - first:
+      213: 3724798162732003762
+    second: 2DRP CCArt RPG Town (32x32)_46
+  - first:
+      213: 3093488651758683985
+    second: 2DRP CCArt RPG Town (32x32)_47
+  - first:
+      213: 4730678341684280169
+    second: 2DRP CCArt RPG Town (32x32)_48
+  - first:
+      213: -4684323370798329513
+    second: 2DRP CCArt RPG Town (32x32)_49
+  - first:
+      213: 3231508859755377563
+    second: 2DRP CCArt RPG Town (32x32)_50
+  - first:
+      213: 4622046207973184241
+    second: 2DRP CCArt RPG Town (32x32)_51
+  - first:
+      213: 5011243108605170933
+    second: 2DRP CCArt RPG Town (32x32)_52
+  - first:
+      213: 2439130023579166854
+    second: 2DRP CCArt RPG Town (32x32)_53
+  - first:
+      213: -1830226092096039059
+    second: 2DRP CCArt RPG Town (32x32)_54
+  - first:
+      213: -6534434592491800491
+    second: 2DRP CCArt RPG Town (32x32)_55
+  - first:
+      213: 6376331497628989495
+    second: 2DRP CCArt RPG Town (32x32)_56
+  - first:
+      213: -4974451111863135698
+    second: 2DRP CCArt RPG Town (32x32)_57
+  - first:
+      213: 9086116893246886584
+    second: 2DRP CCArt RPG Town (32x32)_58
+  - first:
+      213: 4975086547077634544
+    second: 2DRP CCArt RPG Town (32x32)_59
+  - first:
+      213: 8934419329603129774
+    second: 2DRP CCArt RPG Town (32x32)_60
+  - first:
+      213: -3616667302339327165
+    second: 2DRP CCArt RPG Town (32x32)_61
+  - first:
+      213: -710498173700599108
+    second: 2DRP CCArt RPG Town (32x32)_62
+  - first:
+      213: -7257568117730099298
+    second: 2DRP CCArt RPG Town (32x32)_63
+  - first:
+      213: 3685118990824472770
+    second: 2DRP CCArt RPG Town (32x32)_64
+  - first:
+      213: 4524177797885936353
+    second: 2DRP CCArt RPG Town (32x32)_65
+  - first:
+      213: 4666499809739599122
+    second: 2DRP CCArt RPG Town (32x32)_66
+  - first:
+      213: 7286888996500679793
+    second: 2DRP CCArt RPG Town (32x32)_67
+  - first:
+      213: 2607596349516325956
+    second: 2DRP CCArt RPG Town (32x32)_68
+  - first:
+      213: -627494744858611722
+    second: 2DRP CCArt RPG Town (32x32)_69
+  - first:
+      213: -990742354223884783
+    second: 2DRP CCArt RPG Town (32x32)_70
+  - first:
+      213: -4174564231625648388
+    second: 2DRP CCArt RPG Town (32x32)_71
+  - first:
+      213: -8879418925503174675
+    second: 2DRP CCArt RPG Town (32x32)_72
+  - first:
+      213: -2018352524470799233
+    second: 2DRP CCArt RPG Town (32x32)_73
+  - first:
+      213: -6734162866218821379
+    second: 2DRP CCArt RPG Town (32x32)_74
+  - first:
+      213: -6655990877023033207
+    second: 2DRP CCArt RPG Town (32x32)_75
+  - first:
+      213: 1515048540711214484
+    second: 2DRP CCArt RPG Town (32x32)_76
+  - first:
+      213: 698935597145187176
+    second: 2DRP CCArt RPG Town (32x32)_77
+  - first:
+      213: 7681133127085306329
+    second: 2DRP CCArt RPG Town (32x32)_78
+  - first:
+      213: 7814932247759292633
+    second: 2DRP CCArt RPG Town (32x32)_79
+  - first:
+      213: 5844526215972082098
+    second: 2DRP CCArt RPG Town (32x32)_80
+  - first:
+      213: -5672306704284702256
+    second: 2DRP CCArt RPG Town (32x32)_81
+  - first:
+      213: 7274763213269256723
+    second: 2DRP CCArt RPG Town (32x32)_82
+  - first:
+      213: 5398911528012373440
+    second: 2DRP CCArt RPG Town (32x32)_83
+  - first:
+      213: -6586122859916500639
+    second: 2DRP CCArt RPG Town (32x32)_84
+  - first:
+      213: -7688582884943745670
+    second: 2DRP CCArt RPG Town (32x32)_85
+  - first:
+      213: -6339294083605572204
+    second: 2DRP CCArt RPG Town (32x32)_86
+  - first:
+      213: 2786371490297023028
+    second: 2DRP CCArt RPG Town (32x32)_87
+  - first:
+      213: -8166666171245995545
+    second: 2DRP CCArt RPG Town (32x32)_88
+  - first:
+      213: 9184391378544577830
+    second: 2DRP CCArt RPG Town (32x32)_89
+  - first:
+      213: -6373034036843618495
+    second: 2DRP CCArt RPG Town (32x32)_90
+  - first:
+      213: -306933011345184363
+    second: 2DRP CCArt RPG Town (32x32)_91
+  - first:
+      213: 4628571221500396076
+    second: 2DRP CCArt RPG Town (32x32)_92
+  - first:
+      213: 7074103629466000380
+    second: 2DRP CCArt RPG Town (32x32)_93
+  - first:
+      213: -6084233233147544044
+    second: 2DRP CCArt RPG Town (32x32)_94
+  - first:
+      213: -3752483267877256382
+    second: 2DRP CCArt RPG Town (32x32)_95
+  - first:
+      213: 82468531330548749
+    second: 2DRP CCArt RPG Town (32x32)_96
+  - first:
+      213: -8803610753654638200
+    second: 2DRP CCArt RPG Town (32x32)_97
+  - first:
+      213: 8516216059223899548
+    second: 2DRP CCArt RPG Town (32x32)_98
+  - first:
+      213: 1401617580256724558
+    second: 2DRP CCArt RPG Town (32x32)_99
+  - first:
+      213: 6212952416974589082
+    second: 2DRP CCArt RPG Town (32x32)_100
+  - first:
+      213: -420798913871158248
+    second: 2DRP CCArt RPG Town (32x32)_101
+  - first:
+      213: -6508479246751755994
+    second: 2DRP CCArt RPG Town (32x32)_102
+  - first:
+      213: 5549819052880299940
+    second: 2DRP CCArt RPG Town (32x32)_103
+  - first:
+      213: 6426099243583369813
+    second: 2DRP CCArt RPG Town (32x32)_104
+  - first:
+      213: -5557855905890239013
+    second: 2DRP CCArt RPG Town (32x32)_105
+  - first:
+      213: 1625676153160062300
+    second: 2DRP CCArt RPG Town (32x32)_106
+  - first:
+      213: 3424042324795289770
+    second: 2DRP CCArt RPG Town (32x32)_107
+  - first:
+      213: 8169655818743275822
+    second: 2DRP CCArt RPG Town (32x32)_108
+  - first:
+      213: -2742250294306140891
+    second: 2DRP CCArt RPG Town (32x32)_109
+  - first:
+      213: -8630322837933435242
+    second: 2DRP CCArt RPG Town (32x32)_110
+  - first:
+      213: 1108330213532390244
+    second: 2DRP CCArt RPG Town (32x32)_111
+  - first:
+      213: -7178641917407164662
+    second: 2DRP CCArt RPG Town (32x32)_112
+  - first:
+      213: 5943515612149776754
+    second: 2DRP CCArt RPG Town (32x32)_113
+  - first:
+      213: 6506419946008548007
+    second: 2DRP CCArt RPG Town (32x32)_114
+  - first:
+      213: -2799184050258655885
+    second: 2DRP CCArt RPG Town (32x32)_115
+  - first:
+      213: 4609181024180773824
+    second: 2DRP CCArt RPG Town (32x32)_116
+  - first:
+      213: -6621181175730150199
+    second: 2DRP CCArt RPG Town (32x32)_117
+  - first:
+      213: 1811673411180984959
+    second: 2DRP CCArt RPG Town (32x32)_118
+  - first:
+      213: 2587169062732278359
+    second: 2DRP CCArt RPG Town (32x32)_119
+  - first:
+      213: 9074371205848822925
+    second: 2DRP CCArt RPG Town (32x32)_120
+  - first:
+      213: 5860973071842605642
+    second: 2DRP CCArt RPG Town (32x32)_121
+  - first:
+      213: -2391928831404647444
+    second: 2DRP CCArt RPG Town (32x32)_122
+  - first:
+      213: -7620734062022178883
+    second: 2DRP CCArt RPG Town (32x32)_123
+  - first:
+      213: -6647327240385698405
+    second: 2DRP CCArt RPG Town (32x32)_124
+  - first:
+      213: -2813070894532018812
+    second: 2DRP CCArt RPG Town (32x32)_125
+  - first:
+      213: 984404195939964985
+    second: 2DRP CCArt RPG Town (32x32)_126
+  - first:
+      213: 5802198827551593040
+    second: 2DRP CCArt RPG Town (32x32)_127
+  - first:
+      213: -7942044440516166169
+    second: 2DRP CCArt RPG Town (32x32)_128
+  - first:
+      213: -4241829651604504677
+    second: 2DRP CCArt RPG Town (32x32)_129
+  - first:
+      213: 5048639438506562151
+    second: 2DRP CCArt RPG Town (32x32)_130
+  - first:
+      213: 6615957611589766960
+    second: 2DRP CCArt RPG Town (32x32)_131
+  - first:
+      213: -7915548692310481345
+    second: 2DRP CCArt RPG Town (32x32)_132
+  - first:
+      213: 8225226566250166852
+    second: 2DRP CCArt RPG Town (32x32)_133
+  - first:
+      213: -599127310610190097
+    second: 2DRP CCArt RPG Town (32x32)_134
+  - first:
+      213: -5890241733310183408
+    second: 2DRP CCArt RPG Town (32x32)_135
+  - first:
+      213: -1749361730387521652
+    second: 2DRP CCArt RPG Town (32x32)_136
+  - first:
+      213: -4252714317538736804
+    second: 2DRP CCArt RPG Town (32x32)_137
+  - first:
+      213: 1580593992566185026
+    second: 2DRP CCArt RPG Town (32x32)_138
+  - first:
+      213: -2834947177438667058
+    second: 2DRP CCArt RPG Town (32x32)_139
+  - first:
+      213: -3759611729903804929
+    second: 2DRP CCArt RPG Town (32x32)_140
+  - first:
+      213: 4512810160142002726
+    second: 2DRP CCArt RPG Town (32x32)_141
+  - first:
+      213: -949575129267670638
+    second: 2DRP CCArt RPG Town (32x32)_142
+  - first:
+      213: -5055406478906234828
+    second: 2DRP CCArt RPG Town (32x32)_143
+  - first:
+      213: -2617679726863713621
+    second: 2DRP CCArt RPG Town (32x32)_144
+  - first:
+      213: 3718119316817629540
+    second: 2DRP CCArt RPG Town (32x32)_145
+  - first:
+      213: 2626834061077640200
+    second: 2DRP CCArt RPG Town (32x32)_146
+  - first:
+      213: -9191850542367888348
+    second: 2DRP CCArt RPG Town (32x32)_147
+  - first:
+      213: 5478478050823443788
+    second: 2DRP CCArt RPG Town (32x32)_148
+  - first:
+      213: -4216548182170167375
+    second: 2DRP CCArt RPG Town (32x32)_149
+  - first:
+      213: -9193962525522043968
+    second: 2DRP CCArt RPG Town (32x32)_150
+  - first:
+      213: -7010535733272927916
+    second: 2DRP CCArt RPG Town (32x32)_151
+  - first:
+      213: 4229259412815768599
+    second: 2DRP CCArt RPG Town (32x32)_152
+  - first:
+      213: -9016479725836220267
+    second: 2DRP CCArt RPG Town (32x32)_153
+  - first:
+      213: -7633914531438249544
+    second: 2DRP CCArt RPG Town (32x32)_154
+  - first:
+      213: 7123066834226756071
+    second: 2DRP CCArt RPG Town (32x32)_155
+  - first:
+      213: -4432471558884157119
+    second: 2DRP CCArt RPG Town (32x32)_156
+  - first:
+      213: -7625979605261236266
+    second: 2DRP CCArt RPG Town (32x32)_157
+  - first:
+      213: 3392340240997298594
+    second: 2DRP CCArt RPG Town (32x32)_158
+  - first:
+      213: -900602179985333394
+    second: 2DRP CCArt RPG Town (32x32)_159
+  - first:
+      213: 4920017038039282513
+    second: 2DRP CCArt RPG Town (32x32)_160
+  - first:
+      213: -7225341408561363957
+    second: 2DRP CCArt RPG Town (32x32)_161
+  - first:
+      213: -3212381281650151536
+    second: 2DRP CCArt RPG Town (32x32)_162
+  - first:
+      213: 4477450502280061258
+    second: 2DRP CCArt RPG Town (32x32)_163
+  - first:
+      213: 7594862992448371661
+    second: 2DRP CCArt RPG Town (32x32)_164
+  - first:
+      213: 5718174002360714632
+    second: 2DRP CCArt RPG Town (32x32)_165
+  - first:
+      213: 498175926755328820
+    second: 2DRP CCArt RPG Town (32x32)_166
+  - first:
+      213: 7158520077968343713
+    second: 2DRP CCArt RPG Town (32x32)_167
+  - first:
+      213: -2752151074660130013
+    second: 2DRP CCArt RPG Town (32x32)_168
+  - first:
+      213: 1799206066993445415
+    second: 2DRP CCArt RPG Town (32x32)_169
+  - first:
+      213: -6772425549873183661
+    second: 2DRP CCArt RPG Town (32x32)_170
+  - first:
+      213: 5780991322350738715
+    second: 2DRP CCArt RPG Town (32x32)_171
+  - first:
+      213: 7766817286893458480
+    second: 2DRP CCArt RPG Town (32x32)_172
+  - first:
+      213: -4572616138358657201
+    second: 2DRP CCArt RPG Town (32x32)_173
+  - first:
+      213: 3590613261901570347
+    second: 2DRP CCArt RPG Town (32x32)_174
+  - first:
+      213: -2992395529818748583
+    second: 2DRP CCArt RPG Town (32x32)_175
+  - first:
+      213: 6487337347428605457
+    second: 2DRP CCArt RPG Town (32x32)_176
+  - first:
+      213: 1626577356804951116
+    second: 2DRP CCArt RPG Town (32x32)_177
+  - first:
+      213: -5235182467219266149
+    second: 2DRP CCArt RPG Town (32x32)_178
+  - first:
+      213: -7636363834940294216
+    second: 2DRP CCArt RPG Town (32x32)_179
+  - first:
+      213: 6829368407859982157
+    second: 2DRP CCArt RPG Town (32x32)_180
+  - first:
+      213: 8232296412926543876
+    second: 2DRP CCArt RPG Town (32x32)_181
+  - first:
+      213: 4905264962927694469
+    second: 2DRP CCArt RPG Town (32x32)_182
+  - first:
+      213: -4134011644730749225
+    second: 2DRP CCArt RPG Town (32x32)_183
+  - first:
+      213: 8992358281191676716
+    second: 2DRP CCArt RPG Town (32x32)_184
+  - first:
+      213: 5224173923944052384
+    second: 2DRP CCArt RPG Town (32x32)_185
+  - first:
+      213: 90436589364582676
+    second: 2DRP CCArt RPG Town (32x32)_186
+  - first:
+      213: 3037126164288607456
+    second: 2DRP CCArt RPG Town (32x32)_187
+  - first:
+      213: -3141576766837925677
+    second: 2DRP CCArt RPG Town (32x32)_188
+  - first:
+      213: 169207376921142621
+    second: 2DRP CCArt RPG Town (32x32)_189
+  - first:
+      213: -1118188000177998867
+    second: 2DRP CCArt RPG Town (32x32)_190
+  - first:
+      213: 6386697342269147537
+    second: 2DRP CCArt RPG Town (32x32)_191
+  - first:
+      213: -5042554732288609943
+    second: 2DRP CCArt RPG Town (32x32)_192
+  - first:
+      213: -3647451501596986656
+    second: 2DRP CCArt RPG Town (32x32)_193
+  - first:
+      213: 2902113834492188981
+    second: 2DRP CCArt RPG Town (32x32)_194
+  - first:
+      213: -709474960108292638
+    second: 2DRP CCArt RPG Town (32x32)_195
+  - first:
+      213: -4078332140642198670
+    second: 2DRP CCArt RPG Town (32x32)_196
+  - first:
+      213: 8428408276194806841
+    second: 2DRP CCArt RPG Town (32x32)_197
+  - first:
+      213: 1652722855213527639
+    second: 2DRP CCArt RPG Town (32x32)_198
+  - first:
+      213: -36276900574651817
+    second: 2DRP CCArt RPG Town (32x32)_199
+  - first:
+      213: -400619055681374081
+    second: 2DRP CCArt RPG Town (32x32)_200
+  - first:
+      213: -6446829977111804652
+    second: 2DRP CCArt RPG Town (32x32)_201
+  - first:
+      213: 7960264709673666960
+    second: 2DRP CCArt RPG Town (32x32)_202
+  - first:
+      213: 1774911896417944856
+    second: 2DRP CCArt RPG Town (32x32)_203
+  - first:
+      213: 6884423945902935471
+    second: 2DRP CCArt RPG Town (32x32)_204
+  - first:
+      213: 468957239851014622
+    second: 2DRP CCArt RPG Town (32x32)_205
+  - first:
+      213: 4554938781333192338
+    second: 2DRP CCArt RPG Town (32x32)_206
+  - first:
+      213: 5604196821250472814
+    second: 2DRP CCArt RPG Town (32x32)_207
+  - first:
+      213: -7321606875929750275
+    second: 2DRP CCArt RPG Town (32x32)_208
+  - first:
+      213: 6308638109050254128
+    second: 2DRP CCArt RPG Town (32x32)_209
+  - first:
+      213: -3536347371238113794
+    second: 2DRP CCArt RPG Town (32x32)_210
+  - first:
+      213: 4570298889034222455
+    second: 2DRP CCArt RPG Town (32x32)_211
+  - first:
+      213: 2721145477919316698
+    second: 2DRP CCArt RPG Town (32x32)_212
+  - first:
+      213: 4862774525076947594
+    second: 2DRP CCArt RPG Town (32x32)_213
+  - first:
+      213: 5563234339549079829
+    second: 2DRP CCArt RPG Town (32x32)_214
+  - first:
+      213: -6263786852934861239
+    second: 2DRP CCArt RPG Town (32x32)_215
+  - first:
+      213: 4513290031776578110
+    second: 2DRP CCArt RPG Town (32x32)_216
+  - first:
+      213: -4527694182735609993
+    second: 2DRP CCArt RPG Town (32x32)_217
+  - first:
+      213: -8890490419347364123
+    second: 2DRP CCArt RPG Town (32x32)_218
+  - first:
+      213: -2046728067202830965
+    second: 2DRP CCArt RPG Town (32x32)_219
+  - first:
+      213: -8054655496645294443
+    second: 2DRP CCArt RPG Town (32x32)_220
+  - first:
+      213: -2208300448444799324
+    second: 2DRP CCArt RPG Town (32x32)_221
+  - first:
+      213: -1552503193066403153
+    second: 2DRP CCArt RPG Town (32x32)_222
+  - first:
+      213: -7031405911154310035
+    second: 2DRP CCArt RPG Town (32x32)_223
+  - first:
+      213: -4343896781245939919
+    second: 2DRP CCArt RPG Town (32x32)_224
+  - first:
+      213: 418387107025357161
+    second: 2DRP CCArt RPG Town (32x32)_225
+  - first:
+      213: 3474572473561238029
+    second: 2DRP CCArt RPG Town (32x32)_226
+  - first:
+      213: 7460926215128946389
+    second: 2DRP CCArt RPG Town (32x32)_227
+  - first:
+      213: -1534183135094029262
+    second: 2DRP CCArt RPG Town (32x32)_228
+  - first:
+      213: 8835548684461026464
+    second: 2DRP CCArt RPG Town (32x32)_229
+  - first:
+      213: -4118821973482624341
+    second: 2DRP CCArt RPG Town (32x32)_230
+  - first:
+      213: 7198586200291258925
+    second: 2DRP CCArt RPG Town (32x32)_231
+  - first:
+      213: 7516229924845943696
+    second: 2DRP CCArt RPG Town (32x32)_232
+  - first:
+      213: -5591685881867497358
+    second: 2DRP CCArt RPG Town (32x32)_233
+  - first:
+      213: 4252275823093473461
+    second: 2DRP CCArt RPG Town (32x32)_234
+  - first:
+      213: 382798096131473661
+    second: 2DRP CCArt RPG Town (32x32)_235
+  - first:
+      213: 6950121716036457796
+    second: 2DRP CCArt RPG Town (32x32)_236
+  - first:
+      213: -413073425714067104
+    second: 2DRP CCArt RPG Town (32x32)_237
+  - first:
+      213: 2664274330854019609
+    second: 2DRP CCArt RPG Town (32x32)_238
+  - first:
+      213: 637465614716096505
+    second: 2DRP CCArt RPG Town (32x32)_239
+  - first:
+      213: 5638255734354359425
+    second: 2DRP CCArt RPG Town (32x32)_240
+  - first:
+      213: 5406236647887714778
+    second: 2DRP CCArt RPG Town (32x32)_241
+  - first:
+      213: 4872127504268980135
+    second: 2DRP CCArt RPG Town (32x32)_242
+  - first:
+      213: -4600873941000771202
+    second: 2DRP CCArt RPG Town (32x32)_243
+  - first:
+      213: 614913929556064593
+    second: 2DRP CCArt RPG Town (32x32)_244
+  - first:
+      213: 3481369245976079032
+    second: 2DRP CCArt RPG Town (32x32)_245
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07819668a5e672550800000000000000
+      internalID: 6135994352396736624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca59c870f9ff31c0800000000000000
+      internalID: -4521620689642759482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e8be1aca2740f8c0800000000000000
+      internalID: -3967593022608197399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1abd17630c981ee30800000000000000
+      internalID: 4531054158751587233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0aa49f64f611df50800000000000000
+      internalID: 6904324942835526155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c58b2effb8c6340800000000000000
+      internalID: 4858412029162576974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b81ba8a66b7dfa60800000000000000
+      internalID: 7709453817974823094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da8c863b05a535be0800000000000000
+      internalID: -1489747749075629907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3e4aadeb6ae9cf0800000000000000
+      internalID: -243573991189191737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c49cf8ca9813481c0800000000000000
+      internalID: -4502419260088268468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5220a1033acd290800000000000000
+      internalID: -7864231422305622582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_11
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 905738993aa0c7260800000000000000
+      internalID: 7096558810600535305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1469e53a368e1e660800000000000000
+      internalID: 7413461976268838465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_13
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1bbda744e341d090800000000000000
+      internalID: -8011547614381229285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_14
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5d226a5ff334d720800000000000000
+      internalID: 2869976034367909210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_15
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74cdfc10b3c5eb680800000000000000
+      internalID: -8737444818548958137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1cb290ecfdd6d5e0800000000000000
+      internalID: -1885075315838764003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_17
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f4985d4eb40ff00800000000000000
+      internalID: 1148501351186648845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_18
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b300638bc587cb50800000000000000
+      internalID: 6613401686945825717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_19
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fc644ef472dca580800000000000000
+      internalID: -8814438970746966793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97aaba721f1ac7d90800000000000000
+      internalID: -7098620855517992327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_21
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248c2fdfd00b218e0800000000000000
+      internalID: -1724122133187868606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_22
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ec1db77324cbc850800000000000000
+      internalID: 6398423352221703396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_23
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b37db64271171c00800000000000000
+      internalID: 871184235430245300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_24
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd8ac1bf3cf7a860800000000000000
+      internalID: 7541273451551165875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_25
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bc857b09840b42a0800000000000000
+      internalID: -6752298229662643024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_26
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1807c3bcd1e5bd140800000000000000
+      internalID: 4745490114421747841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_27
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a0a1b4f062b3c2c0800000000000000
+      internalID: -4412487080401067870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d876c1f90f80b120800000000000000
+      internalID: 2427597472026491092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_29
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b71bb9fdd1872e30800000000000000
+      internalID: 4478691144820791221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_30
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc91feb4e99619b0800000000000000
+      internalID: -5109727519470150465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_31
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92fd189cda7146a90800000000000000
+      internalID: -7321701059020071127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_32
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62be8977161bd1b20800000000000000
+      internalID: 3106834350131964710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_33
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c959d66472c6f3640800000000000000
+      internalID: 5061883422128838044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_34
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c98547ba707edb0800000000000000
+      internalID: -4762829647948243909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_35
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c95a0765a637ce320800000000000000
+      internalID: 2588570786385143196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_36
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a39aff269263d6e0800000000000000
+      internalID: -1813997827710610522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_37
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e91368b46476c5a70800000000000000
+      internalID: 8817035722097045918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_38
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1188633041789dd40800000000000000
+      internalID: 5609663330889664529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_39
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1347fd6131484720800000000000000
+      internalID: 2830584046356480799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf4da4fb8e1adbae0800000000000000
+      internalID: -1531890277222263557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_41
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7449a991f57853560800000000000000
+      internalID: 7292884014117590087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_42
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a7020a2ec2e10f0800000000000000
+      internalID: -1144427903444813301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_43
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 939e1cf0fa3034b70800000000000000
+      internalID: 8881946940523276601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_44
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 134635c253d7f6c00800000000000000
+      internalID: 896072518200419377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_45
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 588a00b1a09923220800000000000000
+      internalID: 2464200214806833285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_46
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b13ba5b13421b330800000000000000
+      internalID: 3724798162732003762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_47
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15747cce9874eea20800000000000000
+      internalID: 3093488651758683985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_48
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96bb9b633eeb6a140800000000000000
+      internalID: 4730678341684280169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_49
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 751518e76b0fdfeb0800000000000000
+      internalID: -4684323370798329513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_50
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b933f3acf20a8dc20800000000000000
+      internalID: 3231508859755377563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_51
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f2dea9998ec42040800000000000000
+      internalID: 4622046207973184241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_52
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f4198b7e038b8540800000000000000
+      internalID: 5011243108605170933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_53
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6882d6855d789d120800000000000000
+      internalID: 2439130023579166854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_54
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d67d6f1f01bb996e0800000000000000
+      internalID: -1830226092096039059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_55
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 558708aeb560155a0800000000000000
+      internalID: -6534434592491800491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_56
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7387f4eb6b74d7850800000000000000
+      internalID: 6376331497628989495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_57
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e22d9dcc11337fab0800000000000000
+      internalID: -4974451111863135698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_58
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b218a19c2f581e70800000000000000
+      internalID: 9086116893246886584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_59
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f9136dfade0b0540800000000000000
+      internalID: 4975086547077634544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea1d06f2b0f6dfb70800000000000000
+      internalID: 8934419329603129774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_61
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34b4b4d10440fcdc0800000000000000
+      internalID: -3616667302339327165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_62
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb21307ecadc326f0800000000000000
+      internalID: -710498173700599108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_63
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9f3f79cf30f74b90800000000000000
+      internalID: -7257568117730099298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_64
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c08323923c242330800000000000000
+      internalID: 3685118990824472770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_65
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e243bfacbb19ce30800000000000000
+      internalID: 4524177797885936353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_66
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21de4ff4adcb2c040800000000000000
+      internalID: 4666499809739599122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_67
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17c202a4fea302560800000000000000
+      internalID: 7286888996500679793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_68
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444a682701b003420800000000000000
+      internalID: 2607596349516325956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_69
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ff274aaad0ba47f0800000000000000
+      internalID: -627494744858611722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_70
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1161d88f31d2042f0800000000000000
+      internalID: -990742354223884783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_71
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf6d6e9f2f7f016c0800000000000000
+      internalID: -4174564231625648388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_72
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de7a08d4887f5c480800000000000000
+      internalID: -8879418925503174675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_73
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74b76b921f5df3e0800000000000000
+      internalID: -2018352524470799233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_74
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df896636d827b82a0800000000000000
+      internalID: -6734162866218821379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_75
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9882dc2ff8b21a3a0800000000000000
+      internalID: -6655990877023033207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_76
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49dd096ee98860510800000000000000
+      internalID: 1515048540711214484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_77
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 863e6b4f83e13b900800000000000000
+      internalID: 698935597145187176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_78
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d1b768f1edd89a60800000000000000
+      internalID: 7681133127085306329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_79
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d8007b5977347c60800000000000000
+      internalID: 7814932247759292633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b15977b0adeb1150800000000000000
+      internalID: 5844526215972082098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_81
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d92b0a0b1be741b0800000000000000
+      internalID: -5672306704284702256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_82
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a4eff599625f460800000000000000
+      internalID: 7274763213269256723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_83
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cd50f81e69ccea40800000000000000
+      internalID: 5398911528012373440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_84
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 161e89757246994a0800000000000000
+      internalID: -6586122859916500639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_85
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7da7cc1a9aac4590800000000000000
+      internalID: -7688582884943745670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_86
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49554f33e9d4608a0800000000000000
+      internalID: -6339294083605572204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_87
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a0e6b8b1e2ba620800000000000000
+      internalID: 2786371490297023028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_88
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e9dea7d26c2aae80800000000000000
+      internalID: -8166666171245995545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_89
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62d4f4c3c43857f70800000000000000
+      internalID: 9184391378544577830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_90
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14f567c2f4f6e87a0800000000000000
+      internalID: -6373034036843618495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_91
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 599ede86d0e8dbbf0800000000000000
+      internalID: -306933011345184363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_92
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c228023b00dfb3040800000000000000
+      internalID: 4628571221500396076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_93
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb5f9255c34c2260800000000000000
+      internalID: 7074103629466000380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_94
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e3d9f2c16709ba0800000000000000
+      internalID: -6084233233147544044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_95
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243449079508cebc0800000000000000
+      internalID: -3752483267877256382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_96
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d040b1b31bcf42100800000000000000
+      internalID: 82468531330548749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_97
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8893b9fb9aa43d580800000000000000
+      internalID: -8803610753654638200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_98
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d7480926daf2670800000000000000
+      internalID: 8516216059223899548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_99
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e46052e53cb837310800000000000000
+      internalID: 1401617580256724558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ccc2c3e47d83650800000000000000
+      internalID: 6212952416974589082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_101
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 814e6d80e95092af0800000000000000
+      internalID: -420798913871158248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_102
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6211c55cb9c3da5a0800000000000000
+      internalID: -6508479246751755994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_103
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a700ae360be40d40800000000000000
+      internalID: 5549819052880299940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_104
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 552713117371e2950800000000000000
+      internalID: 6426099243583369813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_105
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bddfa9810878ed2b0800000000000000
+      internalID: -5557855905890239013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_106
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55ddec19df8f8610800000000000000
+      internalID: 1625676153160062300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_107
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa073516a54a48f20800000000000000
+      internalID: 3424042324795289770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_108
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e216565bea2706170800000000000000
+      internalID: 8169655818743275822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_109
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52d0caae2e191f9d0800000000000000
+      internalID: -2742250294306140891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_110
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6965904ba1fea3880800000000000000
+      internalID: -8630322837933435242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_111
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4635e6ff474916f00800000000000000
+      internalID: 1108330213532390244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_112
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a07873fc537506c90800000000000000
+      internalID: -7178641917407164662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_113
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2710d2b85fb9b7250800000000000000
+      internalID: 5943515612149776754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_114
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a21b59e7727b4a50800000000000000
+      internalID: 6506419946008548007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_115
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 375c46fdfec4729d0800000000000000
+      internalID: -2799184050258655885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_116
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c324c398b917ff30800000000000000
+      internalID: 4609181024180773824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_117
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c4e91b1dc6dc14a0800000000000000
+      internalID: -6621181175730150199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_118
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7a767a6e5b542910800000000000000
+      internalID: 1811673411180984959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_119
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75aa90e1e8877e320800000000000000
+      internalID: 2587169062732278359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d84f6ac9884aeed70800000000000000
+      internalID: 9074371205848822925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_121
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4afe41c4fb565150800000000000000
+      internalID: 5860973071842605642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_122
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb5c1c96692eced0800000000000000
+      internalID: -2391928831404647444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_123
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db7c2793fb6bd3690800000000000000
+      internalID: -7620734062022178883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_124
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b95680b0813ffb3a0800000000000000
+      internalID: -6647327240385698405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_125
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48dbd6bfce6f5f8d0800000000000000
+      internalID: -2813070894532018812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_126
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 938d76e866e49ad00800000000000000
+      internalID: 984404195939964985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_127
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0529660a71d858050800000000000000
+      internalID: 5802198827551593040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_128
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7edfaacf8a038c190800000000000000
+      internalID: -7942044440516166169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_129
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ff462f76ef125c0800000000000000
+      internalID: -4241829651604504677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_130
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 762163b02de501640800000000000000
+      internalID: 5048639438506562151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_131
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03f89d7156a90db50800000000000000
+      internalID: 6615957611589766960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_132
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f36a6881762562290800000000000000
+      internalID: -7915548692310481345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_133
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44a727e9bffd52270800000000000000
+      internalID: 8225226566250166852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_134
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe038d3a2e87fa7f0800000000000000
+      internalID: -599127310610190097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_135
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0188dd4f958a14ea0800000000000000
+      internalID: -5890241733310183408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_136
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8fc69456c409b7e0800000000000000
+      internalID: -1749361730387521652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_137
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55c2eb2cd25bf4c0800000000000000
+      internalID: -4252714317538736804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_138
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c1605acd56fe510800000000000000
+      internalID: 1580593992566185026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_139
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece95c3ff8e38a8d0800000000000000
+      internalID: -2834947177438667058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_140
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd11b90d0d23dbc0800000000000000
+      internalID: -3759611729903804929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_141
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62aa9064ee8b0ae30800000000000000
+      internalID: 4512810160142002726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_142
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2917474737e62d2f0800000000000000
+      internalID: -949575129267670638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_143
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438e595979697d9b0800000000000000
+      internalID: -5055406478906234828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_144
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baafb8058222cabd0800000000000000
+      internalID: -2617679726863713621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_145
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 461de67b1d9699330800000000000000
+      internalID: 3718119316817629540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_146
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 804fd6639a3647420800000000000000
+      internalID: 2626834061077640200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_147
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c2ea9d1acff6080800000000000000
+      internalID: -9191850542367888348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_148
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c451b11d2c6770c40800000000000000
+      internalID: 5478478050823443788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_149
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b79d6fb4cfcb75c0800000000000000
+      internalID: -4216548182170167375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_150
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb51047bcb786080800000000000000
+      internalID: -9193962525522043968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_151
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451a51dd4e295be90800000000000000
+      internalID: -7010535733272927916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_152
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c6cd3470951ba30800000000000000
+      internalID: 4229259412815768599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_153
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5984501f5770fd280800000000000000
+      internalID: -9016479725836220267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_154
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b93eeb0e23ee0690800000000000000
+      internalID: -7633914531438249544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_155
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e9b37dcb873ad260800000000000000
+      internalID: 7123066834226756071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_156
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14910b7f992bc72c0800000000000000
+      internalID: -4432471558884157119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_157
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d7c70404f31b2690800000000000000
+      internalID: -7625979605261236266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_158
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a138edc973041f20800000000000000
+      internalID: 3392340240997298594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_159
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e632802c61b6083f0800000000000000
+      internalID: -900602179985333394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_160
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1537331cd69674440800000000000000
+      internalID: 4920017038039282513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_161
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0487c9354e6abb90800000000000000
+      internalID: -7225341408561363957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_162
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09fe0288e345b63d0800000000000000
+      internalID: -3212381281650151536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_163
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a412ccf5289132e30800000000000000
+      internalID: 4477450502280061258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_164
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcb35aef6af566960800000000000000
+      internalID: 7594862992448371661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_165
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 885859e75f80b5f40800000000000000
+      internalID: 5718174002360714632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_166
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43307edad50e9e600800000000000000
+      internalID: 498175926755328820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_167
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a20ecc551c285360800000000000000
+      internalID: 7158520077968343713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_168
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3236caadd256ec9d0800000000000000
+      internalID: -2752151074660130013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_169
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72a3fd4a26018f810800000000000000
+      internalID: 1799206066993445415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_170
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 354870028d28302a0800000000000000
+      internalID: -6772425549873183661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_171
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1dd45a8af43a3050800000000000000
+      internalID: 5780991322350738715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_172
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 034d5ac0c2749cb60800000000000000
+      internalID: 7766817286893458480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_173
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4fe9e259ddca80c0800000000000000
+      internalID: -4572616138358657201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_174
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b212371ecbb64d130800000000000000
+      internalID: 3590613261901570347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_175
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 959cfa9be10e876d0800000000000000
+      internalID: -2992395529818748583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_176
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e5b9332f6a70a50800000000000000
+      internalID: 6487337347428605457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_177
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c8d00fc73c29610800000000000000
+      internalID: 1626577356804951116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_178
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b95ea038845e857b0800000000000000
+      internalID: -5235182467219266149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_179
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bb7eb22d8f260690800000000000000
+      internalID: -7636363834940294216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_180
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4fe4c6226ac6ce50800000000000000
+      internalID: 6829368407859982157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_181
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 408853298fdfe3270800000000000000
+      internalID: 8232296412926543876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_182
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582997c9e70031440800000000000000
+      internalID: 4905264962927694469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_183
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dece72ef4a01a6c0800000000000000
+      internalID: -4134011644730749225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_184
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2bd87396364bcc70800000000000000
+      internalID: 8992358281191676716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_185
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a63b85418eff7840800000000000000
+      internalID: 5224173923944052384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_186
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41916cf499b414100800000000000000
+      internalID: 90436589364582676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_187
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e49770b72a062a20800000000000000
+      internalID: 3037126164288607456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_188
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d8510a4390e664d0800000000000000
+      internalID: -3141576766837925677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_189
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d55a2ca7635295200800000000000000
+      internalID: 169207376921142621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_190
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3394130f56b70f0800000000000000
+      internalID: -1118188000177998867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_191
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19942e5056b12a850800000000000000
+      internalID: 6386697342269147537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_192
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 961f875003f350ab0800000000000000
+      internalID: -5042554732288609943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_193
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e2b8df2f26a16dc0800000000000000
+      internalID: -3647451501596986656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_194
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53957aa0821664820800000000000000
+      internalID: 2902113834492188981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_195
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5f5b168407726f0800000000000000
+      internalID: -709474960108292638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_196
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27b96f8a68ad667c0800000000000000
+      internalID: -4078332140642198670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_197
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ccd8ceba8b7f470800000000000000
+      internalID: 8428408276194806841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_198
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 752fb292ea6afe610800000000000000
+      internalID: 1652722855213527639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_199
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a12b3e95e1f7ff0800000000000000
+      internalID: -36276900574651817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_200
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f78fbd76717b07af0800000000000000
+      internalID: -400619055681374081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_201
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41549e6ea424886a0800000000000000
+      internalID: -6446829977111804652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_202
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0994d22049a887e60800000000000000
+      internalID: 7960264709673666960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_203
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8154b9547f0c1a810800000000000000
+      internalID: 1774911896417944856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_204
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fadccb28a136a8f50800000000000000
+      internalID: 6884423945902935471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_205
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed9da200022128600800000000000000
+      internalID: 468957239851014622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_206
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29ef30340b4663f30800000000000000
+      internalID: 4554938781333192338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_207
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6bf10e015b16cd40800000000000000
+      internalID: 5604196821250472814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_208
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df4562f765d646a90800000000000000
+      internalID: -7321606875929750275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_209
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033be628fe8cc8750800000000000000
+      internalID: 6308638109050254128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_210
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd37fe5dce5ceec0800000000000000
+      internalID: -3536347371238113794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_211
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77b4f3600a6fc6f30800000000000000
+      internalID: 4570298889034222455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_212
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ada9a89156373c520800000000000000
+      internalID: 2721145477919316698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_213
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a82c70e9aab0c7340800000000000000
+      internalID: 4862774525076947594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_214
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 519e3131824943d40800000000000000
+      internalID: 5563234339549079829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_215
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94e3e025b0f8219a0800000000000000
+      internalID: -6263786852934861239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_216
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3aba581f5d62ae30800000000000000
+      internalID: 4513290031776578110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_217
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77ff07a21266a21c0800000000000000
+      internalID: -4527694182735609993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_218
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e669c34112ae9480800000000000000
+      internalID: -8890490419347364123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_219
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8dad8abaaf8893e0800000000000000
+      internalID: -2046728067202830965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_220
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5964f4e408d183090800000000000000
+      internalID: -8054655496645294443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_221
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a6ac15317a8a51e0800000000000000
+      internalID: -2208300448444799324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_222
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faa0e984296647ae0800000000000000
+      internalID: -1552503193066403153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_223
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64c01ae39d6b6e90800000000000000
+      internalID: -7031405911154310035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_224
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13f7fd474e067b3c0800000000000000
+      internalID: -4343896781245939919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_225
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96989dc6bd86ec500800000000000000
+      internalID: 418387107025357161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_226
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0ac7f07149283030800000000000000
+      internalID: 3474572473561238029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_227
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d6192cecd88a8760800000000000000
+      internalID: 7460926215128946389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_228
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 234435c219c75bae0800000000000000
+      internalID: -1534183135094029262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_229
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac28fc37bc2e9a70800000000000000
+      internalID: 8835548684461026464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_230
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baaae71dc3107d6c0800000000000000
+      internalID: -4118821973482624341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_231
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d22b369620486e360800000000000000
+      internalID: 7198586200291258925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_232
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09b7a904b430f4860800000000000000
+      internalID: 7516229924845943696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_233
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27098b301575662b0800000000000000
+      internalID: -5591685881867497358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_234
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b0e772e45e130b30800000000000000
+      internalID: 4252275823093473461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_235
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0cc9c17d8ff4500800000000000000
+      internalID: 382798096131473661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_236
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 445d41e90eac37060800000000000000
+      internalID: 6950121716036457796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_237
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069c82a68e7744af0800000000000000
+      internalID: -413073425714067104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_238
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 912deb2536769f420800000000000000
+      internalID: 2664274330854019609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_239
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ffcda1699bb8d800800000000000000
+      internalID: 637465614716096505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_240
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1843007b7bb1f3e40800000000000000
+      internalID: 5638255734354359425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_241
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad9bb09769fc60b40800000000000000
+      internalID: 5406236647887714778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_242
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7afec58c6264d9340800000000000000
+      internalID: 4872127504268980135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_243
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e792c42f6896620c0800000000000000
+      internalID: -4600873941000771202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_244
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 159f0a206fc988800800000000000000
+      internalID: 614913929556064593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DRP CCArt RPG Town (32x32)_245
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8baaf5652ee405030800000000000000
+      internalID: 3481369245976079032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

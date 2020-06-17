@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public InventoryUI inventoryUI;
     public CharacterUI characterUI;
     private int speed = 6; 
+    private IInteractable interactable;
 
     private void Start()
     {
@@ -61,5 +62,28 @@ public class PlayerMovement : MonoBehaviour
         Vector2 screenPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         Vector2 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
         crosshair.transform.localPosition = worldPosition;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if(collision.gameObject.tag == "Loot")
+        {
+            Loot loot = collision.gameObject.GetComponent<LootInfo>().loot;
+            GetComponent<Inventory>().GiveItem(loot.id);
+            Destroy(collision.gameObject);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision){
+        if(collision.gameObject.tag == "NPC"){
+            interactable = collision.GetComponent<IInteractable>();
+            interactable.Interact();
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision){
+        if(collision.gameObject.tag == "NPC"){
+            interactable.StopInteract();
+            interactable = null;
+        }
     }
 }

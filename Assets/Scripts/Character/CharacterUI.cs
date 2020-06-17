@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CharacterUI : MonoBehaviour
 {
+    public UIItem mainhand;
+    public UIItem offhand;
     public UIItem headslot;
     public UIItem chestslot;
     public UIItem legslot;
