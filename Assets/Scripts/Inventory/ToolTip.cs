@@ -24,8 +24,8 @@ public class ToolTip : MonoBehaviour
                 statText += stat.Key.ToString() + ": " + stat.Value.ToString() + "\n";
             }
         }
-        string tooltip = string.Format("<b>{0}</b>\n{1}\n\n<b>{2}</b>",
-            loot.lootName, loot.description, statText);
+        string tooltip = string.Format("<b>{0}</b>\n{1}\n Type: {2}\n\n<b>{3}</b>",
+            loot.lootName, loot.description, loot.lootType, statText);
         tooltipText.text = tooltip;
         ShowTooltip();
     }

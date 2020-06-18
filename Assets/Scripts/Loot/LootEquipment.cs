@@ -19,6 +19,7 @@ public class LootEquipment : Loot
     private void InitEquip(Loot item){
         this.id = item.id;
         this.lootName = item.lootName;
+        this.lootWeight = item.lootWeight;
         this.description = item.description;
         this.sprite = item.sprite;
         this.stats = item.stats;

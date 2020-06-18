@@ -11,7 +11,6 @@ public class Inventory : MonoBehaviour
     private bool ring;
     private bool trinket;
 
-
     private void Start(){
         GiveItem(0);
         GiveItem(0);
@@ -19,8 +18,10 @@ public class Inventory : MonoBehaviour
         GiveItem(2);
         GiveItem(2);
         GiveItem(3);
-                GiveItem(2);
-
+        GiveItem(4);
+        GiveItem(5);
+        GiveItem(6);
+        GiveItem(7);
         equipment = new CharacterEquipment();
         ring = true;
         trinket = true;
@@ -32,14 +33,12 @@ public class Inventory : MonoBehaviour
         inventoryUI.AddNewItem(itemToAdd);
         characterItems.Add(itemToAdd);
     }
-
     public void GiveItem(string itemName)
     {
         Loot itemToAdd = ItemDB.Instance.GetItem(itemName);
         inventoryUI.AddNewItem(itemToAdd);
         characterItems.Add(itemToAdd);
     }
-
     public LootEquipment EquipItem(LootEquipment loot, int slot){
          switch(loot.equipmentType){
             case EquipmentType.head:
@@ -149,12 +148,10 @@ public class Inventory : MonoBehaviour
                 return null;
         }
     }
-
     public Loot CheckForItem(int id)
     {
         return characterItems.Find(item => item.id == id);
     }
-
     public void RemoveItem(int id)
     {
         Loot itemToRemove = CheckForItem(id);
