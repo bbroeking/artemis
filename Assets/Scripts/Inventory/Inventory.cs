@@ -13,6 +13,14 @@ public class Inventory : MonoBehaviour
 
 
     private void Start(){
+        GiveItem(0);
+        GiveItem(0);
+        GiveItem(1);
+        GiveItem(2);
+        GiveItem(2);
+        GiveItem(3);
+                GiveItem(2);
+
         equipment = new CharacterEquipment();
         ring = true;
         trinket = true;
@@ -32,101 +40,113 @@ public class Inventory : MonoBehaviour
         characterItems.Add(itemToAdd);
     }
 
-    public void EquipItem(LootEquipment loot){
-        switch(loot.equipmentType){
+    public LootEquipment EquipItem(LootEquipment loot, int slot){
+         switch(loot.equipmentType){
             case EquipmentType.head:
                 if (this.equipment.head == null){
                     this.equipment.head = loot;
-                    RemoveItem(loot.id);
+                    return null;
                 } else {
-                    GiveItem(this.equipment.head.id);
+                    LootEquipment wasEquipped = this.equipment.head;
                     this.equipment.head = loot;
-                    RemoveItem(loot.id);
+                    return wasEquipped;
                 }
-                characterUI.headslot.UpdateItem(this.equipment.head);
-                break;
             case EquipmentType.chest:
                 if (this.equipment.chest == null){
                     this.equipment.chest = loot;
-                    RemoveItem(loot.id);
+                    return null;
                 } else {
-                    GiveItem(this.equipment.chest.id);
+                    LootEquipment wasEquipped = this.equipment.chest;
                     this.equipment.chest = loot;
-                    RemoveItem(loot.id);
+                    return wasEquipped;
                 }
-                characterUI.chestslot.UpdateItem(this.equipment.chest);
-                break;
             case EquipmentType.legs:
                 if (this.equipment.legs == null){
                     this.equipment.legs = loot;
-                    RemoveItem(loot.id);
+                    return null;
                 } else {
-                    GiveItem(this.equipment.legs.id);
+                    LootEquipment wasEquipped = this.equipment.legs;
                     this.equipment.legs = loot;
-                    RemoveItem(loot.id);
+                    return wasEquipped;
                 }
-                characterUI.legslot.UpdateItem(this.equipment.legs);
-                break;
+            case EquipmentType.mainhand:
+                if (this.equipment.mainhand == null){
+                    this.equipment.mainhand = loot;
+                    return null;
+                } else {
+                    LootEquipment wasEquipped = this.equipment.mainhand;
+                    this.equipment.mainhand = loot;
+                    return wasEquipped;
+                }
+            case EquipmentType.offhand:
+                if (this.equipment.offhand == null){
+                    this.equipment.offhand = loot;
+                    return null;
+                } else {
+                    LootEquipment wasEquipped = this.equipment.offhand;
+                    this.equipment.offhand = loot;
+                    return wasEquipped;
+                }
             case EquipmentType.ring:
-                if (this.equipment.ring1 == null){
-                    this.equipment.ring1 = loot;
-                    RemoveItem(loot.id);
-                    ring = false;
-                } else if (this.equipment.ring2 == null){
-                    this.equipment.ring2 = loot;
-                    RemoveItem(loot.id);
-                    ring = true;
-                } 
-                else {
-                    if (ring){
-                        GiveItem(this.equipment.ring1.id);
+                if (slot == 0) 
+                {
+                    if (this.equipment.ring1 == null)
+                    {
                         this.equipment.ring1 = loot;
-                        RemoveItem(loot.id);
-                        ring = false;
-                    } else {
-                        GiveItem(this.equipment.ring2.id);
-                        this.equipment.ring2 = loot;
-                        RemoveItem(loot.id);
-                        ring = true;
+                        return null;
+                    } 
+                    else 
+                    {
+                        LootEquipment wasEquipped = this.equipment.ring1;
+                        this.equipment.ring1 = loot;
+                        return wasEquipped;
                     }
-                }
-                if (ring){
-                    characterUI.ringslot2.UpdateItem(this.equipment.ring2);
-                } else {
-                    characterUI.ringslot1.UpdateItem(this.equipment.ring1);
-                }
-                break;
-            case EquipmentType.trinket:
-                if (this.equipment.trinket1 == null){
-                    this.equipment.trinket1 = loot;
-                    RemoveItem(loot.id);
-                    trinket = false;
-                } else if (this.equipment.trinket2 == null){
-                    this.equipment.trinket2 = loot;
-                    RemoveItem(loot.id);
-                    trinket = true;
                 } 
-                else {
-                    if (ring){
-                        GiveItem(this.equipment.trinket1.id);
-                        this.equipment.trinket1 = loot;
-                        RemoveItem(loot.id);
-                        trinket = false;
-                    } else {
-                        GiveItem(this.equipment.trinket2.id);
-                        this.equipment.trinket2 = loot;
-                        RemoveItem(loot.id);
-                        trinket = true;
+                else 
+                {
+                    if (this.equipment.ring2 == null)
+                    {
+                        this.equipment.ring2 = loot;
+                        return null;
+                    } 
+                    else 
+                    {
+                        LootEquipment wasEquipped = this.equipment.ring2;
+                        this.equipment.ring2 = loot;
+                        return wasEquipped;
                     }
                 }
-                if (ring){
-                    characterUI.trinketslot2.UpdateItem(this.equipment.trinket2);
-                } else {
-                    characterUI.trinketslot1.UpdateItem(this.equipment.trinket1);
+            case EquipmentType.trinket:
+                if (slot == 0) 
+                {
+                    if (this.equipment.trinket1 == null)
+                    {
+                        this.equipment.trinket1 = loot;
+                        return null;
+                    } 
+                    else 
+                    {
+                        LootEquipment wasEquipped = this.equipment.trinket1;
+                        this.equipment.trinket1 = loot;
+                        return wasEquipped;
+                    }
+                } 
+                else 
+                {
+                    if (this.equipment.trinket2 == null)
+                    {
+                        this.equipment.trinket2 = loot;
+                        return null;
+                    } 
+                    else 
+                    {
+                        LootEquipment wasEquipped = this.equipment.trinket2;
+                        this.equipment.trinket2 = loot;
+                        return wasEquipped;
+                    }
                 }
-                break;
             default:
-                break;
+                return null;
         }
     }
 

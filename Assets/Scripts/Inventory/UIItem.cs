@@ -36,25 +36,124 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
 
     public void OnPointerClick(PointerEventData eventData)
     {
-       if(this.loot != null)
+        List<string> tags = eventData.pointerEnter.gameObject.GetComponent<Tags>()?.tags;
+        if(tags == null){
+            tags = new List<string>();
+        }
+        if(this.loot != null) // loot in the clicked spot
         {
-            if(this.loot.lootType == LootType.Equipment){
-                inventory.EquipItem((LootEquipment)this.loot);
-            }
-            else if(selectedItem.loot != null)
+            if(selectedItem.loot != null) // loot selected
             {
-                Loot clone = Loot.CreateLoot(selectedItem.loot);
-                selectedItem.UpdateItem(this.loot);
-                UpdateItem(clone);
+                if(this.loot.lootType == LootType.Equipment){
+                    LootEquipment lq = (LootEquipment) selectedItem.loot;
+                    if(tags.Contains("head")){
+                        inventory.equipment.head = lq;
+                    }
+                    if(tags.Contains("chest")){
+                        inventory.equipment.chest = lq;
+                    }
+                    if(tags.Contains("legs")){
+                        inventory.equipment.legs = lq;
+                    }
+                    if(tags.Contains("mainhand")){
+                        inventory.equipment.mainhand = lq;
+                    }
+                    if(tags.Contains("offhand")){
+                        inventory.equipment.offhand = lq;
+                    }
+                    if(tags.Contains("ring1")){
+                        inventory.equipment.ring1 = lq;
+                    }
+                    if(tags.Contains("ring2")){
+                        inventory.equipment.ring2 = lq;
+                    }
+                    if(tags.Contains("trinket1")){
+                        inventory.equipment.trinket1 = lq;
+                    }
+                    if(tags.Contains("trinket2")){
+                        inventory.equipment.trinket2 = lq;
+                    }
+                    LootEquipment eqclone =  LootEquipment.CreateLootEquipment(lq);
+                    selectedItem.UpdateItem(this.loot);
+                    UpdateItem(eqclone);
+                } else {
+                    Loot clone = Loot.CreateLoot(selectedItem.loot);
+                    selectedItem.UpdateItem(this.loot);
+                    UpdateItem(clone);
+                }
             } else
             {
+                if(this.loot.lootType == LootType.Equipment){
+                    LootEquipment lq = (LootEquipment) selectedItem.loot;
+                    if(tags.Contains("head")){
+                        inventory.equipment.head = null;
+                    }
+                    if(tags.Contains("chest")){
+                        inventory.equipment.chest = null;
+                    }
+                    if(tags.Contains("legs")){
+                        inventory.equipment.legs = null;
+                    }
+                    if(tags.Contains("mainhand")){
+                        inventory.equipment.mainhand = null;
+                    }
+                    if(tags.Contains("offhand")){
+                        inventory.equipment.offhand = null;
+                    }
+                    if(tags.Contains("ring1")){
+                        inventory.equipment.ring1 = null;
+                    }
+                    if(tags.Contains("ring2")){
+                        inventory.equipment.ring2 = null;
+                    }
+                    if(tags.Contains("trinket1")){
+                        inventory.equipment.trinket1 = null;
+                    }
+                    if(tags.Contains("trinket2")){
+                        inventory.equipment.trinket2 = null;
+                    }
+                }
                 selectedItem.UpdateItem(this.loot);
                 UpdateItem(null);
             }
-        } else if (selectedItem.loot != null)
+        } 
+        else if (selectedItem.loot != null)
         {
-            UpdateItem(selectedItem.loot);
-            selectedItem.UpdateItem(null);
+            if(selectedItem.loot.lootType == LootType.Equipment)
+            {
+                LootEquipment lq = (LootEquipment) selectedItem.loot;
+                if (eventData.pointerEnter.tag == "Untagged")
+                {
+                    UpdateItem(selectedItem.loot);
+                    selectedItem.UpdateItem(null);
+                }
+                else if (tags.Contains(lq.equipmentType.ToString()))
+                {
+                    if (tags.Contains("ring2")) 
+                    {
+                        LootEquipment wasEquipped = inventory.EquipItem(lq, 1);
+                        selectedItem.UpdateItem(wasEquipped);
+                        UpdateItem(lq);
+                    }
+                    else if (tags.Contains("trinket2"))
+                    {
+                        LootEquipment wasEquipped = inventory.EquipItem(lq, 1);
+                        selectedItem.UpdateItem(wasEquipped);
+                        UpdateItem(lq);
+                    }
+                    else 
+                    {
+                        LootEquipment wasEquipped = inventory.EquipItem(lq, 0);
+                        selectedItem.UpdateItem(wasEquipped);
+                        UpdateItem(lq);
+                    }
+                }
+            } 
+            else 
+            {
+                UpdateItem(selectedItem.loot);
+                selectedItem.UpdateItem(null);
+            }
         }
     }
 

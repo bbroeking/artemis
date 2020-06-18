@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class CharacterEquipment
 {
-    public Loot head;
-    public Loot chest;
-    public Loot legs;
-    public Loot ring1;
-    public Loot ring2;
-    public Loot trinket1;
-    public Loot trinket2;
+    public LootEquipment mainhand;
+    public LootEquipment offhand;
+    public LootEquipment head;
+    public LootEquipment chest;
+    public LootEquipment legs;
+    public LootEquipment ring1;
+    public LootEquipment ring2;
+    public LootEquipment trinket1;
+    public LootEquipment trinket2;
 
     public CharacterEquipment(){
         head = null;
