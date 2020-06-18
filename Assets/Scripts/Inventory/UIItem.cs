@@ -44,17 +44,23 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
         {
             if(selectedItem.loot != null) // loot selected
             {
-                if(this.loot.lootType == LootType.Equipment)
+                if(selectedItem.loot.lootType == LootType.Equipment)
                 {
-                    SetEquipment(tags);
-                    LootEquipment equipmentClone = LootEquipment.CreateLootEquipment((LootEquipment) selectedItem.loot);
-                    selectedItem.UpdateItem(this.loot);
-                    UpdateItem(equipmentClone);
+                    LootEquipment looteq = (LootEquipment)selectedItem.loot;
+                    LootEquipment thislooteq = (LootEquipment)this.loot;
+                    if (looteq.equipmentType == thislooteq.equipmentType){
+                        SetEquipment(tags, looteq);
+                        LootEquipment equipmentClone = LootEquipment.CreateLootEquipment((LootEquipment) selectedItem.loot);
+                        selectedItem.UpdateItem(this.loot);
+                        UpdateItem(equipmentClone);
+                    }
                 }
                 else {
-                    Loot clone = Loot.CreateLoot(selectedItem.loot);
-                    selectedItem.UpdateItem(this.loot);
-                    UpdateItem(clone);
+                    if(!tags.Contains("equipment")){
+                        Loot clone = Loot.CreateLoot(selectedItem.loot);
+                        selectedItem.UpdateItem(this.loot);
+                        UpdateItem(clone);
+                    }
                 }
             } else
             {
@@ -74,8 +80,10 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
             }
             else 
             {
-                UpdateItem(selectedItem.loot);
-                selectedItem.UpdateItem(null);
+                if(!tags.Contains("equipment")){
+                    UpdateItem(selectedItem.loot);
+                    selectedItem.UpdateItem(null);
+                }
             }
         }
     }
@@ -111,9 +119,8 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
         }
     }
 
-    private void SetEquipment(List<string> tags)
+    private void SetEquipment(List<string> tags, LootEquipment looteq)
     {
-        LootEquipment looteq = (LootEquipment)selectedItem.loot;
         if (tags.Contains("head"))
         {
             inventory.equipment.head = looteq;
