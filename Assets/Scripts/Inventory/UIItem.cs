@@ -20,7 +20,6 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
         inventory = GameObject.FindGameObjectWithTag("player").GetComponent<Inventory>();
         UpdateItem(null);
     }
-
     public void UpdateItem(Loot loot)
     {
         this.loot = loot;
@@ -33,7 +32,6 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
             spriteImage.color = Color.clear;
         }
     }
-
     public void OnPointerClick(PointerEventData eventData)
     {
         List<string> tags = eventData.pointerEnter.gameObject.GetComponent<Tags>()?.tags;
@@ -87,7 +85,6 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
             }
         }
     }
-
     private void NewEquip(PointerEventData eventData, List<string> tags)
     {
         LootEquipment looteq = (LootEquipment)selectedItem.loot;
@@ -118,7 +115,6 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
             }
         }
     }
-
     private void SetEquipment(List<string> tags, LootEquipment looteq)
     {
         if (tags.Contains("head"))
@@ -158,7 +154,6 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
             inventory.equipment.trinket2 = looteq;
         }
     }
-
     private void ClearEquipment(List<string> tags)
     {
         if (tags.Contains("head"))
@@ -198,7 +193,6 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
             inventory.equipment.trinket2 = null;
         }
     }
-
     public void OnPointerEnter(PointerEventData eventData)
     {
         if(this.loot != null)
@@ -206,11 +200,8 @@ public class UIItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,
             tooltip.GenerateTooltip(this.loot);
         }
     }
-
     public void OnPointerExit(PointerEventData eventData)
     {
         tooltip.HideTooltip();
     }
-
-
 }

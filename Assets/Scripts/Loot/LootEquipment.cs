@@ -11,7 +11,7 @@ public enum EquipmentType {
     mainhand,
     offhand
 }
-[UnityEditor.InitializeOnLoad]
+
 [CreateAssetMenu(fileName = "New Equipment Loot", menuName = "Equipment Loot")]
 public class LootEquipment : Loot
 {

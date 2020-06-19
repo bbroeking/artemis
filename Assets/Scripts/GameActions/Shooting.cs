@@ -10,13 +10,23 @@ public class Shooting : MonoBehaviour
     public GameObject gravityBullet;
     public Collider2D playerCollider;
 
+    public Transform attackPos;
+    public LayerMask whatIsEnemy;
+    public float attackRange;
+    public float internalAttackCooldown;
+    private float timeBetweenAttack;
     public float bulletForce = 200f;
     // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Melee();
+            if(timeBetweenAttack <= 0){
+                Melee();
+                timeBetweenAttack = internalAttackCooldown;
+            } else {
+                timeBetweenAttack -= Time.deltaTime;
+            }
         }
         if (Input.GetButtonDown("Fire2"))
         {
@@ -25,7 +35,16 @@ public class Shooting : MonoBehaviour
     }
 
     void Melee(){
+        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);
+        for (int i = 0; i < enemiesToDamage.Length; i++)
+        {
+            enemiesToDamage[i].GetComponent<Enemy>().Hit();
+        }
+    }
 
+    void OnDrawGizmosSelected(){
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
     void Cast(GameObject b, Transform firePoint)
     {

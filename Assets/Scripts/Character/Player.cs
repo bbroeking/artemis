@@ -24,7 +24,6 @@ public class Player : Character
     private void Start()
     {
         Cursor.visible = false;
-        CalculateStats();
     }
     void Update()
     {
@@ -50,7 +49,12 @@ public class Player : Character
     void Move(Vector3 movement)
     {
         rb.velocity = new Vector2(movement.x * speed, movement.y * speed);
-//        this.PrintStats();
+        // if(movement.x > 0){
+        //     Dictionary<string, dynamic> characterStats = base.GetCharacterStats();
+        //     foreach(KeyValuePair<string, dynamic> stat in characterStats){
+        //         Debug.Log(stat.Key + ": " + stat.Value);
+        //     }
+        // }
     }
     private void HandleHealth()
     {
@@ -119,6 +123,11 @@ public class Player : Character
         this.dexterity = dexterity;
         this.intellect = intellect;
         this.vitality = vitality;
-        
+        UpdateModifiers();
+    }
+
+    private void UpdateModifiers(){
+        base.CalculateBaseHealth();
+        base.CalculateInteralAttackCD();
     }
 }

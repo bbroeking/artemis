@@ -18,7 +18,7 @@ public class Inventory : MonoBehaviour
         GiveItem(4);
         GiveItem(5);
         GiveItem(6);
-        //GiveItem(7); break for some reason
+        GiveItem(7);
     }
 
     public void GiveItem(int id)
@@ -26,7 +26,6 @@ public class Inventory : MonoBehaviour
         Loot genericItem = ItemDB.Instance.GetItem(id);
         Loot generatedItem;
         if(genericItem.lootType == LootType.Equipment){
-            Debug.Log("herer");
             generatedItem = ((LootEquipment) genericItem).GenerateItem();
         } else {
             generatedItem = genericItem.GenerateItem();
@@ -36,9 +35,15 @@ public class Inventory : MonoBehaviour
     }
     public void GiveItem(string itemName)
     {
-        Loot itemToAdd = ItemDB.Instance.GetItem(itemName);
-        inventoryUI.AddNewItem(itemToAdd);
-        characterItems.Add(itemToAdd);
+        Loot genericItem = ItemDB.Instance.GetItem(itemName);
+        Loot generatedItem;
+        if(genericItem.lootType == LootType.Equipment){
+            generatedItem = ((LootEquipment) genericItem).GenerateItem();
+        } else {
+            generatedItem = genericItem.GenerateItem();
+        }
+        inventoryUI.AddNewItem(generatedItem);
+        characterItems.Add(generatedItem);
     }
     public LootEquipment EquipItem(LootEquipment loot, int slot){
          switch(loot.equipmentType){
