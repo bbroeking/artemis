@@ -16,15 +16,18 @@ public class Shooting : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Shoot(sniperBullet, primary);
+            Melee();
         }
         if (Input.GetButtonDown("Fire2"))
         {
-            Shoot(gravityBullet, secondary);
+            Cast(gravityBullet, secondary);
         }
     }
 
-    void Shoot(GameObject b, Transform firePoint)
+    void Melee(){
+
+    }
+    void Cast(GameObject b, Transform firePoint)
     {
         GameObject bullet = Instantiate(b, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();

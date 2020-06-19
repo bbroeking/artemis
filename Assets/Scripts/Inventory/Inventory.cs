@@ -6,12 +6,9 @@ public class Inventory : MonoBehaviour
 {
     public InventoryUI inventoryUI;
     public CharacterUI characterUI;
-    public CharacterEquipment equipment;
+    public CharacterEquipment equipment = new CharacterEquipment();
     public List<Loot> characterItems = new List<Loot>();
-    private bool ring;
-    private bool trinket;
-
-    private void Start(){
+    private void Awake(){
         GiveItem(0);
         GiveItem(0);
         GiveItem(1);
@@ -22,9 +19,6 @@ public class Inventory : MonoBehaviour
         GiveItem(5);
         GiveItem(6);
         GiveItem(7);
-        equipment = new CharacterEquipment();
-        ring = true;
-        trinket = true;
     }
 
     public void GiveItem(int id)

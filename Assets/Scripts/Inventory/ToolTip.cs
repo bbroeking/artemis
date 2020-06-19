@@ -17,13 +17,17 @@ public class ToolTip : MonoBehaviour
     public void GenerateTooltip(Loot loot)
     {
         string statText = "";
-        if(loot.stats != null && loot.stats.Count > 0)
-        {
-            foreach(var stat in loot.stats)
+        LootEquipment eq = loot as LootEquipment;
+        if (eq != null){
+            if(eq.stats != null && eq.stats.Count > 0)
             {
-                statText += stat.Key.ToString() + ": " + stat.Value.ToString() + "\n";
+                foreach(var stat in eq.stats)
+                {
+                    statText += stat.Key.ToString() + ": " + stat.Value.ToString() + "\n";
+                }
             }
         }
+        
         string tooltip = string.Format("<b>{0}</b>\n{1}\n Type: {2}\n\n<b>{3}</b>",
             loot.lootName, loot.description, loot.lootType, statText);
         tooltipText.text = tooltip;
