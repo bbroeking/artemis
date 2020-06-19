@@ -18,14 +18,21 @@ public class Inventory : MonoBehaviour
         GiveItem(4);
         GiveItem(5);
         GiveItem(6);
-        GiveItem(7);
+        //GiveItem(7); break for some reason
     }
 
     public void GiveItem(int id)
     {
-        Loot itemToAdd = ItemDB.Instance.GetItem(id);
-        inventoryUI.AddNewItem(itemToAdd);
-        characterItems.Add(itemToAdd);
+        Loot genericItem = ItemDB.Instance.GetItem(id);
+        Loot generatedItem;
+        if(genericItem.lootType == LootType.Equipment){
+            Debug.Log("herer");
+            generatedItem = ((LootEquipment) genericItem).GenerateItem();
+        } else {
+            generatedItem = genericItem.GenerateItem();
+        }
+        inventoryUI.AddNewItem(generatedItem);
+        characterItems.Add(generatedItem);
     }
     public void GiveItem(string itemName)
     {

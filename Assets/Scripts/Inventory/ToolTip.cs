@@ -20,10 +20,12 @@ public class ToolTip : MonoBehaviour
         LootEquipment eq = loot as LootEquipment;
         if (eq != null){
             if(eq.stats != null && eq.stats.Count > 0)
+            Debug.Log("there are stats");
             {
                 foreach(var stat in eq.stats)
                 {
                     statText += stat.Key.ToString() + ": " + stat.Value.ToString() + "\n";
+                    Debug.Log(statText);
                 }
             }
         }

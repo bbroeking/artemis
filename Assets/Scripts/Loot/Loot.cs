@@ -15,16 +15,19 @@ public class Loot : ScriptableObject
     public Sprite sprite;
     public int weight;
     public LootType lootType;
+    public Dictionary<string, int> stats = new  Dictionary<string, int>();
+
 
     public virtual Loot GenerateItem(){
         return this;
     }
-    private void Init(int id, string lootName, int lootWeight, string description, Sprite sprite, int weight, LootType lootType){
+    private void Init(int id, string lootName, int lootWeight, string description, Dictionary<string, int> stats, Sprite sprite, int weight, LootType lootType){
         this.id = id;
         this.lootName = lootName;
         this.lootWeight = lootWeight;
         this.description = description;
         this.sprite = sprite;
+        this.stats = stats;
         this.weight = weight;
         this.lootType = lootType;
     }
@@ -35,13 +38,14 @@ public class Loot : ScriptableObject
         this.lootWeight = item.lootWeight;
         this.description = item.description;
         this.sprite = item.sprite;
+        this.stats = item.stats;
         this.weight = item.weight;
         this.lootType = item.lootType;
     }
-    public static Loot CreateLoot(int id, string lootName, int lootWeight, string description, Sprite sprite, int weight, LootType lootType){
+    public static Loot CreateLoot(int id, string lootName, int lootWeight, string description, Dictionary<string, int> stats, Sprite sprite, int weight, LootType lootType){
         Loot loot = ScriptableObject.CreateInstance<Loot>();
 
-        loot.Init(id, lootName, lootWeight, description, sprite, weight, lootType);
+        loot.Init(id, lootName, lootWeight, description, stats, sprite, weight, lootType);
 
         return loot;
     }

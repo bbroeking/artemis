@@ -16,17 +16,18 @@ public enum EquipmentType {
 public class LootEquipment : Loot
 {
     public EquipmentType equipmentType;
-    public List<string> _keys = new List<string>{
+    public IEnumerable<string> _keys = new List<string>{
         "strength",
         "dexterity",
         "intellect",
         "vitality"
     };
-    public List<int> _values;
-    public Dictionary<string, int> stats = new  Dictionary<string, int>();
-
+    public List<int> _values = new List<int>();
     public override Loot GenerateItem(){
         LootEquipment equip = Instantiate(this);
+        for(int i = 0; i < _keys.ToList().Count; i++){
+            _values.Add(Random.Range(0, 5));
+        }
         equip.stats = _keys.Zip(_values, (key, value) => new { key, value}).ToDictionary(x => x.key, x => x.value);
         return equip;
     }
