@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8030960686836833952}
   - component: {fileID: 8030960686836833953}
   - component: {fileID: 1123408497928055539}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: gravityCast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,12 +98,12 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &8030960686836833953
 BoxCollider2D:

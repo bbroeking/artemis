@@ -32,7 +32,14 @@ public class Combat : MonoBehaviour
         }
         if (Input.GetButtonDown("Fire2"))
         {
-            Cast(gravitySoul, castPos);
+            if(this.GetComponent<Player>().GetActiveSoul() == Soul.gravity){
+                Cast(gravitySoul, castPos);
+            }
+            else if(this.GetComponent<Player>().GetActiveSoul() == Soul.poison){
+                Cast(poisonNova, castPos);
+            }
+
+           
             this.GetComponent<Player>().UseEssence(1);
         }
     }
@@ -47,7 +54,7 @@ public class Combat : MonoBehaviour
 
     public void UseSoulAbility(Soul activeSoul){
         if (activeSoul == Soul.poison){
-            spellbook.CastPoisonNova(poisonNova, castPos.transform, playerCollider, 10f);
+            spellbook.CastPoisonNova(poisonNova, castPos.transform, playerCollider);
         }
     }
 
@@ -65,6 +72,6 @@ public class Combat : MonoBehaviour
         Vector2 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
         Vector2 lookDir = worldPosition - rb.position;
 
-        rb.AddForce(lookDir * spellForce, ForceMode2D.Impulse);
+        rb.AddForce(lookDir.normalized * spellForce, ForceMode2D.Impulse);
     }
 }

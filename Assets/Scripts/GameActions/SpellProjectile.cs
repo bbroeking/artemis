@@ -13,6 +13,9 @@ public class SpellProjectile : MonoBehaviour
                 enemy.Hit();
             }
         }
+        else if (collision.gameObject.tag == "projectile"){
+            Debug.Log("Ignore Projectile Collision");
+        }
         else{
             Destroy(gameObject);
         }

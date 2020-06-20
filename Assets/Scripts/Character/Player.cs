@@ -109,7 +109,6 @@ public class Player : Character
             this.activeEssence.SetEssence(this.poisonEssence);
         }
     }
-
     public void SwapActiveSoul(){
         Soul tempSoul = activeSoul;
         activeSoul = inactiveSoul;
@@ -118,7 +117,6 @@ public class Player : Character
         activeEssence = inactiveEssence;
         inactiveEssence = temp;
     }
-
     void Aim()
     {
         Vector2 screenPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
@@ -147,7 +145,6 @@ public class Player : Character
             interactable = null;
         }
     }
-
     private void CalculateStats(){
         int strength = 0;
         int dexterity = 0;
@@ -183,14 +180,15 @@ public class Player : Character
         this.vitality = vitality;
         UpdateModifiers();
     }
-
     private void CalculateEssence(){
         this.maxEssence = 5 + this.intellect;
     }
-
     private void UpdateModifiers(){
         base.CalculateBaseHealth();
         base.CalculateInteralAttackCD();
         CalculateEssence();
+    }
+    public Soul GetActiveSoul(){
+        return this.activeSoul;
     }
 }
