@@ -49,6 +49,7 @@ public class Player : Character
     {
         Cursor.visible = false;
         activeSoul = Soul.gravity;
+        inactiveSoul = Soul.poison;
         CalculateStats();
         activeEssence.SetMaxEssence(this.maxEssence);
         inactiveEssence.SetMaxEssence(this.maxEssence);
@@ -111,6 +112,8 @@ public class Player : Character
             this.activeEssence.SetEssence(this.gravityEssence);
         }
         else if (activeSoul == Soul.poison){
+            Debug.Log(this.gravityEssence);
+            Debug.Log(this.poisonEssence);
             this.poisonEssence -= essence;
             this.activeEssence.SetEssence(this.poisonEssence);
         }
@@ -120,6 +123,9 @@ public class Player : Character
         Soul tempSoul = activeSoul;
         activeSoul = inactiveSoul;
         inactiveSoul = tempSoul;
+        EssenceBar temp = activeEssence;
+        activeEssence = inactiveEssence;
+        inactiveEssence = temp;
     }
 
     void Aim()
