@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5219676574206256825}
   - component: {fileID: 8547637292466635390}
   - component: {fileID: 7778941499288865495}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ClosedRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -720,7 +720,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6264074365679579901}
   - component: {fileID: 7533661782214739256}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ClosedRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -3,27 +3,57 @@ using System.Collections.Generic;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 
+public enum Soul {
+    gravity,
+    poison
+}
 public class Player : Character
 {
     [SerializeField]
     private Rigidbody2D rb;
+
     [SerializeField]
     private Animator anim;
-    [SerializeField]
-    private HealthBar healthbar;
+    
     [SerializeField]
     private GameObject crosshair;
+
     [SerializeField]
     private InventoryUI inventoryUI;
+
     [SerializeField]
     private CharacterUI characterUI;
+
     [SerializeField]
     private Inventory inventory;
     private IInteractable interactable;
 
+    [SerializeField]
+    private HealthBar healthbar;
+    
+    [SerializeField]
+    private EssenceBar activeEssence;
+    
+    [SerializeField]
+    private EssenceBar inactiveEssence;
+    private int gravityEssence;
+    private int poisonEssence;
+    private Soul activeSoul;
+    private Soul inactiveSoul;
+    [SerializeField]
+    private Spellbook spellbook;
+    private int maxEssence;
+
+
     private void Start()
     {
         Cursor.visible = false;
+        activeSoul = Soul.gravity;
+        CalculateStats();
+        activeEssence.SetMaxEssence(this.maxEssence);
+        inactiveEssence.SetMaxEssence(this.maxEssence);
+        this.gravityEssence = this.maxEssence;
+        this.poisonEssence = this.maxEssence;
     }
     void Update()
     {
@@ -44,6 +74,14 @@ public class Player : Character
         {
             characterUI.ToggleCharacter();
         }
+        if (Input.GetKeyDown("e"))
+        {
+            SwapActiveSoul();
+        }
+        if (Input.GetKeyDown("q"))
+        {
+            UseSoulAbility();
+        }
 
     }
     void Move(Vector3 movement)
@@ -56,11 +94,34 @@ public class Player : Character
         //     }
         // }
     }
-    private void HandleHealth()
+    private void TakeDamage(int damage)
     {
-        PermanentUI.perm.health -= 1;
-        healthbar.SetHealth(PermanentUI.perm.health);
+        this.health -= damage;
+        healthbar.SetHealth(this.health);
     }
+
+    public void UseSoulAbility(){
+        if (activeSoul == Soul.poison){
+            spellbook.poisonNova();
+        }
+    }
+    public void UseEssence(int essence){
+        if(activeSoul == Soul.gravity){
+            this.gravityEssence -= essence;
+            this.activeEssence.SetEssence(this.gravityEssence);
+        }
+        else if (activeSoul == Soul.poison){
+            this.poisonEssence -= essence;
+            this.activeEssence.SetEssence(this.poisonEssence);
+        }
+    }
+
+    public void SwapActiveSoul(){
+        Soul tempSoul = activeSoul;
+        activeSoul = inactiveSoul;
+        inactiveSoul = tempSoul;
+    }
+
     void Aim()
     {
         Vector2 screenPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
@@ -126,8 +187,13 @@ public class Player : Character
         UpdateModifiers();
     }
 
+    private void CalculateEssence(){
+        this.maxEssence = 5 + this.intellect;
+    }
+
     private void UpdateModifiers(){
         base.CalculateBaseHealth();
         base.CalculateInteralAttackCD();
+        CalculateEssence();
     }
 }

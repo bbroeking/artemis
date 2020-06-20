@@ -2,21 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shooting : MonoBehaviour
+public class Combat : MonoBehaviour
 {
-    public Transform primary;
-    public Transform secondary;
-    public GameObject sniperBullet;
-    public GameObject gravityBullet;
-    public Collider2D playerCollider;
-
     public Transform attackPos;
+    public Transform castPos;
+    public GameObject gravitySoul;
+    public Collider2D playerCollider;
     public LayerMask whatIsEnemy;
     public float attackRange;
     public float internalAttackCooldown;
+    public float spellForce;
     private float timeBetweenAttack;
-    public float bulletForce = 200f;
-    // Update is called once per frame
+
+
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))
@@ -30,7 +28,8 @@ public class Shooting : MonoBehaviour
         }
         if (Input.GetButtonDown("Fire2"))
         {
-            Cast(gravityBullet, secondary);
+            Cast(gravitySoul, castPos);
+            this.GetComponent<Player>().UseEssence(1);
         }
     }
 
@@ -48,14 +47,14 @@ public class Shooting : MonoBehaviour
     }
     void Cast(GameObject b, Transform firePoint)
     {
-        GameObject bullet = Instantiate(b, firePoint.position, firePoint.rotation);
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        Physics2D.IgnoreCollision(bullet.GetComponent<Collider2D>(), playerCollider);
+        GameObject spell = Instantiate(b, firePoint.position, firePoint.rotation);
+        Rigidbody2D rb = spell.GetComponent<Rigidbody2D>();
+        Physics2D.IgnoreCollision(spell.GetComponent<Collider2D>(), playerCollider);
 
         Vector2 screenPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         Vector2 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
         Vector2 lookDir = worldPosition - rb.position;
 
-        rb.AddForce(lookDir * bulletForce, ForceMode2D.Impulse);
+        rb.AddForce(lookDir * spellForce, ForceMode2D.Impulse);
     }
 }
