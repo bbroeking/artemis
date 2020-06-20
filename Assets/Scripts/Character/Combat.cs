@@ -13,6 +13,10 @@ public class Combat : MonoBehaviour
     public float internalAttackCooldown;
     public float spellForce;
     private float timeBetweenAttack;
+    [SerializeField]
+    private GameObject poisonNova;
+    [SerializeField]
+    private Spellbook spellbook;
 
 
     void Update()
@@ -38,6 +42,12 @@ public class Combat : MonoBehaviour
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
             enemiesToDamage[i].GetComponent<Enemy>().Hit();
+        }
+    }
+
+    public void UseSoulAbility(Soul activeSoul){
+        if (activeSoul == Soul.poison){
+            spellbook.CastPoisonNova(poisonNova, castPos.transform, playerCollider, 10f);
         }
     }
 

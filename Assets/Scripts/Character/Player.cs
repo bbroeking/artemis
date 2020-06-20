@@ -44,7 +44,6 @@ public class Player : Character
     private Spellbook spellbook;
     private int maxEssence;
 
-
     private void Start()
     {
         Cursor.visible = false;
@@ -81,7 +80,7 @@ public class Player : Character
         }
         if (Input.GetKeyDown("q"))
         {
-            UseSoulAbility();
+            this.GetComponent<Combat>().UseSoulAbility(activeSoul);
         }
 
     }
@@ -100,20 +99,12 @@ public class Player : Character
         this.health -= damage;
         healthbar.SetHealth(this.health);
     }
-
-    public void UseSoulAbility(){
-        if (activeSoul == Soul.poison){
-            spellbook.poisonNova();
-        }
-    }
     public void UseEssence(int essence){
         if(activeSoul == Soul.gravity){
             this.gravityEssence -= essence;
             this.activeEssence.SetEssence(this.gravityEssence);
         }
         else if (activeSoul == Soul.poison){
-            Debug.Log(this.gravityEssence);
-            Debug.Log(this.poisonEssence);
             this.poisonEssence -= essence;
             this.activeEssence.SetEssence(this.poisonEssence);
         }
