@@ -77,7 +77,7 @@ public class Player : Character
 
         if (Input.GetKeyDown("i"))
         {
-            inventoryUI.ToggleInventory();
+            inventoryUI.Toggle();
         }
         if (Input.GetKeyDown("c"))
         {

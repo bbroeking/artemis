@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterUI : MonoBehaviour
+public class CharacterUI : TogglePanel
 {
     public UIItem mainhand;
     public UIItem offhand;
@@ -14,15 +14,10 @@ public class CharacterUI : MonoBehaviour
     public UIItem trinketslot1;
     public UIItem trinketslot2;
     public Inventory inventory;
-    private CanvasGroup cvg;
-    private bool active;
 
-
-    void Awake(){
+    public override void Awake(){
+        base.Awake();
         inventory = GameObject.FindGameObjectWithTag("player").GetComponent<Inventory>();
-        cvg = gameObject.GetComponent<CanvasGroup>();
-        HideCharacter();
-        active = false;
     }
     public void ToggleCharacter(){
         if(active){
@@ -34,11 +29,11 @@ public class CharacterUI : MonoBehaviour
         }
     }
     public void ShowCharacter(){
-        cvg.alpha = 1;
-        cvg.blocksRaycasts = true;
+        canvasGroup.alpha = 1;
+        canvasGroup.blocksRaycasts = true;
     }
     public void HideCharacter(){
-        cvg.alpha = 0;
-        cvg.blocksRaycasts = false;
+        canvasGroup.alpha = 0;
+        canvasGroup.blocksRaycasts = false;
     }
 }
