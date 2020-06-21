@@ -13,14 +13,17 @@ public class GenerateShop : MonoBehaviour
     public List<UIItem> UIItems = new List<UIItem>();
     public GameObject slotPrefab;
     public Transform slotPanel;
+    public GameObject shopPanel;
+    private bool active;
 
-    void Awake(){
+    public void GenerateShopForShopkeeper(List<Loot> shopkeeperInventory){
+        shopInventory = shopkeeperInventory;
+        Instantiate(shopPanel);
         for (int i = 0; i < shopInventory.Count; i++)
         {
             CreateLootButton(shopInventory[i], i);
         }
-        //shopTemplate.gameObject.SetActive(false);
-    } 
+    }
 
     private void CreateLootButton(Loot loot, int position){
         GameObject instance = Instantiate(slotPrefab);
@@ -30,4 +33,5 @@ public class GenerateShop : MonoBehaviour
         instance.GetComponentInChildren<UIItem>().UpdateItem(loot);
         instance.GetComponentInChildren<TextMeshProUGUI>().SetText(loot.cost.ToString());
     }
+    
 }

@@ -8,7 +8,7 @@ public class InventoryUI : MonoBehaviour
     public GameObject slotPrefab;
     public Transform slotPanel;
     public int numberOfSlots = 40;
-    public CanvasGroup cvg;
+    public CanvasGroup canvasGroup;
     public bool active;
     [SerializeField]
     private Player player;
@@ -27,7 +27,7 @@ public class InventoryUI : MonoBehaviour
             instance.transform.SetParent(slotPanel);
             UIItems.Add(instance.GetComponentInChildren<UIItem>());
         }
-        cvg = gameObject.GetComponent<CanvasGroup>();
+        canvasGroup = gameObject.GetComponent<CanvasGroup>();
         HideInventory();
         active = true;
     }
@@ -48,12 +48,12 @@ public class InventoryUI : MonoBehaviour
         }
     }
     public void ShowInventory(){
-        cvg.alpha = 1;
-        cvg.blocksRaycasts = true;
+        canvasGroup.alpha = 1;
+        canvasGroup.blocksRaycasts = true;
     }
     public void HideInventory(){
-        cvg.alpha = 0;
-        cvg.blocksRaycasts = false;
+        canvasGroup.alpha = 0;
+        canvasGroup.blocksRaycasts = false;
     }
     public void UpdateSlot(int slot, Loot loot)
     {

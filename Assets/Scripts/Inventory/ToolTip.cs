@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class ToolTip : MonoBehaviour
 {
     private Text tooltipText;
-    private CanvasGroup cvg;
+    private CanvasGroup canvasGroup;
     void Start()
     {
         tooltipText = GetComponentInChildren<Text>();
-        cvg = gameObject.GetComponent<CanvasGroup>();
+        canvasGroup = gameObject.GetComponent<CanvasGroup>();
         HideTooltip();
     }
 
@@ -38,11 +38,11 @@ public class ToolTip : MonoBehaviour
     }
 
     public void ShowTooltip(){
-        cvg.alpha = 1;
-        cvg.blocksRaycasts = true;
+        canvasGroup.alpha = 1;
+        canvasGroup.blocksRaycasts = true;
     }
     public void HideTooltip(){
-        cvg.alpha = 0;
-        cvg.blocksRaycasts = false;
+        canvasGroup.alpha = 0;
+        canvasGroup.blocksRaycasts = false;
     }
 }
