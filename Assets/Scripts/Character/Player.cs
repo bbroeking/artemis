@@ -41,7 +41,6 @@ public class Player : Character
     public int spellDamage;
     private Soul activeSoul;
     private Soul inactiveSoul;
-    [SerializeField]
     private Spellbook spellbook;
     private int maxEssence;
     [SerializeField]
@@ -51,6 +50,8 @@ public class Player : Character
     private int weight;
     private void Start()
     {
+        spellbook = GetComponent<Spellbook>();
+        inventory = GetComponent<Inventory>();
         Cursor.visible = false;
         activeSoul = Soul.gravity;
         inactiveSoul = Soul.poison;

@@ -29,9 +29,8 @@ public class InventoryUI : MonoBehaviour
         }
         cvg = gameObject.GetComponent<CanvasGroup>();
         HideInventory();
-        active = false;
+        active = true;
     }
-
     void Update(){
         if(active){
             goldText.text = player.GetGold().ToString();

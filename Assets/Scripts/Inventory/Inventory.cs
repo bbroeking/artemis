@@ -8,7 +8,7 @@ public class Inventory : MonoBehaviour
     public CharacterUI characterUI;
     public CharacterEquipment equipment = new CharacterEquipment();
     public List<Loot> characterItems = new List<Loot>();
-    private void Awake(){
+    private void Start(){
         GiveItem(0);
         GiveItem(0);
         GiveItem(1);

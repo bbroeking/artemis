@@ -28,11 +28,11 @@ public class ToolTip : MonoBehaviour
                 }
             }
             tooltip = string.Format("<b>{0}</b>\n{1}\n Type: {2}\n\n<b>{3}</b>",
-            eq.lootName, eq.description, eq.equipmentType, statText);
+                                    eq.lootName, eq.description, eq.equipmentType, statText);
         } else {
-            tooltip = string.Format("<b>{0}</b>\n{1}\n Type: {2}\n\n<b>{3}</b>", loot.lootName, loot.description, loot.lootType, statText);
+            tooltip = string.Format("<b>{0}</b>\n{1}\n Type: {2}\n\n<b>{3}</b>", 
+                                    loot.lootName, loot.description, loot.lootType, statText);
         }
-        
         tooltipText.text = tooltip;
         ShowTooltip();
     }

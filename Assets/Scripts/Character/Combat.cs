@@ -15,12 +15,13 @@ public class Combat : MonoBehaviour
     private float timeBetweenAttack;
     [SerializeField]
     private GameObject poisonNova;
-    [SerializeField]
     private Spellbook spellbook;
     [SerializeField]
     private Player player;
 
-
+    void Start(){
+        spellbook = GetComponent<Spellbook>();
+    }
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))
