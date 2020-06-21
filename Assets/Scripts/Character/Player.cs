@@ -38,11 +38,14 @@ public class Player : Character
     private EssenceBar inactiveEssence;
     private int gravityEssence;
     private int poisonEssence;
+    public int spellDamage;
     private Soul activeSoul;
     private Soul inactiveSoul;
     [SerializeField]
     private Spellbook spellbook;
     private int maxEssence;
+    [SerializeField]
+    private Combat combat;
 
     private void Start()
     {
@@ -66,11 +69,11 @@ public class Player : Character
         Move(movement);
         Aim();
 
-        if (Input.GetKeyDown("i") == true)
+        if (Input.GetKeyDown("i"))
         {
             inventoryUI.ToggleInventory();
         }
-        if (Input.GetKeyDown("c") == true)
+        if (Input.GetKeyDown("c"))
         {
             characterUI.ToggleCharacter();
         }
@@ -80,24 +83,21 @@ public class Player : Character
         }
         if (Input.GetKeyDown("q"))
         {
-            this.GetComponent<Combat>().UseSoulAbility(activeSoul);
+            int activeEssenceAmount = GetActiveEssenceAmount();
+            if(activeEssenceAmount > 3){
+                StartCoroutine(combat.CastSoulAbility(activeSoul));
+            }
         }
 
     }
     void Move(Vector3 movement)
     {
         rb.velocity = new Vector2(movement.x * speed, movement.y * speed);
-        // if(movement.x > 0){
-        //     Dictionary<string, dynamic> characterStats = base.GetCharacterStats();
-        //     foreach(KeyValuePair<string, dynamic> stat in characterStats){
-        //         Debug.Log(stat.Key + ": " + stat.Value);
-        //     }
-        // }
     }
     private void TakeDamage(int damage)
     {
-        this.health -= damage;
-        healthbar.SetHealth(this.health);
+        this.currentHealth -= damage;
+        healthbar.SetHealth(this.currentHealth);
     }
     public void UseEssence(int essence){
         if(activeSoul == Soul.gravity){
@@ -183,12 +183,27 @@ public class Player : Character
     private void CalculateEssence(){
         this.maxEssence = 5 + this.intellect;
     }
+    private void CalculateSpellDamage(){
+        this.spellDamage = 1 + this.intellect;
+    }
     private void UpdateModifiers(){
         base.CalculateBaseHealth();
         base.CalculateInteralAttackCD();
         CalculateEssence();
+        CalculateSpellDamage();
     }
     public Soul GetActiveSoul(){
         return this.activeSoul;
+    }
+    public int GetActiveEssenceAmount(){
+        if(activeSoul == Soul.gravity){
+            return this.gravityEssence;
+        }
+        else if (activeSoul == Soul.poison){
+            return this.poisonEssence;
+        }
+        else {
+            return 0;
+        }
     }
 }

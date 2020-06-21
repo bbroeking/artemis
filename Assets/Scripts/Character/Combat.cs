@@ -17,6 +17,8 @@ public class Combat : MonoBehaviour
     private GameObject poisonNova;
     [SerializeField]
     private Spellbook spellbook;
+    [SerializeField]
+    private Player player;
 
 
     void Update()
@@ -32,15 +34,16 @@ public class Combat : MonoBehaviour
         }
         if (Input.GetButtonDown("Fire2"))
         {
-            if(this.GetComponent<Player>().GetActiveSoul() == Soul.gravity){
-                Cast(gravitySoul, castPos);
+            if(player.GetActiveEssenceAmount() > 0){
+                Soul active = player.GetActiveSoul();
+                if(active == Soul.gravity){
+                    Cast(gravitySoul, castPos);
+                }
+                else if(active == Soul.poison){
+                    Cast(poisonNova, castPos);
+                }
+                player.UseEssence(1);
             }
-            else if(this.GetComponent<Player>().GetActiveSoul() == Soul.poison){
-                Cast(poisonNova, castPos);
-            }
-
-           
-            this.GetComponent<Player>().UseEssence(1);
         }
     }
 
@@ -48,16 +51,22 @@ public class Combat : MonoBehaviour
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
-            enemiesToDamage[i].GetComponent<Enemy>().Hit();
+            enemiesToDamage[i].GetComponent<Enemy>().Hit(player.spellDamage);
         }
     }
 
-    public void UseSoulAbility(Soul activeSoul){
+    private void SoulAbility(Soul activeSoul){
         if (activeSoul == Soul.poison){
-            spellbook.CastPoisonNova(poisonNova, castPos.transform, playerCollider);
+            spellbook.PoisonNova(poisonNova, castPos.transform, playerCollider);
         }
     }
-
+    public IEnumerator CastSoulAbility(Soul activeSoul){
+        for (int i = 0; i < 6; i++)
+        {
+            SoulAbility(activeSoul);
+            yield return new WaitForSeconds(1f);
+        }
+    }
     void OnDrawGizmosSelected(){
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPos.position, attackRange);

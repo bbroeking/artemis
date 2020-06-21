@@ -5,6 +5,7 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     protected int health;
+    protected int currentHealth;
     protected int speed; 
     protected int strength;
     protected int dexterity;
@@ -17,9 +18,11 @@ public class Character : MonoBehaviour
     protected float intellectModifier;
     protected float vitalityModifier;
     protected float internalAttackCooldown;
+    protected bool dead;
 
     private void Awake(){
         health = 30;
+        currentHealth = health;
         speed  = 6;
         strength = 1;
         dexterity = 1;
@@ -32,6 +35,7 @@ public class Character : MonoBehaviour
         intellectModifier = 0.1f;
         vitalityModifier = 0;
         internalAttackCooldown = 2f;
+        dead = false;
     }
 
     public int CalculateDamage(){
@@ -65,5 +69,9 @@ public class Character : MonoBehaviour
         characterStats.Add("vitalityModifier", this.vitalityModifier);
         characterStats.Add("internalAttackCooldown", this.internalAttackCooldown);
         return characterStats;
+    }
+
+    public float percentHealth(){
+        return (float)currentHealth / (float)health;
     }
 }
