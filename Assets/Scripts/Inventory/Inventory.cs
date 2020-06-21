@@ -23,28 +23,49 @@ public class Inventory : MonoBehaviour
 
     public void GiveItem(int id)
     {
-        Loot genericItem = ItemDB.Instance.GetItem(id);
-        Loot generatedItem;
-        if(genericItem.lootType == LootType.Equipment){
-            generatedItem = ((LootEquipment) genericItem).GenerateItem();
-        } else {
-            generatedItem = genericItem.GenerateItem();
-        }
+        Loot generatedItem = GenerateItem(id);
         inventoryUI.AddNewItem(generatedItem);
         characterItems.Add(generatedItem);
     }
     public void GiveItem(string itemName)
     {
-        Loot genericItem = ItemDB.Instance.GetItem(itemName);
-        Loot generatedItem;
-        if(genericItem.lootType == LootType.Equipment){
-            generatedItem = ((LootEquipment) genericItem).GenerateItem();
-        } else {
-            generatedItem = genericItem.GenerateItem();
-        }
+        Loot generatedItem = GenerateItem(itemName);
         inventoryUI.AddNewItem(generatedItem);
         characterItems.Add(generatedItem);
     }
+
+    private Loot GenerateItem(int id)
+    {
+        Loot generatedItem;
+        Loot genericItem = ItemDB.Instance.GetItem(id);
+        if (genericItem.lootType == LootType.Equipment)
+        {
+            generatedItem = ((LootEquipment)genericItem).GenerateItem();
+        }
+        else
+        {
+            generatedItem = genericItem.GenerateItem();
+        }
+
+        return generatedItem;
+    }
+
+    private Loot GenerateItem(string itemName)
+    {
+        Loot generatedItem;
+        Loot genericItem = ItemDB.Instance.GetItem(itemName);
+        if (genericItem.lootType == LootType.Equipment)
+        {
+            generatedItem = ((LootEquipment)genericItem).GenerateItem();
+        }
+        else
+        {
+            generatedItem = genericItem.GenerateItem();
+        }
+
+        return generatedItem;
+    }
+
     public LootEquipment EquipItem(LootEquipment loot, int slot){
          switch(loot.equipmentType){
             case EquipmentType.head:

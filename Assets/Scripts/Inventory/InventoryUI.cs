@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -9,6 +10,14 @@ public class InventoryUI : MonoBehaviour
     public int numberOfSlots = 40;
     public CanvasGroup cvg;
     public bool active;
+    [SerializeField]
+    private Player player;
+    [SerializeField]
+    private Text goldText;
+    [SerializeField]
+    private Text soulText;
+    [SerializeField]
+    private Text weightText;
 
     private void Awake()
     {
@@ -21,6 +30,14 @@ public class InventoryUI : MonoBehaviour
         cvg = gameObject.GetComponent<CanvasGroup>();
         HideInventory();
         active = false;
+    }
+
+    void Update(){
+        if(active){
+            goldText.text = player.GetGold().ToString();
+            soulText.text = player.GetSoul().ToString();
+            weightText.text = player.GetWeight().ToString();
+        }
     }
     public void ToggleInventory(){
         if(active){

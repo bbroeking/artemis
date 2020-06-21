@@ -46,7 +46,9 @@ public class Player : Character
     private int maxEssence;
     [SerializeField]
     private Combat combat;
-
+    private int gold;
+    private int souls;
+    private int weight;
     private void Start()
     {
         Cursor.visible = false;
@@ -57,6 +59,9 @@ public class Player : Character
         inactiveEssence.SetMaxEssence(this.maxEssence);
         this.gravityEssence = this.maxEssence;
         this.poisonEssence = this.maxEssence;
+        this.gold = 1;
+        this.souls = 1;
+        this.weight = 1;
     }
     void Update()
     {
@@ -195,6 +200,28 @@ public class Player : Character
     public Soul GetActiveSoul(){
         return this.activeSoul;
     }
+    public int GetGold(){
+        return this.gold;
+    }
+
+    public int GetSoul(){
+        return this.souls;
+    }
+
+    public int GetWeight(){
+        return this.weight;
+    }
+
+    public void UpdateGold(int gold){
+        this.gold += gold;
+    }
+    public void UpdateSouls(int souls){
+        this.souls += souls;
+    }
+    public void UpdateWeight(int weight){
+        this.weight += weight;
+    }
+
     public int GetActiveEssenceAmount(){
         if(activeSoul == Soul.gravity){
             return this.gravityEssence;

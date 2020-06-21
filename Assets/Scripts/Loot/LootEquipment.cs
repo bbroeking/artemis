@@ -38,6 +38,7 @@ public class LootEquipment : Loot
         this.description = item.description;
         this.sprite = item.sprite;
         this.weight = item.weight;
+        this.itemWeight = item.itemWeight;
         this.lootType = item.lootType;
     }
     public static LootEquipment CreateLootEquipment(LootEquipment item){
