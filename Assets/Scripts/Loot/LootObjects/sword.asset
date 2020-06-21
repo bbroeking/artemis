@@ -17,8 +17,9 @@ MonoBehaviour:
   lootWeight: 5
   description: sword
   sprite: {fileID: -7254802838702641023, guid: f1d7d22837f0bf84191e4d007a225c67, type: 3}
-  _keys: []
-  _values: 
   weight: 100
   lootType: 1
+  itemWeight: 0
+  cost: 2
   equipmentType: 5
+  _values: 

@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   lootName: Ore
+  lootWeight: 0
   description: we can craft things with this
   sprite: {fileID: 21300000, guid: 8fcb248715cb5c840ab2b421f1506c81, type: 3}
   weight: 10
   lootType: 0
+  itemWeight: 0
+  cost: 4

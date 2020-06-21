@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   lootName: Bones
+  lootWeight: 0
   description: these here are bones
   sprite: {fileID: 7007010545437925719, guid: ee639f852642c3246b994b77794394ed, type: 3}
   weight: 10
   lootType: 0
+  itemWeight: 0
+  cost: 5
