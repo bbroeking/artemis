@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
+using UnityEngine.UI;
 
 public enum Soul {
     gravity,
@@ -37,15 +38,133 @@ public class Player : Character
     [SerializeField] Inventory inventory;
     [SerializeField] EquipmentPanel equipmentPanel;
     [SerializeField] StatPanel statPanel;
+    [SerializeField] ItemTooltip itemTooltip;
+    [SerializeField] Image draggableItem;
+    private ItemSlot draggedSlot;
 
+    private void OnValidate(){
+        if(itemTooltip == null){
+            itemTooltip = FindObjectOfType<ItemTooltip>();
+        }
+    }
     protected override void Awake(){
         base.Awake();
-        inventory.OnItemRightClickedEvent += EquipFromInventory;
         strength = new CharacterStat(1);
         dexterity = new CharacterStat(1);
         intellect = new CharacterStat(1);
         vitality = new CharacterStat(1);
+
+        // Setup Events
+        //inventory.OnRightClickEvent += Equip;
+        //equipmentPanel.OnRightClickEvent += Unequip;
+
+        inventory.OnPointerEnterEvent += ShowTooltip;
+        equipmentPanel.OnPointerEnterEvent += ShowTooltip;
+
+        inventory.OnPointerExitEvent += HideTooltip;
+        equipmentPanel.OnPointerExitEvent += HideTooltip;
+
+        inventory.OnBeginDragEvent += BeginDrag;
+        equipmentPanel.OnBeginDragEvent += BeginDrag;
+
+        inventory.OnEndDragEvent += EndDrag;
+        equipmentPanel.OnEndDragEvent += EndDrag;
+
+        inventory.OnDragEvent += Drag;
+        equipmentPanel.OnDragEvent += Drag;
+
+        inventory.OnDropEvent += Drop;
+        equipmentPanel.OnDropEvent += Drop;
+
     }
+	private void EquipmentPanelRightClick(ItemSlot itemSlot)
+	{
+		if (itemSlot.Item is EquippableItem)
+		{
+			Unequip((EquippableItem)itemSlot.Item);
+		}
+	}
+
+	private void ShowTooltip(ItemSlot itemSlot)
+	{
+        EquippableItem equippableItem = itemSlot.Item as EquippableItem;
+		if (itemSlot.Item != null)
+		{
+			itemTooltip.ShowTooltip(equippableItem);
+		}
+	}
+
+	private void HideTooltip(ItemSlot itemSlot)
+	{
+		if (itemTooltip.gameObject.activeSelf)
+		{
+			itemTooltip.HideTooltip();
+		}
+	}
+
+	private void BeginDrag(ItemSlot itemSlot)
+	{
+		if (itemSlot.Item != null)
+		{
+			draggedSlot = itemSlot;
+			draggableItem.sprite = itemSlot.Item.sprite;
+			draggableItem.transform.position = Input.mousePosition;
+			draggableItem.gameObject.SetActive(true);
+		}
+	}
+
+	private void Drag(ItemSlot itemSlot)
+	{
+		draggableItem.transform.position = Input.mousePosition;
+	}
+
+	private void EndDrag(ItemSlot itemSlot)
+	{
+		draggedSlot = null;
+		draggableItem.gameObject.SetActive(false);
+	}
+
+	private void Drop(ItemSlot dropItemSlot)
+	{
+		// if (dragItemSlot == null) return;
+
+		// if (dropItemSlot.CanAddStack(dragItemSlot.Item))
+		// {
+		// 	AddStacks(dropItemSlot);
+		// }
+		if (dropItemSlot.CanReceiveItem(draggedSlot.Item) && draggedSlot.CanReceiveItem(dropItemSlot.Item))
+		{
+			SwapItems(dropItemSlot);
+		}
+	}
+
+    private void SwapItems(ItemSlot dropItemSlot)
+	{
+		EquippableItem dragEquipItem = draggedSlot.Item as EquippableItem;
+		EquippableItem dropEquipItem = dropItemSlot.Item as EquippableItem;
+
+		if (dropItemSlot is EquipmentSlot)
+		{
+			if (dragEquipItem != null) dragEquipItem.Equip(this);
+			if (dropEquipItem != null) dropEquipItem.Unequip(this);
+		}
+		if (draggedSlot is EquipmentSlot)
+		{
+			if (dragEquipItem != null) dragEquipItem.Unequip(this);
+			if (dropEquipItem != null) dropEquipItem.Equip(this);
+		}
+		statPanel.UpdateStatValues();
+
+		Item draggedItem = draggedSlot.Item;
+		//int draggedItemAmount = draggedSlot.Amount;
+
+		draggedSlot.Item = dropItemSlot.Item;
+		//draggedSlot.Amount = dropItemSlot.Amount;
+
+		dropItemSlot.Item = draggedItem;
+		//dropItemSlot.Amount = draggedItemAmount;
+	}
+
     private void Start()
     {
         statPanel.SetStats(strength, dexterity, intellect, vitality);
