@@ -9,7 +9,7 @@ public class ShopKeeper : NPC
     [SerializeField]
     private GenerateShopUI generateShop;
     [SerializeField]
-    private UIItem selectedItem;
+    //private UIItem selectedItem;
 
     public override void Interact(){
         generateShop.GenerateShopForShopkeeper(shopInventory);
@@ -19,6 +19,6 @@ public class ShopKeeper : NPC
     public override void StopInteract(){
         generateShop.Toggle();
         generateShop.ClearShop();
-        selectedItem.UpdateItem(null);
+        //selectedItem.UpdateItem(null);
     }
 }

@@ -9,33 +9,19 @@ public enum Soul {
 }
 public class Player : Character
 {
-    [SerializeField]
-    private Rigidbody2D rb;
+    [SerializeField] private Rigidbody2D rb;
 
-    [SerializeField]
-    private Animator anim;
+    [SerializeField] private Animator anim;
     
-    [SerializeField]
-    private GameObject crosshair;
+    [SerializeField] private GameObject crosshair;
 
-    [SerializeField]
-    private InventoryUI inventoryUI;
-
-    [SerializeField]
-    private CharacterUI characterUI;
-
-    [SerializeField]
-    private Inventory inventory;
     private IInteractable interactable;
 
-    [SerializeField]
-    private HealthBar healthbar;
+    [SerializeField] private HealthBar healthbar;
     
-    [SerializeField]
-    private EssenceBar activeEssence;
+    [SerializeField] private EssenceBar activeEssence;
     
-    [SerializeField]
-    private EssenceBar inactiveEssence;
+    [SerializeField] private EssenceBar inactiveEssence;
     private int gravityEssence;
     private int poisonEssence;
     public int spellDamage;
@@ -43,21 +29,34 @@ public class Player : Character
     private Soul inactiveSoul;
     private Spellbook spellbook;
     private int maxEssence;
-    [SerializeField]
-    private Combat combat;
+    [SerializeField] private Combat combat;
     private int gold;
     private int souls;
     private int weight;
+    [Space]
+    [SerializeField] Inventory inventory;
+    [SerializeField] EquipmentPanel equipmentPanel;
+    [SerializeField] StatPanel statPanel;
+
+    protected override void Awake(){
+        base.Awake();
+        inventory.OnItemRightClickedEvent += EquipFromInventory;
+        strength = new CharacterStat(1);
+        dexterity = new CharacterStat(1);
+        intellect = new CharacterStat(1);
+        vitality = new CharacterStat(1);
+    }
     private void Start()
     {
+        statPanel.SetStats(strength, dexterity, intellect, vitality);
+        statPanel.UpdateStatValues();
+        // Old
         spellbook = GetComponent<Spellbook>();
-        inventory = GetComponent<Inventory>();
-        Cursor.visible = false;
+        //Cursor.visible = false;
         activeSoul = Soul.gravity;
         inactiveSoul = Soul.poison;
-        CalculateStats();
-        activeEssence.SetMaxEssence(this.maxEssence);
-        inactiveEssence.SetMaxEssence(this.maxEssence);
+        //activeEssence.SetMaxEssence(this.maxEssence);
+        //inactiveEssence.SetMaxEssence(this.maxEssence);
         this.gravityEssence = this.maxEssence;
         this.poisonEssence = this.maxEssence;
         this.gold = 1;
@@ -77,11 +76,11 @@ public class Player : Character
 
         if (Input.GetKeyDown("i"))
         {
-            inventoryUI.Toggle();
+            //inventoryUI.Toggle();
         }
         if (Input.GetKeyDown("c"))
         {
-            characterUI.ToggleCharacter();
+            //characterUI.ToggleCharacter();
         }
         if (Input.GetKeyDown("e"))
         {
@@ -96,6 +95,44 @@ public class Player : Character
         }
 
     }
+    private void EquipFromInventory(Item item){
+        if(item is EquippableItem){
+            Equip((EquippableItem) item);
+        }
+    }
+
+    private void UnequipFromInventory(Item item){
+        if(item is EquippableItem){
+            Equip((EquippableItem) item);
+        }
+    }
+
+    public void Equip(EquippableItem item){
+        if(inventory.RemoveItem(item)){
+            EquippableItem previousItem;
+            if(equipmentPanel.AddItem(item, out previousItem)){
+                if(previousItem != null){
+                    inventory.AddItem(previousItem);
+                    previousItem.Unequip(this);
+                    statPanel.UpdateStatValues();
+                }
+                item.Equip(this);
+                statPanel.UpdateStatValues();
+            }
+            else {
+                inventory.RemoveItem(item);
+            }
+        }
+    }
+
+    public void Unequip(EquippableItem item){
+        if(!inventory.IsFull() && equipmentPanel.RemoveItem(item)){
+            item.Unequip(this);
+            statPanel.UpdateStatValues();
+            inventory.AddItem(item);
+        }
+    }
+
     void Move(Vector3 movement)
     {
         rb.velocity = new Vector2(movement.x * speed, movement.y * speed);
@@ -135,7 +172,7 @@ public class Player : Character
         if(collision.gameObject.tag == "Loot")
         {
             Loot loot = collision.gameObject.GetComponent<LootInfo>().loot;
-            GetComponent<Inventory>().GiveItem(loot.id);
+            //GetComponent<Inventory>().GiveItem(loot.id);
             Destroy(collision.gameObject);
         }
     }
@@ -151,46 +188,11 @@ public class Player : Character
             interactable = null;
         }
     }
-    private void CalculateStats(){
-        int strength = 0;
-        int dexterity = 0;
-        int intellect = 0;
-        int vitality = 0;
-
-        CharacterEquipment equipment = inventory.equipment;
-        List<LootEquipment> equipped = equipment.GetEquipment();
-
-        foreach (LootEquipment l in equipped){
-            Dictionary<string, int> stats = l.stats;
-            if(l.equipmentType == EquipmentType.mainhand){
-                mainHandMaxDamage = stats["mainHandMaxDamage"];
-                mainHandMinDamage = stats["mainhandMinDamage"];
-            }
-            if(stats.ContainsKey("strength")){
-                strength += stats["strength"];
-            }
-            if(stats.ContainsKey("dexterity")){
-                dexterity += stats["dexterity"];
-            }
-            if(stats.ContainsKey("intellect")){
-                intellect += stats["intellect"];
-            }
-            if(stats.ContainsKey("vitality")){
-                vitality += stats["vitality"];
-            }
-        }
-
-        this.strength = strength;
-        this.dexterity = dexterity;
-        this.intellect = intellect;
-        this.vitality = vitality;
-        UpdateModifiers();
-    }
     private void CalculateEssence(){
-        this.maxEssence = 5 + this.intellect;
+        this.maxEssence = 5 + (int)this.intellect.Value;
     }
     private void CalculateSpellDamage(){
-        this.spellDamage = 1 + this.intellect;
+        this.spellDamage = 1 + (int)this.intellect.Value;
     }
     private void UpdateModifiers(){
         base.CalculateBaseHealth();

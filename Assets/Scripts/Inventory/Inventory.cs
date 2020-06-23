@@ -1,191 +1,59 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Inventory : MonoBehaviour
 {
-    public InventoryUI inventoryUI;
-    public CharacterUI characterUI;
-    public CharacterEquipment equipment = new CharacterEquipment();
-    public List<Loot> characterItems = new List<Loot>();
+    [SerializeField] List<Item> items;
+    [SerializeField] Transform itemsParent;
+    [SerializeField] ItemSlot[] itemSlots;
+
+    public event Action<Item> OnItemRightClickedEvent;
+
     private void Start(){
-        GiveItem(0);
-        GiveItem(0);
-        GiveItem(1);
-        GiveItem(2);
-        GiveItem(2);
-        GiveItem(3);
-        GiveItem(4);
-        GiveItem(5);
-        GiveItem(6);
-        GiveItem(7);
-    }
-
-    public void GiveItem(int id)
-    {
-        Loot generatedItem = GenerateItem(id);
-        inventoryUI.AddNewItem(generatedItem);
-        characterItems.Add(generatedItem);
-    }
-    public void GiveItem(string itemName)
-    {
-        Loot generatedItem = GenerateItem(itemName);
-        inventoryUI.AddNewItem(generatedItem);
-        characterItems.Add(generatedItem);
-    }
-
-    private Loot GenerateItem(int id)
-    {
-        Loot generatedItem;
-        Loot genericItem = ItemDB.Instance.GetItem(id);
-        if (genericItem.lootType == LootType.Equipment)
+        for (int i = 0; i < itemSlots.Length; i++)
         {
-            generatedItem = ((LootEquipment)genericItem).GenerateItem();
+            itemSlots[i].OnRightClickEvent += OnItemRightClickedEvent;
         }
-        else
-        {
-            generatedItem = genericItem.GenerateItem();
-        }
-
-        return generatedItem;
     }
 
-    private Loot GenerateItem(string itemName)
-    {
-        Loot generatedItem;
-        Loot genericItem = ItemDB.Instance.GetItem(itemName);
-        if (genericItem.lootType == LootType.Equipment)
-        {
-            generatedItem = ((LootEquipment)genericItem).GenerateItem();
+    private void OnValidate(){
+        if(itemsParent != null){
+            itemSlots = itemsParent.GetComponentsInChildren<ItemSlot>();
         }
-        else
-        {
-            generatedItem = genericItem.GenerateItem();
-        }
-
-        return generatedItem;
+        RefreshUI();
     }
 
-    public LootEquipment EquipItem(LootEquipment loot, int slot){
-         switch(loot.equipmentType){
-            case EquipmentType.head:
-                if (this.equipment.head == null){
-                    this.equipment.head = loot;
-                    return null;
-                } else {
-                    LootEquipment wasEquipped = this.equipment.head;
-                    this.equipment.head = loot;
-                    return wasEquipped;
-                }
-            case EquipmentType.chest:
-                if (this.equipment.chest == null){
-                    this.equipment.chest = loot;
-                    return null;
-                } else {
-                    LootEquipment wasEquipped = this.equipment.chest;
-                    this.equipment.chest = loot;
-                    return wasEquipped;
-                }
-            case EquipmentType.legs:
-                if (this.equipment.legs == null){
-                    this.equipment.legs = loot;
-                    return null;
-                } else {
-                    LootEquipment wasEquipped = this.equipment.legs;
-                    this.equipment.legs = loot;
-                    return wasEquipped;
-                }
-            case EquipmentType.mainhand:
-                if (this.equipment.mainhand == null){
-                    this.equipment.mainhand = loot;
-                    return null;
-                } else {
-                    LootEquipment wasEquipped = this.equipment.mainhand;
-                    this.equipment.mainhand = loot;
-                    return wasEquipped;
-                }
-            case EquipmentType.offhand:
-                if (this.equipment.offhand == null){
-                    this.equipment.offhand = loot;
-                    return null;
-                } else {
-                    LootEquipment wasEquipped = this.equipment.offhand;
-                    this.equipment.offhand = loot;
-                    return wasEquipped;
-                }
-            case EquipmentType.ring:
-                if (slot == 0) 
-                {
-                    if (this.equipment.ring1 == null)
-                    {
-                        this.equipment.ring1 = loot;
-                        return null;
-                    } 
-                    else 
-                    {
-                        LootEquipment wasEquipped = this.equipment.ring1;
-                        this.equipment.ring1 = loot;
-                        return wasEquipped;
-                    }
-                } 
-                else 
-                {
-                    if (this.equipment.ring2 == null)
-                    {
-                        this.equipment.ring2 = loot;
-                        return null;
-                    } 
-                    else 
-                    {
-                        LootEquipment wasEquipped = this.equipment.ring2;
-                        this.equipment.ring2 = loot;
-                        return wasEquipped;
-                    }
-                }
-            case EquipmentType.trinket:
-                if (slot == 0) 
-                {
-                    if (this.equipment.trinket1 == null)
-                    {
-                        this.equipment.trinket1 = loot;
-                        return null;
-                    } 
-                    else 
-                    {
-                        LootEquipment wasEquipped = this.equipment.trinket1;
-                        this.equipment.trinket1 = loot;
-                        return wasEquipped;
-                    }
-                } 
-                else 
-                {
-                    if (this.equipment.trinket2 == null)
-                    {
-                        this.equipment.trinket2 = loot;
-                        return null;
-                    } 
-                    else 
-                    {
-                        LootEquipment wasEquipped = this.equipment.trinket2;
-                        this.equipment.trinket2 = loot;
-                        return wasEquipped;
-                    }
-                }
-            default:
-                return null;
+    private void RefreshUI(){
+        int i = 0;
+        for(; i < items.Count && i < itemSlots.Length; i++){
+            itemSlots[i].Item = items[i];
+        }
+        for(; i < itemSlots.Length; i++){
+            itemSlots[i].Item = null;
         }
     }
-    public Loot CheckForItem(int id)
-    {
-        return characterItems.Find(item => item.id == id);
+
+    public bool AddItem(Item item){
+        if (IsFull())
+            return false;
+        items.Add(item);
+        RefreshUI();
+        return true;
     }
-    public void RemoveItem(int id)
-    {
-        Loot itemToRemove = CheckForItem(id);
-        if(itemToRemove != null)
+
+    public bool RemoveItem(Item item){
+        if(items.Remove(item))
         {
-            characterItems.Remove(itemToRemove);
-            inventoryUI.RemoveItem(itemToRemove);
+            RefreshUI();
+            return true;
         }
+        return false;
     }
+
+    public bool IsFull(){
+        return items.Count >= itemSlots.Length;
+    }
+
 }

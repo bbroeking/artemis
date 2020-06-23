@@ -7,10 +7,10 @@ public class Character : MonoBehaviour
     protected int health;
     protected int currentHealth;
     protected int speed; 
-    protected int strength;
-    protected int dexterity;
-    protected int intellect;
-    protected int vitality;
+    public CharacterStat strength;
+    public CharacterStat dexterity;
+    public CharacterStat intellect;
+    public CharacterStat vitality;
     protected int mainHandMinDamage;
     protected int mainHandMaxDamage;
     protected float strengthModifier;
@@ -20,14 +20,10 @@ public class Character : MonoBehaviour
     protected float internalAttackCooldown;
     protected bool dead;
 
-    private void Awake(){
+    protected virtual void Awake(){
         health = 30;
         currentHealth = health;
         speed  = 6;
-        strength = 1;
-        dexterity = 1;
-        intellect = 1;
-        vitality = 1;
         mainHandMaxDamage = 1;
         mainHandMinDamage = 1;
         strengthModifier = 0.1f;
@@ -40,27 +36,27 @@ public class Character : MonoBehaviour
 
     public int CalculateDamage(){
         int damageRoll = Random.Range(mainHandMinDamage, mainHandMaxDamage);
-        float damageCalc = (float)damageRoll * ((float)strength * strengthModifier);
+        float damageCalc = (float)damageRoll * ((float)strength.BaseValue * strengthModifier);
         return (int)Mathf.Ceil(damageCalc);
     }
 
     protected void CalculateBaseHealth(){
-        float healthCalc = 30f + 30f * ((float)vitality * vitalityModifier);
+        float healthCalc = 30f + 30f * ((float)vitality.BaseValue * vitalityModifier);
         this.health = (int)Mathf.Ceil(healthCalc);
     }
 
     protected void CalculateInteralAttackCD(){
-        this.internalAttackCooldown = 2f * ((float)dexterity * dexterityModifier);
+        this.internalAttackCooldown = 2f * ((float)dexterity.BaseValue * dexterityModifier);
     }
 
     public Dictionary<string, dynamic> GetCharacterStats(){
         Dictionary<string, dynamic> characterStats = new Dictionary<string, dynamic>();
         characterStats.Add("health", this.health);
         characterStats.Add("speed", this.speed);
-        characterStats.Add("strength", this.strength);
-        characterStats.Add("dexterity", this.dexterity);
-        characterStats.Add("intellect", this.intellect);
-        characterStats.Add("vitality", this.vitality);
+        // characterStats.Add("strength", this.strength);
+        // characterStats.Add("dexterity", this.dexterity);
+        // characterStats.Add("intellect", this.intellect);
+        // characterStats.Add("vitality", this.vitality);
         characterStats.Add("mainHandMaxDamage", this.mainHandMaxDamage);
         characterStats.Add("mainHandMinDamage", this.mainHandMinDamage);
         characterStats.Add("strengthModifier", this.strengthModifier);

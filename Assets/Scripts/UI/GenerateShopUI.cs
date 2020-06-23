@@ -24,7 +24,7 @@ public class GenerateShopUI : TogglePanel
         instance.transform.SetParent(slotPanel);
         slots.Add(instance);
 
-        instance.GetComponentInChildren<UIItem>().UpdateItem(loot);
+        //instance.GetComponentInChildren<UIItem>().UpdateItem(loot);
         instance.GetComponentInChildren<TextMeshProUGUI>().SetText(loot.cost.ToString());
     }
     public void ClearShop() {
