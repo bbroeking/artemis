@@ -62,11 +62,8 @@ public class CharacterStat
     
         for (int i = statModifiers.Count - 1; i >= 0; i--)
         {
-            Debug.Log(statModifiers[i].Source.ToString());
-            Debug.Log(source.ToString());
             if (statModifiers[i].Source == source)
             {
-                Debug.Log("are we ever here");
                 isDirty = true;
                 didRemove = true;
                 statModifiers.RemoveAt(i);

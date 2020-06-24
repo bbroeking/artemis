@@ -55,8 +55,8 @@ public class Player : Character
         vitality = new CharacterStat(1);
 
         // Setup Events
-        //inventory.OnRightClickEvent += Equip;
-        //equipmentPanel.OnRightClickEvent += Unequip;
+        inventory.OnRightClickEvent += InventoryRightClick;
+        equipmentPanel.OnRightClickEvent += EquipmentPanelRightClick;
 
         inventory.OnPointerEnterEvent += ShowTooltip;
         equipmentPanel.OnPointerEnterEvent += ShowTooltip;
@@ -77,20 +77,12 @@ public class Player : Character
         equipmentPanel.OnDropEvent += Drop;
 
     }
-	private void EquipmentPanelRightClick(ItemSlot itemSlot)
-	{
-		if (itemSlot.Item is EquippableItem)
-		{
-			Unequip((EquippableItem)itemSlot.Item);
-		}
-	}
 
 	private void ShowTooltip(ItemSlot itemSlot)
 	{
-        EquippableItem equippableItem = itemSlot.Item as EquippableItem;
 		if (itemSlot.Item != null)
 		{
-			itemTooltip.ShowTooltip(equippableItem);
+			itemTooltip.ShowTooltip(itemSlot.Item);
 		}
 	}
 
@@ -126,7 +118,7 @@ public class Player : Character
 
 	private void Drop(ItemSlot dropItemSlot)
 	{
-		// if (dragItemSlot == null) return;
+		if (draggedSlot == null) return;
 
 		// if (dropItemSlot.CanAddStack(dragItemSlot.Item))
 		// {
@@ -193,14 +185,6 @@ public class Player : Character
         Move(movement);
         Aim();
 
-        if (Input.GetKeyDown("i"))
-        {
-            //inventoryUI.Toggle();
-        }
-        if (Input.GetKeyDown("c"))
-        {
-            //characterUI.ToggleCharacter();
-        }
         if (Input.GetKeyDown("e"))
         {
             SwapActiveSoul();
@@ -214,15 +198,26 @@ public class Player : Character
         }
 
     }
-    private void EquipFromInventory(Item item){
-        if(item is EquippableItem){
-            Equip((EquippableItem) item);
+    private void InventoryRightClick(ItemSlot itemSlot){
+        EquippableItem equippableItem = itemSlot.Item as EquippableItem;
+        if(equippableItem != null){
+            Equip(equippableItem);
+        }
+        else if (itemSlot.Item is UsableItem){
+            UsableItem useableItem = (UsableItem) itemSlot.Item;
+            useableItem.Use(this);
+
+            if(useableItem.isConsumable){
+                inventory.RemoveItem(useableItem);
+                //useableItem.Destroy();
+            }
         }
     }
 
-    private void UnequipFromInventory(Item item){
-        if(item is EquippableItem){
-            Equip((EquippableItem) item);
+    private void EquipmentPanelRightClick(ItemSlot itemSlot){
+        EquippableItem equippableItem = itemSlot.Item as EquippableItem;
+        if(equippableItem != null){
+            Unequip(equippableItem);
         }
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    protected int health;
+    public int health;
     protected int currentHealth;
     protected int speed; 
     public CharacterStat strength;

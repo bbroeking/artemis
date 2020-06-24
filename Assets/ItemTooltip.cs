@@ -7,26 +7,17 @@ using System.Text;
 public class ItemTooltip : MonoBehaviour
 {
     [SerializeField] Text ItemNameText;
-    [SerializeField] Text ItemSlotText;
-    [SerializeField] Text ItemStatsText;
+    [SerializeField] Text ItemTypeText;
+	[SerializeField] Text ItemDescriptionText;
 
     private StringBuilder sb = new StringBuilder();
 
-    public void ShowTooltip(EquippableItem item)
+    public void ShowTooltip(Item item)
     {   
-        ItemNameText.text = item.name;
-        ItemSlotText.text = item.EquipmentType.ToString();
-
-        sb.Length = 0;
-        
-        AddStat(item.strengthBonus, "strength");
-        AddStat(item.dexterityBonus, "dexterity");
-        AddStat(item.intellectBonus, "intellect");
-        AddStat(item.vitalityBonus, "vitality");
-
-        ItemStatsText.text = sb.ToString();
-
-        gameObject.SetActive(true);
+        ItemNameText.text = item.itemName;
+		ItemTypeText.text = item.GetItemType();
+		ItemDescriptionText.text = item.GetDescription();
+		gameObject.SetActive(true);
     }
 
     public void HideTooltip(){
