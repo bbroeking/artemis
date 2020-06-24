@@ -1,27 +1,40 @@
-﻿using UnityEngine;
+﻿using System.Text;
+using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
-using System.Text;
+#endif
 
 [CreateAssetMenu(menuName = "Items/Item")]
 public class Item : ScriptableObject
 {
-    [SerializeField] string id;
-    public string ID { get {return id;}}
-    public string itemName;
-    public Sprite sprite;
-    protected static readonly StringBuilder sb = new StringBuilder();
-    private void OnValidate(){
-        string path = AssetDatabase.GetAssetPath(this);
-        id = AssetDatabase.AssetPathToGUID(path);
-    }
-    public virtual Item GetCopy()
+	[SerializeField] string id;
+	public string ID { get { return id; } }
+	public string ItemName;
+	public Sprite Icon;
+	[Range(1,999)]
+	public int MaximumStacks = 1;
+
+	protected static readonly StringBuilder sb = new StringBuilder();
+
+	#if UNITY_EDITOR
+	protected virtual void OnValidate()
+	{
+		string path = AssetDatabase.GetAssetPath(this);
+		id = AssetDatabase.AssetPathToGUID(path);
+	}
+	#endif
+
+	public virtual Item GetCopy()
 	{
 		return this;
 	}
-    public virtual void Destroy(){
 
-    }
-    public virtual string GetItemType()
+	public virtual void Destroy()
+	{
+
+	}
+
+	public virtual string GetItemType()
 	{
 		return "";
 	}

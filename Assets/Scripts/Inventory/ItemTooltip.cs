@@ -14,7 +14,7 @@ public class ItemTooltip : MonoBehaviour
 
     public void ShowTooltip(Item item)
     {   
-        ItemNameText.text = item.itemName;
+        ItemNameText.text = item.name;
 		ItemTypeText.text = item.GetItemType();
 		ItemDescriptionText.text = item.GetDescription();
 		gameObject.SetActive(true);

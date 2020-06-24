@@ -12,7 +12,7 @@ public class PickupItem : MonoBehaviour
     private bool isInRange;
 
     void Start(){
-        spriteRenderer.sprite = item.sprite;
+        spriteRenderer.sprite = item.Icon;
     }
     void Update()
     {

@@ -9,13 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0767f064d65b0b14c9d4bd97592f6434, type: 3}
-  m_Name: Helm
+  m_Script: {fileID: 11500000, guid: 09275b2ab578e974894a76319a7f93f3, type: 3}
+  m_Name: Item Database
   m_EditorClassIdentifier: 
-  itemName: heml
-  sprite: {fileID: 7561057552667737168, guid: f1d7d22837f0bf84191e4d007a225c67, type: 3}
-  strengthBonus: 2
-  dexterityBonus: 2
-  intellectBonus: 2
-  vitalityBonus: 2
-  EquipmentType: 0
+  items: []

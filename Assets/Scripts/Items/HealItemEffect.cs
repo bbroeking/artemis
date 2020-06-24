@@ -6,8 +6,8 @@ using UnityEngine;
 public class HealItemEffect : UsableItemEffect
 {
     public int healAmount;
-    public override void ExecuteEffect(UsableItem parentItem, Character character){
-        character.health += healAmount;
+    public override void ExecuteEffect(UsableItem parentItem, Player player){
+        player.health += healAmount;
     }
 
     public override string GetDescription()

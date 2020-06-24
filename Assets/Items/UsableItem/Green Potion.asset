@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Green Potion
   m_EditorClassIdentifier: 
   id: f55644f5d6147ab42a336513c54fb73b
-  itemName: Green Potion
-  sprite: {fileID: 21300000, guid: 4ca28b04ed5720d49bfcb4cbf9764cd7, type: 3}
+  ItemName: 
+  Icon: {fileID: 21300000, guid: 4ca28b04ed5720d49bfcb4cbf9764cd7, type: 3}
+  MaximumStacks: 1
   isConsumable: 1
   Effects:
   - {fileID: 11400000, guid: bec8026406f54904d8498889961897fa, type: 2}
+  - {fileID: 11400000, guid: 934835997f5b9784e92cbe7d7771c264, type: 2}

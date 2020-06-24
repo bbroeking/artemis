@@ -35,12 +35,14 @@ public class Player : Character
     private int souls;
     private int weight;
     [Space]
-    [SerializeField] Inventory inventory;
-    [SerializeField] EquipmentPanel equipmentPanel;
+    public Inventory Inventory;
+    public EquipmentPanel EquipmentPanel;
     [SerializeField] StatPanel statPanel;
     [SerializeField] ItemTooltip itemTooltip;
     [SerializeField] Image draggableItem;
-    private ItemSlot draggedSlot;
+    private BaseItemSlot draggedSlot;
+    [SerializeField] ItemSaveManager itemSaveManager;
+
 
     private void OnValidate(){
         if(itemTooltip == null){
@@ -55,68 +57,62 @@ public class Player : Character
         vitality = new CharacterStat(1);
 
         // Setup Events
-        inventory.OnRightClickEvent += InventoryRightClick;
-        equipmentPanel.OnRightClickEvent += EquipmentPanelRightClick;
+        Inventory.OnRightClickEvent += InventoryRightClick;
+        EquipmentPanel.OnRightClickEvent += EquipmentPanelRightClick;
 
-        inventory.OnPointerEnterEvent += ShowTooltip;
-        equipmentPanel.OnPointerEnterEvent += ShowTooltip;
+        Inventory.OnPointerEnterEvent += ShowTooltip;
+        EquipmentPanel.OnPointerEnterEvent += ShowTooltip;
 
-        inventory.OnPointerExitEvent += HideTooltip;
-        equipmentPanel.OnPointerExitEvent += HideTooltip;
+        Inventory.OnPointerExitEvent += HideTooltip;
+        EquipmentPanel.OnPointerExitEvent += HideTooltip;
 
-        inventory.OnBeginDragEvent += BeginDrag;
-        equipmentPanel.OnBeginDragEvent += BeginDrag;
+        Inventory.OnBeginDragEvent += BeginDrag;
+        EquipmentPanel.OnBeginDragEvent += BeginDrag;
 
-        inventory.OnEndDragEvent += EndDrag;
-        equipmentPanel.OnEndDragEvent += EndDrag;
+        Inventory.OnEndDragEvent += EndDrag;
+        EquipmentPanel.OnEndDragEvent += EndDrag;
 
-        inventory.OnDragEvent += Drag;
-        equipmentPanel.OnDragEvent += Drag;
+        Inventory.OnDragEvent += Drag;
+        EquipmentPanel.OnDragEvent += Drag;
 
-        inventory.OnDropEvent += Drop;
-        equipmentPanel.OnDropEvent += Drop;
+        Inventory.OnDropEvent += Drop;
+        EquipmentPanel.OnDropEvent += Drop;
 
     }
-
-	private void ShowTooltip(ItemSlot itemSlot)
+	private void ShowTooltip(BaseItemSlot itemSlot)
 	{
 		if (itemSlot.Item != null)
 		{
 			itemTooltip.ShowTooltip(itemSlot.Item);
 		}
 	}
-
-	private void HideTooltip(ItemSlot itemSlot)
+	private void HideTooltip(BaseItemSlot itemSlot)
 	{
 		if (itemTooltip.gameObject.activeSelf)
 		{
 			itemTooltip.HideTooltip();
 		}
 	}
-
-	private void BeginDrag(ItemSlot itemSlot)
+	private void BeginDrag(BaseItemSlot itemSlot)
 	{
 		if (itemSlot.Item != null)
 		{
 			draggedSlot = itemSlot;
-			draggableItem.sprite = itemSlot.Item.sprite;
+			draggableItem.sprite = itemSlot.Item.Icon;
 			draggableItem.transform.position = Input.mousePosition;
 			draggableItem.gameObject.SetActive(true);
 		}
 	}
-
-	private void Drag(ItemSlot itemSlot)
+	private void Drag(BaseItemSlot itemSlot)
 	{
 		draggableItem.transform.position = Input.mousePosition;
 	}
-
-	private void EndDrag(ItemSlot itemSlot)
+	private void EndDrag(BaseItemSlot itemSlot)
 	{
 		draggedSlot = null;
 		draggableItem.gameObject.SetActive(false);
 	}
-
-	private void Drop(ItemSlot dropItemSlot)
+	private void Drop(BaseItemSlot dropItemSlot)
 	{
 		if (draggedSlot == null) return;
 
@@ -129,8 +125,7 @@ public class Player : Character
 			SwapItems(dropItemSlot);
 		}
 	}
-
-    private void SwapItems(ItemSlot dropItemSlot)
+    private void SwapItems(BaseItemSlot dropItemSlot)
 	{
 		EquippableItem dragEquipItem = draggedSlot.Item as EquippableItem;
 		EquippableItem dropEquipItem = dropItemSlot.Item as EquippableItem;
@@ -156,11 +151,16 @@ public class Player : Character
 		dropItemSlot.Item = draggedItem;
 		//dropItemSlot.Amount = draggedItemAmount;
 	}
-
     private void Start()
     {
         statPanel.SetStats(strength, dexterity, intellect, vitality);
-        statPanel.UpdateStatValues();
+        statPanel.UpdateStatValues(); 
+
+        itemSaveManager.LoadEquipment(this);
+        itemSaveManager.LoadInventory(this);
+
+        Debug.Log(Application.persistentDataPath);
+
         // Old
         spellbook = GetComponent<Spellbook>();
         //Cursor.visible = false;
@@ -174,6 +174,11 @@ public class Player : Character
         this.souls = 1;
         this.weight = 1;
     }
+    private void OnDestroy()
+	{
+        itemSaveManager.SaveEquipment(this);
+        itemSaveManager.SaveInventory(this);
+	}
     void Update()
     {
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
@@ -198,7 +203,7 @@ public class Player : Character
         }
 
     }
-    private void InventoryRightClick(ItemSlot itemSlot){
+    private void InventoryRightClick(BaseItemSlot itemSlot){
         EquippableItem equippableItem = itemSlot.Item as EquippableItem;
         if(equippableItem != null){
             Equip(equippableItem);
@@ -208,13 +213,13 @@ public class Player : Character
             useableItem.Use(this);
 
             if(useableItem.isConsumable){
-                inventory.RemoveItem(useableItem);
+                Inventory.RemoveItem(useableItem);
                 //useableItem.Destroy();
             }
         }
     }
 
-    private void EquipmentPanelRightClick(ItemSlot itemSlot){
+    private void EquipmentPanelRightClick(BaseItemSlot itemSlot){
         EquippableItem equippableItem = itemSlot.Item as EquippableItem;
         if(equippableItem != null){
             Unequip(equippableItem);
@@ -222,11 +227,11 @@ public class Player : Character
     }
 
     public void Equip(EquippableItem item){
-        if(inventory.RemoveItem(item)){
+        if(Inventory.RemoveItem(item)){
             EquippableItem previousItem;
-            if(equipmentPanel.AddItem(item, out previousItem)){
+            if(EquipmentPanel.AddItem(item, out previousItem)){
                 if(previousItem != null){
-                    inventory.AddItem(previousItem);
+                    Inventory.AddItem(previousItem);
                     previousItem.Unequip(this);
                     statPanel.UpdateStatValues();
                 }
@@ -234,16 +239,16 @@ public class Player : Character
                 statPanel.UpdateStatValues();
             }
             else {
-                inventory.RemoveItem(item);
+                Inventory.RemoveItem(item);
             }
         }
     }
 
     public void Unequip(EquippableItem item){
-        if(!inventory.IsFull() && equipmentPanel.RemoveItem(item)){
+        if(!Inventory.CanAddItem(item) && EquipmentPanel.RemoveItem(item)){
             item.Unequip(this);
             statPanel.UpdateStatValues();
-            inventory.AddItem(item);
+            Inventory.AddItem(item);
         }
     }
 
@@ -349,5 +354,9 @@ public class Player : Character
         else {
             return 0;
         }
+    }
+
+    public void UpdateStatValues(){
+        statPanel.UpdateStatValues();
     }
 }

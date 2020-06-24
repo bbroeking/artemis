@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aab5c75de1e30e14cb2dc6a6b5b02c40, type: 3}
-  m_Name: Bones
+  m_Script: {fileID: 11500000, guid: ec35d600239d597439195ddb061ae1f3, type: 3}
+  m_Name: StrengthBuff
   m_EditorClassIdentifier: 
-  itemName: Bones
-  sprite: {fileID: 6471500516762935339, guid: ee639f852642c3246b994b77794394ed, type: 3}
+  statType: 0
+  BuffAmount: 5
+  Duration: 20

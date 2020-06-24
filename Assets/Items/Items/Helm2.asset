@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0767f064d65b0b14c9d4bd97592f6434, type: 3}
+  m_Name: Helm2
+  m_EditorClassIdentifier: 
+  id: 50ffd38af23f6974e8714eaf2219e7c7
+  ItemName: Helm2
+  Icon: {fileID: 21300000, guid: 20a370aee5de2ad43901d10fa5de4b22, type: 3}
+  MaximumStacks: 1
+  strengthBonus: 3
+  dexterityBonus: 3
+  intellectBonus: 3
+  vitalityBonus: 3
+  EquipmentType: 0

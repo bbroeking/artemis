@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0767f064d65b0b14c9d4bd97592f6434, type: 3}
-  m_Name: AnotherHelm
+  m_Name: Helm
   m_EditorClassIdentifier: 
-  itemName: AnotherHelm
-  sprite: {fileID: 6587658822208887209, guid: f1d7d22837f0bf84191e4d007a225c67, type: 3}
-  strengthBonus: 3
-  dexterityBonus: 3
-  intellectBonus: 3
-  vitalityBonus: 3
+  id: f4e1e915d353b0a438eef9d60b5caa79
+  ItemName: helm1
+  Icon: {fileID: 21300000, guid: bdb0e8bea4876064ba04460252a65742, type: 3}
+  MaximumStacks: 1
+  strengthBonus: 2
+  dexterityBonus: 2
+  intellectBonus: 2
+  vitalityBonus: 2
   EquipmentType: 0

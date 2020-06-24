@@ -1,16 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public enum EquipmentType {
-    Head,
-    Chest,
-    Legs,
-    Ring,
-    Trinket,
-    Mainhand,
-    Offhand
-}
+public enum EquipmentType { Head, Chest, Legs, Ring, Trinket, Mainhand, Offhand }
 [CreateAssetMenu]
 public class EquippableItem : Item
 {
