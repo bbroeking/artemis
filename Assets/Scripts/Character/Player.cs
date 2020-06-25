@@ -159,8 +159,6 @@ public class Player : Character
         itemSaveManager.LoadEquipment(this);
         itemSaveManager.LoadInventory(this);
 
-        Debug.Log(Application.persistentDataPath);
-
         // Old
         spellbook = GetComponent<Spellbook>();
         //Cursor.visible = false;
