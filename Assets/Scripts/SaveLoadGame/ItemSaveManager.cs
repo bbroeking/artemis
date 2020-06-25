@@ -21,13 +21,18 @@ public class ItemSaveManager : MonoBehaviour
 
 			if (savedSlot == null)
 			{
+				Debug.Log(i);
 				itemSlot.Item = null;
-				itemSlot.Amount = 0;
+				//itemSlot.Amount = 0;
 			}
 			else
 			{
+				Debug.Log("other");
 				itemSlot.Item = itemDatabase.GetItemCopy(savedSlot.ItemID);
-				itemSlot.Amount = savedSlot.Amount;
+				if(itemSlot.Item == null){
+					Debug.Log(itemSlot.Item.ID);
+				}
+				//itemSlot.Amount = savedSlot.Amount;
 			}
 		}
 	}
@@ -42,7 +47,6 @@ public class ItemSaveManager : MonoBehaviour
 			if (savedSlot == null) {
 				continue;
 			}
-
 			Item item = itemDatabase.GetItemCopy(savedSlot.ItemID);
 			player.Inventory.AddItem(item);
 			player.Equip((EquippableItem)item);

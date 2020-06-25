@@ -13,7 +13,6 @@ public static class ItemSaveIO
 	{
 		FileReadWrite.WriteToBinaryFile(baseSavePath + "/" + path + ".dat", items);
 	}
-
 	public static ItemContainerSaveData LoadItems(string path)
 	{
 		string filePath = baseSavePath + "/" + path + ".dat";

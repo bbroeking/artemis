@@ -5,7 +5,6 @@ using UnityEngine;
 public abstract class ItemContainer : MonoBehaviour, IItemContainer
 {
 	public List<ItemSlot> ItemSlots;
-
 	public event Action<BaseItemSlot> OnPointerEnterEvent;
 	public event Action<BaseItemSlot> OnPointerExitEvent;
 	public event Action<BaseItemSlot> OnRightClickEvent;
@@ -55,15 +54,16 @@ public abstract class ItemContainer : MonoBehaviour, IItemContainer
 
 	public virtual bool AddItem(Item item)
 	{
-		for (int i = 0; i < ItemSlots.Count; i++)
-		{
-			if (ItemSlots[i].CanAddStack(item))
-			{
-				ItemSlots[i].Item = item;
-				ItemSlots[i].Amount++;
-				return true;
-			}
-		}
+		// for (int i = 0; i < ItemSlots.Count; i++)
+		// {
+		// 	if (ItemSlots[i].CanAddStack(item))
+		// 	{
+		// 		Debug.Log("stcking");
+		// 		ItemSlots[i].Item = item;
+		// 		ItemSlots[i].Amount++;
+		// 		return true;
+		// 	}
+		// }
 
 		for (int i = 0; i < ItemSlots.Count; i++)
 		{

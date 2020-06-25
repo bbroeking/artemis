@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class BaseItemSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
 	[SerializeField] protected Image image;
-	[SerializeField] protected Text amountText;
+	[SerializeField] public  Text amountText;
 
 	public event Action<BaseItemSlot> OnPointerEnterEvent;
 	public event Action<BaseItemSlot> OnPointerExitEvent;
