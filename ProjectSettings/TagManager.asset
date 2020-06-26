@@ -9,7 +9,6 @@ TagManager:
   - Rooms
   - Enemy
   - Loot
-  - NPC
   - mainhand
   - offhand
   - head
@@ -21,6 +20,9 @@ TagManager:
   - ring2
   - trinket1
   - trinket2
+  - enemy
+  - ladder
+  - Interactable
   layers:
   - Default
   - TransparentFX

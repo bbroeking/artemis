@@ -60,7 +60,10 @@ public class ItemSlot : BaseItemSlot, IBeginDragHandler, IEndDragHandler, IDragH
 
 	public void OnDrop(PointerEventData eventData)
 	{
-		if (OnDropEvent != null)
+		if (OnDropEvent != null){
 			OnDropEvent(this);
+		} else {
+			Debug.Log("drop even is nul");
+		}
 	}
 }

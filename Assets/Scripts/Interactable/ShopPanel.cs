@@ -5,28 +5,25 @@ using System;
 
 public class ShopPanel : ItemContainer
 {
-	[SerializeField] protected Item[] startingItems;
+	[SerializeField] protected List<Item> shopItems;
 	[SerializeField] protected Transform itemsParent;
 	protected override void OnValidate()
 	{
 		if (itemsParent != null)
 			itemsParent.GetComponentsInChildren(includeInactive: true, result: ItemSlots);
-
-		if (!Application.isPlaying) {
-			SetStartingItems();
-		}
 	}
 	protected override void Awake()
 	{
 		base.Awake();
-		SetStartingItems();
 	}
-	private void SetStartingItems()
+	public void SetShop(List<Item> items)
 	{
+		shopItems = items;
 		Clear();
-		foreach (Item item in startingItems)
+		foreach (Item item in shopItems)
 		{
 			AddItem(item.GetCopy());
 		}
 	}
+
 }

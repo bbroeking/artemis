@@ -63,7 +63,7 @@ public class Combat : MonoBehaviour
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
-            enemiesToDamage[i].GetComponent<Enemy>().Hit(player.spellDamage);
+            enemiesToDamage[i].GetComponent<Enemy>().Hit(player.SpellDamage);
         }
     }
     void Cast(GameObject b, Transform firePoint)

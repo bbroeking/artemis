@@ -4,33 +4,29 @@ using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 using UnityEngine.UI;
 
-public enum Soul {
-    gravity,
-    poison
-}
 public class Player : Character
 {
+    [Header("Components")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator anim;
-    [SerializeField] private GameObject crosshair;
-
-    [Header("Components")]
     [SerializeField] protected Combat combat;
     [SerializeField] protected PlayerResources resources;
     [SerializeField] protected Spellbook spellbook;
     
+    
     [Header("Currencies")]
     protected int gold;
-    public int Gold { get { return gold;} }
+    public int Gold { get { return gold;} set { gold += value; }}
     protected int souls;
-    public int Souls { get { return souls;} }
+    public int Souls { get { return souls;} set { souls += value; }}
     protected int weight;
-    public int Weight { get { return weight;} }
+    public int Weight { get { return weight;} set { weight += value; }}
     
     [Space]
     public Inventory Inventory;
     public EquipmentPanel EquipmentPanel;
     [SerializeField] StatPanel statPanel;
+    [SerializeField] ShopPanel ShopPanel;
     [SerializeField] ItemTooltip itemTooltip;
     [SerializeField] Image draggableItem;
     protected BaseItemSlot draggedSlot;
@@ -52,25 +48,54 @@ public class Player : Character
         // Setup Events
         Inventory.OnRightClickEvent += InventoryRightClick;
         EquipmentPanel.OnRightClickEvent += EquipmentPanelRightClick;
+        ShopPanel.OnRightClickEvent += InventoryRightClick;
 
         Inventory.OnPointerEnterEvent += ShowTooltip;
         EquipmentPanel.OnPointerEnterEvent += ShowTooltip;
+        ShopPanel.OnPointerEnterEvent += ShowTooltip;
 
         Inventory.OnPointerExitEvent += HideTooltip;
         EquipmentPanel.OnPointerExitEvent += HideTooltip;
+        ShopPanel.OnPointerExitEvent += HideTooltip;
 
         Inventory.OnBeginDragEvent += BeginDrag;
         EquipmentPanel.OnBeginDragEvent += BeginDrag;
+        ShopPanel.OnBeginDragEvent += BeginDrag;
 
         Inventory.OnEndDragEvent += EndDrag;
         EquipmentPanel.OnEndDragEvent += EndDrag;
+        ShopPanel.OnEndDragEvent += EndDrag;
 
         Inventory.OnDragEvent += Drag;
         EquipmentPanel.OnDragEvent += Drag;
+        ShopPanel.OnDragEvent += Drag;
 
         Inventory.OnDropEvent += Drop;
         EquipmentPanel.OnDropEvent += Drop;
+        ShopPanel.OnDropEvent += Drop;
 
+    }
+    private void Start()
+    {
+        statPanel.SetStats(strength, dexterity, intellect, vitality);
+        statPanel.UpdateStatValues(); 
+
+        itemSaveManager.LoadEquipment(this);
+        itemSaveManager.LoadInventory(this);
+
+        this.gold = 1;
+        this.souls = 1;
+        this.weight = 1;
+    }
+    void Update()
+    {
+        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
+
+        anim.SetFloat("Horizontal", movement.x);
+        anim.SetFloat("Vertical", movement.y);
+        anim.SetFloat("Magnitude", movement.magnitude);
+
+        Move(movement);
     }
 	private void ShowTooltip(BaseItemSlot itemSlot)
 	{
@@ -109,10 +134,6 @@ public class Player : Character
 	{
 		if (draggedSlot == null) return;
 
-		// if (dropItemSlot.CanAddStack(dragItemSlot.Item))
-		// {
-		// 	AddStacks(dropItemSlot);
-		// }
 		if (dropItemSlot.CanReceiveItem(draggedSlot.Item) && draggedSlot.CanReceiveItem(dropItemSlot.Item))
 		{
 			SwapItems(dropItemSlot);
@@ -136,44 +157,14 @@ public class Player : Character
 		statPanel.UpdateStatValues();
 
 		Item draggedItem = draggedSlot.Item;
-		//int draggedItemAmount = draggedSlot.Amount;
-
 		draggedSlot.Item = dropItemSlot.Item;
-		//draggedSlot.Amount = dropItemSlot.Amount;
-
 		dropItemSlot.Item = draggedItem;
-		//dropItemSlot.Amount = draggedItemAmount;
 	}
-    private void Start()
-    {
-        statPanel.SetStats(strength, dexterity, intellect, vitality);
-        statPanel.UpdateStatValues(); 
-
-        itemSaveManager.LoadEquipment(this);
-        itemSaveManager.LoadInventory(this);
-
-        // Old
-        //Cursor.visible = false;
-        this.gold = 1;
-        this.souls = 1;
-        this.weight = 1;
-    }
     private void OnDestroy()
 	{
         itemSaveManager.SaveEquipment(this);
         itemSaveManager.SaveInventory(this);
 	}
-    void Update()
-    {
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
-
-        anim.SetFloat("Horizontal", movement.x);
-        anim.SetFloat("Vertical", movement.y);
-        anim.SetFloat("Magnitude", movement.magnitude);
-
-        Move(movement);
-        Aim();
-    }
     private void InventoryRightClick(BaseItemSlot itemSlot){
         EquippableItem equippableItem = itemSlot.Item as EquippableItem;
         if(equippableItem != null){
@@ -189,14 +180,12 @@ public class Player : Character
             }
         }
     }
-
     private void EquipmentPanelRightClick(BaseItemSlot itemSlot){
         EquippableItem equippableItem = itemSlot.Item as EquippableItem;
         if(equippableItem != null){
             Unequip(equippableItem);
         }
     }
-
     public void Equip(EquippableItem item){
         if(Inventory.RemoveItem(item)){
             EquippableItem previousItem;
@@ -214,7 +203,6 @@ public class Player : Character
             }
         }
     }
-
     public void Unequip(EquippableItem item){
         if(!Inventory.CanAddItem(item) && EquipmentPanel.RemoveItem(item)){
             item.Unequip(this);
@@ -222,36 +210,10 @@ public class Player : Character
             Inventory.AddItem(item);
         }
     }
-
     void Move(Vector3 movement)
     {
         rb.velocity = new Vector2(movement.x * speed, movement.y * speed);
     }
-    void Aim()
-    {
-        Vector2 screenPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-        Vector2 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
-        crosshair.transform.localPosition = worldPosition;
-    }
-    private void CalculateSpellDamage(){
-        this.spellDamage = 1 + (int)this.intellect.Value;
-    }
-    private void UpdateModifiers(){
-        base.CalculateBaseHealth();
-        base.CalculateInteralAttackCD();
-        CalculateSpellDamage();
-    }
-
-    public void UpdateGold(int gold){
-        this.gold += gold;
-    }
-    public void UpdateSouls(int souls){
-        this.souls += souls;
-    }
-    public void UpdateWeight(int weight){
-        this.weight += weight;
-    }
-
     public void UpdateStatValues(){
         statPanel.UpdateStatValues();
     }

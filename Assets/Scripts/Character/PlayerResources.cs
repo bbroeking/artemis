@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Soul { gravity, poison }
 public class PlayerResources : MonoBehaviour
 {
     [SerializeField] private Player player;
