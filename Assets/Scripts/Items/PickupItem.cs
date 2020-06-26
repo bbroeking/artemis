@@ -6,7 +6,6 @@ public class PickupItem : MonoBehaviour
     [SerializeField] Inventory inventory;
     [SerializeField] KeyCode itemPickupKeyCode = KeyCode.F;
     [SerializeField] SpriteRenderer spriteRenderer;
-    [SerializeField] GameObject playerGameObject;
     private bool isInRange;
 
     void Start(){

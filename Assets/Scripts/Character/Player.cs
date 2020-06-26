@@ -22,10 +22,11 @@ public class Player : Character
     protected int weight;
     public int Weight { get { return weight;} set { weight += value; }}
     
-    [Space]
-    public Inventory Inventory;
-    public EquipmentPanel EquipmentPanel;
+    [Header("UI Panels")]
+    [SerializeField] public Inventory Inventory;
+    [SerializeField] public EquipmentPanel EquipmentPanel;
     [SerializeField] StatPanel statPanel;
+    [SerializeField] CurrencyPanel currencyPanel;
     [SerializeField] ShopPanel ShopPanel;
     [SerializeField] ItemTooltip itemTooltip;
     [SerializeField] Image draggableItem;
@@ -83,9 +84,12 @@ public class Player : Character
         itemSaveManager.LoadEquipment(this);
         itemSaveManager.LoadInventory(this);
 
+        // Currency
         this.gold = 1;
         this.souls = 1;
         this.weight = 1;
+        currencyPanel.SetCurrency(this.gold, this.souls, this.weight);
+        currencyPanel.UpdateCurrencyValues();
     }
     void Update()
     {
@@ -139,6 +143,9 @@ public class Player : Character
 			SwapItems(dropItemSlot);
 		}
 	}
+    public void SetPlayerCurrency(){
+        currencyPanel.SetCurrency(this.gold, this.souls, this.weight);
+    }
     private void SwapItems(BaseItemSlot dropItemSlot)
 	{
 		EquippableItem dragEquipItem = draggedSlot.Item as EquippableItem;

@@ -22,7 +22,6 @@ public class ItemSaveManager : MonoBehaviour
 			if (savedSlot == null)
 			{
 				itemSlot.Item = null;
-				//itemSlot.Amount = 0;
 			}
 			else
 			{
@@ -30,7 +29,6 @@ public class ItemSaveManager : MonoBehaviour
 				if(itemSlot.Item == null){
 					Debug.Log(itemSlot.Item.ID);
 				}
-				//itemSlot.Amount = savedSlot.Amount;
 			}
 		}
 	}
