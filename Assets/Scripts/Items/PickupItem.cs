@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PickupItem : MonoBehaviour
 {
-    [SerializeField] Item item;
+    [SerializeField] public Item item;
     [SerializeField] Inventory inventory;
     [SerializeField] KeyCode itemPickupKeyCode = KeyCode.F;
     [SerializeField] SpriteRenderer spriteRenderer;

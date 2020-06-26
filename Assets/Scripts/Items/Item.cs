@@ -11,8 +11,8 @@ public class Item : ScriptableObject
 	public string ID { get { return id; } }
 	public string ItemName;
 	public Sprite Icon;
-	[Range(1,999)]
-	public int MaximumStacks = 1;
+	[Range(1,999)] public int MaximumStacks = 1;
+	public int dropChance;
 
 	protected static readonly StringBuilder sb = new StringBuilder();
 

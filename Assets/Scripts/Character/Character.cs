@@ -5,7 +5,7 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     public int health;
-    protected int currentHealth;
+    public int currentHealth;
     protected int speed; 
     public CharacterStat strength;
     public CharacterStat dexterity;
@@ -18,6 +18,8 @@ public class Character : MonoBehaviour
     protected float intellectModifier;
     protected float vitalityModifier;
     protected float internalAttackCooldown;
+    public float InteralAttackCooldown { get { return internalAttackCooldown;} }
+    public int spellDamage;
     protected bool dead;
 
     protected virtual void Awake(){

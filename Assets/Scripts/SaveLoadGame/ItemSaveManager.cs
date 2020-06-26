@@ -21,13 +21,11 @@ public class ItemSaveManager : MonoBehaviour
 
 			if (savedSlot == null)
 			{
-				Debug.Log(i);
 				itemSlot.Item = null;
 				//itemSlot.Amount = 0;
 			}
 			else
 			{
-				Debug.Log("other");
 				itemSlot.Item = itemDatabase.GetItemCopy(savedSlot.ItemID);
 				if(itemSlot.Item == null){
 					Debug.Log(itemSlot.Item.ID);

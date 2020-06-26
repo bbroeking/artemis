@@ -11,36 +11,29 @@ public enum Soul {
 public class Player : Character
 {
     [SerializeField] private Rigidbody2D rb;
-
     [SerializeField] private Animator anim;
-    
     [SerializeField] private GameObject crosshair;
 
-    private IInteractable interactable;
-
-    [SerializeField] private HealthBar healthbar;
+    [Header("Components")]
+    [SerializeField] protected Combat combat;
+    [SerializeField] protected PlayerResources resources;
+    [SerializeField] protected Spellbook spellbook;
     
-    [SerializeField] private EssenceBar activeEssence;
+    [Header("Currencies")]
+    protected int gold;
+    public int Gold { get { return gold;} }
+    protected int souls;
+    public int Souls { get { return souls;} }
+    protected int weight;
+    public int Weight { get { return weight;} }
     
-    [SerializeField] private EssenceBar inactiveEssence;
-    private int gravityEssence;
-    private int poisonEssence;
-    public int spellDamage;
-    private Soul activeSoul;
-    private Soul inactiveSoul;
-    private Spellbook spellbook;
-    private int maxEssence;
-    [SerializeField] private Combat combat;
-    private int gold;
-    private int souls;
-    private int weight;
     [Space]
     public Inventory Inventory;
     public EquipmentPanel EquipmentPanel;
     [SerializeField] StatPanel statPanel;
     [SerializeField] ItemTooltip itemTooltip;
     [SerializeField] Image draggableItem;
-    private BaseItemSlot draggedSlot;
+    protected BaseItemSlot draggedSlot;
     [SerializeField] ItemSaveManager itemSaveManager;
 
 
@@ -160,14 +153,7 @@ public class Player : Character
         itemSaveManager.LoadInventory(this);
 
         // Old
-        spellbook = GetComponent<Spellbook>();
         //Cursor.visible = false;
-        activeSoul = Soul.gravity;
-        inactiveSoul = Soul.poison;
-        //activeEssence.SetMaxEssence(this.maxEssence);
-        //inactiveEssence.SetMaxEssence(this.maxEssence);
-        this.gravityEssence = this.maxEssence;
-        this.poisonEssence = this.maxEssence;
         this.gold = 1;
         this.souls = 1;
         this.weight = 1;
@@ -187,19 +173,6 @@ public class Player : Character
 
         Move(movement);
         Aim();
-
-        if (Input.GetKeyDown("e"))
-        {
-            SwapActiveSoul();
-        }
-        if (Input.GetKeyDown("q"))
-        {
-            int activeEssenceAmount = GetActiveEssenceAmount();
-            if(activeEssenceAmount > 3){
-                StartCoroutine(combat.CastSoulAbility(activeSoul));
-            }
-        }
-
     }
     private void InventoryRightClick(BaseItemSlot itemSlot){
         EquippableItem equippableItem = itemSlot.Item as EquippableItem;
@@ -254,59 +227,11 @@ public class Player : Character
     {
         rb.velocity = new Vector2(movement.x * speed, movement.y * speed);
     }
-    private void TakeDamage(int damage)
-    {
-        this.currentHealth -= damage;
-        healthbar.SetHealth(this.currentHealth);
-    }
-    public void UseEssence(int essence){
-        if(activeSoul == Soul.gravity){
-            this.gravityEssence -= essence;
-            this.activeEssence.SetEssence(this.gravityEssence);
-        }
-        else if (activeSoul == Soul.poison){
-            this.poisonEssence -= essence;
-            this.activeEssence.SetEssence(this.poisonEssence);
-        }
-    }
-    public void SwapActiveSoul(){
-        Soul tempSoul = activeSoul;
-        activeSoul = inactiveSoul;
-        inactiveSoul = tempSoul;
-        EssenceBar temp = activeEssence;
-        activeEssence = inactiveEssence;
-        inactiveEssence = temp;
-    }
     void Aim()
     {
         Vector2 screenPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         Vector2 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
         crosshair.transform.localPosition = worldPosition;
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-
-        if(collision.gameObject.tag == "Loot")
-        {
-            Loot loot = collision.gameObject.GetComponent<LootInfo>().loot;
-            //GetComponent<Inventory>().GiveItem(loot.id);
-            Destroy(collision.gameObject);
-        }
-    }
-    private void OnTriggerEnter2D(Collider2D collision){
-        if(collision.gameObject.tag == "NPC"){
-            interactable = collision.GetComponent<IInteractable>();
-            interactable.Interact();
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision){
-        if(collision.gameObject.tag == "NPC"){
-            interactable.StopInteract();
-            interactable = null;
-        }
-    }
-    private void CalculateEssence(){
-        this.maxEssence = 5 + (int)this.intellect.Value;
     }
     private void CalculateSpellDamage(){
         this.spellDamage = 1 + (int)this.intellect.Value;
@@ -314,22 +239,7 @@ public class Player : Character
     private void UpdateModifiers(){
         base.CalculateBaseHealth();
         base.CalculateInteralAttackCD();
-        CalculateEssence();
         CalculateSpellDamage();
-    }
-    public Soul GetActiveSoul(){
-        return this.activeSoul;
-    }
-    public int GetGold(){
-        return this.gold;
-    }
-
-    public int GetSoul(){
-        return this.souls;
-    }
-
-    public int GetWeight(){
-        return this.weight;
     }
 
     public void UpdateGold(int gold){
@@ -340,18 +250,6 @@ public class Player : Character
     }
     public void UpdateWeight(int weight){
         this.weight += weight;
-    }
-
-    public int GetActiveEssenceAmount(){
-        if(activeSoul == Soul.gravity){
-            return this.gravityEssence;
-        }
-        else if (activeSoul == Soul.poison){
-            return this.poisonEssence;
-        }
-        else {
-            return 0;
-        }
     }
 
     public void UpdateStatValues(){

@@ -10,67 +10,61 @@ public class Combat : MonoBehaviour
     public Collider2D playerCollider;
     public LayerMask whatIsEnemy;
     public float attackRange;
-    public float internalAttackCooldown;
     public float spellForce;
     private float timeBetweenAttack;
-    [SerializeField]
-    private GameObject poisonNova;
-    private Spellbook spellbook;
-    [SerializeField]
-    private Player player;
+    [SerializeField] private GameObject poisonNova;
+    
+    [Header("Components")]
+    [SerializeField] private Player player;
+    [SerializeField] private Spellbook spellbook;
+    [SerializeField] private PlayerResources resources;
+    [SerializeField] private GameObject inventoryGameObject;
+    [SerializeField] private GameObject equipmentGameObject;
 
-    void Start(){
-        spellbook = GetComponent<Spellbook>();
-    }
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            if(timeBetweenAttack <= 0){
-                Melee();
-                timeBetweenAttack = internalAttackCooldown;
-            } else {
-                timeBetweenAttack -= Time.deltaTime;
+        if(!inventoryGameObject.activeSelf && !equipmentGameObject.activeSelf){
+            if (Input.GetButtonDown("Fire1"))
+            {
+                if(timeBetweenAttack <= 0){
+                    Melee();
+                    timeBetweenAttack = player.InteralAttackCooldown;
+                } else {
+                    timeBetweenAttack -= Time.deltaTime;
+                }
             }
-        }
-        if (Input.GetButtonDown("Fire2"))
-        {
-            if(player.GetActiveEssenceAmount() > 0){
-                Soul active = player.GetActiveSoul();
-                if(active == Soul.gravity){
-                    Cast(gravitySoul, castPos);
+            if (Input.GetButtonDown("Fire2"))
+            {
+                if(resources.GetActiveEssenceAmount() > 0){
+                    Soul active = resources.ActiveSoul;
+                    if(active == Soul.gravity){
+                        Cast(gravitySoul, castPos);
+                    }
+                    else if(active == Soul.poison){
+                        Cast(poisonNova, castPos);
+                    }
+                    resources.UseEssence(1);
                 }
-                else if(active == Soul.poison){
-                    Cast(poisonNova, castPos);
+            }
+            if (Input.GetKeyDown("e"))
+            {
+                resources.SwapActiveSoul();
+            }
+            if (Input.GetKeyDown("q"))
+            {
+                int activeEssenceAmount = resources.GetActiveEssenceAmount();
+                if(activeEssenceAmount > 3){
+                    StartCoroutine(CastSoulAbility(resources.ActiveSoul));
                 }
-                player.UseEssence(1);
             }
         }
     }
-
     void Melee(){
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
             enemiesToDamage[i].GetComponent<Enemy>().Hit(player.spellDamage);
         }
-    }
-
-    private void SoulAbility(Soul activeSoul){
-        if (activeSoul == Soul.poison){
-            spellbook.PoisonNova(poisonNova, castPos.transform, playerCollider);
-        }
-    }
-    public IEnumerator CastSoulAbility(Soul activeSoul){
-        for (int i = 0; i < 6; i++)
-        {
-            SoulAbility(activeSoul);
-            yield return new WaitForSeconds(1f);
-        }
-    }
-    void OnDrawGizmosSelected(){
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
     void Cast(GameObject b, Transform firePoint)
     {
@@ -83,5 +77,21 @@ public class Combat : MonoBehaviour
         Vector2 lookDir = worldPosition - rb.position;
 
         rb.AddForce(lookDir.normalized * spellForce, ForceMode2D.Impulse);
+    }
+    void OnDrawGizmosSelected(){
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPos.position, attackRange);
+    }
+    private void SoulAbility(Soul activeSoul){
+        if (activeSoul == Soul.poison){
+            spellbook.PoisonNova(poisonNova, castPos.transform, playerCollider);
+        }
+    }
+    public IEnumerator CastSoulAbility(Soul activeSoul){
+        for (int i = 0; i < 6; i++)
+        {
+            SoulAbility(activeSoul);
+            yield return new WaitForSeconds(1f);
+        }
     }
 }

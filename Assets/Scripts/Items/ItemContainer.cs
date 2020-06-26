@@ -54,17 +54,6 @@ public abstract class ItemContainer : MonoBehaviour, IItemContainer
 
 	public virtual bool AddItem(Item item)
 	{
-		// for (int i = 0; i < ItemSlots.Count; i++)
-		// {
-		// 	if (ItemSlots[i].CanAddStack(item))
-		// 	{
-		// 		Debug.Log("stcking");
-		// 		ItemSlots[i].Item = item;
-		// 		ItemSlots[i].Amount++;
-		// 		return true;
-		// 	}
-		// }
-
 		for (int i = 0; i < ItemSlots.Count; i++)
 		{
 			if (ItemSlots[i].Item == null)

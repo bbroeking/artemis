@@ -24,12 +24,12 @@ public class Enemy : Character
 
     private void SpawnLootAndDestroy()
     {
-        Loot drop = GetComponent<LootTable>().GenerateDrop();
+        Item drop = GetComponent<LootTable>().GenerateDrop();
         GameObject d = Instantiate(item, transform.position, Quaternion.identity);
         SpriteRenderer sr = d.GetComponent<SpriteRenderer>();
-        sr.sprite = drop.sprite;
-        LootInfo li = d.GetComponent<LootInfo>();
-        li.loot = drop;
+        sr.sprite = drop.Icon;
+        PickupItem li = d.GetComponent<PickupItem>();
+        li.item = drop;
         Destroy(this.gameObject);
     }
 
