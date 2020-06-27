@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class SpellProjectile : MonoBehaviour
 {
-    [SerializeField]
-    private Player player;
+    [SerializeField] private Player player;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

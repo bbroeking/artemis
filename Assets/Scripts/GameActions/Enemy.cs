@@ -4,32 +4,21 @@ using UnityEngine;
 
 public class Enemy : Character
 {
+    [SerializeField] LootTable lootTable;
 
-    public GameObject item;
-
-    [SerializeField]
-    private int enemyHealth;
-    void Start(){
-        this.health = enemyHealth;
-        this.currentHealth = enemyHealth;
+    private void OnValidate(){
+        lootTable = gameObject.GetComponentInParent<LootTable>();
     }
     public void Hit(int damage)
     {
         TakeDamage(damage);
         if (this.dead)
-        {
             SpawnLootAndDestroy();
-        }
     }
 
     private void SpawnLootAndDestroy()
     {
-        Item drop = GetComponent<LootTable>().GenerateDrop();
-        GameObject d = Instantiate(item, transform.position, Quaternion.identity);
-        SpriteRenderer sr = d.GetComponent<SpriteRenderer>();
-        sr.sprite = drop.Icon;
-        PickupItem li = d.GetComponent<PickupItem>();
-        li.item = drop;
+        lootTable.SpawnLoot();
         Destroy(this.gameObject);
     }
 

@@ -16,6 +16,7 @@ MonoBehaviour:
   ItemName: helm1
   Icon: {fileID: 21300000, guid: bdb0e8bea4876064ba04460252a65742, type: 3}
   MaximumStacks: 1
+  dropChance: 50
   strengthBonus: 2
   dexterityBonus: 2
   intellectBonus: 2

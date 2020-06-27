@@ -1,14 +1,13 @@
 ﻿using UnityEngine;
 
 public enum EquipmentType { Head, Chest, Legs, Ring, Trinket, Mainhand, Offhand }
-[CreateAssetMenu]
+[CreateAssetMenu(menuName="Items/EquipmentItem")]
 public class EquippableItem : Item
 {
     public int strengthBonus;
     public int dexterityBonus;
     public int intellectBonus;
     public int vitalityBonus;
-    [Space]
     public EquipmentType EquipmentType;
 
     public void Equip(Character c){
@@ -21,18 +20,16 @@ public class EquippableItem : Item
         if (vitalityBonus != 0)
             c.vitality.AddModifier(new StatModifier(vitalityBonus, StatModType.Flat, this));
     }
-
     public void Unequip(Character c){
         c.strength.RemoveAllModifiersFromSource(this);
         c.dexterity.RemoveAllModifiersFromSource(this);
         c.intellect.RemoveAllModifiersFromSource(this);
         c.vitality.RemoveAllModifiersFromSource(this);
     }
-
     public override string GetItemType(){
         return EquipmentType.ToString();
     }
-    	public override string GetDescription()
+    public override string GetDescription()
 	{
 		sb.Length = 0;
 		AddStat(strengthBonus, "Strength");
@@ -42,7 +39,6 @@ public class EquippableItem : Item
 
 		return sb.ToString();
 	}
-
 	private void AddStat(float value, string statName, bool isPercent = false)
 	{
 		if (value != 0)

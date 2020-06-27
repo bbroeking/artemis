@@ -4,10 +4,37 @@ using UnityEngine;
 
 public class LootTable : MonoBehaviour
 {
-    public List<Item> loot;
+    // Loot Generator
     private int randomNumber;
     private int total;
     private int count;
+
+    [SerializeField] Enemy enemy;
+
+    [Header("Loot Table")]
+    public List<Item> loot;
+
+    [Header("Drop Prefabs")]
+    [SerializeField] GameObject droppedItem;
+    [SerializeField] GameObject droppedCurrency;    
+
+    private void OnValidate(){
+        enemy = gameObject.GetComponentInParent<Enemy>();
+        droppedItem = (GameObject) LoadPrefab.LoadPrefabFromFile("DroppedItem");
+        droppedCurrency = (GameObject) LoadPrefab.LoadPrefabFromFile("DroppedCurrency");
+    }
+    public void SpawnLoot(){
+        Item drop = GenerateDrop();
+        GameObject loot = Instantiate(droppedItem, transform.position, Quaternion.identity);
+        SetLoot(drop, loot);
+    }
+
+    private void SetLoot(Item drop, GameObject loot){
+        SpriteRenderer spriteRenderer = loot.GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = drop.Icon;
+        PickupItem pickupItem = loot.GetComponent<PickupItem>();
+        pickupItem.item = drop;
+    }
 
     public Item GenerateDrop(){
         total = 0;

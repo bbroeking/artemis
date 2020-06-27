@@ -9,10 +9,15 @@ public class PickupItem : MonoBehaviour
     private bool isInRange;
 
     void Start(){
-        spriteRenderer.sprite = item.Icon;
+        if(item != null){
+            spriteRenderer.sprite = item.Icon;
+        }
     }
     void Update()
     {
+        if(item != null){
+            spriteRenderer.sprite = item.Icon;
+        }
         if(isInRange && Input.GetKeyDown(itemPickupKeyCode)){
             inventory.AddItem(Instantiate(item));
             Destroy(this.gameObject);

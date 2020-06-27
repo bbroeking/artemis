@@ -26,9 +26,6 @@ public class ItemSaveManager : MonoBehaviour
 			else
 			{
 				itemSlot.Item = itemDatabase.GetItemCopy(savedSlot.ItemID);
-				if(itemSlot.Item == null){
-					Debug.Log(itemSlot.Item.ID);
-				}
 			}
 		}
 	}
