@@ -5,9 +5,11 @@ using UnityEngine;
 public class Enemy : Character
 {
     [SerializeField] LootTable lootTable;
+    [SerializeField] Sprite sprite;
 
     private void OnValidate(){
         lootTable = gameObject.GetComponentInParent<LootTable>();
+        gameObject.GetComponentInParent<SpriteRenderer>().sprite = sprite;
     }
     public void Hit(int damage)
     {

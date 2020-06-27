@@ -26,7 +26,7 @@ public class Player : Character
     [SerializeField] public Inventory Inventory;
     [SerializeField] public EquipmentPanel EquipmentPanel;
     [SerializeField] StatPanel statPanel;
-    [SerializeField] CurrencyPanel currencyPanel;
+    [SerializeField] public CurrencyPanel currencyPanel;
     [SerializeField] ShopPanel ShopPanel;
     [SerializeField] ItemTooltip itemTooltip;
     [SerializeField] Image draggableItem;

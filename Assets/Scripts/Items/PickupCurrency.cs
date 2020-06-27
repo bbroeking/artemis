@@ -1,18 +1,28 @@
 using UnityEngine;
 
 public enum CurrencyType { Gold, Soul }
-public class PickupCurrency : MonoBehaviour
+public class PickupCurrency : Interactable
 {
     [SerializeField] int amount;
     [SerializeField] CurrencyType type;
-    [SerializeField] KeyCode itemPickupKeyCode = KeyCode.F;
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] Player player;
+    [SerializeField] CurrencyPanel currencyPanel;
+    
+    [Header("Sprites")]
     [SerializeField] Sprite gold;
     [SerializeField] Sprite soul;
-    [SerializeField] CurrencyPanel currencyPanel;
-    private bool isInRange;
 
+    public override void Interact(Player player){
+        this.player = player;
+        this.currencyPanel = player.currencyPanel;
+        isInRange = true;
+    }
+    public override void StopInteract(){
+        this.player = null;
+        this.currencyPanel = null;
+        isInRange = false;
+    }
     void Start(){
         if(type == CurrencyType.Gold){
             spriteRenderer.sprite = gold;
@@ -22,7 +32,7 @@ public class PickupCurrency : MonoBehaviour
     }
     void Update()
     {
-        if(isInRange && Input.GetKeyDown(itemPickupKeyCode)){
+        if(isInRange && Input.GetKeyDown(interactKey)){
             if(type == CurrencyType.Gold){
                 player.Gold = amount;
             } else if (type == CurrencyType.Soul){
@@ -31,19 +41,6 @@ public class PickupCurrency : MonoBehaviour
             player.SetPlayerCurrency();
             currencyPanel.UpdateCurrencyValues();
             Destroy(this.gameObject);
-            
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other){
-        if(other.gameObject.CompareTag("player")){
-            isInRange = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other){
-        if(other.gameObject.CompareTag("player")){
-            isInRange = false;
         }
     }
 }

@@ -1,18 +1,30 @@
 ﻿using UnityEngine;
 
-public class PickupItem : MonoBehaviour
+public class PickupItem : Interactable
 {
     [SerializeField] public Item item;
     [SerializeField] Inventory inventory;
     [SerializeField] KeyCode itemPickupKeyCode = KeyCode.F;
     [SerializeField] SpriteRenderer spriteRenderer;
-    private bool isInRange;
+
+    public override void Interact(Inventory inventory)
+    {
+        isInRange = true;
+        this.inventory = inventory;
+    }
+
+    public override void StopInteract()
+    {
+        isInRange = false;
+        inventory = null;
+    }
 
     void Start(){
         if(item != null){
             spriteRenderer.sprite = item.Icon;
         }
     }
+    
     void Update()
     {
         if(item != null){
@@ -21,18 +33,6 @@ public class PickupItem : MonoBehaviour
         if(isInRange && Input.GetKeyDown(itemPickupKeyCode)){
             inventory.AddItem(Instantiate(item));
             Destroy(this.gameObject);
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other){
-        if(other.gameObject.CompareTag("player")){
-            isInRange = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other){
-        if(other.gameObject.CompareTag("player")){
-            isInRange = false;
         }
     }
 }
