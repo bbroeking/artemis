@@ -40,9 +40,9 @@ TagManager:
   - ground
   - walls
   - projectile
+  - enemyprojectile
   - loot
   - shop
-  - 
   - 
   - 
   - 
