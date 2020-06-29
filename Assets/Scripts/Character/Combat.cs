@@ -6,31 +6,31 @@ public class Combat : MonoBehaviour
 {
     public Transform attackPos;
     public Transform castPos;
-    public GameObject gravitySoul;
     public Collider2D playerCollider;
     public LayerMask whatIsEnemy;
     public float attackRange;
     public float spellForce;
-    private float timeBetweenAttack;
-    [SerializeField] private GameObject poisonNova;
+    private float interalCD;
+    [SerializeField] GameObject gravitySoul;
+    [SerializeField] GameObject poisonNova;
     
     [Header("Components")]
     [SerializeField] private Player player;
     [SerializeField] private Spellbook spellbook;
     [SerializeField] private PlayerResources resources;
-    [SerializeField] private GameObject inventoryGameObject;
-    [SerializeField] private GameObject equipmentGameObject;
+    [SerializeField] private CanvasGroup inventoryCanvasGroup;
+    [SerializeField] private CanvasGroup equipmentCanvasGroup;
 
     void Update()
     {
-        if(!inventoryGameObject.activeSelf && !equipmentGameObject.activeSelf){
+        if(!inventoryCanvasGroup.blocksRaycasts && !equipmentCanvasGroup.blocksRaycasts){
             if (Input.GetButtonDown("Fire1"))
             {
-                if(timeBetweenAttack <= 0){
+                if(player.InteralAttackCooldown <= 0){
                     Melee();
-                    timeBetweenAttack = player.InteralAttackCooldown;
+                    interalCD = player.InteralAttackCooldown;
                 } else {
-                    timeBetweenAttack -= Time.deltaTime;
+                    interalCD -= Time.deltaTime;
                 }
             }
             if (Input.GetButtonDown("Fire2"))

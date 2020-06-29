@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 18156145653926267}
   m_Layer: 8
   m_Name: DroppedItem
-  m_TagString: Interactable
+  m_TagString: DroppedItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca3a2ce0fa5f1a44ea73f35f4bb27f99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactKey: 102
   item: {fileID: 11400000, guid: f55644f5d6147ab42a336513c54fb73b, type: 2}
   inventory: {fileID: 0}
   itemPickupKeyCode: 102

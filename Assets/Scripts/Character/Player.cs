@@ -183,7 +183,7 @@ public class Player : Character
 
             if(useableItem.isConsumable){
                 Inventory.RemoveItem(useableItem);
-                //useableItem.Destroy();
+                useableItem.Destroy();
             }
         }
     }

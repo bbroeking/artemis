@@ -23,7 +23,7 @@ public class PlayerCollision : MonoBehaviour
         }
     }
     private void OnTriggerExit2D(Collider2D collision){
-        if(collision.gameObject.tag == "Interactable"){
+        if(collision.gameObject.tag == "DroppedItem" && collision.gameObject.tag == "DroppedCurrency" && collision.gameObject.tag == "NPC"){
             interactable.StopInteract();
             interactable = null;
         }

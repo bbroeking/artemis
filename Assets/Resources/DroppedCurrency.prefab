@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4158551135748663222}
   m_Layer: 8
   m_Name: DroppedCurrency
-  m_TagString: Untagged
+  m_TagString: DroppedCurrency
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,14 +46,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5583460c56f6eec4181f12aac33b5d34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactKey: 102
   amount: 5
   type: 0
-  itemPickupKeyCode: 102
   spriteRenderer: {fileID: 4158551135748663219}
   player: {fileID: 0}
+  currencyPanel: {fileID: 0}
   gold: {fileID: 21300000, guid: 09a5f527333a2e54cbe98ae77528c17e, type: 3}
   soul: {fileID: 21300000, guid: 888f73c56bff66e419dab2ecb28d7ff6, type: 3}
-  currencyPanel: {fileID: 0}
 --- !u!212 &4158551135748663219
 SpriteRenderer:
   m_ObjectHideFlags: 0

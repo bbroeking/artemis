@@ -23,6 +23,8 @@ TagManager:
   - enemy
   - ladder
   - Interactable
+  - DroppedCurrency
+  - DroppedItem
   layers:
   - Default
   - TransparentFX

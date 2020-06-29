@@ -67,7 +67,7 @@ public class ItemSaveManager : MonoBehaviour
 			if (itemSlot.Item == null) {
 				saveData.SavedSlots[i] = null;
 			} else {
-				saveData.SavedSlots[i] = new ItemSlotSaveData(itemSlot.Item.ID, itemSlot.Amount);
+				saveData.SavedSlots[i] = new ItemSlotSaveData(itemSlot.Item.ID);
 			}
 		}
 

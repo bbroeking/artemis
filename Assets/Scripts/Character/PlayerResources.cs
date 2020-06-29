@@ -27,12 +27,13 @@ public class PlayerResources : MonoBehaviour
         maxEssence = 5;
         activeSoul = Soul.gravity;
         inactiveSoul = Soul.poison;
+        healthbar.SetMaxHealth(player.health);
         activeEssence.SetMaxEssence(this.maxEssence);
         inactiveEssence.SetMaxEssence(this.maxEssence);
         this.gravityEssence = this.maxEssence;
         this.poisonEssence = this.maxEssence;
     }
-    private void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         player.currentHealth -= damage;
         healthbar.SetHealth(player.currentHealth);

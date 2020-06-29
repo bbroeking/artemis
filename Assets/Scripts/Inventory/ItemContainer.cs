@@ -12,6 +12,7 @@ public abstract class ItemContainer : MonoBehaviour, IItemContainer
 	public event Action<BaseItemSlot> OnEndDragEvent;
 	public event Action<BaseItemSlot> OnDragEvent;
 	public event Action<BaseItemSlot> OnDropEvent;
+	[SerializeField] CanvasGroup canvasGroup;
 
 	protected virtual void OnValidate()
 	{
@@ -38,20 +39,6 @@ public abstract class ItemContainer : MonoBehaviour, IItemContainer
 			action(itemSlot);
 	}
 
-	public virtual bool CanAddItem(Item item, int amount = 1)
-	{
-		int freeSpaces = 0;
-
-		foreach (ItemSlot itemSlot in ItemSlots)
-		{
-			if (itemSlot.Item == null || itemSlot.Item.ID == item.ID)
-			{
-				freeSpaces += item.MaximumStacks - itemSlot.Amount;
-			}
-		}
-		return freeSpaces >= amount;
-	}
-
 	public virtual bool AddItem(Item item)
 	{
 		for (int i = 0; i < ItemSlots.Count; i++)
@@ -59,7 +46,6 @@ public abstract class ItemContainer : MonoBehaviour, IItemContainer
 			if (ItemSlots[i].Item == null)
 			{
 				ItemSlots[i].Item = item;
-				ItemSlots[i].Amount++;
 				return true;
 			}
 		}
@@ -72,7 +58,7 @@ public abstract class ItemContainer : MonoBehaviour, IItemContainer
 		{
 			if (ItemSlots[i].Item == item)
 			{
-				ItemSlots[i].Amount--;
+				ItemSlots[i].Item = null;
 				return true;
 			}
 		}
@@ -86,28 +72,11 @@ public abstract class ItemContainer : MonoBehaviour, IItemContainer
 			Item item = ItemSlots[i].Item;
 			if (item != null && item.ID == itemID)
 			{
-				ItemSlots[i].Amount--;
 				return item;
 			}
 		}
 		return null;
 	}
-
-	public virtual int ItemCount(string itemID)
-	{
-		int number = 0;
-
-		for (int i = 0; i < ItemSlots.Count; i++)
-		{
-			Item item = ItemSlots[i].Item;
-			if (item != null && item.ID == itemID)
-			{
-				number += ItemSlots[i].Amount;
-			}
-		}
-		return number;
-	}
-
 	public void Clear()
 	{
 		for (int i = 0; i < ItemSlots.Count; i++)
@@ -116,7 +85,18 @@ public abstract class ItemContainer : MonoBehaviour, IItemContainer
 				ItemSlots[i].Item.Destroy();
 			}
 			ItemSlots[i].Item = null;
-			ItemSlots[i].Amount = 0;
 		}
 	}
+
+    public bool CanAddItem(Item item)
+    {
+        foreach (ItemSlot itemSlot in ItemSlots)
+		{
+			if (itemSlot.Item == null)
+			{
+				return true;
+			}
+		}
+		return false;
+    }
 }
