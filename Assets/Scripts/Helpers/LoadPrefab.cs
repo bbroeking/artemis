@@ -5,7 +5,6 @@ using UnityEngine;
 public class LoadPrefab {
     public static UnityEngine.Object LoadPrefabFromFile(string filename)
     {
-        Debug.Log("Trying to load LevelPrefab from file ("+filename+ ")...");
         var loadedObject = Resources.Load(filename);
         if (loadedObject == null)
         {
