@@ -1539,6 +1539,16 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2263914536203507938, guid: 3a63aa3eee749044983dff7800266d31,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -555
+      objectReference: {fileID: 0}
+    - target: {fileID: 2263914536203507938, guid: 3a63aa3eee749044983dff7800266d31,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -177
+      objectReference: {fileID: 0}
     - target: {fileID: 2263914536256661078, guid: 3a63aa3eee749044983dff7800266d31,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -6004,7 +6014,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &959389065
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6022,7 +6032,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -52, y: 80}
+  m_AnchoredPosition: {x: -45, y: 102}
   m_SizeDelta: {x: -717.17554, y: -382.01294}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &959389066
@@ -6156,12 +6166,12 @@ PrefabInstance:
         type: 3}
       propertyPath: shopPanel
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1593784079}
     - target: {fileID: 3214922022390422571, guid: f0c46955de4fdf94e8cce016ee87cdb6,
         type: 3}
       propertyPath: shopGameObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1166552998}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c46955de4fdf94e8cce016ee87cdb6, type: 3}
 --- !u!1 &1006007182
@@ -6453,6 +6463,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1166552998 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2263914536950977799, guid: 3a63aa3eee749044983dff7800266d31,
+    type: 3}
+  m_PrefabInstance: {fileID: 953450794}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1177382632
 GameObject:
   m_ObjectHideFlags: 0
@@ -6726,9 +6742,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: fd438a7b8713a6a439334073febe1b51, type: 3}
-        m_MethodName: set_name
-        m_Mode: 5
+      - m_Target: {fileID: 959389066}
+        m_MethodName: Respawn
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6780,7 +6796,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 953450794}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1166552998}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ae94c0636216d04d9778d694aab4b68, type: 3}
@@ -7438,6 +7454,11 @@ PrefabInstance:
       propertyPath: resources
       value: 
       objectReference: {fileID: 616979284}
+    - target: {fileID: 342705243974471167, guid: 35a86d8fe5971814b9be399ba53e0732,
+        type: 3}
+      propertyPath: deathMenu
+      value: 
+      objectReference: {fileID: 959389066}
     - target: {fileID: 501771466581329052, guid: 35a86d8fe5971814b9be399ba53e0732,
         type: 3}
       propertyPath: m_Name
