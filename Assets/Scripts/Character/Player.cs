@@ -28,6 +28,7 @@ public class Player : Character
     [SerializeField] StatPanel statPanel;
     [SerializeField] public CurrencyPanel currencyPanel;
     [SerializeField] ShopPanel ShopPanel;
+    [SerializeField] DeathMenu deathMenu;
     [SerializeField] ItemTooltip itemTooltip;
     [SerializeField] Image draggableItem;
     protected BaseItemSlot draggedSlot;
@@ -49,7 +50,7 @@ public class Player : Character
         // Setup Events
         Inventory.OnRightClickEvent += InventoryRightClick;
         EquipmentPanel.OnRightClickEvent += EquipmentPanelRightClick;
-        ShopPanel.OnRightClickEvent += InventoryRightClick;
+        ShopPanel.OnRightClickEvent += InventoryRightClick; // this needs to have a purchase method
 
         Inventory.OnPointerEnterEvent += ShowTooltip;
         EquipmentPanel.OnPointerEnterEvent += ShowTooltip;
@@ -91,8 +92,14 @@ public class Player : Character
         currencyPanel.SetCurrency(this.gold, this.souls, this.weight);
         currencyPanel.UpdateCurrencyValues();
     }
+    private void OnDestroy()
+	{
+        itemSaveManager.SaveEquipment(this);
+        itemSaveManager.SaveInventory(this);
+	}
     void Update()
     {
+        Dead();
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
 
         anim.SetFloat("Horizontal", movement.x);
@@ -167,11 +174,6 @@ public class Player : Character
 		draggedSlot.Item = dropItemSlot.Item;
 		dropItemSlot.Item = draggedItem;
 	}
-    private void OnDestroy()
-	{
-        itemSaveManager.SaveEquipment(this);
-        itemSaveManager.SaveInventory(this);
-	}
     private void InventoryRightClick(BaseItemSlot itemSlot){
         EquippableItem equippableItem = itemSlot.Item as EquippableItem;
         if(equippableItem != null){
@@ -223,5 +225,16 @@ public class Player : Character
     }
     public void UpdateStatValues(){
         statPanel.UpdateStatValues();
+    }
+
+    public override void Hit(int damage){
+        base.TakeDamage(damage);
+        resources.SetHealthbar();
+    }
+
+    public override void Dead(){
+        if(dead){
+            deathMenu.ShowMenu();
+        }
     }
 }

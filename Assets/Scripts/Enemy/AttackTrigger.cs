@@ -7,6 +7,7 @@ public class AttackTrigger : MonoBehaviour
         attack = GetComponentInParent<Attack>();
     }
     void OnTriggerEnter2D(){
+        Debug.Log("is in range");
         attack.IsInRange = true;
     }
 

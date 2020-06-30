@@ -24,7 +24,7 @@ public class Character : MonoBehaviour
     protected bool dead;
 
     protected virtual void Awake(){
-        health = 30;
+        health = 5;
         currentHealth = health;
         speed  = 6;
         mainHandMaxDamage = 1;
@@ -58,5 +58,20 @@ public class Character : MonoBehaviour
     }
     public float percentHealth(){
         return (float)currentHealth / (float)health;
+    }
+
+    public virtual void Hit(int damage){
+        return;
+    }
+    
+    public virtual void TakeDamage(int damage){
+        this.currentHealth -= damage;
+        if(this.currentHealth <= 0){
+            this.dead = true;
+        }
+    }
+
+    public virtual void Dead(){
+        return;
     }
 }

@@ -33,9 +33,8 @@ public class PlayerResources : MonoBehaviour
         this.gravityEssence = this.maxEssence;
         this.poisonEssence = this.maxEssence;
     }
-    public void TakeDamage(int damage)
+    public void SetHealthbar()
     {
-        player.currentHealth -= damage;
         healthbar.SetHealth(player.currentHealth);
     }
     public void UseEssence(int essence){

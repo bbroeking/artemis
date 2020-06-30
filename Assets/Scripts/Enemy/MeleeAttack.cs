@@ -5,10 +5,11 @@ using UnityEngine;
 public class MeleeAttack : Attack
 {
     protected override void TriggerAttack(){
-        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);
-        for (int i = 0; i < enemiesToDamage.Length; i++)
+        Collider2D[] toDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);
+        for (int i = 0; i < toDamage.Length; i++)
         {
-            enemiesToDamage[i].GetComponent<PlayerResources>().TakeDamage(damage);
+            Debug.Log("melee");
+            toDamage[i].GetComponent<Player>().Hit(damage);
         }
     }
 }

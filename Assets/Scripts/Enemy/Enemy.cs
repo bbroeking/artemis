@@ -11,9 +11,9 @@ public class Enemy : Character
         lootTable = gameObject.GetComponentInParent<LootTable>();
         gameObject.GetComponentInParent<SpriteRenderer>().sprite = sprite;
     }
-    public void Hit(int damage)
+    public override void Hit(int damage)
     {
-        TakeDamage(damage);
+        base.Hit(damage);
         if (this.dead)
             SpawnLootAndDestroy();
     }
@@ -22,12 +22,5 @@ public class Enemy : Character
     {
         lootTable.SpawnLoot();
         Destroy(this.gameObject);
-    }
-
-    public void TakeDamage(int damage){
-        this.currentHealth -= damage;
-        if(this.currentHealth <= 0){
-            this.dead = true;
-        }
     }
 }
