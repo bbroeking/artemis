@@ -84,11 +84,9 @@ public class Player : Character
 
         itemSaveManager.LoadEquipment(this);
         itemSaveManager.LoadInventory(this);
+        itemSaveManager.LoadCurrency(this);
 
-        // Currency
-        this.gold = 1;
-        this.souls = 1;
-        this.weight = 1;
+        this.weight = 1; // Need to calcuate the items weight
         currencyPanel.SetCurrency(this.gold, this.souls, this.weight);
         currencyPanel.UpdateCurrencyValues();
     }
@@ -96,6 +94,7 @@ public class Player : Character
 	{
         itemSaveManager.SaveEquipment(this);
         itemSaveManager.SaveInventory(this);
+        itemSaveManager.SaveCurrency(this);
 	}
     void Update()
     {

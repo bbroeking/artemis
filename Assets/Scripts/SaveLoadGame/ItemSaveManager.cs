@@ -7,6 +7,7 @@ public class ItemSaveManager : MonoBehaviour
 
 	private const string InventoryFileName = "Inventory";
 	private const string EquipmentFileName = "Equipment";
+	private const string CurrencyFileName = "Currency";
 
 	public void LoadInventory(Player player)
 	{
@@ -46,6 +47,12 @@ public class ItemSaveManager : MonoBehaviour
 		}
 	}
 
+	public void LoadCurrency(Player player){
+		CurrencySaveData save = ItemSaveIO.LoadCurrency(CurrencyFileName);
+		player.Gold = save.gold;
+		player.Souls = save.souls;
+	}
+
 	public void SaveInventory(Player player)
 	{
 		SaveItems(player.Inventory.ItemSlots, InventoryFileName);
@@ -54,6 +61,10 @@ public class ItemSaveManager : MonoBehaviour
 	public void SaveEquipment(Player player)
 	{
 		SaveItems(player.EquipmentPanel.equipmentSlots, EquipmentFileName);
+	}
+
+	public void SaveCurrency(Player player){
+		SaveCurrencies(player.Gold, player.Souls, CurrencyFileName);
 	}
 
 	private void SaveItems(IList<ItemSlot> itemSlots, string fileName)
@@ -72,5 +83,10 @@ public class ItemSaveManager : MonoBehaviour
 		}
 
 		ItemSaveIO.SaveItems(saveData, fileName);
+	}
+
+	private void SaveCurrencies(int gold, int souls, string filename){
+		var saveData = new CurrencySaveData(gold, souls);
+		ItemSaveIO.SaveCurrencies(saveData, filename);
 	}
 }
