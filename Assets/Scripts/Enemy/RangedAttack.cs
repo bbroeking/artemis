@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RangedAttack : Attack
 {
+    [Header("Ranged Attack")]
     [SerializeField] GameObject projectile;
     [SerializeField] Collider2D chracterCollider;
     void OnValidate(){

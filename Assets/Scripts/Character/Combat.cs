@@ -21,12 +21,15 @@ public class Combat : MonoBehaviour
     [SerializeField] private CanvasGroup inventoryCanvasGroup;
     [SerializeField] private CanvasGroup equipmentCanvasGroup;
 
+    void Start(){
+        interalCD = 0;
+    }
     void Update()
     {
         if(!inventoryCanvasGroup.blocksRaycasts && !equipmentCanvasGroup.blocksRaycasts){
             if (Input.GetButtonDown("Fire1"))
             {
-                if(player.InteralAttackCooldown <= 0){
+                if(interalCD <= 0){
                     Melee();
                     interalCD = player.InteralAttackCooldown;
                 } else {
@@ -63,7 +66,7 @@ public class Combat : MonoBehaviour
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
-            enemiesToDamage[i].GetComponent<Enemy>().Hit(player.SpellDamage);
+            enemiesToDamage[i].GetComponent<Enemy>()?.Hit(5);
         }
     }
     void Cast(GameObject b, Transform firePoint)

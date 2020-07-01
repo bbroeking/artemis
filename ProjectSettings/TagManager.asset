@@ -25,6 +25,7 @@ TagManager:
   - Interactable
   - DroppedCurrency
   - DroppedItem
+  - aggro
   layers:
   - Default
   - TransparentFX

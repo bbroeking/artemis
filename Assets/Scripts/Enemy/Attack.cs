@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
+    [Header("Attack")]
     [SerializeField] protected Transform attackPos;
     [SerializeField] protected LayerMask whatIsEnemy;
     [SerializeField] protected float attackRange;
