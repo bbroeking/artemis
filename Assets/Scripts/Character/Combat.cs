@@ -10,7 +10,7 @@ public class Combat : MonoBehaviour
     public LayerMask whatIsEnemy;
     public float attackRange;
     public float spellForce;
-    private float interalCD;
+    private bool isCooldown = false;
     [SerializeField] GameObject gravitySoul;
     [SerializeField] GameObject poisonNova;
     
@@ -20,20 +20,16 @@ public class Combat : MonoBehaviour
     [SerializeField] private PlayerResources resources;
     [SerializeField] private CanvasGroup inventoryCanvasGroup;
     [SerializeField] private CanvasGroup equipmentCanvasGroup;
+    [SerializeField] private Animator anim;
 
-    void Start(){
-        interalCD = 0;
-    }
     void Update()
     {
         if(!inventoryCanvasGroup.blocksRaycasts && !equipmentCanvasGroup.blocksRaycasts){
             if (Input.GetButtonDown("Fire1"))
             {
-                if(interalCD <= 0){
+                if(!isCooldown){
                     Melee();
-                    interalCD = player.InteralAttackCooldown;
-                } else {
-                    interalCD -= Time.deltaTime;
+                    Cooldown();
                 }
             }
             if (Input.GetButtonDown("Fire2"))
@@ -64,11 +60,24 @@ public class Combat : MonoBehaviour
     }
     void Melee(){
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);
+        Debug.Log("melee");
+        anim.SetTrigger("Attack");
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
             enemiesToDamage[i].GetComponent<Enemy>()?.Hit(5);
         }
     }
+
+    private IEnumerator Cooldown()
+    {
+        // Start cooldown
+        isCooldown = true;
+        // Wait for time you want
+        yield return new WaitForSeconds(player.InteralAttackCooldown);
+        // Stop cooldown
+        isCooldown = false;
+    }
+
     void Cast(GameObject b, Transform firePoint)
     {
         GameObject spell = Instantiate(b, firePoint.position, firePoint.rotation);

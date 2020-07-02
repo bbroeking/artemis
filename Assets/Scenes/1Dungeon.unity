@@ -6073,7 +6073,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -45, y: 102}
+  m_AnchoredPosition: {x: -45.00006, y: 102}
   m_SizeDelta: {x: -717.17554, y: -382.01294}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &959389066
@@ -6504,6 +6504,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1144574938 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5220502902797990221, guid: 35a86d8fe5971814b9be399ba53e0732,
+    type: 3}
+  m_PrefabInstance: {fileID: 501771468008835907}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1166552998 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2263914536950977799, guid: 3a63aa3eee749044983dff7800266d31,
@@ -7581,6 +7587,11 @@ PrefabInstance:
       propertyPath: inventoryCanvasGroup
       value: 
       objectReference: {fileID: 790933440}
+    - target: {fileID: 80122751041942059, guid: 35a86d8fe5971814b9be399ba53e0732,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1144574938}
     - target: {fileID: 342705243974471163, guid: 35a86d8fe5971814b9be399ba53e0732,
         type: 3}
       propertyPath: m_RootOrder

@@ -33,7 +33,7 @@ public class Character : MonoBehaviour
         dexterityModifier  = 0.1f;
         intellectModifier = 0.1f;
         vitalityModifier = 0;
-        internalAttackCooldown = 2f;
+        internalAttackCooldown = 1f;
         dead = false;
     }
     public int CalculateDamage(){
