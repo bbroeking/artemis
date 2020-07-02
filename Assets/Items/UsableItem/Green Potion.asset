@@ -17,6 +17,7 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: ddb0ac0ceb441ca42a88a641bc589147, type: 3}
   MaximumStacks: 1
   dropChance: 0
+  weight: 1
   isConsumable: 1
   Effects:
   - {fileID: 11400000, guid: bec8026406f54904d8498889961897fa, type: 2}

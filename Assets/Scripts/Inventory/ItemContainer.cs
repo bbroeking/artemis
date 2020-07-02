@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class ItemContainer : MonoBehaviour, IItemContainer
 {
 	public List<ItemSlot> ItemSlots;
+	public int inventoryWeight;
 	public event Action<BaseItemSlot> OnPointerEnterEvent;
 	public event Action<BaseItemSlot> OnPointerExitEvent;
 	public event Action<BaseItemSlot> OnRightClickEvent;
@@ -46,6 +47,8 @@ public abstract class ItemContainer : MonoBehaviour, IItemContainer
 			if (ItemSlots[i].Item == null)
 			{
 				ItemSlots[i].Item = item;
+				SingletonPlayer.Instance.player.Weight = GetWeight();
+				SingletonPlayer.Instance.player.SetPlayerCurrency();
 				return true;
 			}
 		}
@@ -59,6 +62,8 @@ public abstract class ItemContainer : MonoBehaviour, IItemContainer
 			if (ItemSlots[i].Item == item)
 			{
 				ItemSlots[i].Item = null;
+				SingletonPlayer.Instance.player.Weight = GetWeight();
+				SingletonPlayer.Instance.player.SetPlayerCurrency();
 				return true;
 			}
 		}
@@ -99,4 +104,15 @@ public abstract class ItemContainer : MonoBehaviour, IItemContainer
 		}
 		return false;
     }
+
+	public int GetWeight(){
+		var result = 0;
+		foreach (var slots in ItemSlots)
+		{
+			if (slots.Item != null)
+				result += slots.Item.weight;
+		}
+
+		return result;
+	}
 }

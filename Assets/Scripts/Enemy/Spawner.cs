@@ -20,7 +20,7 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         GameObject enemyInstance = Instantiate(enemy, transform.position, Quaternion.identity);
-        this.transform.parent = transform;
+        enemyInstance.transform.SetParent(transform);
         SpriteRenderer sr = enemyInstance.GetComponent<SpriteRenderer>();
         sr.sprite = sprite;
         Enemy e = enemyInstance.GetComponent<Enemy>();

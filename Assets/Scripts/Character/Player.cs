@@ -20,7 +20,7 @@ public class Player : Character
     protected int souls;
     public int Souls { get { return souls;} set { souls += value; }}
     protected int weight;
-    public int Weight { get { return weight;} set { weight += value; }}
+    public int Weight { get { return weight;} set { weight = value; }}
     
     [Header("UI Panels")]
     [SerializeField] public Inventory Inventory;
@@ -86,7 +86,7 @@ public class Player : Character
         itemSaveManager.LoadInventory(this);
         itemSaveManager.LoadCurrency(this);
 
-        this.weight = 1; // Need to calcuate the items weight
+        this.weight = Inventory.GetWeight(); // Need to calcuate the items weight
         currencyPanel.SetCurrency(this.gold, this.souls, this.weight);
         currencyPanel.UpdateCurrencyValues();
     }
@@ -151,6 +151,7 @@ public class Player : Character
 	}
     public void SetPlayerCurrency(){
         currencyPanel.SetCurrency(this.gold, this.souls, this.weight);
+        currencyPanel.UpdateCurrencyValues();
     }
     private void SwapItems(BaseItemSlot dropItemSlot)
 	{

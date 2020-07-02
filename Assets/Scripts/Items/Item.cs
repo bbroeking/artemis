@@ -13,6 +13,7 @@ public class Item : ScriptableObject
 	public Sprite Icon;
 	[Range(1,999)] public int MaximumStacks = 1;
 	public int dropChance;
+	public int weight = 1;
 
 	protected static readonly StringBuilder sb = new StringBuilder();
 

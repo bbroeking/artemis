@@ -47,7 +47,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 8
+  m_Radius: 5
 --- !u!114 &1529755895636070318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,7 +61,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 0}
-  col: {fileID: 0}
+  col: {fileID: 3421773593248468073}
+  aggroRange: 5
 --- !u!1 &7004473852374044008
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,7 +110,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 1
 --- !u!114 &7004473852374044011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,6 +124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attack: {fileID: 0}
+  col: {fileID: 7004473852374044010}
+  attackRange: 1
 --- !u!1 &7004473852481412322
 GameObject:
   m_ObjectHideFlags: 0

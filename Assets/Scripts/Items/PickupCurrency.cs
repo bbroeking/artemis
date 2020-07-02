@@ -39,7 +39,6 @@ public class PickupCurrency : Interactable
                 player.Souls = amount;
             }
             player.SetPlayerCurrency();
-            currencyPanel.UpdateCurrencyValues();
             Destroy(this.gameObject);
         }
     }

@@ -8,10 +8,6 @@ public class Inventory : ItemContainer
 	{
 		if (itemsParent != null)
 			itemsParent.GetComponentsInChildren(includeInactive: true, result: ItemSlots);
-
-		if (!Application.isPlaying) {
-			SetStartingItems();
-		}
 	}
 	protected override void Awake()
 	{
