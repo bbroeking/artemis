@@ -12,9 +12,51 @@ EditorBuildSettings:
     path: Assets/Scenes/Home.unity
     guid: efa233ff91b98494eaafeac802dbaa72
   - enabled: 1
-    path: Assets/Scenes/1Dungeon.unity
+    path: Assets/Scenes/TBLR.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/2Dungeon.unity
     guid: 99a260b871b2bea4bb38b51b18269566
+  - enabled: 1
+    path: Assets/Scenes/B.unity
+    guid: 8282e9e929a357549b06225df4f24045
+  - enabled: 1
+    path: Assets/Scenes/BL.unity
+    guid: ea7225afe143b624db36d9eb99b39c67
+  - enabled: 1
+    path: Assets/Scenes/BLR.unity
+    guid: c94dd4acd25edf94b8f896261554d745
+  - enabled: 1
+    path: Assets/Scenes/BR.unity
+    guid: 9450430fe77ec0840a03287ad23d6fb9
+  - enabled: 1
+    path: Assets/Scenes/L.unity
+    guid: a46ff53ae11ff654c93b5091012a7d50
+  - enabled: 1
+    path: Assets/Scenes/LR.unity
+    guid: f784c68bf914e7348aa47ec2d9f9575e
+  - enabled: 1
+    path: Assets/Scenes/R.unity
+    guid: 725d751dbb450454e9d4fdd1cafb24e3
+  - enabled: 1
+    path: Assets/Scenes/T.unity
+    guid: 6119dc734dcd45b4c9b1f7880a62a332
+  - enabled: 1
+    path: Assets/Scenes/TB.unity
+    guid: 94de2a6d1a2dd5840892c6b63e962829
+  - enabled: 1
+    path: Assets/Scenes/TBL.unity
+    guid: 3387ef178bb1c114bab7c31ebc41a2bb
+  - enabled: 1
+    path: Assets/Scenes/TBR.unity
+    guid: 26b6162b4deda294483e8a891b20c800
+  - enabled: 1
+    path: Assets/Scenes/TL.unity
+    guid: 9ce6067d93df30846b9c851d1940e1e4
+  - enabled: 1
+    path: Assets/Scenes/TLR.unity
+    guid: cdd7119531e2c9e40a38b34c16c0c5cb
+  - enabled: 1
+    path: Assets/Scenes/TR.unity
+    guid: 9862ce751c80c3448b97ea436f239bbf
   m_configObjects: {}

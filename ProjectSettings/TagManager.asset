@@ -26,6 +26,10 @@ TagManager:
   - DroppedCurrency
   - DroppedItem
   - aggro
+  - north
+  - south
+  - east
+  - west
   layers:
   - Default
   - TransparentFX
