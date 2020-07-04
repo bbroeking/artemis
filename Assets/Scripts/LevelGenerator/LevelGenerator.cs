@@ -5,57 +5,73 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
-    public int gridSizeX = 10; // number of squares in the positive and negative x direction
-    public int gridSizeY = 10; // number of squares in the postive and negative y direction
-    public int numberOfRooms = 20; // number of rooms to generate
-    public Room[,] rooms; // location of Room in [0, gridSize * 2]
-    public List<Vector2> takenPositions = new List<Vector2>(); // populated locations
-    public List<Vector2> toBeGeneratedPositions = new List<Vector2>(); // locations that have yet to be placed
-    private Mapper map; // helper function for figuring out what tile to place
+    public int gridSizeX = 5; // number of squares in the positive and negative x direction
+    public int gridSizeY = 5; // number of squares in the postive and negative y direction
+    public int numberOfRooms = 3; // number of rooms to generate
+    public static Room[,] rooms; // location of Room in [0, gridSize * 2]
+    public static List<Vector2> takenPositions = new List<Vector2>(); // populated locations
+    public static List<Vector2> toBeGeneratedPositions = new List<Vector2>(); // locations that have yet to be placed
+    private static Mapper map; // helper function for figuring out what tile to place
     private Room currentRoom;
     public Room CurrentRoom { get { return currentRoom; }}
-    private int currentGridPosX = 10;
-    public int CurrentGridPosX { get { return currentGridPosX;} set { currentGridPosX = value; } }
-    private int currentGridPosY = 10;
-    public int CurrentGridPosY { get { return currentGridPosY;} set { currentGridPosY = value; } }
+    public static int currentGridPosX;
+    public static int currentGridPosY;
+    public static bool levelExists;
 
     void Awake()
     {
-        map = GameObject.FindGameObjectWithTag("RoomMapper").GetComponent<Mapper>();
-        rooms = new Room[gridSizeX * 2, gridSizeY * 2];
-        Room room = new Room(Vector2.zero, true, true, true, true);
-        rooms[gridSizeX, gridSizeY] = room;
-        takenPositions.Insert(0, Vector2.zero);
-        AddToBeGeneratedPositions(room);
-        
-        for (int i = 0; i <= numberOfRooms; i++)
-        {
-            if (toBeGeneratedPositions.Count == 0)
+        if(!levelExists){
+            levelExists = true;
+            DontDestroyOnLoad(this.gameObject);
+
+            map = GameObject.FindGameObjectWithTag("RoomMapper").GetComponent<Mapper>();
+            rooms = new Room[gridSizeX * 2, gridSizeY * 2];
+            currentGridPosX = gridSizeX;
+            currentGridPosY = gridSizeY;
+            Room room = new Room(Vector2.zero, true, true, true, true);
+            rooms[currentGridPosX, currentGridPosY] = room;
+            takenPositions.Insert(0, Vector2.zero);
+            AddToBeGeneratedPositions(room);
+            
+            for (int i = 0; i <= numberOfRooms; i++)
             {
-                break;
+                if (toBeGeneratedPositions.Count == 0)
+                {
+                    break;
+                }
+                int vecIdx = Random.Range(0, toBeGeneratedPositions.Count - 1);
+                Vector2 vec = toBeGeneratedPositions[vecIdx];
+                toBeGeneratedPositions.RemoveAt(vecIdx);
+                Room nr = PlaceTile(vec);
+                rooms[(int)vec.x + gridSizeX, (int)vec.y + gridSizeY] = nr;
+                AddToBeGeneratedPositions(nr);
+                takenPositions.Insert(0, vec);
             }
-            int vecIdx = Random.Range(0, toBeGeneratedPositions.Count - 1);
-            Vector2 vec = toBeGeneratedPositions[vecIdx];
-            toBeGeneratedPositions.RemoveAt(vecIdx);
-            Room nr = PlaceTile(vec);
-            rooms[(int)vec.x + gridSizeX, (int)vec.y + gridSizeY] = nr;
-            AddToBeGeneratedPositions(nr);
-            takenPositions.Insert(0, vec);
+            foreach(Vector2 vec in toBeGeneratedPositions)
+            {
+                Room nr = PlaceClosedTile(vec);
+                rooms[(int)vec.x + gridSizeX, (int)vec.y + gridSizeY] = nr;
+                takenPositions.Insert(0, vec);
+            }
+            DrawMapString();
+        } else {
+            Destroy(gameObject);
+            DrawMapString();
         }
-        foreach(Vector2 vec in toBeGeneratedPositions)
-        {
-            Room nr = PlaceClosedTile(vec);
-            rooms[(int)vec.x + gridSizeX, (int)vec.y + gridSizeY] = nr;
-            takenPositions.Insert(0, vec);
-        }
-        //DrawMap();
     }
 
     
     public string GetNextRoom(int xoff, int yoff){
-        SetCurrentRoom();
+        // Debug.Log("current grid x " + currentGridPosX);
+        // Debug.Log("current grid y " + currentGridPosY);
+        // Debug.Log(xoff);
+        // Debug.Log(yoff);
         currentGridPosX = currentGridPosX + xoff;
         currentGridPosY  = currentGridPosY + yoff;
+        //SetCurrentRoom();
+        Debug.Log("current grid x " + currentGridPosX);
+        Debug.Log("current grid y " + currentGridPosY);
+        //Debug.Log(currentRoom.ToString());
         Room nextRoom = rooms[currentGridPosX, currentGridPosY];
         GameObject selectedRoom = map.SelectRoom(nextRoom); // switch to use list of scene names?
         return selectedRoom.name;
@@ -291,9 +307,10 @@ public class LevelGenerator : MonoBehaviour
     
     void DrawMapString()
     {
-        for (int y = 0; y < rooms.GetLength(0); y++)
+        for (int y = rooms.GetLength(0)-1; y >= 0; y--)
         {
             string line = "";
+            line += y.ToString();
             for (int x = 0; x < rooms.GetLength(1); x++)
             {
                 if (rooms[x, y] == null)

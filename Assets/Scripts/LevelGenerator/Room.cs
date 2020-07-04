@@ -17,6 +17,6 @@ public class Room
 
     public override string ToString()
     {
-        return "gridPos: " + gridPos.ToString() + " " + System.Convert.ToInt32(top) + System.Convert.ToInt32(bottom) + System.Convert.ToInt32(left) + System.Convert.ToInt32(right);
+        return "gridPos: " + gridPos.ToString() + " T/B/L/R " + System.Convert.ToInt32(top) + System.Convert.ToInt32(bottom) + System.Convert.ToInt32(left) + System.Convert.ToInt32(right);
     }
 }
