@@ -62,16 +62,9 @@ public class LevelGenerator : MonoBehaviour
 
     
     public string GetNextRoom(int xoff, int yoff){
-        // Debug.Log("current grid x " + currentGridPosX);
-        // Debug.Log("current grid y " + currentGridPosY);
-        // Debug.Log(xoff);
-        // Debug.Log(yoff);
         currentGridPosX = currentGridPosX + xoff;
         currentGridPosY  = currentGridPosY + yoff;
-        //SetCurrentRoom();
-        Debug.Log("current grid x " + currentGridPosX);
-        Debug.Log("current grid y " + currentGridPosY);
-        //Debug.Log(currentRoom.ToString());
+        SetCurrentRoom();
         Room nextRoom = rooms[currentGridPosX, currentGridPosY];
         GameObject selectedRoom = map.SelectRoom(nextRoom); // switch to use list of scene names?
         return selectedRoom.name;

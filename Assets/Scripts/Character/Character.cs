@@ -6,7 +6,7 @@ public class Character : MonoBehaviour
 {
     public int health;
     public int currentHealth;
-    protected int speed; 
+    public int speed; 
     public CharacterStat strength;
     public CharacterStat dexterity;
     public CharacterStat intellect;
