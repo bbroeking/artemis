@@ -49,6 +49,7 @@ public class ItemSaveManager : MonoBehaviour
 
 	public void LoadCurrency(Player player){
 		CurrencySaveData save = ItemSaveIO.LoadCurrency(CurrencyFileName);
+		if (save == null) return;
 		player.Gold = save.gold;
 		player.Souls = save.souls;
 	}

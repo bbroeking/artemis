@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae87a60a12c199a439338ce5cdd4182e, type: 3}
+  m_Name: Town Portal
+  m_EditorClassIdentifier: 
+  id: c1f11c9d2719a63488fefd0ebd7c369c
+  ItemName: Teleport - Home
+  Icon: {fileID: 21300000, guid: 29cd69be99171c144b5635d230d3b1f9, type: 3}
+  MaximumStacks: 1
+  dropChance: 0
+  weight: 1
+  isConsumable: 0
+  Effects:
+  - {fileID: 11400000, guid: 461b3651178e1de48a8e0512cd1688ad, type: 2}

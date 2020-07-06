@@ -20,7 +20,7 @@ public class Mapper : MonoBehaviour
     public GameObject fLeftRightRoom;
     public GameObject fClosedRoom;
 
-    public GameObject SelectRoom(Room room)
+    public string SelectRoom(Room room)
     {
         if (room.top)
         {
@@ -30,25 +30,25 @@ public class Mapper : MonoBehaviour
                 {
                     if (room.right)
                     {
-                        return fLeftRightTopBottomRoom;
+                        return "TBLR";
                     }
-                    return fLeftTopBottomRoom;
+                    return fLeftTopBottomRoom.name;
                 }
-                return fTopBottomRoom;
+                return fTopBottomRoom.name;
             }
             if (room.left)
             {
                 if (room.right)
                 {
-                    return fLeftRightTopRoom;
+                    return fLeftRightTopRoom.name;
                 }
-                return fLeftTopRoom;
+                return fLeftTopRoom.name;
             }
             if (room.right)
             {
-                return fRightTopRoom;
+                return fRightTopRoom.name;
             }
-            return fTopRoom;
+            return fTopRoom.name;
         }
 
         // Bottoms
@@ -58,15 +58,15 @@ public class Mapper : MonoBehaviour
             {
                 if (room.right)
                 {
-                    return fLeftRightBottomRoom;
+                    return fLeftRightBottomRoom.name;
                 }
-                return fLeftBottomRoom;
+                return fLeftBottomRoom.name;
             }
             if (room.right)
             {
-                return fRightBottomRoom;
+                return fRightBottomRoom.name;
             }
-            return fBottomRoom;
+            return fBottomRoom.name;
         }
 
         // Lefts
@@ -74,18 +74,18 @@ public class Mapper : MonoBehaviour
         {
             if (room.right)
             {
-                return fLeftRightRoom;
+                return fLeftRightRoom.name;
             }
-            return fLeftRoom;
+            return fLeftRoom.name;
         }
 
         //Rights
         if (room.right)
         {
-            return fRightRoom;
+            return fRightRoom.name;
         }
 
         // Else
-        return fClosedRoom;
+        return fClosedRoom.name;
     }
 }

@@ -53,10 +53,8 @@ public class LevelGenerator : MonoBehaviour
                 rooms[(int)vec.x + gridSizeX, (int)vec.y + gridSizeY] = nr;
                 takenPositions.Insert(0, vec);
             }
-            DrawMapString();
         } else {
             Destroy(gameObject);
-            DrawMapString();
         }
     }
 
@@ -66,8 +64,8 @@ public class LevelGenerator : MonoBehaviour
         currentGridPosY  = currentGridPosY + yoff;
         SetCurrentRoom();
         Room nextRoom = rooms[currentGridPosX, currentGridPosY];
-        GameObject selectedRoom = map.SelectRoom(nextRoom); // switch to use list of scene names?
-        return selectedRoom.name;
+        string selectedRoom = map.SelectRoom(nextRoom); // switch to use list of scene names?
+        return selectedRoom;
     }
 
     public void SetCurrentRoom(){
@@ -280,22 +278,22 @@ public class LevelGenerator : MonoBehaviour
         }
     }
 
-    void DrawMap()
-    {
-        foreach(Room room in rooms)
-        {
-            if(room == null)
-            {
-                continue;
-            }
-            Vector2 drawPos = room.gridPos;
-            drawPos.x *= 14;
-            drawPos.y *= 14;
-            GameObject selectedRoom = map.SelectRoom(room);
+    // void DrawMap()
+    // {
+    //     foreach(Room room in rooms)
+    //     {
+    //         if(room == null)
+    //         {
+    //             continue;
+    //         }
+    //         Vector2 drawPos = room.gridPos;
+    //         drawPos.x *= 14;
+    //         drawPos.y *= 14;
+    //         GameObject selectedRoom = map.SelectRoom(room);
 
-            Instantiate(selectedRoom, drawPos, Quaternion.identity);
-        }
-    }
+    //         Instantiate(selectedRoom, drawPos, Quaternion.identity);
+    //     }
+    // }
 
     
     void DrawMapString()
