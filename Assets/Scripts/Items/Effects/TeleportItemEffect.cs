@@ -9,6 +9,9 @@ public class TeleportItemEffect : UsableItemEffect
 {
     public override void ExecuteEffect(UsableItem parentItem, Player player)
     {
+        Debug.Log(player.transform.position.ToString());
+        player.LastDungeonLocation = player.transform.position;
+        player.scene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene("Home");
     }
 

@@ -13,7 +13,6 @@ public class Player : Character
     [SerializeField] protected PlayerResources resources;
     [SerializeField] protected Spellbook spellbook;
     
-    
     [Header("Currencies")]
     protected int gold;
     public int Gold { get { return gold;} set { gold += value; }}
@@ -25,15 +24,19 @@ public class Player : Character
     [Header("UI Panels")]
     [SerializeField] public Inventory Inventory;
     [SerializeField] public EquipmentPanel EquipmentPanel;
-    [SerializeField] StatPanel statPanel;
+    [SerializeField] private StatPanel statPanel;
     [SerializeField] public CurrencyPanel currencyPanel;
-    [SerializeField] ShopPanel ShopPanel;
-    [SerializeField] DeathMenu deathMenu;
-    [SerializeField] ItemTooltip itemTooltip;
-    [SerializeField] Image draggableItem;
+    [SerializeField] private ShopPanel ShopPanel;
+    [SerializeField] private DeathMenu deathMenu;
+    [SerializeField] private ItemTooltip itemTooltip;
+    [SerializeField] private Image draggableItem;
+    [SerializeField] private ItemSaveManager itemSaveManager;
     protected BaseItemSlot draggedSlot;
-    [SerializeField] ItemSaveManager itemSaveManager;
-
+    
+    [Header("Etc")]
+    public Vector3 lastDungeonLocation;
+    public Vector3 LastDungeonLocation { get { return lastDungeonLocation; } set { lastDungeonLocation = value; }}
+    public string scene = null;
 
     private void OnValidate(){
         if(itemTooltip == null){
@@ -77,6 +80,7 @@ public class Player : Character
         ShopPanel.OnDropEvent += Drop;
 
     }
+
     private void Start()
     {
         statPanel.SetStats(strength, dexterity, intellect, vitality);
@@ -181,6 +185,7 @@ public class Player : Character
         }
         else if (itemSlot.Item is UsableItem){
             UsableItem useableItem = (UsableItem) itemSlot.Item;
+            Debug.Log(this.transform.position.ToString());
             useableItem.Use(this);
 
             if(useableItem.isConsumable){
