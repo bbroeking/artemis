@@ -60,7 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridSizeX: 5
   gridSizeY: 5
-  numberOfRooms: 5
+  numberOfRooms: 2
 --- !u!1 &8618203806760994961
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8618203806760994961}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d5a5ab3c0dea3748a3811454895e746, type: 3}
   m_Name: 
