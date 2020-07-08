@@ -36,7 +36,8 @@ public class Player : Character
     [Header("Etc")]
     public Vector3 lastDungeonLocation;
     public Vector3 LastDungeonLocation { get { return lastDungeonLocation; } set { lastDungeonLocation = value; }}
-    public string scene = null;
+    public string scene;
+    public bool backToDungeon;
 
     private void OnValidate(){
         if(itemTooltip == null){
@@ -93,6 +94,7 @@ public class Player : Character
         this.weight = Inventory.GetWeight(); // Need to calcuate the items weight
         currencyPanel.SetCurrency(this.gold, this.souls, this.weight);
         currencyPanel.UpdateCurrencyValues();
+        backToDungeon = false;
     }
     private void OnDestroy()
 	{
@@ -185,7 +187,6 @@ public class Player : Character
         }
         else if (itemSlot.Item is UsableItem){
             UsableItem useableItem = (UsableItem) itemSlot.Item;
-            Debug.Log(this.transform.position.ToString());
             useableItem.Use(this);
 
             if(useableItem.isConsumable){

@@ -12,6 +12,7 @@ public class TeleportItemEffect : UsableItemEffect
         Debug.Log(player.transform.position.ToString());
         player.LastDungeonLocation = player.transform.position;
         player.scene = SceneManager.GetActiveScene().name;
+        Debug.Log(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene("Home");
     }
 

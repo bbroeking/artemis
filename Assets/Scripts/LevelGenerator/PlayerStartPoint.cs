@@ -5,25 +5,23 @@ public class PlayerStartPoint : MonoBehaviour
 {
     private Player player;
 
-    void Awake(){
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
     void Start()
     {
         player = FindObjectOfType<Player>();
-        //player.transform.position = transform.position;
+        ReturnToDungeon();
     }
 
     public void ReturnToDungeon(){
-        if (player == null || player.scene == null) return;
-        Debug.Log(player.lastDungeonLocation.ToString());
-        player.transform.position = player.lastDungeonLocation;
-        this.player.scene = null;
-        player.transform.position = new Vector3(0,0,0);
-    }
-
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode){
-        if (scene.name == "Home") return;
-        ReturnToDungeon();
+        if (player == null || player.scene == null) {
+            return;
+        }
+        if(player.backToDungeon){
+            Debug.Log("startpoint");
+            player.transform.position = new Vector3(5,5,5);
+            Debug.Log("should be palced");
+            this.player.scene = null;
+            player.transform.position = new Vector3(0,0,0);
+            player.backToDungeon = false;
+        }
     }
 }
