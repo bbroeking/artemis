@@ -21,9 +21,13 @@ public class PlayerCollision : MonoBehaviour
             interactable = collision.GetComponent<IInteractable>();
             interactable.Interact(player.Inventory);
         }
+        else if(collision.gameObject.tag == "shop"){
+            interactable = collision.GetComponent<IInteractable>();
+            interactable.Interact();
+        }
     }
     private void OnTriggerExit2D(Collider2D collision){
-        if(collision.gameObject.tag == "DroppedItem" && collision.gameObject.tag == "DroppedCurrency" && collision.gameObject.tag == "NPC"){
+        if(interactable != null){
             interactable.StopInteract();
             interactable = null;
         }

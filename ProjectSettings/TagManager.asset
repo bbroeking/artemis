@@ -30,6 +30,8 @@ TagManager:
   - south
   - east
   - west
+  - NPC
+  - shop
   layers:
   - Default
   - TransparentFX

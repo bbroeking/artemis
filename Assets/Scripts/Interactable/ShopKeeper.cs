@@ -6,14 +6,22 @@ public class ShopKeeper : NPC
 {
     [SerializeField] private List<Item> shopInventory;
     [SerializeField] private ShopPanel shopPanel;
-    [SerializeField] GameObject shopGameObject;
+    [SerializeField] private GameObject shopGameObject;
 
     public override void Interact(){
+        OpenShop();
+    }
+
+    public override void StopInteract(){
+        CloseShop();
+    }
+
+    private void OpenShop(){
         shopPanel.SetShop(shopInventory);
         shopGameObject.SetActive(!shopGameObject.activeSelf);
     }
 
-    public override void StopInteract(){
+    private void CloseShop(){
         shopGameObject.SetActive(!shopGameObject.activeSelf);
         shopPanel.Clear();
     }
