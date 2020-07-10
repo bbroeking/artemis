@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 public class BaseItemSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
 	[SerializeField] protected Image image;
-	[SerializeField] public  Text amountText;
 
 	public event Action<BaseItemSlot> OnPointerEnterEvent;
 	public event Action<BaseItemSlot> OnPointerExitEvent;
@@ -15,7 +14,7 @@ public class BaseItemSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
 	protected Color normalColor = Color.white;
 	protected Color disabledColor = new Color(1, 1, 1, 0);
 	protected Item _item;
-	public Item Item {
+	public virtual Item Item {
 		get { return _item; }
 		set {
 			_item = value;
@@ -49,9 +48,6 @@ public class BaseItemSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
 	{
 		if (image == null)
 			image = GetComponent<Image>();
-
-		if (amountText == null)
-			amountText = GetComponentInChildren<Text>();
 
 		Item = _item;
 	}

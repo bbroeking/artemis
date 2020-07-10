@@ -31,11 +31,11 @@ public class Player : Character
     [SerializeField] private ItemTooltip itemTooltip;
     [SerializeField] private Image draggableItem;
     [SerializeField] private ItemSaveManager itemSaveManager;
-    protected BaseItemSlot draggedSlot;
+    [SerializeField] protected BaseItemSlot draggedSlot;
     
     [Header("Etc")]
     public Vector3 lastDungeonLocation;
-    public Vector3 LastDungeonLocation { get { return lastDungeonLocation; } set { lastDungeonLocation = value; }}
+    public Vector3 LastDungeonLocation { get { return lastDungeonLocation; } set { lastDungeonLocation = value; } }
     public string scene;
     public bool backToDungeon;
 
@@ -78,7 +78,7 @@ public class Player : Character
 
         Inventory.OnDropEvent += Drop;
         EquipmentPanel.OnDropEvent += Drop;
-        ShopPanel.OnDropEvent += Drop;
+        ShopPanel.OnDropEvent += DropShop;
 
     }
 
@@ -146,6 +146,19 @@ public class Player : Character
 		draggedSlot = null;
 		draggableItem.gameObject.SetActive(false);
 	}
+
+    private void DropShop(BaseItemSlot dropItemSlot){
+        if (draggedSlot == null) return;
+
+        if (dropItemSlot.CanReceiveItem(draggedSlot.Item)) {
+            Gold = Gold + draggedSlot.Item.goldValue;
+            Souls = Souls + draggedSlot.Item.soulValue;
+            dropItemSlot.Item = draggedSlot.Item;
+            Inventory.RemoveItem(draggedSlot.Item);
+            currencyPanel.UpdateCurrencyValues();
+        }
+
+    }
 	private void Drop(BaseItemSlot dropItemSlot)
 	{
 		if (draggedSlot == null) return;
