@@ -140,18 +140,27 @@ public class Player : Character
 
     private void BeginDragEquipment(BaseItemSlot itemSlot)
     {
-        draggedSlot.dragType = SlotType.Equipment;
-        BeginDrag(itemSlot);
+        if (itemSlot.Item != null)
+		{
+            draggedSlot.dragType = SlotType.Equipment;
+            BeginDrag(itemSlot);
+        }
     }
     private void BeginDragInventory(BaseItemSlot itemSlot)
     {
-        draggedSlot.dragType = SlotType.Inventory;
-        BeginDrag(itemSlot);
+        if (itemSlot.Item != null)
+		{
+            draggedSlot.dragType = SlotType.Inventory;
+            BeginDrag(itemSlot);
+        }
     }
     private void BeginDragShop(BaseItemSlot itemSlot)
     {
-        draggedSlot.dragType = SlotType.Shop;
-        BeginDrag(itemSlot);
+        if (itemSlot.Item != null)
+		{
+            draggedSlot.dragType = SlotType.Shop;
+            BeginDrag(itemSlot);
+        }
     }
     
 	private void Drag(BaseItemSlot itemSlot)
@@ -160,23 +169,23 @@ public class Player : Character
 	}
 	private void EndDrag(BaseItemSlot itemSlot)
 	{
-        draggedSlot.dragType = SlotType.None;
-		draggedSlot = null;
-		draggableItem.gameObject.SetActive(false);
+        if (draggedSlot != null){
+            draggedSlot.dragType = SlotType.None;
+		    draggedSlot = null;
+		    draggableItem.gameObject.SetActive(false);
+        }
 	}
 
     private void DropShop(BaseItemSlot dropItemSlot){
         if (draggedSlot == null) return;
         if (dropItemSlot.dragType == SlotType.Equipment) return;
         if (dropItemSlot.dragType == SlotType.Shop) return;
-        Debug.Log("outside but past");
         if (dropItemSlot.CanReceiveItem(dropItemSlot.Item)) {
-            Debug.Log("Inside");
             AddCurrency(draggedSlot.Item);
-            BasicSwap(dropItemSlot);
+            SwapItems(dropItemSlot);
         }
-
     }
+
 	private void Drop(BaseItemSlot dropItemSlot)
 	{
 		if (draggedSlot == null) return;
@@ -201,12 +210,12 @@ public class Player : Character
     private void AddCurrency(Item item){
         Gold = Gold + item.goldValue;
         Souls = Souls + item.soulValue;
-        currencyPanel.UpdateCurrencyValues();
+        SetPlayerCurrency();
     }
     private void RemoveCurrency(Item item){
         Gold = Gold - item.goldValue;
         Souls = Souls - item.soulValue;
-        currencyPanel.UpdateCurrencyValues();
+        SetPlayerCurrency();
     }
     private void BasicSwap(BaseItemSlot dropItemSlot){
         Item draggedItem = draggedSlot.Item;

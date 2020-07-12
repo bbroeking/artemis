@@ -10,19 +10,16 @@ public class ShopItemSlot : ItemSlot
 
     public override bool CanReceiveItem(Item item)
 	{
-		if(Item==null){
-			Debug.Log("can recieve");
-		}
 		return Item == null;
 	}
 
     public override Item Item {
 		get { return _item; }
 		set {
-			Debug.Log("should set");
 			_item = value;
 
 			if (_item == null) {
+
 				image.sprite = null;
 				image.color = disabledColor;
                 amountText.alpha = 0;
