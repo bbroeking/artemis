@@ -15,7 +15,7 @@ public class Item : ScriptableObject
 	public int dropChance;
 	public int weight = 1;
 	public int goldValue = 1;
-	public int soulValue = 1;
+	public int soulValue = 0;
 
 	protected static readonly StringBuilder sb = new StringBuilder();
 

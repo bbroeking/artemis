@@ -15,9 +15,9 @@ public class Player : Character
     
     [Header("Currencies")]
     protected int gold;
-    public int Gold { get { return gold;} set { gold += value; }}
+    public int Gold { get { return gold;} set { gold = value; }}
     protected int souls;
-    public int Souls { get { return souls;} set { souls += value; }}
+    public int Souls { get { return souls;} set { souls = value; }}
     protected int weight;
     public int Weight { get { return weight;} set { weight = value; }}
     
@@ -72,9 +72,9 @@ public class Player : Character
         EquipmentPanel.OnEndDragEvent += EndDrag;
         ShopPanel.OnEndDragEvent += EndDrag;
 
-        Inventory.OnDragEvent += Drag;
-        EquipmentPanel.OnDragEvent += Drag;
-        ShopPanel.OnDragEvent += Drag;
+        Inventory.OnDragEvent += BeginDragInventory;
+        EquipmentPanel.OnDragEvent += BeginDragEquipment;
+        ShopPanel.OnDragEvent += BeginDragShop;
 
         Inventory.OnDropEvent += Drop;
         EquipmentPanel.OnDropEvent += Drop;
@@ -137,25 +137,43 @@ public class Player : Character
 			draggableItem.gameObject.SetActive(true);
 		}
 	}
+
+    private void BeginDragEquipment(BaseItemSlot itemSlot)
+    {
+        draggedSlot.dragType = SlotType.Equipment;
+        BeginDrag(itemSlot);
+    }
+    private void BeginDragInventory(BaseItemSlot itemSlot)
+    {
+        draggedSlot.dragType = SlotType.Inventory;
+        BeginDrag(itemSlot);
+    }
+    private void BeginDragShop(BaseItemSlot itemSlot)
+    {
+        draggedSlot.dragType = SlotType.Shop;
+        BeginDrag(itemSlot);
+    }
+    
 	private void Drag(BaseItemSlot itemSlot)
 	{
 		draggableItem.transform.position = Input.mousePosition;
 	}
 	private void EndDrag(BaseItemSlot itemSlot)
 	{
+        draggedSlot.dragType = SlotType.None;
 		draggedSlot = null;
 		draggableItem.gameObject.SetActive(false);
 	}
 
     private void DropShop(BaseItemSlot dropItemSlot){
         if (draggedSlot == null) return;
-
-        if (dropItemSlot.CanReceiveItem(draggedSlot.Item)) {
-            Gold = Gold + draggedSlot.Item.goldValue;
-            Souls = Souls + draggedSlot.Item.soulValue;
-            dropItemSlot.Item = draggedSlot.Item;
-            Inventory.RemoveItem(draggedSlot.Item);
-            currencyPanel.UpdateCurrencyValues();
+        if (dropItemSlot.dragType == SlotType.Equipment) return;
+        if (dropItemSlot.dragType == SlotType.Shop) return;
+        Debug.Log("outside but past");
+        if (dropItemSlot.CanReceiveItem(dropItemSlot.Item)) {
+            Debug.Log("Inside");
+            AddCurrency(draggedSlot.Item);
+            BasicSwap(dropItemSlot);
         }
 
     }
@@ -163,7 +181,12 @@ public class Player : Character
 	{
 		if (draggedSlot == null) return;
 
-		if (dropItemSlot.CanReceiveItem(draggedSlot.Item) && draggedSlot.CanReceiveItem(dropItemSlot.Item))
+        if (draggedSlot.dragType == SlotType.Shop && dropItemSlot.Item == null && CanAfford(draggedSlot)){
+            RemoveCurrency(draggedSlot.Item);
+            SwapItems(dropItemSlot);
+        }
+
+		else if (dropItemSlot.CanReceiveItem(draggedSlot.Item) && draggedSlot.CanReceiveItem(dropItemSlot.Item))
 		{
 			SwapItems(dropItemSlot);
 		}
@@ -171,6 +194,24 @@ public class Player : Character
     public void SetPlayerCurrency(){
         currencyPanel.SetCurrency(this.gold, this.souls, this.weight);
         currencyPanel.UpdateCurrencyValues();
+    }
+    private bool CanAfford(BaseItemSlot itemSlot){
+        return itemSlot.Item.goldValue <= Gold;
+    }
+    private void AddCurrency(Item item){
+        Gold = Gold + item.goldValue;
+        Souls = Souls + item.soulValue;
+        currencyPanel.UpdateCurrencyValues();
+    }
+    private void RemoveCurrency(Item item){
+        Gold = Gold - item.goldValue;
+        Souls = Souls - item.soulValue;
+        currencyPanel.UpdateCurrencyValues();
+    }
+    private void BasicSwap(BaseItemSlot dropItemSlot){
+        Item draggedItem = draggedSlot.Item;
+		draggedSlot.Item = null;
+		dropItemSlot.Item = draggedItem;
     }
     private void SwapItems(BaseItemSlot dropItemSlot)
 	{

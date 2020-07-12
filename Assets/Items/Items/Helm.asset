@@ -18,6 +18,8 @@ MonoBehaviour:
   MaximumStacks: 1
   dropChance: 50
   weight: 1
+  goldValue: 0
+  soulValue: 1
   strengthBonus: 2
   dexterityBonus: 2
   intellectBonus: 2
