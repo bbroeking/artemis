@@ -8,6 +8,7 @@ public class PlayerStartPoint : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<Player>();
+        player.transform.position = this.transform.position;
         ReturnToDungeon();
     }
 
@@ -16,9 +17,7 @@ public class PlayerStartPoint : MonoBehaviour
             return;
         }
         if(player.backToDungeon){
-            Debug.Log("startpoint");
             player.transform.position = new Vector3(5,5,5);
-            Debug.Log("should be palced");
             this.player.scene = null;
             player.transform.position = new Vector3(0,0,0);
             player.backToDungeon = false;

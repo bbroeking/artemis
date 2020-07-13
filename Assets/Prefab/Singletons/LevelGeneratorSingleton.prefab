@@ -60,7 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridSizeX: 5
   gridSizeY: 5
-  numberOfRooms: 2
+  numberOfRooms: 1
 --- !u!1 &8618203806760994961
 GameObject:
   m_ObjectHideFlags: 0

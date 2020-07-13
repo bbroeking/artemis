@@ -3265,8 +3265,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 7205547041420035234}
-  dragType: 0
-  dropType: 0
+  dragType: 3
+  dropType: 1
 --- !u!1 &7205547041430759149
 GameObject:
   m_ObjectHideFlags: 0
@@ -4751,8 +4751,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 7205547041848173883}
-  dragType: 0
-  dropType: 0
+  dragType: 3
+  dropType: 2
   EquipmentType: 4
 --- !u!1 &7205547041855517746
 GameObject:
@@ -5598,8 +5598,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 7205547042018902485}
-  dragType: 0
-  dropType: 0
+  dragType: 3
+  dropType: 2
   EquipmentType: 1
 --- !u!1 &7205547042034235856
 GameObject:
@@ -6687,8 +6687,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 7205547042217989927}
-  dragType: 0
-  dropType: 0
+  dragType: 3
+  dropType: 2
   EquipmentType: 3
 --- !u!1 &7205547042222145266
 GameObject:
@@ -7061,8 +7061,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 7205547042264188797}
-  dragType: 0
-  dropType: 0
+  dragType: 3
+  dropType: 2
   EquipmentType: 0
 --- !u!1 &7205547042269972427
 GameObject:
@@ -9275,8 +9275,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 7205547042622492452}
-  dragType: 0
-  dropType: 0
+  dragType: 3
+  dropType: 2
   EquipmentType: 4
 --- !u!1 &7205547042623355051
 GameObject:
@@ -9666,8 +9666,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 7205547042772769488}
-  dragType: 0
-  dropType: 0
+  dragType: 3
+  dropType: 2
   EquipmentType: 2
 --- !u!1 &7205547042813752103
 GameObject:
@@ -10729,8 +10729,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 7205547042955492591}
-  dragType: 0
-  dropType: 0
+  dragType: 3
+  dropType: 2
   EquipmentType: 6
 --- !u!1 &7205547042971734407
 GameObject:
@@ -11189,8 +11189,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 7205547043058386267}
-  dragType: 0
-  dropType: 0
+  dragType: 3
+  dropType: 2
   EquipmentType: 3
 --- !u!1 &7205547043100708364
 GameObject:
@@ -12370,8 +12370,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 7205547043238905714}
-  dragType: 0
-  dropType: 0
+  dragType: 2
+  dropType: 3
   EquipmentType: 5
 --- !u!1 &7205547043250766240
 GameObject:
