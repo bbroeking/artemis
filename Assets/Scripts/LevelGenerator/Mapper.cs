@@ -1,24 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Mapper : MonoBehaviour
 {
-    public GameObject fRightRoom;
-    public GameObject fLeftRoom;
-    public GameObject fTopRoom;
-    public GameObject fBottomRoom;
-    public GameObject fRightTopRoom;
-    public GameObject fRightBottomRoom;
-    public GameObject fLeftTopRoom;
-    public GameObject fLeftBottomRoom;
-    public GameObject fLeftRightBottomRoom;
-    public GameObject fLeftRightTopRoom;
-    public GameObject fLeftRightTopBottomRoom;
-    public GameObject fLeftTopBottomRoom;
-    public GameObject fTopBottomRoom;
-    public GameObject fLeftRightRoom;
-    public GameObject fClosedRoom;
+    public static List<string> baseRightRoom = new List<string>{"R"};
+    public static List<string> baseLeftRoom = new List<string>{"L"};
+    public static List<string> baseTopRoom = new List<string>{"T"};
+    public static List<string> baseBottomRoom = new List<string>{"B"};
+    public static List<string> baseRightTopRoom = new List<string>{"TR"};
+    public static List<string> baseRightBottomRoom = new List<string>{"BR"};
+    public static List<string> baseLeftTopRoom = new List<string>{"TL"};
+    public static List<string> baseLeftBottomRoom = new List<string>{"BL"};
+    public static List<string> baseLeftRightBottomRoom = new List<string>{"BLR"};
+    public static List<string> baseLeftRightTopRoom = new List<string>{"TLR"};
+    public static List<string> baseLeftRightTopBottomRoom = new List<string>{"TBLR", "TBLR +1"};
+    public static List<string> baseLeftTopBottomRoom = new List<string>{"TBL"};
+    public static List<string> baseTopBottomRoom = new List<string>{"TB"};
+    public static List<string> baseLeftRightRoom = new List<string>{"LR"};
+    public static List<string> fClosedRoom;
 
     public string SelectRoom(Room room)
     {
@@ -30,25 +31,25 @@ public class Mapper : MonoBehaviour
                 {
                     if (room.right)
                     {
-                        return "TBLR";
+                        return SelectScene(baseLeftRightTopBottomRoom);
                     }
-                    return fLeftTopBottomRoom.name;
+                    return SelectScene(baseLeftTopBottomRoom);
                 }
-                return fTopBottomRoom.name;
+                return SelectScene(baseTopBottomRoom);
             }
             if (room.left)
             {
                 if (room.right)
                 {
-                    return fLeftRightTopRoom.name;
+                    return SelectScene(baseLeftRightTopRoom);
                 }
-                return fLeftTopRoom.name;
+                return SelectScene(baseLeftTopRoom);
             }
             if (room.right)
             {
-                return fRightTopRoom.name;
+                return SelectScene(baseRightTopRoom);
             }
-            return fTopRoom.name;
+            return SelectScene(baseTopRoom);
         }
 
         // Bottoms
@@ -58,15 +59,15 @@ public class Mapper : MonoBehaviour
             {
                 if (room.right)
                 {
-                    return fLeftRightBottomRoom.name;
+                    return SelectScene(baseLeftRightBottomRoom);
                 }
-                return fLeftBottomRoom.name;
+                return SelectScene(baseLeftBottomRoom);
             }
             if (room.right)
             {
-                return fRightBottomRoom.name;
+                return SelectScene(baseRightBottomRoom);
             }
-            return fBottomRoom.name;
+            return SelectScene(baseBottomRoom);
         }
 
         // Lefts
@@ -74,18 +75,26 @@ public class Mapper : MonoBehaviour
         {
             if (room.right)
             {
-                return fLeftRightRoom.name;
+                return SelectScene(baseLeftRightRoom);
             }
-            return fLeftRoom.name;
+            return SelectScene(baseLeftRoom);
         }
 
         //Rights
         if (room.right)
         {
-            return fRightRoom.name;
+            return SelectScene(baseRightRoom);
         }
 
         // Else
-        return fClosedRoom.name;
+        return SelectScene(fClosedRoom);
     }
+
+    private string SelectScene(List<string> scenes){
+        var random = new System.Random();
+        int index = random.Next(scenes.Count);
+        return scenes[index];
+    }
+
 }
+

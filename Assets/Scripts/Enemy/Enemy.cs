@@ -12,7 +12,7 @@ public class Enemy : Character
     public bool IsInAggroRange { get { return isInAggroRange; } set { isInAggroRange = value; }}
     private float aggroCooldown = 5f;
     private float internalAggroCooldown;
-    public float distanceFromSpawn;
+    public float distanceFromSpawn = 3f;
 
 
     private void OnValidate(){
@@ -27,7 +27,6 @@ public class Enemy : Character
     void Start(){
         isInAggroRange = false;
         internalAggroCooldown = 0f;
-        distanceFromSpawn = 3f;
     }
 
     void Update(){

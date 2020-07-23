@@ -1,21 +1,22 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum Direction {North, East, South, West};
 public class PlayerStartPoint : MonoBehaviour
 {
+    [SerializeField] private Direction comingFrom;
     private Player player;
 
     void Start()
     {
         player = FindObjectOfType<Player>();
-        player.transform.position = this.transform.position;
-        ReturnToDungeon();
+        if(player.lastDirection == comingFrom){
+            player.transform.position = this.transform.position;
+        }
     }
 
     public void ReturnToDungeon(){
-        if (player == null || player.scene == null) {
-            return;
-        }
+        if (player == null || player.scene == null) return;
         if(player.backToDungeon){
             player.transform.position = new Vector3(5,5,5);
             this.player.scene = null;

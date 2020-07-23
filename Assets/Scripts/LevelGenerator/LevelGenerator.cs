@@ -9,6 +9,7 @@ public class LevelGenerator : MonoBehaviour
     public int gridSizeY = 5; // number of squares in the postive and negative y direction
     public int numberOfRooms = 3; // number of rooms to generate
     public static Room[,] rooms; // location of Room in [0, gridSize * 2]
+    public static string[,] scenes; // location of Room in [0, gridSize * 2]
     public static List<Vector2> takenPositions = new List<Vector2>(); // populated locations
     public static List<Vector2> toBeGeneratedPositions = new List<Vector2>(); // locations that have yet to be placed
     private static Mapper map; // helper function for figuring out what tile to place
@@ -26,10 +27,15 @@ public class LevelGenerator : MonoBehaviour
 
             map = GameObject.FindGameObjectWithTag("RoomMapper").GetComponent<Mapper>();
             rooms = new Room[gridSizeX * 2, gridSizeY * 2];
+            scenes = new string[gridSizeX * 2, gridSizeY * 2];
+
             currentGridPosX = gridSizeX;
             currentGridPosY = gridSizeY;
+
             Room room = new Room(Vector2.zero, true, true, true, true);
             rooms[currentGridPosX, currentGridPosY] = room;
+            scenes[currentGridPosX, currentGridPosY] = SetRoom(room);
+            
             takenPositions.Insert(0, Vector2.zero);
             AddToBeGeneratedPositions(room);
             
@@ -42,30 +48,43 @@ public class LevelGenerator : MonoBehaviour
                 int vecIdx = Random.Range(0, toBeGeneratedPositions.Count - 1);
                 Vector2 vec = toBeGeneratedPositions[vecIdx];
                 toBeGeneratedPositions.RemoveAt(vecIdx);
-                Room nr = PlaceTile(vec);
-                rooms[(int)vec.x + gridSizeX, (int)vec.y + gridSizeY] = nr;
-                AddToBeGeneratedPositions(nr);
-                takenPositions.Insert(0, vec);
+                PlaceTileInPosition(vec);
             }
             foreach(Vector2 vec in toBeGeneratedPositions)
             {
-                Room nr = PlaceClosedTile(vec);
-                rooms[(int)vec.x + gridSizeX, (int)vec.y + gridSizeY] = nr;
-                takenPositions.Insert(0, vec);
+                PlaceClosedTileInPosition(vec);
             }
         } else {
             Destroy(gameObject);
         }
     }
 
-    
+    public void PlaceTileInPosition(Vector2 vec){
+        Room nr = PlaceTile(vec);
+        Vector2 vecOffset = new Vector2((int)vec.x + gridSizeX, (int)vec.y + gridSizeY);
+        rooms[(int) vecOffset.x, (int) vecOffset.y] = nr;
+        scenes[(int)vec.x + gridSizeX, (int)vec.y + gridSizeY] = SetRoom(nr);
+        AddToBeGeneratedPositions(nr);
+        takenPositions.Insert(0, vec);
+    }
+
+    public void PlaceClosedTileInPosition(Vector2 vec){
+        Room nr = PlaceClosedTile(vec);
+        rooms[(int)vec.x + gridSizeX, (int)vec.y + gridSizeY] = nr;
+        scenes[(int)vec.x + gridSizeX, (int)vec.y + gridSizeY] = SetRoom(nr);
+        takenPositions.Insert(0, vec);
+    }
+
+    public string SetRoom(Room next){
+        return map.SelectRoom(next);
+    }
+
     public string GetNextRoom(int xoff, int yoff){
         currentGridPosX = currentGridPosX + xoff;
         currentGridPosY  = currentGridPosY + yoff;
         SetCurrentRoom();
-        Room nextRoom = rooms[currentGridPosX, currentGridPosY];
-        string selectedRoom = map.SelectRoom(nextRoom); // switch to use list of scene names?
-        return selectedRoom;
+        Debug.Log(scenes[currentGridPosX, currentGridPosY]);
+        return scenes[currentGridPosX, currentGridPosY];
     }
 
     public void SetCurrentRoom(){

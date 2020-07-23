@@ -38,6 +38,7 @@ public class Player : Character
     public Vector3 LastDungeonLocation { get { return lastDungeonLocation; } set { lastDungeonLocation = value; } }
     public string scene;
     public bool backToDungeon;
+    public Direction lastDirection = Direction.North;
 
     private void OnValidate(){
         if(itemTooltip == null){

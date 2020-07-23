@@ -504,11 +504,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   currentHealth: 5
+  speed: 0
   aIDestination: {fileID: 7004473854437749025}
   lootTable: {fileID: 0}
   sprite: {fileID: -5501054352798569629, guid: ee639f852642c3246b994b77794394ed, type: 3}
   spawnLocation: {fileID: 0}
-  distanceFromSpawn: 3
+  distanceFromSpawn: 200
 --- !u!114 &7004473854437749034
 MonoBehaviour:
   m_ObjectHideFlags: 0
