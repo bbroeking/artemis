@@ -2978,7 +2978,7 @@ MonoBehaviour:
   inventoryWeight: 0
   canvasGroup: {fileID: 1644202337}
   shopItems: []
-  itemsParent: {fileID: 7205547041705778682}
+  itemsParent: {fileID: 7205547043424714360}
 --- !u!225 &1644202337
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -12478,7 +12478,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7205547043255209680
 RectTransform:
   m_ObjectHideFlags: 0

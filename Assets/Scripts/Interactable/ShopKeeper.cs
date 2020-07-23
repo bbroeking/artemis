@@ -14,7 +14,7 @@ public class ShopKeeper : NPC
         shopIsActive = false;
         shopCanvasGroup = shopGameObject.GetComponent<CanvasGroup>();
     }
-    public override void Interact(){
+    public override void Interact(Player player){
         OpenShop();
     }
 

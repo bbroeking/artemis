@@ -5,7 +5,7 @@ public abstract class Interactable : MonoBehaviour, IInteractable
     protected bool isInRange;
     [SerializeField] protected KeyCode interactKey = KeyCode.F;
 
-    public virtual void Interact()
+    public virtual void Interact(Player player)
     {
         isInRange = true;
     }
@@ -13,15 +13,5 @@ public abstract class Interactable : MonoBehaviour, IInteractable
     public virtual void StopInteract()
     {
         isInRange = false;
-    }
-
-    public virtual void Interact(Inventory inventory)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public virtual void Interact(Player player)
-    {
-        throw new System.NotImplementedException();
     }
 }

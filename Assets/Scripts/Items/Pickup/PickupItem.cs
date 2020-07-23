@@ -7,10 +7,10 @@ public class PickupItem : Interactable
     [SerializeField] KeyCode itemPickupKeyCode = KeyCode.F;
     [SerializeField] SpriteRenderer spriteRenderer;
 
-    public override void Interact(Inventory inventory)
+    public override void Interact(Player player)
     {
         isInRange = true;
-        this.inventory = inventory;
+        this.inventory = player.Inventory;
     }
 
     public override void StopInteract()

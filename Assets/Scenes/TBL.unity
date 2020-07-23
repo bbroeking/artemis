@@ -4517,6 +4517,11 @@ PrefabInstance:
       propertyPath: dropType
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7205547043255209681, guid: 30603e35a5bc9ee4e9229e4169d0687d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7205547043260062497, guid: 30603e35a5bc9ee4e9229e4169d0687d,
         type: 3}
       propertyPath: m_AnchorMin.y

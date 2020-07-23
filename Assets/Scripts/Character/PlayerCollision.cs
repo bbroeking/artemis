@@ -11,7 +11,7 @@ public class PlayerCollision : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.tag == "DroppedItem"){
             interactable = collision.GetComponent<IInteractable>();
-            interactable.Interact(player.Inventory);
+            interactable.Interact(player);
         }
         else if (collision.gameObject.tag == "DroppedCurrency"){
             interactable = collision.GetComponent<IInteractable>();
@@ -19,11 +19,11 @@ public class PlayerCollision : MonoBehaviour
         }
         else if(collision.gameObject.tag == "NPC"){
             interactable = collision.GetComponent<IInteractable>();
-            interactable.Interact(player.Inventory);
+            interactable.Interact(player);
         }
         else if(collision.gameObject.tag == "shop"){
             interactable = collision.GetComponent<IInteractable>();
-            interactable.Interact();
+            interactable.Interact(player);
         }
     }
     private void OnTriggerExit2D(Collider2D collision){
