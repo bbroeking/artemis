@@ -58,6 +58,7 @@ public class Combat : MonoBehaviour
             }
         }
     }
+    
     void Melee(){
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);
         anim.SetTrigger("Attack");

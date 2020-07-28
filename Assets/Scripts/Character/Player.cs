@@ -115,6 +115,11 @@ public class Player : Character
         anim.SetFloat("Vertical", movement.y);
         anim.SetFloat("Magnitude", movement.magnitude);
 
+        if (movement.x != 0.0f || movement.y != 0.0f){
+            anim.SetFloat("LastHorizonal", movement.x);
+            anim.SetFloat("LastVertical", movement.y);
+        }
+
         Move(movement);
     }
 	private void ShowTooltip(BaseItemSlot itemSlot)

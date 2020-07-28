@@ -35,7 +35,7 @@ public class LevelGenerator : MonoBehaviour
             Room room = new Room(Vector2.zero, true, true, true, true);
             rooms[currentGridPosX, currentGridPosY] = room;
             scenes[currentGridPosX, currentGridPosY] = SetRoom(room);
-            
+
             takenPositions.Insert(0, Vector2.zero);
             AddToBeGeneratedPositions(room);
             
@@ -83,7 +83,6 @@ public class LevelGenerator : MonoBehaviour
         currentGridPosX = currentGridPosX + xoff;
         currentGridPosY  = currentGridPosY + yoff;
         SetCurrentRoom();
-        Debug.Log(scenes[currentGridPosX, currentGridPosY]);
         return scenes[currentGridPosX, currentGridPosY];
     }
 
