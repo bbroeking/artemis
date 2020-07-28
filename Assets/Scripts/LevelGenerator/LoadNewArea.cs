@@ -45,8 +45,8 @@ public class LoadNewArea : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.tag == "player"){
             other.gameObject.GetComponent<Player>().lastDirection = direction;
-            scene = levelGenerator.GetNextRoom(xoff, yoff);
-            SceneManager.LoadScene(scene);
+            other.gameObject.GetComponent<Player>().map = levelGenerator.GetNextRoom(xoff, yoff);
+            SceneManager.LoadScene("Dungeon");
         }
     }
 }

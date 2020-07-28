@@ -38,7 +38,8 @@ public class Player : Character
     public Vector3 LastDungeonLocation { get { return lastDungeonLocation; } set { lastDungeonLocation = value; } }
     public string scene;
     public bool backToDungeon;
-    public Direction lastDirection = Direction.North;
+    public Direction lastDirection;
+    public string map;
 
     private void OnValidate(){
         if(itemTooltip == null){
@@ -96,6 +97,8 @@ public class Player : Character
         currencyPanel.SetCurrency(this.gold, this.souls, this.weight);
         currencyPanel.UpdateCurrencyValues();
         backToDungeon = false;
+        lastDirection = Direction.North;
+        map = "Map/TBLR/TBLR Base"; // default path
     }
     private void OnDestroy()
 	{
