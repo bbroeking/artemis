@@ -32,9 +32,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5044662154932729051}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.688757, y: -1.0637094, z: 1.0195312}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5044662156301540087}
   - {fileID: 5044662156090398450}
@@ -123,18 +123,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0302023, y: -0.17973888}
+  m_Offset: {x: 0.0021453798, y: -0.291967}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.4545455, y: 1.4545455}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 1
   serializedVersion: 2
-  m_Size: {x: 0.65172905, y: 0.58951545}
+  m_Size: {x: 0.5956152, y: 0.8139717}
   m_EdgeRadius: 0
 --- !u!50 &5044662154932729052
 Rigidbody2D:
@@ -171,6 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   currentHealth: 0
+  speed: 0
   rb: {fileID: 5044662154932729052}
   anim: {fileID: 5044662155722365667}
   combat: {fileID: 5044662154932729050}
@@ -185,6 +186,12 @@ MonoBehaviour:
   itemTooltip: {fileID: 0}
   draggableItem: {fileID: 0}
   itemSaveManager: {fileID: 0}
+  draggedSlot: {fileID: 0}
+  lastDungeonLocation: {x: 0, y: 0, z: 0}
+  scene: 
+  backToDungeon: 0
+  lastDirection: 0
+  map: 
 --- !u!114 &5044662154932729050
 MonoBehaviour:
   m_ObjectHideFlags: 0

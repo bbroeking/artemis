@@ -7,7 +7,7 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField] GameObject enemy;
     [SerializeField] Sprite[] sprites;
-    private Sprite sprite;
+    public Sprite sprite;
 
     void OnValidate(){
         enemy = (GameObject) LoadPrefab.LoadPrefabFromFile("MeleeEnemy");

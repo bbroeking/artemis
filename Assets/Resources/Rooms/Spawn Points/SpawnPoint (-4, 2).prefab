@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1399831516747055095}
   - component: {fileID: 1399831516747055094}
   m_Layer: 0
-  m_Name: SpawnPoint
+  m_Name: SpawnPoint (-4, 2)
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -45,5 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 7004473854437749024, guid: 78c7ec8107f973643b000a369adcb77a, type: 3}
   sprites:
-  - {fileID: 21300000, guid: 1ba321327f985b84b94478eb6946ab16, type: 3}
-  - {fileID: 21300000, guid: aea51e4dad0779d47932a0d32fb95295, type: 3}
+  - {fileID: 4919422453830082300, guid: f1d7d22837f0bf84191e4d007a225c67, type: 3}
+  sprite: {fileID: 0}

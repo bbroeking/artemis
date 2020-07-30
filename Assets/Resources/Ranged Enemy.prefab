@@ -62,7 +62,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attack: {fileID: 0}
   col: {fileID: 2484770977343261601}
-  aggroRange: 1
+  attackRange: 1
 --- !u!1 &2247856132808843128
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,7 +297,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -5501054352798569629, guid: ee639f852642c3246b994b77794394ed,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -441,6 +441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   currentHealth: 5
+  speed: 0
   aIDestination: {fileID: 0}
   lootTable: {fileID: 0}
   sprite: {fileID: -5501054352798569629, guid: ee639f852642c3246b994b77794394ed, type: 3}
