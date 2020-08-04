@@ -29,7 +29,7 @@ public class Combat : MonoBehaviour
             {
                 if(!isCooldown){
                     Melee();
-                    Cooldown();
+                    StartCoroutine(Cooldown());
                 }
             }
             if (Input.GetButtonDown("Fire2"))

@@ -10,7 +10,7 @@ public class Spawner : MonoBehaviour
     public Sprite sprite;
 
     void OnValidate(){
-        enemy = (GameObject) LoadPrefab.LoadPrefabFromFile("MeleeEnemy");
+        enemy = (GameObject) LoadPrefab.LoadPrefabFromFile("Enemies/MeleeEnemy");
     }
     void Awake(){
         var random = new System.Random();

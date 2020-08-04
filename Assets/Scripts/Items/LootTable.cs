@@ -21,8 +21,8 @@ public class LootTable : MonoBehaviour
 
     private void OnValidate(){
         enemy = gameObject.GetComponentInParent<Enemy>();
-        droppedItem = (GameObject) LoadPrefab.LoadPrefabFromFile("DroppedItem");
-        droppedCurrency = (GameObject) LoadPrefab.LoadPrefabFromFile("DroppedCurrency");
+        droppedItem = (GameObject) LoadPrefab.LoadPrefabFromFile("Dropped/DroppedItem");
+        droppedCurrency = (GameObject) LoadPrefab.LoadPrefabFromFile("Dropped/DroppedCurrency");
     }
     public void SpawnLoot(){
         Item drop = GenerateDrop();

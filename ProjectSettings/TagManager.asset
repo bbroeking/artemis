@@ -43,8 +43,8 @@ TagManager:
   - 
   - entity
   - enemy
-  - ienvironments
   - ground
+  - ienvironments
   - walls
   - projectile
   - enemyprojectile
