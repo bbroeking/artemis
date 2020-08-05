@@ -145,18 +145,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2931ae7f23dfbfb46b22f4700146399a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &330573365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2818353076470021890, guid: 0edb88dec37a754499e88e823f8c555e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2818353076177197367}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &330573370 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2818353076470021901, guid: 0edb88dec37a754499e88e823f8c555e,
     type: 3}
   m_PrefabInstance: {fileID: 2818353076177197367}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 330573365}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b47c59fef893af4781ff3d2348e11bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &330573372 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 2818353076470021899, guid: 0edb88dec37a754499e88e823f8c555e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2818353076177197367}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &330573375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330573365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b96dc59ee0da3f74c8853587d01fcf7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 330573370}
+  loot:
+  - {fileID: 11400000, guid: f4e1e915d353b0a438eef9d60b5caa79, type: 2}
+  droppedItem: {fileID: 18156145653926270, guid: 4d4245c22262f064daf7075fb14c8cf0,
+    type: 3}
+  droppedCurrency: {fileID: 4158551135748663218, guid: 5a9379fcff8121a44ba32746b3c08acb,
+    type: 3}
 --- !u!1001 &335467387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -718,6 +749,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 722839664815075334, guid: 0edb88dec37a754499e88e823f8c555e,
+        type: 3}
+      propertyPath: chracterCollider
+      value: 
+      objectReference: {fileID: 330573372}
     - target: {fileID: 7670312304543463830, guid: 0edb88dec37a754499e88e823f8c555e,
         type: 3}
       propertyPath: m_Name
