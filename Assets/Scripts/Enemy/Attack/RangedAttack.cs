@@ -15,6 +15,8 @@ public class RangedAttack : Attack
         for (int i = 0; i < 6; i++)
         {
             GameObject spell = Instantiate(projectile, attackPos.position, Quaternion.identity);
+            EnemyProjectile ep = spell.GetComponent<EnemyProjectile>();
+            ep.Damage = this.damage;
             Destroy(spell, 3);
             Rigidbody2D rb = spell.GetComponent<Rigidbody2D>();
             Physics2D.IgnoreCollision(spell.GetComponent<Collider2D>(), chracterCollider);

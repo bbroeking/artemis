@@ -22,7 +22,7 @@ public class Character : MonoBehaviour
     public float InteralAttackCooldown { get { return internalAttackCooldown;} }
     private int spellDamage;
     public int SpellDamage { get { return spellDamage; } }
-    protected bool dead;
+    protected bool isDead;
 
     protected virtual void Awake(){
         health = 5;
@@ -35,7 +35,7 @@ public class Character : MonoBehaviour
         intellectModifier = 0.1f;
         vitalityModifier = 0;
         internalAttackCooldown = 1f;
-        dead = false;
+        isDead = false;
     }
     public int CalculateDamage(){
         int damageRoll = Random.Range(mainHandMinDamage, mainHandMaxDamage);
@@ -68,7 +68,7 @@ public class Character : MonoBehaviour
     public virtual void TakeDamage(int damage){
         this.currentHealth -= damage;
         if(this.currentHealth <= 0){
-            this.dead = true;
+            this.isDead = true;
         }
     }
 

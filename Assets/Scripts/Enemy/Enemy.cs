@@ -45,11 +45,11 @@ public class Enemy : Character
             internalAggroCooldown -= Time.deltaTime;
         }
     }
-    
+
     public override void Hit(int damage)
     {
         base.TakeDamage(damage);
-        if (this.dead){
+        if (this.isDead){
             SpawnLootAndDestroy();
         }
     }

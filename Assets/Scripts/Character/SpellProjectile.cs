@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class SpellProjectile : MonoBehaviour
 {
-    [SerializeField] private Player player;
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.CompareTag(Tags.enemy))
         {
             collision.gameObject.GetComponent<Enemy>()?.Hit(1);
         }

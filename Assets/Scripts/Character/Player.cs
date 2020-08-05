@@ -42,6 +42,7 @@ public class Player : Character
     public Direction lastDirection;
     public string map;
     private bool isMoveDisabled = false;
+
     private void OnValidate(){
         if(itemTooltip == null){
             itemTooltip = FindObjectOfType<ItemTooltip>();
@@ -110,7 +111,7 @@ public class Player : Character
     void Update()
     {
         Dead();
-        if (!isMoveDisabled){
+        if (!isMoveDisabled && !isDead){
             Move();
         }
     }
@@ -319,7 +320,7 @@ public class Player : Character
     }
 
     public override void Dead(){
-        if(dead){
+        if(isDead){
             deathMenu.ShowMenu();
         }
     }
@@ -327,6 +328,6 @@ public class Player : Character
     public void Respawn() {
         currentHealth = health;
         resources.SetHealthbar();
-        dead = false;
+        isDead = false;
     }
 }

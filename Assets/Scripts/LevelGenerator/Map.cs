@@ -6,7 +6,7 @@ public class Map : MonoBehaviour
 {
     Player player;
     void Awake(){
-        player = FindObjectOfType<Player>();
+        player = SingletonPlayer.Instance.player;
     }
     void Start()
     {
