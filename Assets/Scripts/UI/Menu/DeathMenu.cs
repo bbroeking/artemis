@@ -5,13 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class DeathMenu : MonoBehaviour
 {
-    [SerializeField] GameObject deathMenuObject;
+    private Player player;
+    [SerializeField] GameObject deathMenu;
+
+    void Start(){
+        player = FindObjectOfType<Player>();
+    }
     public void Respawn(){
-        deathMenuObject.SetActive(false);
+        deathMenu.SetActive(false);
+        player.Respawn();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void ShowMenu(){
-        deathMenuObject.SetActive(true);
+        deathMenu.SetActive(true);
     }
 
 }

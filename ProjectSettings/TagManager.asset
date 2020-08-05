@@ -32,6 +32,7 @@ TagManager:
   - west
   - NPC
   - shop
+  - spikes
   layers:
   - Default
   - TransparentFX

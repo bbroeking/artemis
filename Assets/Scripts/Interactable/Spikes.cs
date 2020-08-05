@@ -2,37 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spikes : MonoBehaviour
+public class Spikes : Interactable
 {
     public Collider2D spikesHitbox;
-    private int spikesCooldown = 4;
-    private int spikesDuration = 2;
-    private bool isCooldown = false;
-    private bool isActive = false;
-    void Start(){
-        spikesHitbox.enabled = false;
+    private float disableTime = 0.5f;
+    private int spikeDamage = 1;
+    private int spikesCooldown = 2;
+    private bool isInteractable = true;
+    private IEnumerator Cooldown(){
+        isInteractable = false;
+        yield return new WaitForSeconds(spikesCooldown);
+        isInteractable = true;
     }
-    void Update(){
-        if (!isCooldown && !isActive){
+
+    public override void Interact(Player player){
+        if (isInteractable){
             StartCoroutine(Cooldown());
-        } else if (isActive && !isCooldown){
-            StartCoroutine(Duration());
+            player.TakeDamage(spikeDamage);
+            var magnitude = 550;
+            var force = transform.position - player.transform.position;
+            force.Normalize();
+            player.GetComponent<Rigidbody2D>().AddForce(-force * magnitude);
+            StartCoroutine(player.disableMovement(disableTime));
         }
     }
 
-    private IEnumerator Cooldown()
-    {
-        isCooldown = true;
-        yield return new WaitForSeconds(spikesCooldown);
-        isCooldown = false;
-        spikesHitbox.enabled = true;
-        isActive = true;
-    }
+    public override void StopInteract(){
 
-    private IEnumerator Duration(){
-        yield return new WaitForSeconds(spikesCooldown);
-        isActive = false;
-        spikesHitbox.enabled = false;
     }
-
 }

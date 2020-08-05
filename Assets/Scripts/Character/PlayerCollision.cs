@@ -9,19 +9,25 @@ public class PlayerCollision : MonoBehaviour
         player = GetComponentInParent<Player>();
     }
     private void OnTriggerEnter2D(Collider2D collision){
-        if(collision.gameObject.CompareTag(Constants.droppedItem)){
+        if(collision.gameObject.CompareTag(Tags.droppedItem)){
             interactable = collision.GetComponent<IInteractable>();
             interactable.Interact(player);
         }
-        else if (collision.gameObject.CompareTag(Constants.droppedCurrency)){
+        else if (collision.gameObject.CompareTag(Tags.droppedCurrency)){
             interactable = collision.GetComponent<IInteractable>();
             interactable.Interact(player);
         }
-        else if(collision.gameObject.CompareTag(Constants.NPC)){
+        else if(collision.gameObject.CompareTag(Tags.NPC)){
             interactable = collision.GetComponent<IInteractable>();
             interactable.Interact(player);
         }
-        else if(collision.gameObject.CompareTag(Constants.shop)){
+        else if(collision.gameObject.CompareTag(Tags.shop)){
+            interactable = collision.GetComponent<IInteractable>();
+            interactable.Interact(player);
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision){
+        if(collision.gameObject.CompareTag(Tags.spikes)){
             interactable = collision.GetComponent<IInteractable>();
             interactable.Interact(player);
         }

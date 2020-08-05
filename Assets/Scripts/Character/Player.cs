@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
@@ -40,7 +41,7 @@ public class Player : Character
     public bool backToDungeon;
     public Direction lastDirection;
     public string map;
-
+    private bool isMoveDisabled = false;
     private void OnValidate(){
         if(itemTooltip == null){
             itemTooltip = FindObjectOfType<ItemTooltip>();
@@ -109,18 +110,9 @@ public class Player : Character
     void Update()
     {
         Dead();
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
-
-        anim.SetFloat("Horizontal", movement.x);
-        anim.SetFloat("Vertical", movement.y);
-        anim.SetFloat("Magnitude", movement.magnitude);
-
-        if (movement.x != 0.0f || movement.y != 0.0f){
-            anim.SetFloat("LastHorizonal", movement.x);
-            anim.SetFloat("LastVertical", movement.y);
+        if (!isMoveDisabled){
+            Move();
         }
-
-        Move(movement);
     }
 	private void ShowTooltip(BaseItemSlot itemSlot)
 	{
@@ -297,15 +289,31 @@ public class Player : Character
             Inventory.AddItem(item);
         }
     }
-    void Move(Vector3 movement)
+    private void Move()
     {
+        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
+
+        anim.SetFloat("Horizontal", movement.x);
+        anim.SetFloat("Vertical", movement.y);
+        anim.SetFloat("Magnitude", movement.magnitude);
+
+        if (movement.x != 0.0f || movement.y != 0.0f){
+            anim.SetFloat("LastHorizonal", movement.x);
+            anim.SetFloat("LastVertical", movement.y);
+        }
         rb.velocity = new Vector2(movement.x * speed, movement.y * speed);
+    }
+
+    public IEnumerator disableMovement(float time){
+        isMoveDisabled = true;
+        yield return new WaitForSeconds(time);
+        isMoveDisabled = false;
     }
     public void UpdateStatValues(){
         statPanel.UpdateStatValues();
     }
 
-    public override void Hit(int damage){
+    public override void TakeDamage(int damage){
         base.TakeDamage(damage);
         resources.SetHealthbar();
     }
@@ -314,5 +322,11 @@ public class Player : Character
         if(dead){
             deathMenu.ShowMenu();
         }
+    }
+
+    public void Respawn() {
+        currentHealth = health;
+        resources.SetHealthbar();
+        dead = false;
     }
 }

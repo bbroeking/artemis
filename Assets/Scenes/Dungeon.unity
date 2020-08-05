@@ -507,6 +507,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 888dfdfbe81d2814dabb0150962fe372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1541254416 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7205547041553917650, guid: 30603e35a5bc9ee4e9229e4169d0687d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7205547042569507673}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1593784079 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7205547041589027926, guid: 30603e35a5bc9ee4e9229e4169d0687d,
@@ -2323,6 +2329,26 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7205547041553917650, guid: 30603e35a5bc9ee4e9229e4169d0687d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7205547041553917652, guid: 30603e35a5bc9ee4e9229e4169d0687d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7205547041553917652, guid: 30603e35a5bc9ee4e9229e4169d0687d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7205547041553917652, guid: 30603e35a5bc9ee4e9229e4169d0687d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7205547041564765036, guid: 30603e35a5bc9ee4e9229e4169d0687d,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -3643,6 +3669,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -10.293945
       objectReference: {fileID: 0}
+    - target: {fileID: 7205547043255209681, guid: 30603e35a5bc9ee4e9229e4169d0687d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7205547043255209682, guid: 30603e35a5bc9ee4e9229e4169d0687d,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7205547043255209683, guid: 30603e35a5bc9ee4e9229e4169d0687d,
+        type: 3}
+      propertyPath: deathMenu
+      value: 
+      objectReference: {fileID: 1541254416}
     - target: {fileID: 7205547043260062497, guid: 30603e35a5bc9ee4e9229e4169d0687d,
         type: 3}
       propertyPath: m_AnchorMin.y
