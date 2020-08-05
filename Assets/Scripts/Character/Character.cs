@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    [Header("Character")]
     public int health;
     public int currentHealth;
     public int speed; 

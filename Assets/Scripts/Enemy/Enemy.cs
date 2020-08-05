@@ -3,7 +3,8 @@ using Pathfinding;
 
 public class Enemy : Character
 {
-    [SerializeField] AIDestinationSetter aIDestination;
+    [Header("Enemy")]
+    [SerializeField] protected AIDestinationSetter aIDestination;
     [SerializeField] LootTable lootTable;
     [SerializeField] Sprite sprite;
     [SerializeField] public Transform spawnLocation;
@@ -14,7 +15,6 @@ public class Enemy : Character
     private float internalAggroCooldown;
     public float distanceFromSpawn = 3f;
 
-
     private void OnValidate(){
         lootTable = gameObject.GetComponentInParent<LootTable>();
     }
@@ -22,8 +22,9 @@ public class Enemy : Character
     protected override void Awake(){
         base.Awake();
         lootTable = gameObject.GetComponentInParent<LootTable>();
-        player = GameObject.FindGameObjectWithTag("player").GetComponent<Player>(); // TODO find a better way to store player object for other object to use
+        player = SingletonPlayer.Instance.player;
     }
+
     void Start(){
         isInAggroRange = false;
         internalAggroCooldown = 0f;
@@ -33,7 +34,7 @@ public class Enemy : Character
         SetTarget();
     }
 
-    void SetTarget(){
+    protected virtual void SetTarget(){
         float distanceTravelled = Vector2.Distance(spawnLocation.transform.position, this.transform.position);
         if(distanceTravelled > distanceFromSpawn){
             aIDestination.target = spawnLocation;
@@ -44,6 +45,7 @@ public class Enemy : Character
             internalAggroCooldown -= Time.deltaTime;
         }
     }
+    
     public override void Hit(int damage)
     {
         base.TakeDamage(damage);

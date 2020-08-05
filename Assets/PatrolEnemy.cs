@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using Pathfinding;
 
-public class PatrolEnemy : MonoBehaviour
+public class PatrolEnemy : Enemy
 {
-    [SerializeField] AIDestinationSetter aIDestination;
+    [Header("Patrol Enemy")]
     [SerializeField] private Transform[] patrolAnchors;
     private Transform currentAnchor;
     private int currentAnchorIndex;
@@ -19,8 +19,11 @@ public class PatrolEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        SetTarget();
+    }
+
+    protected override void SetTarget(){
         float dist = Vector2.Distance(this.transform.position, currentAnchor.transform.position);
-        Debug.Log(dist.ToString());
         if (dist < 0.2){
             currentAnchorIndex = (currentAnchorIndex + 1) % patrolAnchors.Length;
             currentAnchor = patrolAnchors[currentAnchorIndex];
