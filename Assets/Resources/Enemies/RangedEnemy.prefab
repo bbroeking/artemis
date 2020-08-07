@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 4655410821163562841}
   - component: {fileID: 1973871216670185155}
   m_Layer: 9
-  m_Name: Ranged Enemy
+  m_Name: RangedEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,8 +110,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
-  m_Sprite: {fileID: -5501054352798569629, guid: ee639f852642c3246b994b77794394ed,
+  m_SortingOrder: 2
+  m_Sprite: {fileID: -7269266456686481269, guid: ee639f852642c3246b994b77794394ed,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -190,7 +190,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 0.9375}
+    oldSize: {x: 1, y: 0.9375}
     newSize: {x: 0.9375, y: 0.9375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -255,7 +255,7 @@ MonoBehaviour:
   health: 5
   currentHealth: 5
   speed: 0
-  aIDestination: {fileID: 0}
+  aIDestination: {fileID: 3850890619224503544}
   lootTable: {fileID: 0}
   sprite: {fileID: -5501054352798569629, guid: ee639f852642c3246b994b77794394ed, type: 3}
   spawnLocation: {fileID: 0}
@@ -310,7 +310,7 @@ PrefabInstance:
     - target: {fileID: 8374708117847771895, guid: 6c7189062f5d2744398d1c729ca240b8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8374708117847771895, guid: 6c7189062f5d2744398d1c729ca240b8,
         type: 3}
@@ -385,12 +385,12 @@ PrefabInstance:
     - target: {fileID: 9131909374971812179, guid: 361aa669dc3b72141a17a08f5a47dc0e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.21
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9131909374971812179, guid: 361aa669dc3b72141a17a08f5a47dc0e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.77
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9131909374971812179, guid: 361aa669dc3b72141a17a08f5a47dc0e,
         type: 3}
@@ -400,17 +400,17 @@ PrefabInstance:
     - target: {fileID: 9131909374971812179, guid: 361aa669dc3b72141a17a08f5a47dc0e,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9131909374971812179, guid: 361aa669dc3b72141a17a08f5a47dc0e,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9131909374971812179, guid: 361aa669dc3b72141a17a08f5a47dc0e,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9131909374971812179, guid: 361aa669dc3b72141a17a08f5a47dc0e,
         type: 3}
@@ -581,6 +581,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4101138986279720981, guid: 94e4699f0d43485458a8b027008ebe6f,
+        type: 3}
+      propertyPath: attackRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834786545787525211, guid: 94e4699f0d43485458a8b027008ebe6f,
+        type: 3}
+      propertyPath: m_Radius
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7386212078250721639, guid: 94e4699f0d43485458a8b027008ebe6f,
         type: 3}

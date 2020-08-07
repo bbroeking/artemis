@@ -56,6 +56,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: artemis
       objectReference: {fileID: 0}
+    - target: {fileID: 5044662154932729053, guid: 7257ac7c877ac944aae56f2ce69d2b99,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5044662154932729053, guid: 7257ac7c877ac944aae56f2ce69d2b99,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 5044662154932729055, guid: 7257ac7c877ac944aae56f2ce69d2b99,
         type: 3}
       propertyPath: player
@@ -129,7 +139,7 @@ PrefabInstance:
     - target: {fileID: 5044662156301540087, guid: 7257ac7c877ac944aae56f2ce69d2b99,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5044662156301540087, guid: 7257ac7c877ac944aae56f2ce69d2b99,
         type: 3}

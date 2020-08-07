@@ -7,8 +7,9 @@ public class RangedAttack : Attack
     [Header("Ranged Attack")]
     [SerializeField] GameObject projectile;
     [SerializeField] Collider2D chracterCollider;
-    void OnValidate(){
-        chracterCollider = GetComponentInParent<Collider2D>();
+
+    void Start(){
+        chracterCollider = GetComponent<Collider2D>();
     }
     protected override void TriggerAttack(){
         float force = 4f;

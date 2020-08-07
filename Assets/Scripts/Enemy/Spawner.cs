@@ -3,27 +3,58 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+public enum EnemyType {
+    Melee,
+    Ranged,
+    Patrol
+}
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] GameObject enemy;
     [SerializeField] Sprite[] sprites;
+    private GameObject enemy;
+    private GameObject parent;
+    private GameObject enemyInstance;
+    private EnemyType enemyType;
     public Sprite sprite;
 
-    void OnValidate(){
-        enemy = (GameObject) LoadPrefab.LoadPrefabFromFile("Enemies/MeleeEnemy");
-    }
     void Awake(){
+        enemy = null;
+        parent = null;
         var random = new System.Random();
+        // Pick Enemy Type
+        int choice = random.Next(Enum.GetNames(typeof(EnemyType)).Length);
+        enemyType = (EnemyType) choice;
+        LoadEnemy();
+        // Pick Sprite
         int index = random.Next(sprites.Length);
         sprite = sprites[index];
     }
     void Start()
     {
-        GameObject enemyInstance = Instantiate(enemy, transform.position, Quaternion.identity);
-        enemyInstance.transform.SetParent(transform);
+        if (parent != null){
+            GameObject parentOfEnemyGameObject = Instantiate(parent, transform.position, Quaternion.identity);
+            enemyInstance = parent.transform.GetChild(0).gameObject;
+            parentOfEnemyGameObject.transform.SetParent(transform);
+        }
+        else {
+            enemyInstance = Instantiate(enemy, transform.position, Quaternion.identity);
+            enemyInstance.transform.SetParent(transform);
+        }
         SpriteRenderer sr = enemyInstance.GetComponent<SpriteRenderer>();
         sr.sprite = sprite;
         Enemy e = enemyInstance.GetComponent<Enemy>();
         e.spawnLocation = transform;
+    }
+
+    void LoadEnemy(){
+        if (EnemyType.Melee == enemyType){
+            enemy = (GameObject) LoadPrefab.LoadPrefabFromFile("Enemies/MeleeEnemy");
+        }
+        else if (EnemyType.Ranged == enemyType){
+            enemy = (GameObject) LoadPrefab.LoadPrefabFromFile("Enemies/RangedEnemy");
+        }
+        else if (EnemyType.Patrol == enemyType){
+            parent = (GameObject) LoadPrefab.LoadPrefabFromFile("Enemies/PatrolEnemy");
+        }
     }
 }
