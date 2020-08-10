@@ -259,7 +259,7 @@ MonoBehaviour:
   lootTable: {fileID: 0}
   sprite: {fileID: -5501054352798569629, guid: ee639f852642c3246b994b77794394ed, type: 3}
   spawnLocation: {fileID: 0}
-  distanceFromSpawn: 0
+  distanceFromSpawn: 200
 --- !u!114 &4655410821163562841
 MonoBehaviour:
   m_ObjectHideFlags: 0
