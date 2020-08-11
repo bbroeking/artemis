@@ -33,6 +33,8 @@ public class Mapper : MonoBehaviour
                                                                     MapPath.pitLR, MapPath.pitLR1E, MapPath.pitLR2E};
     public static List<string> fClosedRoom = null;
 
+    public static string baseRightRoom = MapPath.
+
     public string SelectRoom(Room room)
     {
         if (room.top)
@@ -43,7 +45,7 @@ public class Mapper : MonoBehaviour
                 {
                     if (room.right)
                     {
-                        return SelectScene(baseLeftRightTopBottomRoom);
+                        return SelectScene(baseLeftRightTopBottomRoom, room);
                     }
                     return SelectScene(baseLeftTopBottomRoom);
                 }
@@ -102,7 +104,10 @@ public class Mapper : MonoBehaviour
         return SelectScene(fClosedRoom);
     }
 
-    private string SelectScene(List<string> scenes){
+    private string SelectScene(List<string> scenes, Room room){
+        if(room.isBossRoom){
+            return scenes[0];
+        }
         var random = new System.Random();
         int index = random.Next(scenes.Count);
         return scenes[index];

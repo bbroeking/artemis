@@ -50,10 +50,10 @@ public class LevelGenerator : MonoBehaviour
                 toBeGeneratedPositions.RemoveAt(vecIdx);
                 PlaceTileInPosition(vec);
             }
-            foreach(Vector2 vec in toBeGeneratedPositions)
-            {
-                PlaceClosedTileInPosition(vec);
+            for(int j = 0; j < toBeGeneratedPositions.Count - 1; j++){
+                PlaceClosedTileInPosition(toBeGeneratedPositions[j], false);
             }
+            PlaceClosedTileInPosition(toBeGeneratedPositions[toBeGeneratedPositions.Count - 1], true);
         } else {
             Destroy(gameObject);
         }
@@ -68,7 +68,7 @@ public class LevelGenerator : MonoBehaviour
         takenPositions.Insert(0, vec);
     }
 
-    public void PlaceClosedTileInPosition(Vector2 vec){
+    public void PlaceClosedTileInPosition(Vector2 vec, bool isBossRoom){
         Room nr = PlaceClosedTile(vec);
         rooms[(int)vec.x + gridSizeX, (int)vec.y + gridSizeY] = nr;
         scenes[(int)vec.x + gridSizeX, (int)vec.y + gridSizeY] = SetRoom(nr);
@@ -198,7 +198,7 @@ public class LevelGenerator : MonoBehaviour
     }
 
     Room SelectRoomTile(Vector2 vec, bool doorTop, bool wallTop, bool doorBot, bool wallBot, 
-        bool doorLeft, bool wallLeft, bool doorRight, bool wallRight)
+                        bool doorLeft, bool wallLeft, bool doorRight, bool wallRight)
     {
         bool top, bottom, left, right;
         // Top
@@ -296,24 +296,6 @@ public class LevelGenerator : MonoBehaviour
         }
     }
 
-    // void DrawMap()
-    // {
-    //     foreach(Room room in rooms)
-    //     {
-    //         if(room == null)
-    //         {
-    //             continue;
-    //         }
-    //         Vector2 drawPos = room.gridPos;
-    //         drawPos.x *= 14;
-    //         drawPos.y *= 14;
-    //         GameObject selectedRoom = map.SelectRoom(room);
-
-    //         Instantiate(selectedRoom, drawPos, Quaternion.identity);
-    //     }
-    // }
-
-    
     void DrawMapString()
     {
         for (int y = rooms.GetLength(0)-1; y >= 0; y--)
