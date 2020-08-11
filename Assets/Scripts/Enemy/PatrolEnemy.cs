@@ -8,7 +8,6 @@ public class PatrolEnemy : Enemy
     private Transform currentAnchor;
     private int currentAnchorIndex;
 
-    // Start is called before the first frame update
     void Start()
     {
         currentAnchorIndex = 0;
@@ -16,7 +15,6 @@ public class PatrolEnemy : Enemy
         aIDestination.target = currentAnchor;
     }
 
-    // Update is called once per frame
     void Update()
     {
         SetTarget();

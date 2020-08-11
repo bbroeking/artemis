@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using Pathfinding;
+using System.Collections;
 
-public class Enemy : Character
+public class Enemy : Character, IInteractable
 {
     [Header("Enemy")]
     [SerializeField] protected AIDestinationSetter aIDestination;
@@ -13,7 +14,11 @@ public class Enemy : Character
     public bool IsInAggroRange { get { return isInAggroRange; } set { isInAggroRange = value; }}
     private float aggroCooldown = 5f;
     private float internalAggroCooldown;
-    public float distanceFromSpawn = 3f;
+    private float distanceFromSpawn = 3f;
+    private float disableTime = 0.25f;
+    private float magnitude = 200.0f;
+    private bool isInteractable = true;
+    private float interactCooldown = 0.35f;
 
     private void OnValidate(){
         lootTable = gameObject.GetComponentInParent<LootTable>();
@@ -58,5 +63,26 @@ public class Enemy : Character
     {
         lootTable.SpawnLoot();
         Destroy(this.gameObject);
+    }
+
+    public void Interact(Player player)
+    {
+        if (isInteractable){
+            StartCoroutine(Cooldown());
+            player.TakeDamage(this.baseDamage);
+            player.KnockPlayer(this.transform, magnitude);
+            StartCoroutine(player.DisableMovement(this.disableTime));
+        }
+    }
+
+    public void StopInteract(){}
+
+    public IEnumerator Cooldown()
+    {
+        if(isInteractable){
+            isInteractable = false;
+            yield return new WaitForSeconds(interactCooldown);
+            isInteractable = true;
+        }
     }
 }

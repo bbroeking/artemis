@@ -8,6 +8,7 @@ public class Character : MonoBehaviour
     public int health;
     public int currentHealth;
     public int speed; 
+    protected int baseDamage;
     public CharacterStat strength;
     public CharacterStat dexterity;
     public CharacterStat intellect;
@@ -28,6 +29,7 @@ public class Character : MonoBehaviour
         health = 5;
         currentHealth = health;
         speed  = 6;
+        baseDamage = 1;
         mainHandMaxDamage = 1;
         mainHandMinDamage = 1;
         strengthModifier = 0.1f;

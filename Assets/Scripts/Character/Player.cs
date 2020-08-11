@@ -304,8 +304,7 @@ public class Player : Character
         }
         rb.velocity = new Vector2(movement.x * speed, movement.y * speed);
     }
-
-    public IEnumerator disableMovement(float time){
+    public IEnumerator DisableMovement(float time){
         isMoveDisabled = true;
         yield return new WaitForSeconds(time);
         isMoveDisabled = false;
@@ -313,21 +312,23 @@ public class Player : Character
     public void UpdateStatValues(){
         statPanel.UpdateStatValues();
     }
-
     public override void TakeDamage(int damage){
         base.TakeDamage(damage);
         resources.SetHealthbar();
     }
-
     public override void Dead(){
         if(isDead){
             deathMenu.ShowMenu();
         }
     }
-
     public void Respawn() {
         currentHealth = health;
         resources.SetHealthbar();
         isDead = false;
+    }
+    public void KnockPlayer(Transform objectApplyingForce, float magnitude){
+        var dir = objectApplyingForce.position - transform.position;
+        dir.Normalize();
+        rb.AddForce(-dir * magnitude);
     }
 }
