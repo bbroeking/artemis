@@ -1,10 +1,16 @@
-class TopBottomRightPath {
-    public const string TBRPath = "Map/TBR/";
-    // TBR
-    public const string baseTBR = TBRPath + "TBR Base";
-    public const string baseTBR1E = TBRPath + "TBR Base +1";
-    public const string baseTBR2E = TBRPath + "TBR Base +2";
-    public const string pitTBR = TBRPath + "TBR Pit";
-    public const string pitTBR1E = TBRPath + "TBR Pit +1";
-    public const string pitTBR2E = TBRPath + "TBR Pit +2";
+using System.Collections.Generic;
+class TopBottomRightPath : GeneratePath {
+    public TopBottomRightPath(){
+        this.path = "Map/TBR/";
+        this.boss = "Boss";
+        this.general = new List<string>{
+            baseTBR, baseTBR1E, baseTBR2E, pitTBR, pitTBR1E, pitTBR2E
+        };
+    }
+    public const string baseTBR = "TBR Base";
+    public const string baseTBR1E = "TBR Base +1";
+    public const string baseTBR2E = "TBR Base +2";
+    public const string pitTBR = "TBR Pit";
+    public const string pitTBR1E = "TBR Pit +1";
+    public const string pitTBR2E = "TBR Pit +2";
 }
