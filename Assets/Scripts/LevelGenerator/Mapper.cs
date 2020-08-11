@@ -90,6 +90,7 @@ public class Mapper : MonoBehaviour
 
     private string SelectScene(GeneratePath generatePath){
         if(this.currentRoom.isBossRoom){
+            Debug.Log(currentRoom.ToString());
             return generatePath.GenerateBossRoomPath();
         }
         return generatePath.GenerateRandomRoomPath();

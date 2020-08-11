@@ -70,9 +70,13 @@ public class LevelGenerator : MonoBehaviour
 
     public void PlaceClosedTileInPosition(Vector2 vec, bool isBossRoom){
         Room nr = PlaceClosedTile(vec);
+        if(isBossRoom){
+            nr.SetBossRoom();
+        }
         rooms[(int)vec.x + gridSizeX, (int)vec.y + gridSizeY] = nr;
         scenes[(int)vec.x + gridSizeX, (int)vec.y + gridSizeY] = SetRoom(nr);
         takenPositions.Insert(0, vec);
+        Debug.Log(vec.ToString());
     }
 
     public string SetRoom(Room next){
