@@ -6,6 +6,8 @@ public class Enemy : Character, IInteractable
 {
     [Header("Enemy")]
     [SerializeField] protected AIDestinationSetter aIDestination;
+    [SerializeField] protected AIPath aIPath;
+    [SerializeField] private Animator anim;
     [SerializeField] LootTable lootTable;
     [SerializeField] Sprite sprite;
     [SerializeField] public Transform spawnLocation;
@@ -36,7 +38,20 @@ public class Enemy : Character, IInteractable
     }
 
     void Update(){
+        UpdateAnimationValues();
         SetTarget();
+    }
+
+    protected virtual void UpdateAnimationValues(){
+        Vector3 velo = aIPath.velocity;
+        anim.SetFloat("Horizontal", velo.x);
+        anim.SetFloat("Vertical", velo.y);
+        anim.SetFloat("Magnitude", velo.magnitude);
+
+        if (velo.x != 0.0f || velo.y != 0.0f){
+            anim.SetFloat("LastHorizonal", velo.x);
+            anim.SetFloat("LastVertical", velo.y);
+        }
     }
 
     protected virtual void SetTarget(){

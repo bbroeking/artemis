@@ -271,6 +271,7 @@ GameObject:
   - component: {fileID: 7004473854437749030}
   - component: {fileID: 7004473854437749034}
   - component: {fileID: 7004473854437749035}
+  - component: {fileID: 1870554770}
   m_Layer: 9
   m_Name: MeleeEnemy
   m_TagString: Enemy
@@ -363,13 +364,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -5501054352798569629, guid: ee639f852642c3246b994b77794394ed,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: d3d75eaa743dec44ba9b4f96cbd12a4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.9375, y: 0.9375}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -464,8 +464,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 0.9375}
-    newSize: {x: 0.9375, y: 0.9375}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -490,8 +490,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9375, y: 0.9375}
-    newSize: {x: 0.9375, y: 0.9375}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -556,10 +556,11 @@ MonoBehaviour:
   currentHealth: 5
   speed: 0
   aIDestination: {fileID: 7004473854437749025}
+  aIPath: {fileID: 0}
+  anim: {fileID: 0}
   lootTable: {fileID: 0}
   sprite: {fileID: -5501054352798569629, guid: ee639f852642c3246b994b77794394ed, type: 3}
   spawnLocation: {fileID: 0}
-  distanceFromSpawn: 200
 --- !u!114 &7004473854437749034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -572,6 +573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0403735b2d1f3bd40bd6f199d6c9d11d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 1870554770}
   attackPos: {fileID: 7004473853085436906}
   whatIsEnemy:
     serializedVersion: 2
@@ -592,3 +594,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aiPath: {fileID: 7004473854437749026}
+--- !u!95 &1870554770
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7004473854437749024}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 413f9e4901d073349b2a65b6a8f8c549, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

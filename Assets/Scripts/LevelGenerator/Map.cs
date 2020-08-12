@@ -11,6 +11,7 @@ public class Map : MonoBehaviour
     void Start()
     {
         string mapPath = player.map;
+        Debug.Log(mapPath);
         GameObject map = (GameObject) LoadPrefab.LoadPrefabFromFile(mapPath);
         Instantiate(map, Vector3.zero, Quaternion.identity);
     }

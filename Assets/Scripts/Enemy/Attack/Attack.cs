@@ -5,6 +5,7 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     [Header("Attack")]
+    [SerializeField] private Animator anim;
     [SerializeField] protected Transform attackPos;
     [SerializeField] protected LayerMask whatIsEnemy;
     [SerializeField] protected float attackRange;
@@ -23,6 +24,7 @@ public class Attack : MonoBehaviour
     void Update()
     {
         if(internalCooldown <= 0 && isInRange){
+            anim.SetTrigger("Attack");
             TriggerAttack();
             internalCooldown = baseCooldown;
         } else {

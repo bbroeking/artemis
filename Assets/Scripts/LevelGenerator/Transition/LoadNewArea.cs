@@ -3,13 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class LoadNewArea : MonoBehaviour
 {
-    [SerializeField] LevelGenerator levelGenerator;
-    [SerializeField] string scene;
+    private LevelGenerator levelGenerator;
+    private Player player;
     private Direction direction;
     private int xoff;
     private int yoff;
 
     void Awake() {
+        player = SingletonPlayer.Instance.player;
         levelGenerator = GameObject.FindObjectOfType<LevelGenerator>();
     }
 
@@ -41,9 +42,9 @@ public class LoadNewArea : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        if(other.gameObject.tag == "player"){
-            other.gameObject.GetComponent<Player>().lastDirection = direction;
-            other.gameObject.GetComponent<Player>().map = levelGenerator.GetNextRoom(xoff, yoff);
+        if(other.gameObject.CompareTag(Tags.player)){
+            player.lastDirection = direction;
+            player.map = levelGenerator.GetNextRoom(xoff, yoff);
             SceneManager.LoadScene("Dungeon");
         }
     }

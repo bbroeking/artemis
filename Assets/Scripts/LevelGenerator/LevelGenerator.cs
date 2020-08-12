@@ -15,6 +15,7 @@ public class LevelGenerator : MonoBehaviour
     private static Mapper map; // helper function for figuring out what tile to place
     private Room currentRoom;
     public Room CurrentRoom { get { return currentRoom; }}
+    public int currentLevel = 1;
     public static int currentGridPosX;
     public static int currentGridPosY;
     public static bool levelExists;
@@ -24,39 +25,45 @@ public class LevelGenerator : MonoBehaviour
         if(!levelExists){
             levelExists = true;
             DontDestroyOnLoad(this.gameObject);
-
             map = GameObject.FindGameObjectWithTag("RoomMapper").GetComponent<Mapper>();
-            rooms = new Room[gridSizeX * 2, gridSizeY * 2];
-            scenes = new string[gridSizeX * 2, gridSizeY * 2];
-
-            currentGridPosX = gridSizeX;
-            currentGridPosY = gridSizeY;
-
-            Room room = new Room(Vector2.zero, true, true, true, true);
-            rooms[currentGridPosX, currentGridPosY] = room;
-            scenes[currentGridPosX, currentGridPosY] = SetRoom(room);
-
-            takenPositions.Insert(0, Vector2.zero);
-            AddToBeGeneratedPositions(room);
-            
-            for (int i = 0; i <= numberOfRooms; i++)
-            {
-                if (toBeGeneratedPositions.Count == 0)
-                {
-                    break;
-                }
-                int vecIdx = Random.Range(0, toBeGeneratedPositions.Count - 1);
-                Vector2 vec = toBeGeneratedPositions[vecIdx];
-                toBeGeneratedPositions.RemoveAt(vecIdx);
-                PlaceTileInPosition(vec);
-            }
-            for(int j = 0; j < toBeGeneratedPositions.Count - 1; j++){
-                PlaceClosedTileInPosition(toBeGeneratedPositions[j], false);
-            }
-            PlaceClosedTileInPosition(toBeGeneratedPositions[toBeGeneratedPositions.Count - 1], true);
+            GenerateLevel();
         } else {
             Destroy(gameObject);
         }
+    }
+
+
+
+    public void GenerateLevel(){
+        Debug.Log("Generate new level");
+        rooms = new Room[gridSizeX * 2, gridSizeY * 2];
+        scenes = new string[gridSizeX * 2, gridSizeY * 2];
+
+        currentGridPosX = gridSizeX;
+        currentGridPosY = gridSizeY;
+
+        Room room = new Room(Vector2.zero, true, true, true, true);
+        rooms[currentGridPosX, currentGridPosY] = room;
+        scenes[currentGridPosX, currentGridPosY] = SetRoom(room);
+
+        takenPositions.Insert(0, Vector2.zero);
+        AddToBeGeneratedPositions(room);
+        
+        for (int i = 0; i <= numberOfRooms; i++)
+        {
+            if (toBeGeneratedPositions.Count == 0)
+            {
+                break;
+            }
+            int vecIdx = Random.Range(0, toBeGeneratedPositions.Count - 1);
+            Vector2 vec = toBeGeneratedPositions[vecIdx];
+            toBeGeneratedPositions.RemoveAt(vecIdx);
+            PlaceTileInPosition(vec);
+        }
+        for(int j = 0; j < toBeGeneratedPositions.Count - 1; j++){
+            PlaceClosedTileInPosition(toBeGeneratedPositions[j], false);
+        }
+        PlaceClosedTileInPosition(toBeGeneratedPositions[toBeGeneratedPositions.Count - 1], true);
     }
 
     public void PlaceTileInPosition(Vector2 vec){
@@ -76,13 +83,15 @@ public class LevelGenerator : MonoBehaviour
         rooms[(int)vec.x + gridSizeX, (int)vec.y + gridSizeY] = nr;
         scenes[(int)vec.x + gridSizeX, (int)vec.y + gridSizeY] = SetRoom(nr);
         takenPositions.Insert(0, vec);
-        Debug.Log(vec.ToString());
     }
 
     public string SetRoom(Room next){
         return map.SelectRoom(next);
     }
 
+    public string GetFirstRoom(){
+        return scenes[currentGridPosX, currentGridPosY];
+    }
     public string GetNextRoom(int xoff, int yoff){
         currentGridPosX = currentGridPosX + xoff;
         currentGridPosY  = currentGridPosY + yoff;
@@ -300,7 +309,7 @@ public class LevelGenerator : MonoBehaviour
         }
     }
 
-    void DrawMapString()
+    public void DrawMapString()
     {
         for (int y = rooms.GetLength(0)-1; y >= 0; y--)
         {
