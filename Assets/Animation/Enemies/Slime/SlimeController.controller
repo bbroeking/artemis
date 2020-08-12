@@ -9,8 +9,8 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: Horizonal
-    m_EventTreshold: 0.2
+    m_ConditionEvent: Horizontal
+    m_EventTreshold: 0.1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1841675358362797751}
   m_Solo: 0
@@ -90,7 +90,7 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: Horizonal
     m_Mirror: 0
-  m_BlendParameter: Horizonal
+  m_BlendParameter: Horizontal
   m_BlendParameterY: Vertical
   m_MinThreshold: 0
   m_MaxThreshold: 0
@@ -137,7 +137,7 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: Horizonal
     m_Mirror: 0
-  m_BlendParameter: Horizonal
+  m_BlendParameter: Horizontal
   m_BlendParameterY: Vertical
   m_MinThreshold: 0
   m_MaxThreshold: 1
@@ -181,7 +181,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: Horizonal
+    m_ConditionEvent: Horizontal
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1576087820992925490}
@@ -206,8 +206,8 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: ed78d8f3c4c65bb41ba5178ab81ad9ab, type: 2}
-    m_Threshold: 0.09
+    m_Motion: {fileID: 7400000, guid: 99ce1a25bfbfcb84eaeaa980fdf5de63, type: 2}
+    m_Threshold: -0.1
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -215,7 +215,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: e8a46342caf4b1c4db4b007fce669056, type: 2}
-    m_Threshold: 0.1
+    m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -223,8 +223,8 @@ BlendTree:
     m_Mirror: 0
   m_BlendParameter: Vertical
   m_BlendParameterY: Vertical
-  m_MinThreshold: 0.09
-  m_MaxThreshold: 0.1
+  m_MinThreshold: -0.1
+  m_MaxThreshold: 0
   m_UseAutomaticThresholds: 0
   m_NormalizedBlendValues: 0
   m_BlendType: 0
@@ -330,7 +330,7 @@ AnimatorController:
   m_Name: SlimeController
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Horizonal
+  - m_Name: Horizontal
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -354,7 +354,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: LastHorizonal
+  - m_Name: LastHorizontal
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
