@@ -49,7 +49,7 @@ public class Enemy : Character, IInteractable
         anim.SetFloat("Magnitude", velo.magnitude);
 
         if (velo.x != 0.0f || velo.y != 0.0f){
-            anim.SetFloat("LastHorizonal", velo.x);
+            anim.SetFloat("LastHorizontal", velo.x);
             anim.SetFloat("LastVertical", velo.y);
         }
     }

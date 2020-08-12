@@ -24,7 +24,7 @@ public class Attack : MonoBehaviour
     void Update()
     {
         if(internalCooldown <= 0 && isInRange){
-            anim.SetTrigger("Attack");
+            // anim.SetTrigger("Attack");
             TriggerAttack();
             internalCooldown = baseCooldown;
         } else {

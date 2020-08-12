@@ -48,13 +48,13 @@ public class Spawner : MonoBehaviour
 
     void LoadEnemy(){
         if (EnemyType.Melee == enemyType){
-            enemy = (GameObject) LoadPrefab.LoadPrefabFromFile("Enemies/MeleeEnemy");
+            enemy = (GameObject) LoadPrefab.LoadPrefabFromFile("Enemies/Slime/Melee");
         }
         else if (EnemyType.Ranged == enemyType){
-            enemy = (GameObject) LoadPrefab.LoadPrefabFromFile("Enemies/RangedEnemy");
+            enemy = (GameObject) LoadPrefab.LoadPrefabFromFile("Enemies/Slime/Ranged");
         }
         else if (EnemyType.Patrol == enemyType){
-            parent = (GameObject) LoadPrefab.LoadPrefabFromFile("Enemies/PatrolEnemy");
+            parent = (GameObject) LoadPrefab.LoadPrefabFromFile("Enemies/Slime/Patrol");
         }
     }
 }

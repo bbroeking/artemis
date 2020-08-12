@@ -5,20 +5,23 @@ using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
 {
+    [Header("Level Attributes")]
     public int gridSizeX = 5; // number of squares in the positive and negative x direction
     public int gridSizeY = 5; // number of squares in the postive and negative y direction
     public int numberOfRooms = 3; // number of rooms to generate
-    public static Room[,] rooms; // location of Room in [0, gridSize * 2]
-    public static string[,] scenes; // location of Room in [0, gridSize * 2]
-    public static List<Vector2> takenPositions = new List<Vector2>(); // populated locations
-    public static List<Vector2> toBeGeneratedPositions = new List<Vector2>(); // locations that have yet to be placed
-    private static Mapper map; // helper function for figuring out what tile to place
-    private Room currentRoom;
-    public Room CurrentRoom { get { return currentRoom; }}
     public int currentLevel = 1;
     public static int currentGridPosX;
     public static int currentGridPosY;
     public static bool levelExists;
+
+    [Header("Level Generations")]
+    public static Room[,] rooms; // location of Room in [0, gridSize * 2]
+    public static string[,] scenes; // location of Room in [0, gridSize * 2]
+    public static List<Vector2> takenPositions; // populated locations
+    public static List<Vector2> toBeGeneratedPositions; // locations that have yet to be placed
+    private static Mapper map; // helper function for figuring out what tile to place
+    private Room currentRoom;
+    public Room CurrentRoom { get { return currentRoom; }}
 
     void Awake()
     {
@@ -32,10 +35,9 @@ public class LevelGenerator : MonoBehaviour
         }
     }
 
-
-
     public void GenerateLevel(){
-        Debug.Log("Generate new level");
+        takenPositions = new List<Vector2>();
+        toBeGeneratedPositions = new List<Vector2>();
         rooms = new Room[gridSizeX * 2, gridSizeY * 2];
         scenes = new string[gridSizeX * 2, gridSizeY * 2];
 
@@ -64,6 +66,12 @@ public class LevelGenerator : MonoBehaviour
             PlaceClosedTileInPosition(toBeGeneratedPositions[j], false);
         }
         PlaceClosedTileInPosition(toBeGeneratedPositions[toBeGeneratedPositions.Count - 1], true);
+    }
+
+    public void SetLevelSettings(int gridSizeX, int gridSizeY, int numberOfRooms){
+        this.gridSizeX = gridSizeX;
+        this.gridSizeY = gridSizeY;
+        this.numberOfRooms = numberOfRooms;
     }
 
     public void PlaceTileInPosition(Vector2 vec){
