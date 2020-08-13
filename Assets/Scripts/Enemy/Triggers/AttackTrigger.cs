@@ -4,10 +4,10 @@ public class AttackTrigger : MonoBehaviour
 {
     [SerializeField] Attack attack;
     [SerializeField] CircleCollider2D col;
-    [SerializeField] float attackRange = 1f;
+    [SerializeField] float attackTriggerRange = 1f;
     void OnValidate(){
         col = GetComponent<CircleCollider2D>();
-        col.radius = attackRange;
+        col.radius = attackTriggerRange;
     }
     void Awake(){
         attack = GetComponentInParent<Attack>();

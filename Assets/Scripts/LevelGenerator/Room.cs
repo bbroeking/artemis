@@ -7,6 +7,7 @@ public class Room
     //public int type;
     public bool top, bottom, left, right;
     public bool isBossRoom;
+    public bool isCleared;
     public Room(Vector2 _gridPos, bool top, bool bottom, bool left, bool right)
     {
         gridPos = _gridPos;
@@ -15,6 +16,7 @@ public class Room
         this.left = left;
         this.right = right;
         this.isBossRoom = false;
+        this.isCleared = false;
     }
 
     public override string ToString()
@@ -26,5 +28,9 @@ public class Room
 
     public void SetBossRoom(){
         this.isBossRoom = true;
+    }
+
+    public void SetCleared(){
+        this.isCleared = true;
     }
 }

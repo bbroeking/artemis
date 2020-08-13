@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Combat : MonoBehaviour
 {
-    public Transform attackPos;
     public Transform castPos;
     public Collider2D playerCollider;
     public LayerMask whatIsEnemy;
@@ -28,7 +27,7 @@ public class Combat : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 if(!isCooldown){
-                    Melee();
+                    anim.SetTrigger("Attack");
                     StartCoroutine(Cooldown());
                 }
             }
@@ -58,15 +57,7 @@ public class Combat : MonoBehaviour
             }
         }
     }
-    
-    void Melee(){
-        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemy);
-        anim.SetTrigger("Attack");
-        for (int i = 0; i < enemiesToDamage.Length; i++)
-        {
-            enemiesToDamage[i].GetComponent<Enemy>()?.Hit(5);
-        }
-    }
+
 
     private IEnumerator Cooldown()
     {
@@ -89,10 +80,6 @@ public class Combat : MonoBehaviour
         Vector2 lookDir = worldPosition - rb.position;
 
         rb.AddForce(lookDir.normalized * spellForce, ForceMode2D.Impulse);
-    }
-    void OnDrawGizmosSelected(){
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
     private void SoulAbility(Soul activeSoul){
         if (activeSoul == Soul.poison){

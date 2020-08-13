@@ -4,10 +4,10 @@ public class AggroTrigger : MonoBehaviour
 {
     [SerializeField] Enemy enemy;
     [SerializeField] CircleCollider2D col;
-    [SerializeField] float aggroRange = 1f;
+    [SerializeField] float aggroTriggerRange = 1f;
     void OnValidate(){
         col = GetComponent<CircleCollider2D>();
-        col.radius = aggroRange;
+        col.radius = aggroTriggerRange;
     }
     void Awake(){
         enemy = GetComponentInParent<Enemy>();

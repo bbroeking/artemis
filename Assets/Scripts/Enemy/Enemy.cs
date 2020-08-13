@@ -9,18 +9,19 @@ public class Enemy : Character, IInteractable
     [SerializeField] protected AIPath aIPath;
     [SerializeField] private Animator anim;
     [SerializeField] LootTable lootTable;
-    [SerializeField] Sprite sprite;
     [SerializeField] public Transform spawnLocation;
     private Player player;
     private bool isInAggroRange;
     public bool IsInAggroRange { get { return isInAggroRange; } set { isInAggroRange = value; }}
     private float aggroCooldown = 5f;
     private float internalAggroCooldown;
-    private float distanceFromSpawn = 3f;
+    private float distanceFromSpawn = 100f;
     private float disableTime = 0.25f;
     private float magnitude = 200.0f;
     private bool isInteractable = true;
     private float interactCooldown = 0.35f;
+    private bool canBeDamaged = true;
+    private float hitCooldown = 0.25f;
 
     private void OnValidate(){
         lootTable = gameObject.GetComponentInParent<LootTable>();
@@ -68,9 +69,13 @@ public class Enemy : Character, IInteractable
 
     public override void Hit(int damage)
     {
+        if (!canBeDamaged) return;
+        StartCoroutine(HitCooldown());
         base.TakeDamage(damage);
         if (this.isDead){
-            SpawnLootAndDestroy();
+            aIDestination.target = null;
+            anim.SetTrigger("Dead");
+            Invoke("SpawnLootAndDestroy", 2f);
         }
     }
 
@@ -98,6 +103,14 @@ public class Enemy : Character, IInteractable
             isInteractable = false;
             yield return new WaitForSeconds(interactCooldown);
             isInteractable = true;
+        }
+    }
+
+    public IEnumerator HitCooldown(){
+        if(canBeDamaged){
+            canBeDamaged = false;
+            yield return new WaitForSeconds(hitCooldown);
+            canBeDamaged = true;
         }
     }
 }
