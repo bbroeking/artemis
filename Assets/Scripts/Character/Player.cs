@@ -10,7 +10,7 @@ public class Player : Character
     [Header("Components")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator anim;
-    [SerializeField] protected Combat combat;
+    [SerializeField] protected PlayerCombat combat;
     [SerializeField] protected PlayerResources resources;
     [SerializeField] protected Spellbook spellbook;
     

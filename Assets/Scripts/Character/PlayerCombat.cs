@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Combat : MonoBehaviour
+public class PlayerCombat : MonoBehaviour
 {
     public Transform castPos;
     public Collider2D playerCollider;
     public LayerMask whatIsEnemy;
-    public float attackRange;
     public float spellForce;
     private bool isCooldown = false;
     [SerializeField] GameObject gravitySoul;

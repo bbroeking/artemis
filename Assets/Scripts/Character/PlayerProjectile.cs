@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpellProjectile : MonoBehaviour
+public class PlayerProjectile : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
