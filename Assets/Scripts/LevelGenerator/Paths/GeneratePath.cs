@@ -2,19 +2,12 @@
 
 public abstract class GeneratePath
 {
-    public string path;
-    public string boss;
     public List<string> general;
 
-    public virtual string GenerateBossRoomPath(){
-        return path + boss;
-    }
-
-    public virtual string GenerateRandomRoomPath(){
+    public virtual string GenerateRandomFloorPath(){
         var random = new System.Random();
         int index = random.Next(general.Count);
-        return path + general[index];
+        return "Rooms/Maps/Floors/" + general[index];
     }
-
 
 }

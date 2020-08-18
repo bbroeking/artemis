@@ -16,10 +16,8 @@ public class LevelGenerator : MonoBehaviour
 
     [Header("Level Generations")]
     public static Room[,] rooms; // location of Room in [0, gridSize * 2]
-    public static string[,] scenes; // location of Room in [0, gridSize * 2]
     public static List<Vector2> takenPositions; // populated locations
     public static List<Vector2> toBeGeneratedPositions; // locations that have yet to be placed
-    private static Mapper map; // helper function for figuring out what tile to place
     private Room currentRoom;
     public Room CurrentRoom { get { return currentRoom; }}
 
@@ -28,7 +26,6 @@ public class LevelGenerator : MonoBehaviour
         if(!levelExists){
             levelExists = true;
             DontDestroyOnLoad(this.gameObject);
-            map = GameObject.FindGameObjectWithTag("RoomMapper").GetComponent<Mapper>();
             GenerateLevel();
         } else {
             Destroy(gameObject);
@@ -39,14 +36,12 @@ public class LevelGenerator : MonoBehaviour
         takenPositions = new List<Vector2>();
         toBeGeneratedPositions = new List<Vector2>();
         rooms = new Room[gridSizeX * 2, gridSizeY * 2];
-        scenes = new string[gridSizeX * 2, gridSizeY * 2];
 
         currentGridPosX = gridSizeX;
         currentGridPosY = gridSizeY;
 
         Room room = new Room(Vector2.zero, true, true, true, true);
         rooms[currentGridPosX, currentGridPosY] = room;
-        scenes[currentGridPosX, currentGridPosY] = SetRoom(room);
 
         takenPositions.Insert(0, Vector2.zero);
         AddToBeGeneratedPositions(room);
@@ -78,7 +73,6 @@ public class LevelGenerator : MonoBehaviour
         Room nr = PlaceTile(vec);
         Vector2 vecOffset = new Vector2((int)vec.x + gridSizeX, (int)vec.y + gridSizeY);
         rooms[(int) vecOffset.x, (int) vecOffset.y] = nr;
-        scenes[(int)vec.x + gridSizeX, (int)vec.y + gridSizeY] = SetRoom(nr);
         AddToBeGeneratedPositions(nr);
         takenPositions.Insert(0, vec);
     }
@@ -89,22 +83,17 @@ public class LevelGenerator : MonoBehaviour
             nr.SetBossRoom();
         }
         rooms[(int)vec.x + gridSizeX, (int)vec.y + gridSizeY] = nr;
-        scenes[(int)vec.x + gridSizeX, (int)vec.y + gridSizeY] = SetRoom(nr);
         takenPositions.Insert(0, vec);
     }
 
-    public string SetRoom(Room next){
-        return map.SelectRoom(next);
+    public Room GetFirstRoom(){
+        return rooms[currentGridPosX, currentGridPosY];
     }
-
-    public string GetFirstRoom(){
-        return scenes[currentGridPosX, currentGridPosY];
-    }
-    public string GetNextRoom(int xoff, int yoff){
+    public Room GetNextRoom(int xoff, int yoff){
         currentGridPosX = currentGridPosX + xoff;
         currentGridPosY  = currentGridPosY + yoff;
         SetCurrentRoom();
-        return scenes[currentGridPosX, currentGridPosY];
+        return rooms[currentGridPosX, currentGridPosY];
     }
 
     public void SetCurrentRoom(){

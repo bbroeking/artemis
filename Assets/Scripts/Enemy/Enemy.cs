@@ -30,7 +30,7 @@ public class Enemy : Character, IInteractable
     protected override void Awake(){
         base.Awake();
         lootTable = gameObject.GetComponentInParent<LootTable>();
-        player = SingletonPlayer.Instance.player;
+        player = PlayerSingleton.Instance.player;
     }
 
     void Start(){

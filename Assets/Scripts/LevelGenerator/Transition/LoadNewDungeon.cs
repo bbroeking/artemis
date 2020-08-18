@@ -11,7 +11,7 @@ public class LoadNewDungeon : MonoBehaviour
 
     void Awake() {
         levelGenerator = GameObject.FindObjectOfType<LevelGenerator>();
-        player = SingletonPlayer.Instance.player;
+        player = PlayerSingleton.Instance.player;
     }
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.CompareTag(Tags.player)){

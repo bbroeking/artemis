@@ -2,11 +2,9 @@
  using System.Collections;
  
 public class SineProjectile : Projectile {
-    public float MoveSpeed = 2.0f;
     public float frequency = 5.0f;  // Speed of sine movement
     public float magnitude = 0.7f;   // Size of sine movement
     private Vector3 axis;
-    private Vector3 pos;
  
     protected override void Start () {
         base.Start();

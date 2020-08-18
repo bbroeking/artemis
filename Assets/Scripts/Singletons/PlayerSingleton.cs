@@ -2,13 +2,14 @@
 
 public class PlayerSingleton : MonoBehaviour
 {
-    private static bool exists;
+    public Player player;
+    public static PlayerSingleton Instance { get; private set; } 
     void Awake(){
-        if(!exists){
-            exists = true;
+        if(Instance == null){
+            Instance = this;
             DontDestroyOnLoad(this.gameObject);
-        } else {
-            Destroy(gameObject);
-        }
+        } 
+        else { Destroy(gameObject); }
+        player = FindObjectOfType<Player>();
     }
 }

@@ -9,7 +9,7 @@ public class PlayerStartPoint : MonoBehaviour
 
     void Start()
     {
-        player = FindObjectOfType<Player>();
+        player = PlayerSingleton.Instance.player;
         if(player.lastDirection == comingFrom){
             player.transform.position = this.transform.position;
         }

@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class LevelGeneratorSingleton : MonoBehaviour
 {
-    private static bool exists;
+    public LevelGenerator levelGenerator;
+    public static LevelGeneratorSingleton Instance { get; private set; } // static singleton
     void Awake(){
-        if(!exists){
-            exists = true;
+        if(Instance == null){
+            Instance = this;
             DontDestroyOnLoad(this.gameObject);
-        } else {
-            Destroy(gameObject);
-        }
+        } 
+        else { Destroy(gameObject);}
+        levelGenerator = FindObjectOfType<LevelGenerator>();
     }
 }

@@ -10,7 +10,7 @@ public class LoadNewArea : MonoBehaviour
     private int yoff;
 
     void Awake() {
-        player = SingletonPlayer.Instance.player;
+        player = PlayerSingleton.Instance.player;
         levelGenerator = GameObject.FindObjectOfType<LevelGenerator>();
     }
 

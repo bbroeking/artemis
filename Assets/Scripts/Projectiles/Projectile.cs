@@ -6,7 +6,8 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField] protected Player player;
     [SerializeField] protected Rigidbody2D rb;
-    [SerializeField] protected float force = 10f;
+    protected Vector3 pos;
+    public float MoveSpeed = 2.0f;
     protected int damage = 1;
     public int Damage { get { return damage;} set { damage = value; }}
     protected float xRotation = 0f;
@@ -17,14 +18,15 @@ public class Projectile : MonoBehaviour
     public float ZRotation { get {return zRotation; } set {zRotation = value;}}
 
     protected virtual void Start(){
-        player = SingletonPlayer.Instance.player;
+        player = PlayerSingleton.Instance.player;
+        pos = transform.position;
         rb = GetComponent<Rigidbody2D>();
         Destroy(gameObject, 3);
     }
 
     protected virtual void Update(){
-        Vector3 vec = (player.transform.position - transform.position).normalized;
-        rb.AddForce(Vector3.up * force, ForceMode2D.Impulse);
+        pos += transform.up * Time.deltaTime * MoveSpeed;
+        transform.position = pos;
     }
 
     private void OnCollisionEnter2D(Collision2D collision){

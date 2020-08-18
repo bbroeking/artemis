@@ -40,7 +40,7 @@ public class Player : Character
     public string scene;
     public bool backToDungeon;
     public Direction lastDirection;
-    public string map;
+    public Room map;
     private bool isMoveDisabled = false;
 
     private void OnValidate(){
@@ -100,7 +100,7 @@ public class Player : Character
         currencyPanel.UpdateCurrencyValues();
         backToDungeon = false;
         lastDirection = Direction.North;
-        map = "Map/TBLR/TBLR Base"; // default path
+        map = new Room(new Vector2(0,0), true, true, true, true); // default path
     }
     private void OnDestroy()
 	{
