@@ -29,6 +29,10 @@ public class PlayerCollision : MonoBehaviour
             interactable = collision.GetComponent<IInteractable>();
             interactable.Interact(player);
         }
+        else if(collision.gameObject.CompareTag(Tags.spikes)){
+            interactable = collision.GetComponent<IInteractable>();
+            interactable.Interact(player);
+        }
     }
     private void OnTriggerStay2D(Collider2D collision){
         if(collision.gameObject.CompareTag(Tags.spikes)){

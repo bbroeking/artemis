@@ -33,6 +33,7 @@ TagManager:
   - NPC
   - shop
   - spikes
+  - hitbox
   layers:
   - Default
   - TransparentFX
@@ -52,8 +53,8 @@ TagManager:
   - loot
   - shop
   - npc
-  - 
-  - 
+  - nonienvironment
+  - hitbox
   - 
   - 
   - 

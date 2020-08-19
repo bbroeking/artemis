@@ -10,6 +10,7 @@ public enum MoveDirection { Up, Down, Left, Right }
 public class Player : Character
 {
     [Header("Components")]
+    public Transform castPos;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator anim;
     [SerializeField] protected PlayerCombat combat;
@@ -44,6 +45,8 @@ public class Player : Character
     public Direction lastDirection;
     public Room map;
     private bool isMoveDisabled = false;
+    public MoveDirection lastMoveDirection = MoveDirection.Up;
+    public Vector3 movement;
 
     private void OnValidate(){
         if(itemTooltip == null){
@@ -294,7 +297,7 @@ public class Player : Character
     }
     private void Move()
     {
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
+        movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
 
         anim.SetFloat("Horizontal", movement.x);
         anim.SetFloat("Vertical", movement.y);
@@ -303,11 +306,13 @@ public class Player : Character
         if (movement.x != 0.0f || movement.y != 0.0f){
             anim.SetFloat("LastHorizonal", movement.x);
             anim.SetFloat("LastVertical", movement.y);
+            SetLastMoveDirection(movement);
         }
         rb.velocity = new Vector2(movement.x * speed, movement.y * speed);
     }
     public MoveDirection GetMoveDirection(){
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
+        if(movement.x == 0 && movement.y == 0) return lastMoveDirection;
         if (Mathf.Abs(movement.x) > Mathf.Abs(movement.y)){
             if(movement.x >= 0){
                 return MoveDirection.Right;
@@ -320,6 +325,22 @@ public class Player : Character
                 return MoveDirection.Up;
             } else {
                 return MoveDirection.Down;
+            }
+        }
+    }
+    private void SetLastMoveDirection(Vector3 movement){
+        if (Mathf.Abs(movement.x) > Mathf.Abs(movement.y)){
+            if(movement.x >= 0){
+                lastMoveDirection = MoveDirection.Right;
+            } else {
+                lastMoveDirection = MoveDirection.Left;
+            }
+        }
+        else {
+            if(movement.y >= 0){
+                lastMoveDirection = MoveDirection.Up;
+            } else {
+                lastMoveDirection = MoveDirection.Down;
             }
         }
     }

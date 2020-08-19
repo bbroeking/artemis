@@ -7,4 +7,5 @@
     public static string spikes = "spikes";
     public static string player = "player";
     public static string enemy = "Enemy";
+    public static string hitbox = "hitbox";
 }

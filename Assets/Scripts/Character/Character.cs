@@ -36,7 +36,7 @@ public class Character : MonoBehaviour
         dexterityModifier  = 0.1f;
         intellectModifier = 0.1f;
         vitalityModifier = 0;
-        internalAttackCooldown = 1f;
+        internalAttackCooldown = 0.5f;
         spellDamage = 1;
         isDead = false;
     }

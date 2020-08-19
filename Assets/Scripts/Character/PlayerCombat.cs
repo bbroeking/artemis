@@ -11,6 +11,12 @@ public class PlayerCombat : MonoBehaviour
     private bool isCooldown = false;
     [SerializeField] GameObject gravitySoul;
     [SerializeField] GameObject poisonNova;
+
+    [Header("Hitbox")]
+    [SerializeField] private GameObject rightHitbox;
+    [SerializeField] private GameObject leftHitbox;
+    [SerializeField] private GameObject topHitbox;
+    [SerializeField] private GameObject bottomHitbox;
     
     [Header("Components")]
     [SerializeField] private Player player;
@@ -28,6 +34,7 @@ public class PlayerCombat : MonoBehaviour
                 if(!isCooldown){
                     SpawnMeleeWave();
                     anim.SetTrigger("Attack");
+                    CheckHitbox();
                     StartCoroutine(Cooldown());
                 }
             }
@@ -59,10 +66,32 @@ public class PlayerCombat : MonoBehaviour
     }
 
     private void SpawnMeleeWave(){
-        Debug.Log("spawning");
         string pathToPrefab = "Projectiles/PlayerProjectiles/MeleeWave";
         GameObject wave = (GameObject) LoadPrefab.LoadPrefabFromFile(pathToPrefab);
         Instantiate(wave);
+    }
+
+    private void CheckHitbox(){
+        if(player.lastMoveDirection == MoveDirection.Up){
+            StartCoroutine(CheckHitBoxEnabler(topHitbox));
+        }
+        else if(player.lastMoveDirection == MoveDirection.Down){
+            StartCoroutine(CheckHitBoxEnabler(bottomHitbox));
+
+        }
+        else if(player.lastMoveDirection == MoveDirection.Left){
+            StartCoroutine(CheckHitBoxEnabler(leftHitbox));
+
+        }
+        else if(player.lastMoveDirection == MoveDirection.Right){
+            StartCoroutine(CheckHitBoxEnabler(rightHitbox));
+        }
+    }
+
+    private IEnumerator CheckHitBoxEnabler(GameObject hitbox){
+        hitbox.SetActive(true);
+        yield return new WaitForSeconds(0.4f);
+        hitbox.SetActive(false);
     }
 
     private IEnumerator Cooldown()
