@@ -22,6 +22,8 @@ public class Enemy : Character, IInteractable
     private float interactCooldown = 0.35f;
     private bool canBeDamaged = true;
     private float hitCooldown = 0.25f;
+    protected bool isActivateDelay = true;
+    protected float activateDelay = 1.15f;
 
     private void OnValidate(){
         lootTable = gameObject.GetComponentInParent<LootTable>();
@@ -36,11 +38,14 @@ public class Enemy : Character, IInteractable
     void Start(){
         isInAggroRange = false;
         internalAggroCooldown = 0f;
+        StartCoroutine(ActivateEnemyDelay());
     }
 
     void Update(){
         UpdateAnimationValues();
-        SetTarget();
+        if (!isActivateDelay){
+            SetTarget();
+        }
     }
 
     protected virtual void UpdateAnimationValues(){
@@ -112,5 +117,10 @@ public class Enemy : Character, IInteractable
             yield return new WaitForSeconds(hitCooldown);
             canBeDamaged = true;
         }
+    }
+    protected IEnumerator ActivateEnemyDelay()
+    {
+        yield return new WaitForSeconds (activateDelay);
+        isActivateDelay = false;
     }
 }

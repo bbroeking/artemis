@@ -10,14 +10,17 @@ public class PatrolEnemy : Enemy
 
     void Start()
     {
-        currentAnchorIndex = 0;
-        currentAnchor = patrolAnchors[currentAnchorIndex];
-        aIDestination.target = currentAnchor;
+        StartCoroutine(ActivateEnemyDelay());
     }
 
     void Update()
     {
-        SetTarget();
+        if (!isActivateDelay){
+            currentAnchorIndex = 0;
+            currentAnchor = patrolAnchors[currentAnchorIndex];
+            aIDestination.target = currentAnchor;
+            SetTarget();
+        }
     }
 
     protected override void SetTarget(){
