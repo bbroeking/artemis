@@ -87,7 +87,7 @@ public class Enemy : Character, IInteractable
 
     public void Interact(Player player)
     {
-        if (isInteractable){
+        if (isInteractable && !isDead){
             StartCoroutine(Cooldown());
             player.TakeDamage(this.baseDamage);
             player.KnockPlayer(this.transform, magnitude);
