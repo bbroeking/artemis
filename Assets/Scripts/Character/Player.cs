@@ -5,6 +5,8 @@ using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 using UnityEngine.UI;
 
+public enum MoveDirection { Up, Down, Left, Right }
+
 public class Player : Character
 {
     [Header("Components")]
@@ -303,6 +305,23 @@ public class Player : Character
             anim.SetFloat("LastVertical", movement.y);
         }
         rb.velocity = new Vector2(movement.x * speed, movement.y * speed);
+    }
+    public MoveDirection GetMoveDirection(){
+        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
+        if (Mathf.Abs(movement.x) > Mathf.Abs(movement.y)){
+            if(movement.x >= 0){
+                return MoveDirection.Right;
+            } else {
+                return MoveDirection.Left;
+            }
+        }
+        else {
+            if(movement.y >= 0){
+                return MoveDirection.Up;
+            } else {
+                return MoveDirection.Down;
+            }
+        }
     }
     public IEnumerator DisableMovement(float time){
         isMoveDisabled = true;

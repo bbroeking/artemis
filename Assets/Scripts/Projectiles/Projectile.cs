@@ -7,8 +7,10 @@ public class Projectile : MonoBehaviour
     [SerializeField] protected Player player;
     [SerializeField] protected Rigidbody2D rb;
     protected Vector3 pos;
+    protected Vector3 direction;
     public float MoveSpeed = 2.0f;
     protected int damage = 1;
+    protected float duration = 3.0f;
     public int Damage { get { return damage;} set { damage = value; }}
     protected float xRotation = 0f;
     public float XRotation { get { return xRotation; } set {xRotation = value;} }
@@ -20,16 +22,17 @@ public class Projectile : MonoBehaviour
     protected virtual void Start(){
         player = PlayerSingleton.Instance.player;
         pos = transform.position;
+        direction = transform.up; // TODO don't default to up
         rb = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, 3);
+        Destroy(gameObject, duration);
     }
 
     protected virtual void Update(){
-        pos += transform.up * Time.deltaTime * MoveSpeed;
+        pos += direction * Time.deltaTime * MoveSpeed;
         transform.position = pos;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision){
+    protected virtual void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.CompareTag(Tags.player)){
             player.TakeDamage(damage);
         }

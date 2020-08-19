@@ -2,14 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerProjectile : MonoBehaviour
+public class PlayerProjectile : Projectile
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected override void Start() {
+        base.Start();
+        pos = player.transform.position;
+    }
+    protected override void Update(){
+        base.Update();
+    }
+    protected override void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag(Tags.enemy))
         {
             collision.gameObject.GetComponent<Enemy>()?.Hit(1);
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 }

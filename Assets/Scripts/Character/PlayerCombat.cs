@@ -26,6 +26,7 @@ public class PlayerCombat : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 if(!isCooldown){
+                    SpawnMeleeWave();
                     anim.SetTrigger("Attack");
                     StartCoroutine(Cooldown());
                 }
@@ -57,6 +58,12 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
+    private void SpawnMeleeWave(){
+        Debug.Log("spawning");
+        string pathToPrefab = "Projectiles/PlayerProjectiles/MeleeWave";
+        GameObject wave = (GameObject) LoadPrefab.LoadPrefabFromFile(pathToPrefab);
+        Instantiate(wave);
+    }
 
     private IEnumerator Cooldown()
     {
