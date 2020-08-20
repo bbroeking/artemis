@@ -6,6 +6,7 @@ public class PlayerProjectile : Projectile
 {
     protected override void Start() {
         base.Start();
+        SetVectorDirection();
         pos = player.transform.position;
     }
     protected override void Update(){
@@ -18,5 +19,8 @@ public class PlayerProjectile : Projectile
             collision.gameObject.GetComponent<Enemy>()?.Hit(1);
             Destroy(gameObject);
         }
+    }
+    private void SetVectorDirection(){
+        direction = player.GetShotDirection();
     }
 }

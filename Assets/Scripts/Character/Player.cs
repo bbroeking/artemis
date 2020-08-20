@@ -371,4 +371,8 @@ public class Player : Character
         dir.Normalize();
         rb.AddForce(-dir * magnitude);
     }
+
+    public Vector3 GetShotDirection(){
+        return combat.shotDirection;
+    }
 }

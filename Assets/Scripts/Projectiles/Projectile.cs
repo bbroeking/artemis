@@ -22,20 +22,23 @@ public class Projectile : MonoBehaviour
     protected virtual void Start(){
         player = PlayerSingleton.Instance.player;
         pos = transform.position;
-        direction = transform.up; // TODO don't default to up
+        direction = transform.right; // TODO don't default to up
         rb = GetComponent<Rigidbody2D>();
         Destroy(gameObject, duration);
     }
-
     protected virtual void Update(){
+        Debug.Log(this.direction);
         pos += direction * Time.deltaTime * MoveSpeed;
         transform.position = pos;
     }
-
     protected virtual void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.CompareTag(Tags.player)){
             player.TakeDamage(damage);
         }
         Destroy(gameObject);
+    }
+    public virtual void SetDirection(Vector3 direction){
+        Debug.Log(direction);
+        this.direction = direction;
     }
 }
