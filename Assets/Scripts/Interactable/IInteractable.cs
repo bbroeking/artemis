@@ -6,5 +6,4 @@ public interface IInteractable
 {
     void Interact(Player player);
     void StopInteract();
-    IEnumerator Cooldown();
 } 

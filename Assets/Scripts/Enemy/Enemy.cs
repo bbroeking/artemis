@@ -18,7 +18,6 @@ public class Enemy : Character, IInteractable
     private float distanceFromSpawn = 100f;
     private float disableTime = 0.25f;
     private float magnitude = 200.0f;
-    private bool isInteractable = true;
     private float interactCooldown = 0.35f;
     private bool canBeDamaged = true;
     private float hitCooldown = 0.25f;
@@ -92,25 +91,13 @@ public class Enemy : Character, IInteractable
 
     public void Interact(Player player)
     {
-        if (isInteractable && !isDead){
-            StartCoroutine(Cooldown());
+        if (player.canInteract && !isDead){
             player.TakeDamage(this.baseDamage);
-            player.KnockPlayer(this.transform, magnitude);
-            StartCoroutine(player.DisableMovement(this.disableTime));
+            player.KnockPlayer(this.transform, magnitude, disableTime);
         }
     }
 
     public void StopInteract(){}
-
-    public IEnumerator Cooldown()
-    {
-        if(isInteractable){
-            isInteractable = false;
-            yield return new WaitForSeconds(interactCooldown);
-            isInteractable = true;
-        }
-    }
-
     public IEnumerator HitCooldown(){
         if(canBeDamaged){
             canBeDamaged = false;

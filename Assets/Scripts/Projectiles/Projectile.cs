@@ -27,7 +27,6 @@ public class Projectile : MonoBehaviour
         Destroy(gameObject, duration);
     }
     protected virtual void Update(){
-        Debug.Log(this.direction);
         pos += direction * Time.deltaTime * MoveSpeed;
         transform.position = pos;
     }
@@ -38,7 +37,6 @@ public class Projectile : MonoBehaviour
         Destroy(gameObject);
     }
     public virtual void SetDirection(Vector3 direction){
-        Debug.Log(direction);
         this.direction = direction;
     }
 }

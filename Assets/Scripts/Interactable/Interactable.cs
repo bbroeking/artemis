@@ -4,7 +4,7 @@ using System.Collections;
 public abstract class Interactable : MonoBehaviour, IInteractable
 {
     protected bool isInRange;
-    protected float interactCooldown;
+    protected float interactCooldown = 1f;
     protected static bool isInteractable = true;
     [SerializeField] protected KeyCode interactKey = KeyCode.F;
 

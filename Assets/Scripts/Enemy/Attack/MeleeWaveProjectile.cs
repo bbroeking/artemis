@@ -17,7 +17,6 @@ public class MeleeWaveProjectile : PlayerProjectile
         rb = GetComponent<Rigidbody2D>();
         animator.Play("MeleeWave"); // don't call Destroy(), we destroy on the animation exit
     }
-
     private void SetVectorDirection(){
         if (moveDirection == MoveDirection.Up){
             direction = Vector3.up;
@@ -35,5 +34,4 @@ public class MeleeWaveProjectile : PlayerProjectile
             direction = Vector3.right;
         }
     }
-
 }

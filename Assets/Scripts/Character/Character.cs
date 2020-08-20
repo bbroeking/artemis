@@ -24,6 +24,8 @@ public class Character : MonoBehaviour
     private int spellDamage;
     public int SpellDamage { get { return spellDamage; } }
     protected bool isDead;
+    protected bool isDamageDisabled;
+    protected float disableDamageDuration = 0.75f;
 
     protected virtual void Awake(){
         health = 5;
@@ -39,6 +41,7 @@ public class Character : MonoBehaviour
         internalAttackCooldown = 0.5f;
         spellDamage = 1;
         isDead = false;
+        isDamageDisabled = false;
     }
     public int CalculateDamage(){
         int damageRoll = Random.Range(mainHandMinDamage, mainHandMaxDamage);
@@ -68,11 +71,16 @@ public class Character : MonoBehaviour
         return;
     }
     
+    public IEnumerator DisableDamage(float time){
+        isDamageDisabled = true;
+        yield return new WaitForSeconds(time);
+        isDamageDisabled = false;
+    }
     public virtual void TakeDamage(int damage){
+        if (isDamageDisabled) return;
+        StartCoroutine(DisableDamage(disableDamageDuration));
         this.currentHealth -= damage;
-        if(this.currentHealth <= 0){
-            this.isDead = true;
-        }
+        if(this.currentHealth <= 0) this.isDead = true;
     }
 
     public virtual void Dead(){

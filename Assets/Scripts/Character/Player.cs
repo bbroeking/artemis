@@ -47,6 +47,7 @@ public class Player : Character
     private bool isMoveDisabled = false;
     public MoveDirection lastMoveDirection = MoveDirection.Up;
     public Vector3 movement;
+    public bool canInteract;
 
     private void OnValidate(){
         if(itemTooltip == null){
@@ -104,6 +105,7 @@ public class Player : Character
         currencyPanel.SetCurrency(this.gold, this.souls, this.weight);
         currencyPanel.UpdateCurrencyValues();
         backToDungeon = false;
+        canInteract = true;
         lastDirection = Direction.North;
         map = new Room(new Vector2(0,0), true, true, true, true); // default path
     }
@@ -349,6 +351,14 @@ public class Player : Character
         yield return new WaitForSeconds(time);
         isMoveDisabled = false;
     }
+    public IEnumerator DisableInteract(float time)
+    {
+        if(canInteract){
+            canInteract = false;
+            yield return new WaitForSeconds(time);
+            canInteract = true;
+        }
+    }
     public void UpdateStatValues(){
         statPanel.UpdateStatValues();
     }
@@ -366,12 +376,15 @@ public class Player : Character
         resources.SetHealthbar();
         isDead = false;
     }
-    public void KnockPlayer(Transform objectApplyingForce, float magnitude){
+    public void KnockPlayer(Transform objectApplyingForce,
+                            float magnitude,
+                            float disableTime)
+    {
         var dir = objectApplyingForce.position - transform.position;
-        dir.Normalize();
-        rb.AddForce(-dir * magnitude);
+        rb.AddForce(-dir.normalized * magnitude);
+        StartCoroutine(DisableInteract(disableTime));
+        StartCoroutine(DisableMovement(disableTime));
     }
-
     public Vector3 GetShotDirection(){
         return combat.shotDirection;
     }
