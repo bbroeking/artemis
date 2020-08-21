@@ -29,7 +29,6 @@ public class RelicUI : ItemContainer
 		Clear();
 		foreach (Item item in relics)
 		{
-            Debug.Log(item.ToString());
 			AddItem(item.GetCopy());
 		}
 	}
