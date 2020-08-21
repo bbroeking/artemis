@@ -2,18 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum RelicType {Fang, Nova};
 public class Spellbook : MonoBehaviour
 {
-    public void PoisonNova(GameObject b, Transform firePoint, Collider2D playerCollider)
+    [SerializeField] Collider2D playerCollider;
+
+    [Header("Projectiles")]
+    [SerializeField] GameObject projectilePrefab;
+
+    public void PoisonNova(Transform firePoint)
     {   
-        float force = 4f;
         for (int i = 0; i < 6; i++)
         {
-            GameObject spell = Instantiate(b, firePoint.position, Quaternion.identity);
-            Destroy(spell, 3);
-            Rigidbody2D rb = spell.GetComponent<Rigidbody2D>();
-            Physics2D.IgnoreCollision(spell.GetComponent<Collider2D>(), playerCollider);
-            rb.AddForce((Quaternion.Euler(0, 0, (60f*i)) * Vector2.up) * force, ForceMode2D.Impulse);
+            GameObject projectileGameObject = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+            
+            Projectile projectile = projectileGameObject.GetComponent<Projectile>();
+            projectile.ZRotation = 60f*i;
+
+            ProjectileHelpers.ObjectIgnores(projectileGameObject, playerCollider);
+            Destroy(projectileGameObject, 3);
         }
     }
 

@@ -11,6 +11,7 @@ public class PlayerCombat : MonoBehaviour
     private bool isCooldown = false;
     [SerializeField] GameObject gravitySoul;
     [SerializeField] GameObject poisonNova;
+    [SerializeField] GameObject regularProjectile;
     public Vector3 shotDirection = Vector3.zero;
 
     [Header("Hitbox")]
@@ -22,6 +23,7 @@ public class PlayerCombat : MonoBehaviour
     [Header("Components")]
     [SerializeField] private Player player;
     [SerializeField] private Spellbook spellbook;
+    [SerializeField] private PlayerRelic relic;
     [SerializeField] private PlayerResources resources;
     [SerializeField] private CanvasGroup inventoryCanvasGroup;
     [SerializeField] private CanvasGroup equipmentCanvasGroup;
@@ -33,8 +35,8 @@ public class PlayerCombat : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 if(!isCooldown){
-                    SpawnMeleeWave();
                     anim.SetTrigger("Attack");
+                    SpawnMeleeWave();
                     CheckHitbox();
                     StartCoroutine(Cooldown());
                 }
@@ -48,24 +50,19 @@ public class PlayerCombat : MonoBehaviour
                 else if(Input.GetKeyDown("down")) shotDirection = Vector3.down;
                 else if(Input.GetKeyDown("left")) shotDirection = Vector3.left;
                 else if(Input.GetKeyDown("right")) shotDirection = Vector3.right;
-                if(resources.GetActiveEssenceAmount() > 0){
-                    Soul active = resources.ActiveSoul;
-                    Cast();
-                    // resources.UseEssence(1);
-                }
+                if(resources.GetActiveEssenceAmount() > 0) Cast();
             }
-            if (Input.GetKeyDown("e"))
-            {
-                resources.SwapActiveSoul();
-            }
-            if (Input.GetKeyDown("q"))
-            {
-                int activeEssenceAmount = resources.GetActiveEssenceAmount();
-                if(activeEssenceAmount > 3){
-                    StartCoroutine(CastSoulAbility(resources.ActiveSoul));
-                }
-            }
+            if(Input.GetKeyDown(KeyCode.Alpha1)) UseRelicAbility(0);
+            if(Input.GetKeyDown(KeyCode.Alpha2)) UseRelicAbility(1);
+            if(Input.GetKeyDown(KeyCode.Alpha3)) UseRelicAbility(2);
+            if(Input.GetKeyDown(KeyCode.Alpha4)) UseRelicAbility(3);
         }
+    }
+
+    private void UseRelicAbility(int index){
+        UsableItem item = relic.GetRelic(index);
+        if(item == null) return;
+        item.Use(player);
     }
     private void SpawnMeleeWave(){
         string pathToPrefab = "Projectiles/PlayerProjectiles/MeleeWave";
@@ -93,26 +90,17 @@ public class PlayerCombat : MonoBehaviour
     }
     void Cast()
     {
-        GameObject spell = Instantiate(gravitySoul, castPos.position, castPos.rotation);
-        Rigidbody2D rb = spell.GetComponent<Rigidbody2D>();
-        Physics2D.IgnoreCollision(spell.GetComponent<Collider2D>(), playerCollider);
-    }
-    private void SoulAbility(Soul activeSoul){
-        if (activeSoul == Soul.poison){
-            spellbook.PoisonNova(poisonNova, castPos.transform, playerCollider);
-        }
-    }
-    public IEnumerator CastSoulAbility(Soul activeSoul){
-        for (int i = 0; i < 6; i++)
-        {
-            SoulAbility(activeSoul);
-            yield return new WaitForSeconds(1f);
-        }
+        GameObject cast = Instantiate(gravitySoul, castPos.position, castPos.rotation);
+        ProjectileHelpers.ObjectIgnores(cast, playerCollider);
     }
     private IEnumerator Cooldown()
     {
         isCooldown = true;
         yield return new WaitForSeconds(player.InteralAttackCooldown);
         isCooldown = false;
+    }
+
+    public void ExecuteRelicEffect(RelicType type){
+        if (type == RelicType.Nova) spellbook.PoisonNova(castPos.transform);
     }
 }

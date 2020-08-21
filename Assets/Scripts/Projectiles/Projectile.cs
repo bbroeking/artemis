@@ -7,7 +7,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] protected Player player;
     [SerializeField] protected Rigidbody2D rb;
     protected Vector3 pos;
-    protected Vector3 direction;
+    protected Vector3 direction = Vector3.up;
     public float MoveSpeed = 2.0f;
     protected int damage = 1;
     protected float duration = 3.0f;
@@ -22,12 +22,12 @@ public class Projectile : MonoBehaviour
     protected virtual void Start(){
         player = PlayerSingleton.Instance.player;
         pos = transform.position;
-        direction = transform.right; // TODO don't default to up
         rb = GetComponent<Rigidbody2D>();
         Destroy(gameObject, duration);
     }
     protected virtual void Update(){
-        pos += direction * Time.deltaTime * MoveSpeed;
+        pos += Quaternion.Euler(xRotation, yRotation, zRotation) * direction 
+                * Time.deltaTime * MoveSpeed;
         transform.position = pos;
     }
     protected virtual void OnCollisionEnter2D(Collision2D collision){

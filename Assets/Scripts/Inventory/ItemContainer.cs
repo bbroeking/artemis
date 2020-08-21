@@ -5,7 +5,6 @@ using UnityEngine;
 public abstract class ItemContainer : MonoBehaviour, IItemContainer
 {
 	public List<ItemSlot> ItemSlots;
-	public int inventoryWeight;
 	public event Action<BaseItemSlot> OnPointerEnterEvent;
 	public event Action<BaseItemSlot> OnPointerExitEvent;
 	public event Action<BaseItemSlot> OnRightClickEvent;

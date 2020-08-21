@@ -13,9 +13,10 @@ public class Player : Character
     public Transform castPos;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator anim;
-    [SerializeField] protected PlayerCombat combat;
+    [SerializeField] public PlayerCombat combat;
     [SerializeField] protected PlayerResources resources;
-    [SerializeField] protected Spellbook spellbook;
+    [SerializeField] public Spellbook spellbook;
+    [SerializeField] public PlayerRelic relics;
     
     [Header("Currencies")]
     protected int gold;

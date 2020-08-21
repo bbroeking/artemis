@@ -84,7 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6643960156211540892}
   m_Layer: 8
-  m_Name: castPos
+  m_Name: CastPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,10 +118,11 @@ GameObject:
   - component: {fileID: 6643960157044530614}
   - component: {fileID: 6643960157044530615}
   - component: {fileID: 6643960156158524165}
-  - component: {fileID: 6643960156158524167}
   - component: {fileID: 6643960156158524166}
   - component: {fileID: 6643960157044530612}
   - component: {fileID: 8728669361050094890}
+  - component: {fileID: 6643960156158524167}
+  - component: {fileID: 2123634583}
   m_Layer: 8
   m_Name: artemis
   m_TagString: player
@@ -285,6 +286,7 @@ MonoBehaviour:
   combat: {fileID: 8728669361050094890}
   resources: {fileID: 6643960156158524166}
   spellbook: {fileID: 6643960156158524167}
+  relics: {fileID: 2123634583}
   Inventory: {fileID: 0}
   EquipmentPanel: {fileID: 0}
   statPanel: {fileID: 0}
@@ -301,18 +303,7 @@ MonoBehaviour:
   lastDirection: 0
   lastMoveDirection: 0
   movement: {x: 0, y: 0, z: 0}
---- !u!114 &6643960156158524167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6643960157044530608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d633ec287196a24cbee6aa816abbe86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  canInteract: 0
 --- !u!114 &6643960156158524166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,7 +350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41cb91ef5969f7b49b9163db528faed6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  castPos: {fileID: 6643960156158524174}
+  castPos: {fileID: 6643960156211540892}
   playerCollider: {fileID: 6643960157044530614}
   whatIsEnemy:
     serializedVersion: 2
@@ -369,6 +360,8 @@ MonoBehaviour:
     type: 3}
   poisonNova: {fileID: 5940879645747822041, guid: 6da39d896b0b58f4ebe075ee786948f1,
     type: 3}
+  regularProjectile: {fileID: 5940879645747822041, guid: 5be82dea52e786040afd4f6a74e919ee,
+    type: 3}
   shotDirection: {x: 0, y: 0, z: 0}
   rightHitbox: {fileID: 6116954923410325531}
   leftHitbox: {fileID: 8700692063436449969}
@@ -376,10 +369,40 @@ MonoBehaviour:
   bottomHitbox: {fileID: 7695045561575329202}
   player: {fileID: 6643960156158524165}
   spellbook: {fileID: 6643960156158524167}
+  relic: {fileID: 2123634583}
   resources: {fileID: 6643960156158524166}
   inventoryCanvasGroup: {fileID: 0}
   equipmentCanvasGroup: {fileID: 0}
   anim: {fileID: 6643960157763269512}
+--- !u!114 &6643960156158524167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6643960157044530608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d633ec287196a24cbee6aa816abbe86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCollider: {fileID: 6643960157044530614}
+  projectilePrefab: {fileID: 5940879645747822041, guid: 5be82dea52e786040afd4f6a74e919ee,
+    type: 3}
+--- !u!114 &2123634583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6643960157044530608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcd7ce1bed17da44cbc84843ad187e80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  relics:
+  - {fileID: 11400000, guid: c7415c502494d8b4f89e1f1f14a1abc2, type: 2}
 --- !u!1 &6934079752874769360
 GameObject:
   m_ObjectHideFlags: 0
