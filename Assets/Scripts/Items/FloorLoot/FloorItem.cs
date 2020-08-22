@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PickupItem : Interactable
+public class FloorItem : Interactable
 {
     [SerializeField] public Item item;
     [SerializeField] Inventory inventory;

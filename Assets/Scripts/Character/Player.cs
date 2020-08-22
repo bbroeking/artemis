@@ -20,17 +20,17 @@ public class Player : Character
     
     [Header("Currencies")]
     protected int gold;
-    public int Gold { get { return gold;} set { gold = value; }}
+    public int Gold { get { return gold;} set { gold += value; }}
     protected int souls;
-    public int Souls { get { return souls;} set { souls = value; }}
+    public int Souls { get { return souls;} set { souls += value; }}
     protected int weight;
-    public int Weight { get { return weight;} set { weight = value; }}
+    public int Weight { get { return weight;} set { weight += value; }}
     
     [Header("UI Panels")]
     [SerializeField] public Inventory Inventory;
     [SerializeField] public EquipmentPanel EquipmentPanel;
     [SerializeField] private StatPanel statPanel;
-    [SerializeField] public CurrencyPanel currencyPanel;
+    [SerializeField] public SoulPanel soulPanel;
     [SerializeField] private ShopPanel ShopPanel;
     [SerializeField] private DeathMenu deathMenu;
     [SerializeField] private ItemTooltip itemTooltip;
@@ -103,8 +103,8 @@ public class Player : Character
         itemSaveManager.LoadCurrency(this);
 
         this.weight = Inventory.GetWeight(); // Need to calcuate the items weight
-        currencyPanel.SetCurrency(this.gold, this.souls, this.weight);
-        currencyPanel.UpdateCurrencyValues();
+        soulPanel.SetCurrency(this.souls);
+        soulPanel.UpdateCurrencyValues();
         backToDungeon = false;
         canInteract = true;
         lastDirection = Direction.North;
@@ -211,8 +211,8 @@ public class Player : Character
 		}
 	}
     public void SetPlayerCurrency(){
-        currencyPanel.SetCurrency(this.gold, this.souls, this.weight);
-        currencyPanel.UpdateCurrencyValues();
+        soulPanel.SetCurrency(this.souls);
+        soulPanel.UpdateCurrencyValues();
     }
     private bool CanAfford(BaseItemSlot itemSlot){
         return itemSlot.Item.goldValue <= Gold;

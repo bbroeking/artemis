@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CurrencyPanel : MonoBehaviour
+public class SoulPanel : MonoBehaviour
 {
-    [SerializeField] CurrencyDisplay[] statDisplays;
+    [SerializeField] SoulDisplay[] statDisplays;
     private int[] currency;
     private void OnValidate()
     {
-        statDisplays = GetComponentsInChildren<CurrencyDisplay>();
+        statDisplays = GetComponentsInChildren<SoulDisplay>();
     }
 
     public void SetCurrency(params int[] charCurrency){

@@ -13,10 +13,6 @@ public class PlayerCollision : MonoBehaviour
             interactable = collision.GetComponent<IInteractable>();
             interactable.Interact(player);
         }
-        else if (collision.gameObject.CompareTag(Tags.droppedCurrency)){
-            interactable = collision.GetComponent<IInteractable>();
-            interactable.Interact(player);
-        }
         else if(collision.gameObject.CompareTag(Tags.NPC)){
             interactable = collision.GetComponent<IInteractable>();
             interactable.Interact(player);

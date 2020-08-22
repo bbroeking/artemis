@@ -58,7 +58,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -171,11 +171,13 @@ MonoBehaviour:
   health: 0
   currentHealth: 0
   speed: 0
+  castPos: {fileID: 0}
   rb: {fileID: 5044662154932729052}
   anim: {fileID: 5044662155722365667}
   combat: {fileID: 5044662154932729050}
   resources: {fileID: 5044662156252844653}
   spellbook: {fileID: 5044662156252844652}
+  relics: {fileID: 0}
   Inventory: {fileID: 0}
   EquipmentPanel: {fileID: 0}
   statPanel: {fileID: 0}
@@ -190,7 +192,9 @@ MonoBehaviour:
   scene: 
   backToDungeon: 0
   lastDirection: 0
-  map: 
+  lastMoveDirection: 0
+  movement: {x: 0, y: 0, z: 0}
+  canInteract: 0
 --- !u!114 &5044662154932729050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,14 +212,20 @@ MonoBehaviour:
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 512
-  attackRange: 1
   spellForce: 20
   gravitySoul: {fileID: 8030960686836833954, guid: cb323566e55d3f94694465fe13df3674,
     type: 3}
   poisonNova: {fileID: 5940879645747822041, guid: 6da39d896b0b58f4ebe075ee786948f1,
     type: 3}
+  regularProjectile: {fileID: 0}
+  shotDirection: {x: 0, y: 0, z: 0}
+  rightHitbox: {fileID: 0}
+  leftHitbox: {fileID: 0}
+  topHitbox: {fileID: 0}
+  bottomHitbox: {fileID: 0}
   player: {fileID: 5044662156252844654}
   spellbook: {fileID: 5044662156252844652}
+  relic: {fileID: 0}
   resources: {fileID: 5044662156252844653}
   inventoryCanvasGroup: {fileID: 0}
   equipmentCanvasGroup: {fileID: 0}
@@ -232,6 +242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d633ec287196a24cbee6aa816abbe86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCollider: {fileID: 0}
+  projectilePrefab: {fileID: 0}
 --- !u!114 &5044662156252844653
 MonoBehaviour:
   m_ObjectHideFlags: 0

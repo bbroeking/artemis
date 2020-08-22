@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using TMPro;
 
-public class CurrencyDisplay : MonoBehaviour
+public class SoulDisplay : MonoBehaviour
 {
     public TextMeshProUGUI ValueText;
 

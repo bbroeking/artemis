@@ -43,7 +43,7 @@ public class LootTable : MonoBehaviour
     private void SetLoot(Item drop, GameObject loot){
         SpriteRenderer spriteRenderer = loot.GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = drop.Icon;
-        PickupItem pickupItem = loot.GetComponent<PickupItem>();
+        FloorItem pickupItem = loot.GetComponent<FloorItem>();
         pickupItem.item = drop;
     }
 

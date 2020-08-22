@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4158551135748663217}
-  - component: {fileID: 4158551135748663216}
   - component: {fileID: 4158551135748663219}
   - component: {fileID: 4158551135748663223}
   - component: {fileID: 4158551135748663222}
+  - component: {fileID: 586077070838298609}
   m_Layer: 15
   m_Name: DroppedCurrency
   m_TagString: DroppedCurrency
@@ -34,26 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4158551135748663216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4158551135748663218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5583460c56f6eec4181f12aac33b5d34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactKey: 102
-  amount: 5
-  type: 0
-  spriteRenderer: {fileID: 4158551135748663219}
-  player: {fileID: 0}
-  currencyPanel: {fileID: 0}
-  gold: {fileID: 21300000, guid: 09a5f527333a2e54cbe98ae77528c17e, type: 3}
-  soul: {fileID: 21300000, guid: 888f73c56bff66e419dab2ecb28d7ff6, type: 3}
 --- !u!212 &4158551135748663219
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -151,3 +131,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &586077070838298609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158551135748663218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5799afa8b143700469d850c8c2e2b6b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amount: 1
+  player: {fileID: 0}
+  soulPanel: {fileID: 0}

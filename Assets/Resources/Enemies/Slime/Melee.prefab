@@ -183,7 +183,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -372,7 +372,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b96dc59ee0da3f74c8853587d01fcf7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
   loot:
   - {fileID: 11400000, guid: f4e1e915d353b0a438eef9d60b5caa79, type: 2}
   - {fileID: 11400000, guid: 50ffd38af23f6974e8714eaf2219e7c7, type: 2}
@@ -380,6 +379,7 @@ MonoBehaviour:
     type: 3}
   droppedCurrency: {fileID: 4158551135748663218, guid: 5a9379fcff8121a44ba32746b3c08acb,
     type: 3}
+  soul: {fileID: 4158551135748663218, guid: 78b8a56879526ed44bd01e4f7b003188, type: 3}
 --- !u!114 &7004473854437749030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,7 +399,6 @@ MonoBehaviour:
   aIPath: {fileID: 7004473854437749026}
   anim: {fileID: 1870554770}
   lootTable: {fileID: 0}
-  sprite: {fileID: -5501054352798569629, guid: ee639f852642c3246b994b77794394ed, type: 3}
   spawnLocation: {fileID: 0}
 --- !u!114 &7004473854437749035
 MonoBehaviour:
