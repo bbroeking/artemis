@@ -93,7 +93,7 @@ public class Player : Character
 
     }
 
-    private void Start()
+    protected override void Start()
     {
         statPanel.SetStats(strength, dexterity, intellect, vitality);
         statPanel.UpdateStatValues(); 
@@ -102,7 +102,6 @@ public class Player : Character
         itemSaveManager.LoadInventory(this);
         itemSaveManager.LoadCurrency(this);
 
-        this.weight = Inventory.GetWeight(); // Need to calcuate the items weight
         soulPanel.SetCurrency(this.souls);
         soulPanel.UpdateCurrencyValues();
         backToDungeon = false;
@@ -116,7 +115,7 @@ public class Player : Character
         itemSaveManager.SaveInventory(this);
         itemSaveManager.SaveCurrency(this);
 	}
-    void Update()
+    protected override void Update()
     {
         Dead();
         if (!isMoveDisabled && !isDead){
@@ -215,15 +214,13 @@ public class Player : Character
         soulPanel.UpdateCurrencyValues();
     }
     private bool CanAfford(BaseItemSlot itemSlot){
-        return itemSlot.Item.goldValue <= Gold;
+        return itemSlot.Item.soulValue <= Souls;
     }
     private void AddCurrency(Item item){
-        Gold = Gold + item.goldValue;
         Souls = Souls + item.soulValue;
         SetPlayerCurrency();
     }
     private void RemoveCurrency(Item item){
-        Gold = Gold - item.goldValue;
         Souls = Souls - item.soulValue;
         SetPlayerCurrency();
     }

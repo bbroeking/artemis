@@ -4,8 +4,8 @@ class GeneralFloors : GeneratePath {
 
     public GeneralFloors(){
         this.general = new List<string>{
-            baseRocks // TODO REMOVE
-            // base1E, base2E, pit1E, pit2E, boss, spikes
+            slime // TODO REMOVE
+            // base1E, base2E, pit1E, pit2E, boss, spikes, baseRocks
         };
     }
     public const string base1E = "Base +1";
@@ -15,4 +15,7 @@ class GeneralFloors : GeneratePath {
     public const string boss = "Boss";
     public const string spikes = "Spikes";
     public const string baseRocks = "Base Rocks +1";
+
+    // Boss Rooms
+    public const string slime = "SlimeBoss";
 }

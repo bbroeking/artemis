@@ -5,8 +5,7 @@ using UnityEngine;
 public class TogglePanel : MonoBehaviour
 {
     protected bool active;
-    [SerializeField]
-    protected CanvasGroup canvasGroup;
+    [SerializeField] protected CanvasGroup canvasGroup;
 
     public virtual void Awake() {
         active = true;

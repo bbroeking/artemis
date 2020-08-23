@@ -7,8 +7,8 @@ public class Enemy : Character, IInteractable
     [Header("Enemy")]
     [SerializeField] protected AIDestinationSetter aIDestination;
     [SerializeField] protected AIPath aIPath;
-    [SerializeField] private Animator anim;
-    [SerializeField] LootTable lootTable;
+    [SerializeField] protected Animator anim;
+    [SerializeField] protected LootTable lootTable;
     [SerializeField] public Transform spawnLocation;
     private Player player;
     private bool isInAggroRange;
@@ -18,15 +18,10 @@ public class Enemy : Character, IInteractable
     private float distanceFromSpawn = 100f;
     private float disableTime = 0.25f;
     private float magnitude = 200.0f;
-    private float interactCooldown = 0.35f;
-    private bool canBeDamaged = true;
-    private float hitCooldown = 0.25f;
+    protected bool canBeDamaged = true;
+    private float hitCooldown = 0.5f;
     protected bool isActivateDelay = true;
     protected float activateDelay = 1.15f;
-
-    private void OnValidate(){
-        lootTable = gameObject.GetComponentInParent<LootTable>();
-    }
 
     protected override void Awake(){
         base.Awake();
@@ -34,13 +29,14 @@ public class Enemy : Character, IInteractable
         player = PlayerSingleton.Instance.player;
     }
 
-    void Start(){
+    protected override void Start(){
+        if (spawnLocation == null) spawnLocation = this.transform; // current location is spawn location if not spawned with spawner
         isInAggroRange = false;
         internalAggroCooldown = 0f;
         StartCoroutine(ActivateEnemyDelay());
     }
 
-    void Update(){
+    protected override void Update(){
         UpdateAnimationValues();
         if (!isActivateDelay){
             SetTarget();
@@ -74,19 +70,18 @@ public class Enemy : Character, IInteractable
     public override void Hit(int damage)
     {
         if (!canBeDamaged) return;
+        if (isDead) return;
         StartCoroutine(HitCooldown());
         base.TakeDamage(damage);
         if (this.isDead){
             aIDestination.target = null;
             anim.SetTrigger("Dead");
-            Invoke("SpawnLootAndDestroy", 2f);
         }
     }
 
-    private void SpawnLootAndDestroy()
+    public virtual void SpawnLoot()
     {
         lootTable.SpawnLoot();
-        Destroy(this.gameObject);
     }
 
     public void Interact(Player player)

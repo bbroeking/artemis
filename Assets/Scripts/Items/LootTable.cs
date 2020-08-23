@@ -19,13 +19,13 @@ public class LootTable : MonoBehaviour
     public static System.Random random = new System.Random();  
 
     private void OnValidate(){
-        droppedItem = (GameObject) LoadPrefab.LoadPrefabFromFile("FloorLoot/DroppedItem");
+        droppedItem = (GameObject) LoadPrefab.LoadPrefabFromFile("FloorLoot/FloorItem");
         droppedCurrency = (GameObject) LoadPrefab.LoadPrefabFromFile("FloorLoot/DroppedCurrency");
         soul = (GameObject) LoadPrefab.LoadPrefabFromFile("FloorLoot/Soul");
     }
 
     public void SpawnLoot(){
-        if(random.Next(0,2) == 3){
+        if(random.Next(0,1) == 0){
             Item drop = GenerateDrop();
             GameObject loot = Instantiate(droppedItem, transform.position, Quaternion.identity);
             SetLoot(drop, loot);

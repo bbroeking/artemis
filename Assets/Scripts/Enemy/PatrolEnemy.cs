@@ -8,12 +8,12 @@ public class PatrolEnemy : Enemy
     private Transform currentAnchor;
     private int currentAnchorIndex;
 
-    void Start()
+    protected override void Start()
     {
         StartCoroutine(ActivateEnemyDelay());
     }
 
-    void Update()
+    protected override void Update()
     {
         if (!isActivateDelay){
             currentAnchorIndex = 0;

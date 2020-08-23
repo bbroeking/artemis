@@ -6,7 +6,7 @@ public class RelicUI : ItemContainer
 {
     private Player player;
     private PlayerRelic playerRelic;
-    private Item[] relics;
+    private List<UsableItem> relics;
     protected override void Awake(){
 
     }
@@ -18,18 +18,21 @@ public class RelicUI : ItemContainer
         SetStartingItems();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void UpdateRelicsUI(){
+        Clear();
+        relics = playerRelic.relics;
+        AddRelics();
     }
-
     private void SetStartingItems()
 	{
 		Clear();
-		foreach (Item item in relics)
+        AddRelics();
+	}
+
+    private void AddRelics(){
+        foreach (Item item in relics)
 		{
 			AddItem(item.GetCopy());
 		}
-	}
+    }
 }

@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 18156145653926269}
-  - component: {fileID: 18156145653926268}
   - component: {fileID: 18156145653926266}
   - component: {fileID: 18156145653926271}
   - component: {fileID: 18156145653926267}
+  - component: {fileID: 7893894091856602622}
   m_Layer: 15
-  m_Name: DroppedItem
+  m_Name: FloorItem
   m_TagString: DroppedItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,23 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &18156145653926268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 18156145653926270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca3a2ce0fa5f1a44ea73f35f4bb27f99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactKey: 102
-  item: {fileID: 11400000, guid: f55644f5d6147ab42a336513c54fb73b, type: 2}
-  inventory: {fileID: 0}
-  itemPickupKeyCode: 102
-  spriteRenderer: {fileID: 18156145653926266}
 --- !u!212 &18156145653926266
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -148,3 +131,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7893894091856602622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18156145653926270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace28ed2b93cdbf4397488da345861a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactKey: 102
+  item: {fileID: 0}
+  inventory: {fileID: 0}
+  itemPickupKeyCode: 102
+  spriteRenderer: {fileID: 18156145653926266}

@@ -3,20 +3,20 @@
 public class FloorItem : Interactable
 {
     [SerializeField] public Item item;
-    [SerializeField] Inventory inventory;
-    [SerializeField] KeyCode itemPickupKeyCode = KeyCode.F;
+    [SerializeField] PlayerRelic relics;
+    [SerializeField] KeyCode itemPickupKeyCode = KeyCode.Space;
     [SerializeField] SpriteRenderer spriteRenderer;
 
     public override void Interact(Player player)
     {
         isInRange = true;
-        this.inventory = player.Inventory;
+        this.relics = player.relics;
     }
 
     public override void StopInteract()
     {
         isInRange = false;
-        inventory = null;
+        relics = null;
     }
 
     void Start(){
@@ -31,7 +31,7 @@ public class FloorItem : Interactable
             spriteRenderer.sprite = item.Icon;
         }
         if(isInRange && Input.GetKeyDown(itemPickupKeyCode)){
-            inventory.AddItem(Instantiate(item));
+            relics.AddRelic((UsableItem) Instantiate(item));
             Destroy(this.gameObject);
         }
     }

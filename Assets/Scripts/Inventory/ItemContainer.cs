@@ -46,7 +46,6 @@ public abstract class ItemContainer : MonoBehaviour, IItemContainer
 			if (ItemSlots[i].Item == null)
 			{
 				ItemSlots[i].Item = item;
-				PlayerSingleton.Instance.player.Weight = GetWeight();
 				PlayerSingleton.Instance.player.SetPlayerCurrency();
 				return true;
 			}
@@ -61,7 +60,6 @@ public abstract class ItemContainer : MonoBehaviour, IItemContainer
 			if (ItemSlots[i].Item == item)
 			{
 				ItemSlots[i].Item = null;
-				PlayerSingleton.Instance.player.Weight = GetWeight();
 				PlayerSingleton.Instance.player.SetPlayerCurrency();
 				return true;
 			}
@@ -103,15 +101,4 @@ public abstract class ItemContainer : MonoBehaviour, IItemContainer
 		}
 		return false;
     }
-
-	public int GetWeight(){
-		var result = 0;
-		foreach (var slots in ItemSlots)
-		{
-			if (slots.Item != null)
-				result += slots.Item.weight;
-		}
-
-		return result;
-	}
 }

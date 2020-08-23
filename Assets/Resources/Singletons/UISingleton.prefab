@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 888dfdfbe81d2814dabb0150962fe372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 7205547042018902485}
+  image: {fileID: 386902157}
   dragType: 1
   dropType: 1
 --- !u!1 &585523477
@@ -362,7 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 888dfdfbe81d2814dabb0150962fe372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 7205547042018902485}
+  image: {fileID: 1381908805}
   dragType: 1
   dropType: 1
 --- !u!1 &1982527279
@@ -452,7 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 888dfdfbe81d2814dabb0150962fe372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 7205547042018902485}
+  image: {fileID: 1982527282}
   dragType: 1
   dropType: 1
 --- !u!1 &13182352133137997
@@ -3218,13 +3218,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0cb1072ad83f12b49bca553256d35c90, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

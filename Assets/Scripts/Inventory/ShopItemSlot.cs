@@ -27,7 +27,6 @@ public class ShopItemSlot : ItemSlot
 				image.sprite = _item.Icon;
 				image.color = normalColor;
                 amountText.alpha = 1;
-                amountText.text = _item.goldValue.ToString();
 			}
 
 			if (isPointerOver)

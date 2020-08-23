@@ -43,6 +43,10 @@ public class Character : MonoBehaviour
         isDead = false;
         isDamageDisabled = false;
     }
+
+    protected virtual void Start(){}
+    protected virtual void Update(){}
+
     public int CalculateDamage(){
         int damageRoll = Random.Range(mainHandMinDamage, mainHandMaxDamage);
         float damageCalc = (float)damageRoll * ((float)strength.BaseValue * strengthModifier);
@@ -80,6 +84,7 @@ public class Character : MonoBehaviour
         if (isDamageDisabled) return;
         StartCoroutine(DisableDamage(disableDamageDuration));
         this.currentHealth -= damage;
+        Debug.Log(this.currentHealth);
         if(this.currentHealth <= 0) this.isDead = true;
     }
 
