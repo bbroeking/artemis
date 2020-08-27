@@ -212,58 +212,25 @@ public class LevelGenerator : MonoBehaviour
     {
         bool top, bottom, left, right;
         // Top
-        if (doorTop)
-        {
-            top = true;
-        } else if (wallTop)
-        {
-            top = false;
-        } else
-        {
-            top = Random.value <= 0.5f;
-        }
+        if (doorTop) top = true;
+        else if (wallTop) top = false;
+        else top = Random.value <= 0.5f;
 
         // Bottom
-        if (doorBot)
-        {
-            bottom = true;
-        }
-        else if (wallBot)
-        {
-            bottom = false;
-        }
-        else
-        {
-            bottom = Random.value <= 0.5f;
-        }
+        if (doorBot) bottom = true;
+        else if (wallBot) bottom = false;
+        else bottom = Random.value <= 0.5f;
 
         // Left
-        if (doorLeft)
-        {
-            left = true;
-        }
-        else if (wallLeft)
-        {
-            left = false;
-        }
-        else
-        {
-            left = Random.value <= 0.5f;
-        }
+        if (doorLeft) left = true;
+        else if (wallLeft) left = false;
+        else left = Random.value <= 0.5f;
 
         // Right
-        if (doorRight)
-        {
-            right = true;
-        }
-        else if (wallRight)
-        {
-            right = false;
-        }
-        else
-        {
-            right = Random.value <= 0.5f;
-        }
+        if (doorRight) right = true;
+        else if (wallRight) right = false;
+        else right = Random.value <= 0.5f;
+
         return new Room(vec, top, bottom, left, right);
     }
 
@@ -324,5 +291,13 @@ public class LevelGenerator : MonoBehaviour
             }
             Debug.Log(line+"\n");
         }
+    }
+
+    public DoorType GetDoorType(int xoff, int yoff){
+        int doorLeadToX = currentGridPosX + xoff;
+        int doorLoadToY  = currentGridPosY + yoff;
+        Room room = rooms[currentGridPosX, currentGridPosY];
+        if (room.isBossRoom) return DoorType.Boss;
+        return DoorType.Basic;
     }
 }

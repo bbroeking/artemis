@@ -1,13 +1,16 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum DoorType { Basic, Boss }
 public class LoadNewArea : MonoBehaviour
 {
+    [SerializeField] private SpriteRenderer spriteRenderer;
     private LevelGenerator levelGenerator;
     private Player player;
     private Direction direction;
     private int xoff;
     private int yoff;
+    private DoorType doorType;
 
     void Awake() {
         player = PlayerSingleton.Instance.player;
@@ -38,6 +41,14 @@ public class LoadNewArea : MonoBehaviour
                 break;
             default:
                 break;
+        }
+        doorType = levelGenerator.GetDoorType(xoff, yoff);
+        if (doorType == DoorType.Boss) spriteRenderer.sprite = Resources.Load<Sprite>("Sprites/environment/interactables/portal_red");
+        else spriteRenderer.sprite = Resources.Load<Sprite>("Sprites/environment/interactables/portal_blue");
+
+        // Rotate sprite if North/South
+        if(direction == Direction.North || direction == Direction.South){
+            spriteRenderer.transform.Rotate(Vector3.forward, 90, Space.World);
         }
     }
 

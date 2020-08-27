@@ -84,7 +84,6 @@ public class Character : MonoBehaviour
         if (isDamageDisabled) return;
         StartCoroutine(DisableDamage(disableDamageDuration));
         this.currentHealth -= damage;
-        Debug.Log(this.currentHealth);
         if(this.currentHealth <= 0) this.isDead = true;
     }
 
