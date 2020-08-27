@@ -16,7 +16,8 @@ public class PlayerProjectile : Projectile
     {
         if (collision.gameObject.CompareTag(Tags.enemy)) {
             collision.gameObject.GetComponent<Enemy>()?.Hit(5);
-        } 
+        }
+        Destroy(gameObject);
     }
     private void SetVectorDirection(){
         direction = player.GetShotDirection();

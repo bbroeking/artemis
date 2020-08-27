@@ -27,6 +27,7 @@ public class LootTable : MonoBehaviour
     public void SpawnLoot(){
         if(random.Next(0,1) == 0){
             Item drop = GenerateDrop();
+            if (drop == null) return;
             GameObject loot = Instantiate(droppedItem, transform.position, Quaternion.identity);
             SetLoot(drop, loot);
         }

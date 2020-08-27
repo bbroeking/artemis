@@ -10,6 +10,7 @@ public class Character : MonoBehaviour
     public int CurrentHealth { get { return currentHealth;} }
     public int speed; 
     protected int baseDamage;
+    public int BaseDamage { get { return baseDamage;} }
     public CharacterStat strength;
     public CharacterStat dexterity;
     public CharacterStat intellect;

@@ -48,10 +48,7 @@ public class LevelGenerator : MonoBehaviour
         
         for (int i = 0; i <= numberOfRooms; i++)
         {
-            if (toBeGeneratedPositions.Count == 0)
-            {
-                break;
-            }
+            if (toBeGeneratedPositions.Count == 0) break;
             int vecIdx = Random.Range(0, toBeGeneratedPositions.Count - 1);
             Vector2 vec = toBeGeneratedPositions[vecIdx];
             toBeGeneratedPositions.RemoveAt(vecIdx);
@@ -80,6 +77,7 @@ public class LevelGenerator : MonoBehaviour
     public void PlaceClosedTileInPosition(Vector2 vec, bool isBossRoom){
         Room nr = PlaceClosedTile(vec);
         if(isBossRoom){
+            Debug.Log(nr.ToString());
             nr.SetBossRoom();
         }
         rooms[(int)vec.x + gridSizeX, (int)vec.y + gridSizeY] = nr;
@@ -296,7 +294,7 @@ public class LevelGenerator : MonoBehaviour
     public DoorType GetDoorType(int xoff, int yoff){
         int doorLeadToX = currentGridPosX + xoff;
         int doorLoadToY  = currentGridPosY + yoff;
-        Room room = rooms[currentGridPosX, currentGridPosY];
+        Room room = rooms[doorLeadToX, doorLoadToY];
         if (room.isBossRoom) return DoorType.Boss;
         return DoorType.Basic;
     }

@@ -4,6 +4,7 @@ using System;
 public class Room
 {
     public static GeneratePath generalFloors = new GeneralFloors();
+    public static GeneratePath bossFloors = new BossFloors();
     public Vector2 gridPos;
     public bool top, bottom, left, right;
     public bool isBossRoom;
@@ -43,6 +44,7 @@ public class Room
     }
 
     public void SetBossRoom(){
+        this.floorPath = bossFloors.GenerateRandomFloorPath();
         this.isBossRoom = true;
     }
 

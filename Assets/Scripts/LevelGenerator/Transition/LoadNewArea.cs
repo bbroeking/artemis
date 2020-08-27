@@ -43,6 +43,7 @@ public class LoadNewArea : MonoBehaviour
                 break;
         }
         doorType = levelGenerator.GetDoorType(xoff, yoff);
+        Debug.Log(doorType.ToString());
         if (doorType == DoorType.Boss) spriteRenderer.sprite = Resources.Load<Sprite>("Sprites/environment/interactables/portal_red");
         else spriteRenderer.sprite = Resources.Load<Sprite>("Sprites/environment/interactables/portal_blue");
 

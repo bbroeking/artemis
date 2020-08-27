@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5556182237954703329}
-  - component: {fileID: 8279394991483745407}
   - component: {fileID: 9201335722397023990}
   m_Layer: 19
   m_Name: RightHitBox
@@ -17,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5556182237954703329
 Transform:
   m_ObjectHideFlags: 0
@@ -32,18 +31,6 @@ Transform:
   m_Father: {fileID: 6643960156158524174}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8279394991483745407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6116954923410325531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bf3e6edf4ec6c6498d1de93baeb2072, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!60 &9201335722397023990
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -277,8 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83c1967a1c1a1a84bba08f4159cb492e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
-  currentHealth: 5
+  health: 20
   speed: 5
   castPos: {fileID: 6643960156211540892}
   rb: {fileID: 6643960157044530615}
@@ -290,7 +276,7 @@ MonoBehaviour:
   Inventory: {fileID: 0}
   EquipmentPanel: {fileID: 0}
   statPanel: {fileID: 0}
-  currencyPanel: {fileID: 0}
+  soulPanel: {fileID: 0}
   ShopPanel: {fileID: 0}
   deathMenu: {fileID: 0}
   itemTooltip: {fileID: 0}
@@ -363,10 +349,10 @@ MonoBehaviour:
   regularProjectile: {fileID: 5940879645747822041, guid: 5be82dea52e786040afd4f6a74e919ee,
     type: 3}
   shotDirection: {x: 0, y: 0, z: 0}
-  rightHitbox: {fileID: 6116954923410325531}
-  leftHitbox: {fileID: 8700692063436449969}
-  topHitbox: {fileID: 6934079752874769360}
-  bottomHitbox: {fileID: 7695045561575329202}
+  rightHitbox: {fileID: 9201335722397023990}
+  leftHitbox: {fileID: 5540122027958060892}
+  topHitbox: {fileID: 4181263260406980086}
+  bottomHitbox: {fileID: 801975976920199411}
   player: {fileID: 6643960156158524165}
   spellbook: {fileID: 6643960156158524167}
   relic: {fileID: 2123634583}
@@ -403,6 +389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   relics:
   - {fileID: 11400000, guid: c7415c502494d8b4f89e1f1f14a1abc2, type: 2}
+  relicUI: {fileID: 0}
 --- !u!1 &6934079752874769360
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,7 +399,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6761058921132186757}
-  - component: {fileID: 6159552750256524115}
   - component: {fileID: 801975976920199411}
   m_Layer: 19
   m_Name: ForwardHitBox
@@ -420,7 +406,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6761058921132186757
 Transform:
   m_ObjectHideFlags: 0
@@ -435,18 +421,6 @@ Transform:
   m_Father: {fileID: 6643960156158524174}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6159552750256524115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6934079752874769360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bf3e6edf4ec6c6498d1de93baeb2072, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!60 &801975976920199411
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -486,7 +460,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1044952555766250971}
-  - component: {fileID: 2143424602047381001}
   - component: {fileID: 4181263260406980086}
   m_Layer: 19
   m_Name: BackwardsHitBox
@@ -494,7 +467,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1044952555766250971
 Transform:
   m_ObjectHideFlags: 0
@@ -509,18 +482,6 @@ Transform:
   m_Father: {fileID: 6643960156158524174}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2143424602047381001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7695045561575329202}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bf3e6edf4ec6c6498d1de93baeb2072, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!60 &4181263260406980086
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -605,7 +566,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3405746093834325655}
-  - component: {fileID: 2746851346361849836}
   - component: {fileID: 5540122027958060892}
   m_Layer: 19
   m_Name: LeftHitBox
@@ -613,7 +573,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3405746093834325655
 Transform:
   m_ObjectHideFlags: 0
@@ -628,18 +588,6 @@ Transform:
   m_Father: {fileID: 6643960156158524174}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2746851346361849836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8700692063436449969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bf3e6edf4ec6c6498d1de93baeb2072, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!60 &5540122027958060892
 PolygonCollider2D:
   m_ObjectHideFlags: 0

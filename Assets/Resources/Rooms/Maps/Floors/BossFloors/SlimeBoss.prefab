@@ -55,7 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8924096752867754507}
   m_Layer: 0
-  m_Name: Boss
+  m_Name: SlimeBoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -243,7 +243,7 @@ PrefabInstance:
     - target: {fileID: 8880084106395498574, guid: ddef0bb2a823faf4086bbeae905da035,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8880084106395498574, guid: ddef0bb2a823faf4086bbeae905da035,
         type: 3}
