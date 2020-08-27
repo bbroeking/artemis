@@ -20,5 +20,6 @@ public class SplitSlimeEnemy : Enemy
     {
         base.Hit(damage);
         if (this.isDead) activeSlimes -= 1;
+        Debug.Log(activeSlimes);
     }
 }

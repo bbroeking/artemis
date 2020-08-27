@@ -18,7 +18,7 @@ public class Enemy : Character, IInteractable
     private float distanceFromSpawn = 100f;
     private float disableTime = 0.25f;
     private float magnitude = 200.0f;
-    protected bool canBeDamaged = true;
+    public bool canBeDamaged = true;
     private float hitCooldown = 0.5f;
     protected bool isActivateDelay = true;
     protected float activateDelay = 1.15f;

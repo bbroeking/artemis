@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!60 &4977396 stripped
+PolygonCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4181263260406980086, guid: c813f3217c2246e4eb297d105c9cdcb2,
+    type: 3}
+  m_PrefabInstance: {fileID: 6643960156758155346}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &80578868 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7205547042497976941, guid: 30603e35a5bc9ee4e9229e4169d0687d,
@@ -133,6 +139,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeee6acad2132414bbf89707b9c81fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!60 &295245035 stripped
+PolygonCollider2D:
+  m_CorrespondingSourceObject: {fileID: 801975976920199411, guid: c813f3217c2246e4eb297d105c9cdcb2,
+    type: 3}
+  m_PrefabInstance: {fileID: 6643960156758155346}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &434042709 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7205547042715083788, guid: 30603e35a5bc9ee4e9229e4169d0687d,
@@ -379,6 +391,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fabfae95815cc6441ab98e5e8745e0c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!60 &1351840536 stripped
+PolygonCollider2D:
+  m_CorrespondingSourceObject: {fileID: 9201335722397023990, guid: c813f3217c2246e4eb297d105c9cdcb2,
+    type: 3}
+  m_PrefabInstance: {fileID: 6643960156758155346}
+  m_PrefabAsset: {fileID: 0}
+--- !u!60 &1446063680 stripped
+PolygonCollider2D:
+  m_CorrespondingSourceObject: {fileID: 5540122027958060892, guid: c813f3217c2246e4eb297d105c9cdcb2,
+    type: 3}
+  m_PrefabInstance: {fileID: 6643960156758155346}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1530948891 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8058114263042917553, guid: 30603e35a5bc9ee4e9229e4169d0687d,
@@ -1057,6 +1081,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6116954923410325531, guid: c813f3217c2246e4eb297d105c9cdcb2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6643960156158524165, guid: c813f3217c2246e4eb297d105c9cdcb2,
         type: 3}
       propertyPath: Inventory
@@ -1132,10 +1161,25 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 616979287}
+    - target: {fileID: 6934079752874769360, guid: c813f3217c2246e4eb297d105c9cdcb2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7695045561575329202, guid: c813f3217c2246e4eb297d105c9cdcb2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8429465690341246641, guid: c813f3217c2246e4eb297d105c9cdcb2,
         type: 3}
       propertyPath: m_Name
       value: PlayerSingleton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700692063436449969, guid: c813f3217c2246e4eb297d105c9cdcb2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8728669361050094890, guid: c813f3217c2246e4eb297d105c9cdcb2,
         type: 3}
@@ -1147,7 +1191,31 @@ PrefabInstance:
       propertyPath: equipmentCanvasGroup
       value: 
       objectReference: {fileID: 1218710176}
-    m_RemovedComponents: []
+    - target: {fileID: 8728669361050094890, guid: c813f3217c2246e4eb297d105c9cdcb2,
+        type: 3}
+      propertyPath: rightHitbox
+      value: 
+      objectReference: {fileID: 1351840536}
+    - target: {fileID: 8728669361050094890, guid: c813f3217c2246e4eb297d105c9cdcb2,
+        type: 3}
+      propertyPath: leftHitbox
+      value: 
+      objectReference: {fileID: 1446063680}
+    - target: {fileID: 8728669361050094890, guid: c813f3217c2246e4eb297d105c9cdcb2,
+        type: 3}
+      propertyPath: bottomHitbox
+      value: 
+      objectReference: {fileID: 295245035}
+    - target: {fileID: 8728669361050094890, guid: c813f3217c2246e4eb297d105c9cdcb2,
+        type: 3}
+      propertyPath: topHitbox
+      value: 
+      objectReference: {fileID: 4977396}
+    m_RemovedComponents:
+    - {fileID: 6159552750256524115, guid: c813f3217c2246e4eb297d105c9cdcb2, type: 3}
+    - {fileID: 8279394991483745407, guid: c813f3217c2246e4eb297d105c9cdcb2, type: 3}
+    - {fileID: 2746851346361849836, guid: c813f3217c2246e4eb297d105c9cdcb2, type: 3}
+    - {fileID: 2143424602047381001, guid: c813f3217c2246e4eb297d105c9cdcb2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c813f3217c2246e4eb297d105c9cdcb2, type: 3}
 --- !u!1001 &7205547042569507673
 PrefabInstance:

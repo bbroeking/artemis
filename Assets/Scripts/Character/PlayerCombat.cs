@@ -15,10 +15,10 @@ public class PlayerCombat : MonoBehaviour
     public Vector3 shotDirection = Vector3.zero;
 
     [Header("Hitbox")]
-    [SerializeField] private GameObject rightHitbox;
-    [SerializeField] private GameObject leftHitbox;
-    [SerializeField] private GameObject topHitbox;
-    [SerializeField] private GameObject bottomHitbox;
+    [SerializeField] private Collider2D rightHitbox;
+    [SerializeField] private Collider2D leftHitbox;
+    [SerializeField] private Collider2D topHitbox;
+    [SerializeField] private Collider2D bottomHitbox;
     
     [Header("Components")]
     [SerializeField] private Player player;
@@ -70,23 +70,28 @@ public class PlayerCombat : MonoBehaviour
         Instantiate(wave);
     }
     private void CheckHitbox(){
+        Collider2D[] enemiesToDamage = new Collider2D[20]; // maybe i dont want to do this?
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.useLayerMask = true;
+        filter.SetLayerMask(whatIsEnemy);
+
         if(player.lastMoveDirection == MoveDirection.Up){
-            StartCoroutine(CheckHitBoxEnabler(topHitbox));
+            Physics2D.OverlapCollider(topHitbox, filter, enemiesToDamage);
         }
         else if(player.lastMoveDirection == MoveDirection.Down){
-            StartCoroutine(CheckHitBoxEnabler(bottomHitbox));
+            Physics2D.OverlapCollider(bottomHitbox, filter, enemiesToDamage);
         }
         else if(player.lastMoveDirection == MoveDirection.Left){
-            StartCoroutine(CheckHitBoxEnabler(leftHitbox));
+            Physics2D.OverlapCollider(leftHitbox, filter, enemiesToDamage);
         }
         else if(player.lastMoveDirection == MoveDirection.Right){
-            StartCoroutine(CheckHitBoxEnabler(rightHitbox));
+            Physics2D.OverlapCollider(rightHitbox, filter, enemiesToDamage);
         }
-    }
-    private IEnumerator CheckHitBoxEnabler(GameObject hitbox){
-        hitbox.SetActive(true);
-        yield return new WaitForSeconds(0.4f);
-        hitbox.SetActive(false);
+
+        for (int enem = 0; enem < enemiesToDamage.Length; enem++){
+            if (enemiesToDamage[enem] == null) break;
+            enemiesToDamage[enem].GetComponent<Enemy>().Hit(5);
+        }
     }
     void Cast()
     {
