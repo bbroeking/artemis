@@ -1141,6 +1141,16 @@ PrefabInstance:
       propertyPath: soulPanel
       value: 
       objectReference: {fileID: 603879444}
+    - target: {fileID: 6643960156158524165, guid: c813f3217c2246e4eb297d105c9cdcb2,
+        type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643960156158524165, guid: c813f3217c2246e4eb297d105c9cdcb2,
+        type: 3}
+      propertyPath: currentHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6643960156158524166, guid: c813f3217c2246e4eb297d105c9cdcb2,
         type: 3}
       propertyPath: healthbar

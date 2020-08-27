@@ -35,7 +35,7 @@ public class PlayerResources : MonoBehaviour
     }
     public void SetHealthbar()
     {
-        healthbar.SetHealth(player.currentHealth);
+        healthbar.SetHealth(player.CurrentHealth);
     }
     public void UseEssence(int essence){
         if(activeSoul == Soul.gravity){

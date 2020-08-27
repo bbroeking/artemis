@@ -6,7 +6,8 @@ public class Character : MonoBehaviour
 {
     [Header("Character")]
     public int health;
-    public int currentHealth;
+    protected int currentHealth;
+    public int CurrentHealth { get { return currentHealth;} }
     public int speed; 
     protected int baseDamage;
     public CharacterStat strength;
@@ -28,7 +29,6 @@ public class Character : MonoBehaviour
     protected float disableDamageDuration = 0.75f;
 
     protected virtual void Awake(){
-        health = 5;
         currentHealth = health;
         speed  = 6;
         baseDamage = 1;

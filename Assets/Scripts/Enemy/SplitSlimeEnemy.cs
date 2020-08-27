@@ -12,14 +12,11 @@ public class SplitSlimeEnemy : Enemy
     }
 
     public override void SpawnLoot(){
-        if(activeSlimes != 0) return;
-        base.SpawnLoot();
-
+        activeSlimes -= 1;
+        if(activeSlimes == 0) base.SpawnLoot();
     }
     public override void Hit(int damage)
     {
         base.Hit(damage);
-        if (this.isDead) activeSlimes -= 1;
-        Debug.Log(activeSlimes);
     }
 }

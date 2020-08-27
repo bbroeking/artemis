@@ -300,14 +300,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d0f3db53e0b194394e7259f1c8d8cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 35
-  currentHealth: 35
+  health: 10
   speed: 0
   aIDestination: {fileID: 3850890619224503544}
   aIPath: {fileID: 5925134501717123139}
   anim: {fileID: 1163065602598983679}
   lootTable: {fileID: 0}
   spawnLocation: {fileID: 0}
+  canBeDamaged: 1
 --- !u!114 &1973871216670185155
 MonoBehaviour:
   m_ObjectHideFlags: 0
