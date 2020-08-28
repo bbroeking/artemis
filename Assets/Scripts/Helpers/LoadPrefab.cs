@@ -8,6 +8,7 @@ public class LoadPrefab {
         var loadedObject = Resources.Load(filename);
         if (loadedObject == null)
         {
+            Debug.Log("Couldn't Find" + filename);
             throw new FileNotFoundException("...no file found - please check the configuration");
         }
         return loadedObject;

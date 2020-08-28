@@ -30,10 +30,11 @@ TagManager:
   - south
   - east
   - west
-  - NPC
-  - shop
   - spikes
   - hitbox
+  - nextLevelPortal
+  - NPC
+  - shop
   layers:
   - Default
   - TransparentFX
