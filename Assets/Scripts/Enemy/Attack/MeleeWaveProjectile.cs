@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MeleeWaveProjectile : PlayerProjectile
 {
-    [SerializeField] Animator animator;
     private MoveDirection moveDirection; 
 
     protected override void Start(){

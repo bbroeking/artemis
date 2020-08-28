@@ -145,4 +145,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   rb: {fileID: 0}
+  animator: {fileID: 0}
   MoveSpeed: 2

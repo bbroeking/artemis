@@ -95,7 +95,7 @@ public class PlayerCombat : MonoBehaviour
     }
     void Cast()
     {
-        GameObject cast = Instantiate(gravitySoul, castPos.position, castPos.rotation);
+        GameObject cast = Instantiate(regularProjectile, castPos.position, castPos.rotation);
         ProjectileHelpers.ObjectIgnores(cast, playerCollider);
     }
     private IEnumerator Cooldown()

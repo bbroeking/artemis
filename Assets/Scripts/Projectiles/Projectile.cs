@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField] protected Player player;
     [SerializeField] protected Rigidbody2D rb;
+    [SerializeField] protected Animator animator;
     protected Vector3 pos;
     protected Vector3 direction = Vector3.up;
     public float MoveSpeed = 2.0f;
@@ -23,7 +24,8 @@ public class Projectile : MonoBehaviour
         player = PlayerSingleton.Instance.player;
         pos = transform.position;
         rb = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, duration);
+        animator = GetComponent<Animator>();
+        Invoke("TriggerDestruction", duration);
     }
     protected virtual void Update(){
         pos += Quaternion.Euler(xRotation, yRotation, zRotation) * direction 
@@ -38,5 +40,8 @@ public class Projectile : MonoBehaviour
     }
     public virtual void SetDirection(Vector3 direction){
         this.direction = direction;
+    }
+    protected virtual void TriggerDestruction(){
+        animator.SetBool("Expired", true);
     }
 }

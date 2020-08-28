@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 6839433947504847233}
   - component: {fileID: 7186273250579861452}
   - component: {fileID: -1141728652423025735}
-  - component: {fileID: -4363364701163015956}
+  - component: {fileID: 1573705848598644385}
+  - component: {fileID: 7396412452079804011}
   m_Layer: 13
   m_Name: ProjectilePrefab
   m_TagString: Untagged
@@ -131,7 +132,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.869893, y: 0.82363254}
   m_EdgeRadius: 0
---- !u!114 &-4363364701163015956
+--- !u!95 &1573705848598644385
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5940879645747822041}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5d43207c9173bad4baacbe80bfc8da8d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7396412452079804011
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,9 +160,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5940879645747822041}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51808319f2ad2d54e9d338981af33779, type: 3}
+  m_Script: {fileID: 11500000, guid: 35edf732af428f245acb46381e87652c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   rb: {fileID: 0}
-  MoveSpeed: 2
+  animator: {fileID: 0}
+  MoveSpeed: 1
