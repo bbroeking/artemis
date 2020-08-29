@@ -510,11 +510,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   spellForce: 10
-  gravitySoul: {fileID: 8030960686836833954, guid: cb323566e55d3f94694465fe13df3674,
+  voidProjectile: {fileID: 5940879645747822041, guid: caa47a5905f081047a2fb40ca3dd7b1d,
     type: 3}
-  poisonNova: {fileID: 5940879645747822041, guid: 6da39d896b0b58f4ebe075ee786948f1,
+  poisonProjectile: {fileID: 5940879645747822041, guid: 5be82dea52e786040afd4f6a74e919ee,
     type: 3}
-  regularProjectile: {fileID: 5940879645747822041, guid: 5be82dea52e786040afd4f6a74e919ee,
+  hellfireProjectile: {fileID: 5940879645747822041, guid: fbea0692a775ba74eae70674d15b8b51,
     type: 3}
   shotDirection: {x: 0, y: 0, z: 0}
   rightHitbox: {fileID: 271706459007082700}

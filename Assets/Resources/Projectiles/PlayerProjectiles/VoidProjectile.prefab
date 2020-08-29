@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1573705848598644385}
   - component: {fileID: 7396412452079804011}
   m_Layer: 13
-  m_Name: ProjectilePrefab
+  m_Name: VoidProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 29025adcc6ce7834ab0d91acc1f8d0af, type: 3}
+  m_Sprite: {fileID: 6666804923165395517, guid: 6928a489fd5fc6e408de76a9389283d6,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -142,7 +143,7 @@ Animator:
   m_GameObject: {fileID: 5940879645747822041}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5d43207c9173bad4baacbe80bfc8da8d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0b528b84199dfa6489351a97222bfee6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

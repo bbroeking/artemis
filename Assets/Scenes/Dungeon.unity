@@ -820,6 +820,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 271706459007082700, guid: 3915d2dcd56efe142a69fed8319567f0,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
+      value: 0.5534049
+      objectReference: {fileID: 0}
+    - target: {fileID: 271706459007082700, guid: 3915d2dcd56efe142a69fed8319567f0,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
+      value: -1.4304109
+      objectReference: {fileID: 0}
+    - target: {fileID: 271706459007082700, guid: 3915d2dcd56efe142a69fed8319567f0,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].x
+      value: 1.3776124
+      objectReference: {fileID: 0}
+    - target: {fileID: 271706459007082700, guid: 3915d2dcd56efe142a69fed8319567f0,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].y
+      value: -0.33819947
+      objectReference: {fileID: 0}
+    - target: {fileID: 271706459007082700, guid: 3915d2dcd56efe142a69fed8319567f0,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
+      value: 0.5180043
+      objectReference: {fileID: 0}
+    - target: {fileID: 271706459007082700, guid: 3915d2dcd56efe142a69fed8319567f0,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
+      value: 0.6540115
+      objectReference: {fileID: 0}
     - target: {fileID: 384647695801242384, guid: 3915d2dcd56efe142a69fed8319567f0,
         type: 3}
       propertyPath: inventoryCanvasGroup

@@ -9,9 +9,12 @@ public class PlayerCombat : MonoBehaviour
     public LayerMask whatIsEnemy;
     public float spellForce;
     private bool isCooldown = false;
-    [SerializeField] GameObject gravitySoul;
-    [SerializeField] GameObject poisonNova;
-    [SerializeField] GameObject regularProjectile;
+
+    [Header("Projectile")]
+    [SerializeField] GameObject voidProjectile;
+    [SerializeField] GameObject poisonProjectile;
+    [SerializeField] GameObject hellfireProjectile;
+    private List<GameObject> projectiles = new List<GameObject>();
     public Vector3 shotDirection = Vector3.zero;
 
     [Header("Hitbox")]
@@ -28,6 +31,12 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private CanvasGroup inventoryCanvasGroup;
     [SerializeField] private CanvasGroup equipmentCanvasGroup;
     [SerializeField] private Animator anim;
+
+    void Start(){
+        projectiles.Add(voidProjectile);
+        projectiles.Add(poisonProjectile);
+        projectiles.Add(hellfireProjectile);
+    }
 
     void Update()
     {
@@ -95,7 +104,8 @@ public class PlayerCombat : MonoBehaviour
     }
     void Cast()
     {
-        GameObject cast = Instantiate(regularProjectile, castPos.position, castPos.rotation);
+        int num = Random.Range(0, projectiles.Count);
+        GameObject cast = Instantiate(projectiles[num], castPos.position, castPos.rotation);
         ProjectileHelpers.ObjectIgnores(cast, playerCollider);
     }
     private IEnumerator Cooldown()
