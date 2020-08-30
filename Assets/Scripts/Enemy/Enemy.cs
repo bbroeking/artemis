@@ -87,7 +87,7 @@ public class Enemy : Character, IInteractable
     public void Interact(Player player)
     {
         if (player.canInteract && !isDead){
-            player.TakeDamage(this.baseDamage);
+            player.Hit(this.baseDamage);
             player.KnockPlayer(this.transform, magnitude, disableTime);
         }
     }

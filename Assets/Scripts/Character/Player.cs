@@ -360,6 +360,11 @@ public class Player : Character
     public void UpdateStatValues(){
         statPanel.UpdateStatValues();
     }
+    public override void Hit(int damage){
+        anim.SetTrigger("Blink");
+        base.Hit(damage);
+        this.TakeDamage(damage);
+    }
     public override void TakeDamage(int damage){
         base.TakeDamage(damage);
         resources.SetHealthbar();

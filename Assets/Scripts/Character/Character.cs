@@ -5,6 +5,7 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     [Header("Character")]
+    [SerializeField] SpriteRenderer spriteRenderer;
     public int health;
     protected int currentHealth;
     public int CurrentHealth { get { return currentHealth;} }
@@ -30,6 +31,7 @@ public class Character : MonoBehaviour
     protected float disableDamageDuration = 0.75f;
 
     protected virtual void Awake(){
+        spriteRenderer = GetComponent<SpriteRenderer>();
         currentHealth = health;
         speed  = 6;
         baseDamage = 1;
@@ -72,9 +74,7 @@ public class Character : MonoBehaviour
         return (float)currentHealth / (float)health;
     }
 
-    public virtual void Hit(int damage){
-        return;
-    }
+    public virtual void Hit(int damage){}
     
     public IEnumerator DisableDamage(float time){
         isDamageDisabled = true;

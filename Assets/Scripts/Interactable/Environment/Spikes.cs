@@ -12,7 +12,7 @@ public class Spikes : Interactable
 
     public override void Interact(Player player){
         if (player.canInteract){
-            player.TakeDamage(spikeDamage);
+            player.Hit(spikeDamage);
             player.KnockPlayer(this.transform, magnitude, disableTime);
         }
     }
