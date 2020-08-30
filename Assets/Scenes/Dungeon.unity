@@ -1095,6 +1095,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6353695544133603894, guid: 9df3281c11c7e9d45b3c92dac6139f0a,
+        type: 3}
+      propertyPath: crosshair
+      value: 
+      objectReference: {fileID: 2800000, guid: 180ed72446d207042a3aefcbd3bd48d7, type: 3}
     - target: {fileID: 6775226536192045642, guid: 9df3281c11c7e9d45b3c92dac6139f0a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3442,11 +3447,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UISingleton
       objectReference: {fileID: 0}
-    - target: {fileID: 7205547042273462908, guid: 30603e35a5bc9ee4e9229e4169d0687d,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 30dc09d688c39a046a960231990a0462, type: 2}
     - target: {fileID: 7205547042416488421, guid: 30603e35a5bc9ee4e9229e4169d0687d,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -4121,16 +4121,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7205547043133900368, guid: 30603e35a5bc9ee4e9229e4169d0687d,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 742
-      objectReference: {fileID: 0}
-    - target: {fileID: 7205547043133900368, guid: 30603e35a5bc9ee4e9229e4169d0687d,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 363
       objectReference: {fileID: 0}
     - target: {fileID: 7205547043150779886, guid: 30603e35a5bc9ee4e9229e4169d0687d,
         type: 3}
