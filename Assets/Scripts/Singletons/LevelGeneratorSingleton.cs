@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelGeneratorSingleton : MonoBehaviour
+public class LevelGeneratorSingleton : GenericSingleton
 {
     public LevelGenerator levelGenerator;
     public static LevelGeneratorSingleton Instance { get; private set; } // static singleton

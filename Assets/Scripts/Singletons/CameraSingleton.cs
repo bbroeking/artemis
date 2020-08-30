@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraSingleton : MonoBehaviour
+public class CameraSingleton : GenericSingleton
 {
     private static bool exists;
     void Awake(){

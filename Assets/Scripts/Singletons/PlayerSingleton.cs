@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PlayerSingleton : MonoBehaviour
+public class PlayerSingleton : GenericSingleton
 {
     public Player player;
     public static PlayerSingleton Instance { get; private set; } 

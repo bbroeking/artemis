@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class ManagerSingleton : MonoBehaviour
+public class ManagerSingleton : GenericSingleton
 {
     private static bool exists;
     void Awake(){

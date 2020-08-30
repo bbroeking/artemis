@@ -32,7 +32,7 @@ public class Player : Character
     [SerializeField] private StatPanel statPanel;
     [SerializeField] public SoulPanel soulPanel;
     [SerializeField] private ShopPanel ShopPanel;
-    [SerializeField] private DeathMenu deathMenu;
+    [SerializeField] private RecapUI recapUI;
     [SerializeField] private ItemTooltip itemTooltip;
     [SerializeField] private Image draggableItem;
     [SerializeField] private ItemSaveManager itemSaveManager;
@@ -57,6 +57,9 @@ public class Player : Character
     }
     protected override void Awake(){
         base.Awake();
+
+        // Find All UI Objects
+        
         strength = new CharacterStat(1);
         dexterity = new CharacterStat(1);
         intellect = new CharacterStat(1);
@@ -371,7 +374,7 @@ public class Player : Character
     }
     public override void Dead(){
         if(isDead){
-            deathMenu.ShowMenu();
+            recapUI.ShowMenu();
         }
     }
     public void Respawn() {
