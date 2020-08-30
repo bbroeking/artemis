@@ -8,9 +8,9 @@ public class PlayerResources : MonoBehaviour
     [SerializeField] private Player player;
 
     [Header("UI")]
-    [SerializeField] private HealthBar healthbar;
-    [SerializeField] private EssenceBar activeEssence;
-    [SerializeField] private EssenceBar inactiveEssence;
+    // [SerializeField] private HealthBar healthbar;
+    // [SerializeField] private EssenceBar activeEssence;
+    // [SerializeField] private EssenceBar inactiveEssence;
 
     [Header("Souls")]
     [SerializeField] private Soul activeSoul;
@@ -27,33 +27,33 @@ public class PlayerResources : MonoBehaviour
         maxEssence = 5;
         activeSoul = Soul.gravity;
         inactiveSoul = Soul.poison;
-        healthbar.SetMaxHealth(player.health);
-        activeEssence.SetMaxEssence(this.maxEssence);
-        inactiveEssence.SetMaxEssence(this.maxEssence);
+        // healthbar.SetMaxHealth(player.health);
+        // activeEssence.SetMaxEssence(this.maxEssence);
+        // inactiveEssence.SetMaxEssence(this.maxEssence);
         this.gravityEssence = this.maxEssence;
         this.poisonEssence = this.maxEssence;
     }
     public void SetHealthbar()
     {
-        healthbar.SetHealth(player.CurrentHealth);
+        // healthbar.SetHealth(player.CurrentHealth);
     }
     public void UseEssence(int essence){
-        if(activeSoul == Soul.gravity){
-            this.gravityEssence -= essence;
-            this.activeEssence.SetEssence(this.gravityEssence);
-        }
-        else if (activeSoul == Soul.poison){
-            this.poisonEssence -= essence;
-            this.activeEssence.SetEssence(this.poisonEssence);
-        }
+        // if(activeSoul == Soul.gravity){
+        //     this.gravityEssence -= essence;
+        //     this.activeEssence.SetEssence(this.gravityEssence);
+        // }
+        // else if (activeSoul == Soul.poison){
+        //     this.poisonEssence -= essence;
+        //     this.activeEssence.SetEssence(this.poisonEssence);
+        // }
     }
     public void SwapActiveSoul(){
-        Soul tempSoul = activeSoul;
-        activeSoul = inactiveSoul;
-        inactiveSoul = tempSoul;
-        EssenceBar temp = activeEssence;
-        activeEssence = inactiveEssence;
-        inactiveEssence = temp;
+        // Soul tempSoul = activeSoul;
+        // activeSoul = inactiveSoul;
+        // inactiveSoul = tempSoul;
+        // EssenceBar temp = activeEssence;
+        // activeEssence = inactiveEssence;
+        // inactiveEssence = temp;
     }
     public int GetActiveEssenceAmount(){
         if(activeSoul == Soul.gravity){

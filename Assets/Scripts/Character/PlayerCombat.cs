@@ -28,8 +28,6 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private Spellbook spellbook;
     [SerializeField] private PlayerRelic relic;
     [SerializeField] private PlayerResources resources;
-    [SerializeField] private CanvasGroup inventoryCanvasGroup;
-    [SerializeField] private CanvasGroup equipmentCanvasGroup;
     [SerializeField] private Animator anim;
 
     void Start(){
@@ -40,32 +38,30 @@ public class PlayerCombat : MonoBehaviour
 
     void Update()
     {
-        if(!inventoryCanvasGroup.blocksRaycasts && !equipmentCanvasGroup.blocksRaycasts){
-            if (Input.GetButtonDown("Fire1"))
-            {
-                if(!isCooldown){
-                    anim.SetTrigger("Attack");
-                    SpawnMeleeWave();
-                    CheckHitbox();
-                    StartCoroutine(Cooldown());
-                }
+        if (Input.GetButtonDown("Fire1"))
+        {
+            if(!isCooldown){
+                anim.SetTrigger("Attack");
+                SpawnMeleeWave();
+                CheckHitbox();
+                StartCoroutine(Cooldown());
             }
-            if (Input.GetKeyDown("up") ||
-                Input.GetKeyDown("down") ||
-                Input.GetKeyDown("left") ||
-                Input.GetKeyDown("right"))
-            {
-                if(Input.GetKeyDown("up")) shotDirection = Vector3.up;
-                else if(Input.GetKeyDown("down")) shotDirection = Vector3.down;
-                else if(Input.GetKeyDown("left")) shotDirection = Vector3.left;
-                else if(Input.GetKeyDown("right")) shotDirection = Vector3.right;
-                if(resources.GetActiveEssenceAmount() > 0) Cast();
-            }
-            if(Input.GetKeyDown(KeyCode.Alpha1)) UseRelicAbility(0);
-            if(Input.GetKeyDown(KeyCode.Alpha2)) UseRelicAbility(1);
-            if(Input.GetKeyDown(KeyCode.Alpha3)) UseRelicAbility(2);
-            if(Input.GetKeyDown(KeyCode.Alpha4)) UseRelicAbility(3);
         }
+        if (Input.GetKeyDown("up") ||
+            Input.GetKeyDown("down") ||
+            Input.GetKeyDown("left") ||
+            Input.GetKeyDown("right"))
+        {
+            if(Input.GetKeyDown("up")) shotDirection = Vector3.up;
+            else if(Input.GetKeyDown("down")) shotDirection = Vector3.down;
+            else if(Input.GetKeyDown("left")) shotDirection = Vector3.left;
+            else if(Input.GetKeyDown("right")) shotDirection = Vector3.right;
+            if(resources.GetActiveEssenceAmount() > 0) Cast();
+        }
+        if(Input.GetKeyDown(KeyCode.Alpha1)) UseRelicAbility(0);
+        if(Input.GetKeyDown(KeyCode.Alpha2)) UseRelicAbility(1);
+        if(Input.GetKeyDown(KeyCode.Alpha3)) UseRelicAbility(2);
+        if(Input.GetKeyDown(KeyCode.Alpha4)) UseRelicAbility(3);     
     }
 
     private void UseRelicAbility(int index){
@@ -79,7 +75,7 @@ public class PlayerCombat : MonoBehaviour
         Instantiate(wave);
     }
     private void CheckHitbox(){
-        Collider2D[] enemiesToDamage = new Collider2D[20]; // maybe i dont want to do this?
+        Collider2D[] enemiesToDamage = new Collider2D[20]; // TODO maybe i dont want to do this?
         ContactFilter2D filter = new ContactFilter2D();
         filter.useLayerMask = true;
         filter.SetLayerMask(whatIsEnemy);
@@ -99,7 +95,7 @@ public class PlayerCombat : MonoBehaviour
 
         for (int enem = 0; enem < enemiesToDamage.Length; enem++){
             if (enemiesToDamage[enem] == null) break;
-            enemiesToDamage[enem].GetComponent<Enemy>().Hit(5);
+            enemiesToDamage[enem].GetComponent<Enemy>().Hit(player.BaseDamage);
         }
     }
     void Cast()

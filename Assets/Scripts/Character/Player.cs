@@ -68,50 +68,50 @@ public class Player : Character
     {
         uISingleton = UISingleton.Instance;
         // Find All UI Objects
-        Inventory = uISingleton.GetComponentInChildren<Inventory>();
-        EquipmentPanel = uISingleton.GetComponentInChildren<EquipmentPanel>();
-        statPanel = uISingleton.GetComponentInChildren<StatPanel>();
+        // Inventory = uISingleton.GetComponentInChildren<Inventory>();
+        // EquipmentPanel = uISingleton.GetComponentInChildren<EquipmentPanel>();
+        // statPanel = uISingleton.GetComponentInChildren<StatPanel>();
         soulPanel = uISingleton.GetComponentInChildren<SoulPanel>();
-        shopPanel = uISingleton.GetComponentInChildren<ShopPanel>();
+        // shopPanel = uISingleton.GetComponentInChildren<ShopPanel>();
         recapUI = uISingleton.GetComponentInChildren<RecapUI>();
         itemTooltip = uISingleton.GetComponentInChildren<ItemTooltip>();
         itemSaveManager = FindObjectOfType<ItemSaveManager>();
 
-        // Setup Events
-        Inventory.OnRightClickEvent += InventoryRightClick;
-        EquipmentPanel.OnRightClickEvent += EquipmentPanelRightClick;
-        shopPanel.OnRightClickEvent += InventoryRightClick; // this needs to have a purchase method
+        // // Setup Events
+        // Inventory.OnRightClickEvent += InventoryRightClick;
+        // EquipmentPanel.OnRightClickEvent += EquipmentPanelRightClick;
+        // shopPanel.OnRightClickEvent += InventoryRightClick; // this needs to have a purchase method
 
-        Inventory.OnPointerEnterEvent += ShowTooltip;
-        EquipmentPanel.OnPointerEnterEvent += ShowTooltip;
-        shopPanel.OnPointerEnterEvent += ShowTooltip;
+        // Inventory.OnPointerEnterEvent += ShowTooltip;
+        // EquipmentPanel.OnPointerEnterEvent += ShowTooltip;
+        // shopPanel.OnPointerEnterEvent += ShowTooltip;
 
-        Inventory.OnPointerExitEvent += HideTooltip;
-        EquipmentPanel.OnPointerExitEvent += HideTooltip;
-        shopPanel.OnPointerExitEvent += HideTooltip;
+        // Inventory.OnPointerExitEvent += HideTooltip;
+        // EquipmentPanel.OnPointerExitEvent += HideTooltip;
+        // shopPanel.OnPointerExitEvent += HideTooltip;
 
-        Inventory.OnBeginDragEvent += BeginDrag;
-        EquipmentPanel.OnBeginDragEvent += BeginDrag;
-        shopPanel.OnBeginDragEvent += BeginDrag;
+        // Inventory.OnBeginDragEvent += BeginDrag;
+        // EquipmentPanel.OnBeginDragEvent += BeginDrag;
+        // shopPanel.OnBeginDragEvent += BeginDrag;
 
-        Inventory.OnEndDragEvent += EndDrag;
-        EquipmentPanel.OnEndDragEvent += EndDrag;
-        shopPanel.OnEndDragEvent += EndDrag;
+        // Inventory.OnEndDragEvent += EndDrag;
+        // EquipmentPanel.OnEndDragEvent += EndDrag;
+        // shopPanel.OnEndDragEvent += EndDrag;
 
-        Inventory.OnDragEvent += BeginDragInventory;
-        EquipmentPanel.OnDragEvent += BeginDragEquipment;
-        shopPanel.OnDragEvent += BeginDragShop;
+        // Inventory.OnDragEvent += BeginDragInventory;
+        // EquipmentPanel.OnDragEvent += BeginDragEquipment;
+        // shopPanel.OnDragEvent += BeginDragShop;
 
-        Inventory.OnDropEvent += Drop;
-        EquipmentPanel.OnDropEvent += Drop;
-        shopPanel.OnDropEvent += DropShop;
+        // Inventory.OnDropEvent += Drop;
+        // EquipmentPanel.OnDropEvent += Drop;
+        // shopPanel.OnDropEvent += DropShop;
 
-        statPanel.SetStats(strength, dexterity, intellect, vitality);
-        statPanel.UpdateStatValues(); 
+        // statPanel.SetStats(strength, dexterity, intellect, vitality);
+        // statPanel.UpdateStatValues(); 
 
-        itemSaveManager.LoadEquipment(this);
-        itemSaveManager.LoadInventory(this);
-        itemSaveManager.LoadCurrency(this);
+        // itemSaveManager.LoadEquipment(this);
+        // itemSaveManager.LoadInventory(this);
+        // itemSaveManager.LoadCurrency(this);
 
         soulPanel.SetCurrency(this.souls);
         soulPanel.UpdateCurrencyValues();
