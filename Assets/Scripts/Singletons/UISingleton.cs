@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class UISingleton : GenericSingleton
 {
-    private static bool exists;
+    public static UISingleton Instance { get; private set; } 
     void Awake(){
-        if(!exists){
-            exists = true;
+        if(Instance == null){
+            Instance = this;
             DontDestroyOnLoad(this.gameObject);
-        } else {
-            Destroy(gameObject);
-        }
+        } 
+        else { Destroy(gameObject); }
     }
 }

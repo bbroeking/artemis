@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraSingleton : GenericSingleton
-{
-    private static bool exists;
+{    
+    public static CameraSingleton Instance { get; private set; } 
     void Awake(){
-        if(!exists){
-            exists = true;
+        if(Instance == null){
+            Instance = this;
             DontDestroyOnLoad(this.gameObject);
-        } else {
-            Destroy(gameObject);
-        }
+        } 
+        else { Destroy(gameObject); }
     }
 }

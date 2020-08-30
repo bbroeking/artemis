@@ -2,13 +2,12 @@
 
 public class ManagerSingleton : GenericSingleton
 {
-    private static bool exists;
+    public static ManagerSingleton Instance { get; private set; } 
     void Awake(){
-        if(!exists){
-            exists = true;
+        if(Instance == null){
+            Instance = this;
             DontDestroyOnLoad(this.gameObject);
-        } else {
-            Destroy(gameObject);
-        }
+        } 
+        else { Destroy(gameObject); }
     }
 }

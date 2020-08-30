@@ -5,7 +5,7 @@ public enum DoorType { Basic, Boss }
 public class LoadNewArea : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer spriteRenderer;
-    private LevelGenerator levelGenerator;
+    [SerializeField] private LevelGenerator levelGenerator;
     private Player player;
     private Direction direction;
     private int xoff;
@@ -14,7 +14,7 @@ public class LoadNewArea : MonoBehaviour
 
     void Awake() {
         player = PlayerSingleton.Instance.player;
-        levelGenerator = GameObject.FindObjectOfType<LevelGenerator>();
+        levelGenerator = LevelGeneratorSingleton.Instance.levelGenerator;
     }
 
     void Start(){

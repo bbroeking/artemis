@@ -27,16 +27,17 @@ public class Player : Character
     public int Weight { get { return weight;} set { weight += value; }}
     
     [Header("UI Panels")]
+    [SerializeField] private UISingleton uISingleton;
     [SerializeField] public Inventory Inventory;
     [SerializeField] public EquipmentPanel EquipmentPanel;
     [SerializeField] private StatPanel statPanel;
     [SerializeField] public SoulPanel soulPanel;
-    [SerializeField] private ShopPanel ShopPanel;
+    [SerializeField] private ShopPanel shopPanel;
     [SerializeField] private RecapUI recapUI;
     [SerializeField] private ItemTooltip itemTooltip;
-    [SerializeField] private Image draggableItem;
+    // [SerializeField] private Image draggableItem;
     [SerializeField] private ItemSaveManager itemSaveManager;
-    [SerializeField] protected BaseItemSlot draggedSlot;
+    // [SerializeField] protected BaseItemSlot draggedSlot;
     
     [Header("Etc")]
     public Vector3 lastDungeonLocation;
@@ -57,47 +58,54 @@ public class Player : Character
     }
     protected override void Awake(){
         base.Awake();
-
-        // Find All UI Objects
-        
         strength = new CharacterStat(1);
         dexterity = new CharacterStat(1);
         intellect = new CharacterStat(1);
         vitality = new CharacterStat(1);
-
-        // Setup Events
-        Inventory.OnRightClickEvent += InventoryRightClick;
-        EquipmentPanel.OnRightClickEvent += EquipmentPanelRightClick;
-        ShopPanel.OnRightClickEvent += InventoryRightClick; // this needs to have a purchase method
-
-        Inventory.OnPointerEnterEvent += ShowTooltip;
-        EquipmentPanel.OnPointerEnterEvent += ShowTooltip;
-        ShopPanel.OnPointerEnterEvent += ShowTooltip;
-
-        Inventory.OnPointerExitEvent += HideTooltip;
-        EquipmentPanel.OnPointerExitEvent += HideTooltip;
-        ShopPanel.OnPointerExitEvent += HideTooltip;
-
-        Inventory.OnBeginDragEvent += BeginDrag;
-        EquipmentPanel.OnBeginDragEvent += BeginDrag;
-        ShopPanel.OnBeginDragEvent += BeginDrag;
-
-        Inventory.OnEndDragEvent += EndDrag;
-        EquipmentPanel.OnEndDragEvent += EndDrag;
-        ShopPanel.OnEndDragEvent += EndDrag;
-
-        Inventory.OnDragEvent += BeginDragInventory;
-        EquipmentPanel.OnDragEvent += BeginDragEquipment;
-        ShopPanel.OnDragEvent += BeginDragShop;
-
-        Inventory.OnDropEvent += Drop;
-        EquipmentPanel.OnDropEvent += Drop;
-        ShopPanel.OnDropEvent += DropShop;
-
     }
 
     protected override void Start()
     {
+        uISingleton = UISingleton.Instance;
+        // Find All UI Objects
+        Inventory = uISingleton.GetComponentInChildren<Inventory>();
+        EquipmentPanel = uISingleton.GetComponentInChildren<EquipmentPanel>();
+        statPanel = uISingleton.GetComponentInChildren<StatPanel>();
+        soulPanel = uISingleton.GetComponentInChildren<SoulPanel>();
+        shopPanel = uISingleton.GetComponentInChildren<ShopPanel>();
+        recapUI = uISingleton.GetComponentInChildren<RecapUI>();
+        itemTooltip = uISingleton.GetComponentInChildren<ItemTooltip>();
+        itemSaveManager = FindObjectOfType<ItemSaveManager>();
+
+        // Setup Events
+        Inventory.OnRightClickEvent += InventoryRightClick;
+        EquipmentPanel.OnRightClickEvent += EquipmentPanelRightClick;
+        shopPanel.OnRightClickEvent += InventoryRightClick; // this needs to have a purchase method
+
+        Inventory.OnPointerEnterEvent += ShowTooltip;
+        EquipmentPanel.OnPointerEnterEvent += ShowTooltip;
+        shopPanel.OnPointerEnterEvent += ShowTooltip;
+
+        Inventory.OnPointerExitEvent += HideTooltip;
+        EquipmentPanel.OnPointerExitEvent += HideTooltip;
+        shopPanel.OnPointerExitEvent += HideTooltip;
+
+        Inventory.OnBeginDragEvent += BeginDrag;
+        EquipmentPanel.OnBeginDragEvent += BeginDrag;
+        shopPanel.OnBeginDragEvent += BeginDrag;
+
+        Inventory.OnEndDragEvent += EndDrag;
+        EquipmentPanel.OnEndDragEvent += EndDrag;
+        shopPanel.OnEndDragEvent += EndDrag;
+
+        Inventory.OnDragEvent += BeginDragInventory;
+        EquipmentPanel.OnDragEvent += BeginDragEquipment;
+        shopPanel.OnDragEvent += BeginDragShop;
+
+        Inventory.OnDropEvent += Drop;
+        EquipmentPanel.OnDropEvent += Drop;
+        shopPanel.OnDropEvent += DropShop;
+
         statPanel.SetStats(strength, dexterity, intellect, vitality);
         statPanel.UpdateStatValues(); 
 
@@ -114,9 +122,9 @@ public class Player : Character
     }
     private void OnDestroy()
 	{
-        itemSaveManager.SaveEquipment(this);
-        itemSaveManager.SaveInventory(this);
-        itemSaveManager.SaveCurrency(this);
+        // itemSaveManager.SaveEquipment(this);
+        // itemSaveManager.SaveInventory(this);
+        // itemSaveManager.SaveCurrency(this);
 	}
     protected override void Update()
     {
@@ -143,10 +151,10 @@ public class Player : Character
 	{
 		if (itemSlot.Item != null)
 		{
-			draggedSlot = itemSlot;
-			draggableItem.sprite = itemSlot.Item.Icon;
-			draggableItem.transform.position = Input.mousePosition;
-			draggableItem.gameObject.SetActive(true);
+			// draggedSlot = itemSlot;
+			// draggableItem.sprite = itemSlot.Item.Icon;
+			// draggableItem.transform.position = Input.mousePosition;
+			// draggableItem.gameObject.SetActive(true);
 		}
 	}
 
@@ -154,7 +162,7 @@ public class Player : Character
     {
         if (itemSlot.Item != null)
 		{
-            draggedSlot.dragType = SlotType.Equipment;
+            // draggedSlot.dragType = SlotType.Equipment;
             BeginDrag(itemSlot);
         }
     }
@@ -162,7 +170,7 @@ public class Player : Character
     {
         if (itemSlot.Item != null)
 		{
-            draggedSlot.dragType = SlotType.Inventory;
+            // draggedSlot.dragType = SlotType.Inventory;
             BeginDrag(itemSlot);
         }
     }
@@ -170,47 +178,47 @@ public class Player : Character
     {
         if (itemSlot.Item != null)
 		{
-            draggedSlot.dragType = SlotType.Shop;
+            // draggedSlot.dragType = SlotType.Shop;
             BeginDrag(itemSlot);
         }
     }
     
 	private void Drag(BaseItemSlot itemSlot)
 	{
-		draggableItem.transform.position = Input.mousePosition;
+		// draggableItem.transform.position = Input.mousePosition;
 	}
 	private void EndDrag(BaseItemSlot itemSlot)
 	{
-        if (draggedSlot != null){
-            draggedSlot.dragType = SlotType.None;
-		    draggedSlot = null;
-		    draggableItem.gameObject.SetActive(false);
-        }
+        // if (draggedSlot != null){
+        //     draggedSlot.dragType = SlotType.None;
+		//     draggedSlot = null;
+		    // draggableItem.gameObject.SetActive(false);
+        // }
 	}
 
     private void DropShop(BaseItemSlot dropItemSlot){
-        if (draggedSlot == null) return;
-        if (dropItemSlot.dragType == SlotType.Equipment) return;
-        if (dropItemSlot.dragType == SlotType.Shop) return;
-        if (dropItemSlot.CanReceiveItem(dropItemSlot.Item)) {
-            AddCurrency(draggedSlot.Item);
-            SwapItems(dropItemSlot);
-        }
+        // if (draggedSlot == null) return;
+        // if (dropItemSlot.dragType == SlotType.Equipment) return;
+        // if (dropItemSlot.dragType == SlotType.Shop) return;
+        // if (dropItemSlot.CanReceiveItem(dropItemSlot.Item)) {
+        //     AddCurrency(draggedSlot.Item);
+        //     SwapItems(dropItemSlot);
+        // }
     }
 
 	private void Drop(BaseItemSlot dropItemSlot)
 	{
-		if (draggedSlot == null) return;
+		// if (draggedSlot == null) return;
 
-        if (draggedSlot.dragType == SlotType.Shop && dropItemSlot.Item == null && CanAfford(draggedSlot)){
-            RemoveCurrency(draggedSlot.Item);
-            SwapItems(dropItemSlot);
-        }
+        // if (draggedSlot.dragType == SlotType.Shop && dropItemSlot.Item == null && CanAfford(draggedSlot)){
+        //     RemoveCurrency(draggedSlot.Item);
+        //     SwapItems(dropItemSlot);
+        // }
 
-		else if (dropItemSlot.CanReceiveItem(draggedSlot.Item) && draggedSlot.CanReceiveItem(dropItemSlot.Item))
-		{
-			SwapItems(dropItemSlot);
-		}
+		// else if (dropItemSlot.CanReceiveItem(draggedSlot.Item) && draggedSlot.CanReceiveItem(dropItemSlot.Item))
+		// {
+		// 	SwapItems(dropItemSlot);
+		// }
 	}
     public void SetPlayerCurrency(){
         soulPanel.SetCurrency(this.souls);
@@ -228,30 +236,30 @@ public class Player : Character
         SetPlayerCurrency();
     }
     private void BasicSwap(BaseItemSlot dropItemSlot){
-        Item draggedItem = draggedSlot.Item;
-		draggedSlot.Item = null;
-		dropItemSlot.Item = draggedItem;
+        // Item draggedItem = draggedSlot.Item;
+		// draggedSlot.Item = null;
+		// dropItemSlot.Item = draggedItem;
     }
     private void SwapItems(BaseItemSlot dropItemSlot)
 	{
-		EquippableItem dragEquipItem = draggedSlot.Item as EquippableItem;
-		EquippableItem dropEquipItem = dropItemSlot.Item as EquippableItem;
+		// EquippableItem dragEquipItem = draggedSlot.Item as EquippableItem;
+		// EquippableItem dropEquipItem = dropItemSlot.Item as EquippableItem;
 
-		if (dropItemSlot is EquipmentSlot)
-		{
-			if (dragEquipItem != null) dragEquipItem.Equip(this);
-			if (dropEquipItem != null) dropEquipItem.Unequip(this);
-		}
-		if (draggedSlot is EquipmentSlot)
-		{
-			if (dragEquipItem != null) dragEquipItem.Unequip(this);
-			if (dropEquipItem != null) dropEquipItem.Equip(this);
-		}
-		statPanel.UpdateStatValues();
+		// if (dropItemSlot is EquipmentSlot)
+		// {
+		// 	if (dragEquipItem != null) dragEquipItem.Equip(this);
+		// 	if (dropEquipItem != null) dropEquipItem.Unequip(this);
+		// }
+		// if (draggedSlot is EquipmentSlot)
+		// {
+		// 	if (dragEquipItem != null) dragEquipItem.Unequip(this);
+		// 	if (dropEquipItem != null) dropEquipItem.Equip(this);
+		// }
+		// statPanel.UpdateStatValues();
 
-		Item draggedItem = draggedSlot.Item;
-		draggedSlot.Item = dropItemSlot.Item;
-		dropItemSlot.Item = draggedItem;
+		// Item draggedItem = draggedSlot.Item;
+		// draggedSlot.Item = dropItemSlot.Item;
+		// dropItemSlot.Item = draggedItem;
 	}
     private void InventoryRightClick(BaseItemSlot itemSlot){
         EquippableItem equippableItem = itemSlot.Item as EquippableItem;

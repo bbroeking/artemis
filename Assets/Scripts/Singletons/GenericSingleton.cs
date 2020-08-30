@@ -15,7 +15,7 @@ public class GenericSingleton : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
     
-    protected void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    protected virtual void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         // here you can use scene.buildIndex or scene.name to check which scene was loaded
         if (scene.name == Scenes.MainMenu){

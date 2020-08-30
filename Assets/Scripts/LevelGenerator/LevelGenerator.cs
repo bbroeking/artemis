@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelGenerator : MonoBehaviour
+public class LevelGenerator : GenericSingleton
 {
     [Header("Level Attributes")]
     public int gridSizeX = 5; // number of squares in the positive and negative x direction
@@ -21,16 +21,17 @@ public class LevelGenerator : MonoBehaviour
     private Room currentRoom;
     public Room CurrentRoom { get { return currentRoom; }}
 
-    void Awake()
-    {
-        if(!levelExists){
-            levelExists = true;
-            DontDestroyOnLoad(this.gameObject);
+    public static LevelGenerator Instance { get; private set; } 
+    void Awake(){
+        if(Instance == null){
+            Instance = this;
             GenerateLevel();
-        } else {
-            Destroy(gameObject);
-        }
+            DontDestroyOnLoad(this.gameObject);
+        } 
+        else { Destroy(gameObject); }
     }
+
+
 
     public void GenerateLevel(){
         takenPositions = new List<Vector2>();
