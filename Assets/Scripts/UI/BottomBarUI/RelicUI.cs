@@ -7,8 +7,11 @@ public class RelicUI : ItemContainer
     private Player player;
     private PlayerRelic playerRelic;
     private List<UsableItem> relics;
-    protected override void Awake(){
+    [SerializeField] private ItemTooltip itemTooltip;
+    [SerializeField] private UISingleton uISingleton;
 
+    protected override void Awake(){
+        base.Awake();
     }
     void Start()
     {
@@ -16,6 +19,12 @@ public class RelicUI : ItemContainer
         playerRelic = player.relics;
         relics = playerRelic.relics;
         SetStartingItems();
+
+        uISingleton = UISingleton.Instance;
+        itemTooltip = uISingleton.GetComponentInChildren<ItemTooltip>();
+
+        this.OnPointerEnterEvent += ShowTooltip;
+        this.OnPointerExitEvent += HideTooltip;
     }
 
     public void UpdateRelicsUI(){
@@ -35,4 +44,17 @@ public class RelicUI : ItemContainer
 			AddItem(item.GetCopy());
 		}
     }
+ 
+	private void ShowTooltip(BaseItemSlot itemSlot)
+	{
+		if (itemSlot.Item != null)
+			itemTooltip.ShowTooltip(itemSlot.Item);
+	}
+	private void HideTooltip(BaseItemSlot itemSlot)
+	{
+		if (itemTooltip.gameObject.activeSelf)
+		{
+			itemTooltip.HideTooltip();
+		}
+	}
 }

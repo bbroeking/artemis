@@ -12,7 +12,6 @@ public abstract class ItemContainer : MonoBehaviour, IItemContainer
 	public event Action<BaseItemSlot> OnEndDragEvent;
 	public event Action<BaseItemSlot> OnDragEvent;
 	public event Action<BaseItemSlot> OnDropEvent;
-	[SerializeField] CanvasGroup canvasGroup;
 
 	protected virtual void OnValidate()
 	{

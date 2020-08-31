@@ -8,6 +8,8 @@ public class PlayerResources : MonoBehaviour
     [SerializeField] private Player player;
 
     [Header("UI")]
+    [SerializeField] private UISingleton uISingleton;
+    [SerializeField] private SanityUI sanityUI;
     // [SerializeField] private HealthBar healthbar;
     // [SerializeField] private EssenceBar activeEssence;
     // [SerializeField] private EssenceBar inactiveEssence;
@@ -22,8 +24,10 @@ public class PlayerResources : MonoBehaviour
     public int gravityEssence;
     public int poisonEssence;
     public int maxEssence;
-
+    
     void Start() {
+        uISingleton = UISingleton.Instance;
+        sanityUI = uISingleton.GetComponentInChildren<SanityUI>();
         maxEssence = 5;
         activeSoul = Soul.gravity;
         inactiveSoul = Soul.poison;
@@ -33,8 +37,9 @@ public class PlayerResources : MonoBehaviour
         this.gravityEssence = this.maxEssence;
         this.poisonEssence = this.maxEssence;
     }
-    public void SetHealthbar()
+    public void SetSanity()
     {
+        sanityUI.SetSanity(player.CurrentHealth, player.health);
         // healthbar.SetHealth(player.CurrentHealth);
     }
     public void UseEssence(int essence){

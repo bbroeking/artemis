@@ -344,7 +344,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: c78c5978c9b390046b9a1ddb8ad244bd, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.764151, g: 0.764151, b: 0.764151, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -432,6 +432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83c1967a1c1a1a84bba08f4159cb492e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
   health: 20
   speed: 5
   castPos: {fileID: 2324115846911995302}
@@ -441,16 +442,16 @@ MonoBehaviour:
   resources: {fileID: 2324115847002498364}
   spellbook: {fileID: 2324115847002498365}
   relics: {fileID: 8968071499135699373}
+  uISingleton: {fileID: 0}
   Inventory: {fileID: 0}
   EquipmentPanel: {fileID: 0}
   statPanel: {fileID: 0}
   soulPanel: {fileID: 0}
-  ShopPanel: {fileID: 0}
-  deathMenu: {fileID: 0}
+  shopPanel: {fileID: 0}
+  recapUI: {fileID: 0}
+  relicUI: {fileID: 0}
   itemTooltip: {fileID: 0}
-  draggableItem: {fileID: 0}
   itemSaveManager: {fileID: 0}
-  draggedSlot: {fileID: 0}
   lastDungeonLocation: {x: 0, y: 0, z: 0}
   scene: 
   backToDungeon: 0
@@ -471,9 +472,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2324115847002498367}
-  healthbar: {fileID: 0}
-  activeEssence: {fileID: 0}
-  inactiveEssence: {fileID: 0}
+  uISingleton: {fileID: 0}
+  sanityUI: {fileID: 0}
   activeSoul: 0
   inactiveSoul: 1
   gravityEssence: 5
@@ -525,8 +525,6 @@ MonoBehaviour:
   spellbook: {fileID: 2324115847002498365}
   relic: {fileID: 8968071499135699373}
   resources: {fileID: 2324115847002498364}
-  inventoryCanvasGroup: {fileID: 0}
-  equipmentCanvasGroup: {fileID: 0}
   anim: {fileID: 2324115848615046578}
 --- !u!114 &2324115847002498365
 MonoBehaviour:
@@ -5368,8 +5366,8 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.4, y: 0.3}
+    - - {x: 0.23572528, y: 0.07662323}
       - {x: -0.5, y: -0.1}
       - {x: -0.5, y: -0.8}
-      - {x: 0.4, y: -1.1}
-      - {x: 1, y: -0.35}
+      - {x: 0.2839564, y: -0.9043459}
+      - {x: 0.6590843, y: -0.4151844}

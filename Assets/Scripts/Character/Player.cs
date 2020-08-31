@@ -34,10 +34,9 @@ public class Player : Character
     [SerializeField] public SoulPanel soulPanel;
     [SerializeField] private ShopPanel shopPanel;
     [SerializeField] private RecapUI recapUI;
+    [SerializeField] private RelicUI relicUI;
     [SerializeField] private ItemTooltip itemTooltip;
-    // [SerializeField] private Image draggableItem;
     [SerializeField] private ItemSaveManager itemSaveManager;
-    // [SerializeField] protected BaseItemSlot draggedSlot;
     
     [Header("Etc")]
     public Vector3 lastDungeonLocation;
@@ -68,43 +67,11 @@ public class Player : Character
     {
         uISingleton = UISingleton.Instance;
         // Find All UI Objects
-        // Inventory = uISingleton.GetComponentInChildren<Inventory>();
-        // EquipmentPanel = uISingleton.GetComponentInChildren<EquipmentPanel>();
-        // statPanel = uISingleton.GetComponentInChildren<StatPanel>();
         soulPanel = uISingleton.GetComponentInChildren<SoulPanel>();
-        // shopPanel = uISingleton.GetComponentInChildren<ShopPanel>();
         recapUI = uISingleton.GetComponentInChildren<RecapUI>();
+        relicUI = uISingleton.GetComponentInChildren<RelicUI>();
         itemTooltip = uISingleton.GetComponentInChildren<ItemTooltip>();
         itemSaveManager = FindObjectOfType<ItemSaveManager>();
-
-        // // Setup Events
-        // Inventory.OnRightClickEvent += InventoryRightClick;
-        // EquipmentPanel.OnRightClickEvent += EquipmentPanelRightClick;
-        // shopPanel.OnRightClickEvent += InventoryRightClick; // this needs to have a purchase method
-
-        // Inventory.OnPointerEnterEvent += ShowTooltip;
-        // EquipmentPanel.OnPointerEnterEvent += ShowTooltip;
-        // shopPanel.OnPointerEnterEvent += ShowTooltip;
-
-        // Inventory.OnPointerExitEvent += HideTooltip;
-        // EquipmentPanel.OnPointerExitEvent += HideTooltip;
-        // shopPanel.OnPointerExitEvent += HideTooltip;
-
-        // Inventory.OnBeginDragEvent += BeginDrag;
-        // EquipmentPanel.OnBeginDragEvent += BeginDrag;
-        // shopPanel.OnBeginDragEvent += BeginDrag;
-
-        // Inventory.OnEndDragEvent += EndDrag;
-        // EquipmentPanel.OnEndDragEvent += EndDrag;
-        // shopPanel.OnEndDragEvent += EndDrag;
-
-        // Inventory.OnDragEvent += BeginDragInventory;
-        // EquipmentPanel.OnDragEvent += BeginDragEquipment;
-        // shopPanel.OnDragEvent += BeginDragShop;
-
-        // Inventory.OnDropEvent += Drop;
-        // EquipmentPanel.OnDropEvent += Drop;
-        // shopPanel.OnDropEvent += DropShop;
 
         // statPanel.SetStats(strength, dexterity, intellect, vitality);
         // statPanel.UpdateStatValues(); 
@@ -378,7 +345,7 @@ public class Player : Character
     }
     public override void TakeDamage(int damage){
         base.TakeDamage(damage);
-        resources.SetHealthbar();
+        resources.SetSanity();
     }
     public override void Dead(){
         if(isDead){
@@ -387,7 +354,7 @@ public class Player : Character
     }
     public void Respawn() {
         currentHealth = health;
-        resources.SetHealthbar();
+        resources.SetSanity();
         isDead = false;
     }
     public void KnockPlayer(Transform objectApplyingForce,

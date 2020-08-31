@@ -74,7 +74,6 @@ public class BaseItemSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
 	public void OnPointerEnter(PointerEventData eventData)
 	{
 		isPointerOver = true;
-
 		if (OnPointerEnterEvent != null)
 			OnPointerEnterEvent(this);
 	}
