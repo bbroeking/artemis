@@ -168,7 +168,6 @@ GameObject:
   - component: {fileID: 7004473854437749031}
   - component: {fileID: 7004473854437749029}
   - component: {fileID: 7004473854437749030}
-  - component: {fileID: 7004473854437749035}
   - component: {fileID: 1870554770}
   m_Layer: 9
   m_Name: Melee
@@ -423,27 +422,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d0f3db53e0b194394e7259f1c8d8cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
-  speed: 0
+  spriteRenderer: {fileID: 7004473854437749033}
+  health: 1
+  speed: 1
   aIDestination: {fileID: 7004473854437749025}
   aIPath: {fileID: 7004473854437749026}
   anim: {fileID: 1870554770}
   lootTable: {fileID: 0}
   spawnLocation: {fileID: 0}
   canBeDamaged: 1
---- !u!114 &7004473854437749035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7004473854437749024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6a52f5af1a5be84ca3fd52e6ce5bbc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aiPath: {fileID: 7004473854437749026}
 --- !u!95 &1870554770
 Animator:
   serializedVersion: 3

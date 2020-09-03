@@ -374,8 +374,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: add6b6e5e8356cf45b22a4e8933acc70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
   health: 5
-  speed: 0
+  speed: 1
   aIDestination: {fileID: 3850890619224503544}
   aIPath: {fileID: 5925134501717123139}
   anim: {fileID: 1163065602598983679}

@@ -304,8 +304,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d0f3db53e0b194394e7259f1c8d8cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
   health: 10
-  speed: 0
+  speed: 1
   aIDestination: {fileID: 3850890619224503544}
   aIPath: {fileID: 5925134501717123139}
   anim: {fileID: 1163065602598983679}
@@ -388,6 +389,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8880084106395498574}
     m_Modifications:
+    - target: {fileID: 1583859259361875010, guid: 2dc5b9af0a08f7f439a854cca28e6ed5,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2752345320319905030, guid: 2dc5b9af0a08f7f439a854cca28e6ed5,
         type: 3}
       propertyPath: m_Name
@@ -401,7 +407,7 @@ PrefabInstance:
     - target: {fileID: 6497865797104419345, guid: 2dc5b9af0a08f7f439a854cca28e6ed5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6497865797104419345, guid: 2dc5b9af0a08f7f439a854cca28e6ed5,
         type: 3}

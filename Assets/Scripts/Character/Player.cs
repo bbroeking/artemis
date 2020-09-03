@@ -41,6 +41,7 @@ public class Player : Character
     public MoveDirection lastMoveDirection = MoveDirection.Up;
     public Vector3 movement;
     public bool canInteract;
+    private float disableTime = 0.25f;
 
     private void OnValidate(){
         if(itemTooltip == null){
@@ -182,10 +183,12 @@ public class Player : Character
         if(canInteract){
             canInteract = false;
             yield return new WaitForSeconds(time);
+            anim.SetTrigger("CanBeDamaged");
             canInteract = true;
         }
     }
     public override void Hit(int damage){
+        StartCoroutine(DisableInteract(disableTime));
         anim.SetTrigger("Blink");
         base.Hit(damage);
         this.TakeDamage(damage);
@@ -210,7 +213,6 @@ public class Player : Character
     {
         var dir = objectApplyingForce.position - transform.position;
         rb.AddForce(-dir.normalized * magnitude);
-        StartCoroutine(DisableInteract(disableTime));
         StartCoroutine(DisableMovement(disableTime));
     }
     public Vector3 GetShotDirection(){

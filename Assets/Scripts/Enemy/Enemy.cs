@@ -33,6 +33,7 @@ public class Enemy : Character, IInteractable
         if (spawnLocation == null) spawnLocation = this.transform; // current location is spawn location if not spawned with spawner
         isInAggroRange = false;
         internalAggroCooldown = 0f;
+        GetComponent<AIPath>().maxSpeed = this.speed;
         StartCoroutine(ActivateEnemyDelay());
     }
 
