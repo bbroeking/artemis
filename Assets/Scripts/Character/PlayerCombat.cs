@@ -95,6 +95,7 @@ public class PlayerCombat : MonoBehaviour
 
         for (int enem = 0; enem < enemiesToDamage.Length; enem++){
             if (enemiesToDamage[enem] == null) break;
+            Debug.Log(player.BaseDamage);
             enemiesToDamage[enem].GetComponent<Enemy>().Hit(player.BaseDamage);
         }
     }

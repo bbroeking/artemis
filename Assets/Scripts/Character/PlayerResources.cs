@@ -40,7 +40,6 @@ public class PlayerResources : MonoBehaviour
     public void SetSanity()
     {
         sanityUI.SetSanity(player.CurrentHealth, player.health);
-        // healthbar.SetHealth(player.CurrentHealth);
     }
     public void UseEssence(int essence){
         // if(activeSoul == Soul.gravity){

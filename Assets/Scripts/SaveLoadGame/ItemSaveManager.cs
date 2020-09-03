@@ -9,43 +9,43 @@ public class ItemSaveManager : MonoBehaviour
 	private const string EquipmentFileName = "Equipment";
 	private const string CurrencyFileName = "Currency";
 
-	public void LoadInventory(Player player)
-	{
-		ItemContainerSaveData savedSlots = ItemSaveIO.LoadItems(InventoryFileName);
-		if (savedSlots == null) return;
-		player.Inventory.Clear();
+	// public void LoadInventory(Player player)
+	// {
+	// 	ItemContainerSaveData savedSlots = ItemSaveIO.LoadItems(InventoryFileName);
+	// 	if (savedSlots == null) return;
+	// 	player.Inventory.Clear();
 
-		for (int i = 0; i < savedSlots.SavedSlots.Length; i++)
-		{
-			ItemSlot itemSlot = player.Inventory.ItemSlots[i];
-			ItemSlotSaveData savedSlot = savedSlots.SavedSlots[i];
+	// 	for (int i = 0; i < savedSlots.SavedSlots.Length; i++)
+	// 	{
+	// 		ItemSlot itemSlot = player.Inventory.ItemSlots[i];
+	// 		ItemSlotSaveData savedSlot = savedSlots.SavedSlots[i];
 
-			if (savedSlot == null)
-			{
-				itemSlot.Item = null;
-			}
-			else
-			{
-				itemSlot.Item = itemDatabase.GetItemCopy(savedSlot.ItemID);
-			}
-		}
-	}
+	// 		if (savedSlot == null)
+	// 		{
+	// 			itemSlot.Item = null;
+	// 		}
+	// 		else
+	// 		{
+	// 			itemSlot.Item = itemDatabase.GetItemCopy(savedSlot.ItemID);
+	// 		}
+	// 	}
+	// }
 
-	public void LoadEquipment(Player player)
-	{
-		ItemContainerSaveData savedSlots = ItemSaveIO.LoadItems(EquipmentFileName);
-		if (savedSlots == null) return;
+	// public void LoadEquipment(Player player)
+	// {
+	// 	ItemContainerSaveData savedSlots = ItemSaveIO.LoadItems(EquipmentFileName);
+	// 	if (savedSlots == null) return;
 
-		foreach (ItemSlotSaveData savedSlot in savedSlots.SavedSlots)
-		{
-			if (savedSlot == null) {
-				continue;
-			}
-			Item item = itemDatabase.GetItemCopy(savedSlot.ItemID);
-			player.Inventory.AddItem(item);
-			player.Equip((EquippableItem)item);
-		}
-	}
+	// 	foreach (ItemSlotSaveData savedSlot in savedSlots.SavedSlots)
+	// 	{
+	// 		if (savedSlot == null) {
+	// 			continue;
+	// 		}
+	// 		Item item = itemDatabase.GetItemCopy(savedSlot.ItemID);
+	// 		player.Inventory.AddItem(item);
+	// 		player.Equip((EquippableItem)item);
+	// 	}
+	// }
 
 	public void LoadCurrency(Player player){
 		CurrencySaveData save = ItemSaveIO.LoadCurrency(CurrencyFileName);
@@ -54,15 +54,15 @@ public class ItemSaveManager : MonoBehaviour
 		player.Souls = save.souls;
 	}
 
-	public void SaveInventory(Player player)
-	{
-		SaveItems(player.Inventory.ItemSlots, InventoryFileName);
-	}
+	// public void SaveInventory(Player player)
+	// {
+	// 	SaveItems(player.Inventory.ItemSlots, InventoryFileName);
+	// }
 
-	public void SaveEquipment(Player player)
-	{
-		SaveItems(player.EquipmentPanel.equipmentSlots, EquipmentFileName);
-	}
+	// public void SaveEquipment(Player player)
+	// {
+	// 	SaveItems(player.EquipmentPanel.equipmentSlots, EquipmentFileName);
+	// }
 
 	public void SaveCurrency(Player player){
 		SaveCurrencies(player.Gold, player.Souls, CurrencyFileName);

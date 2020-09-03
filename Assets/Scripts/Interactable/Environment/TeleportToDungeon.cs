@@ -8,7 +8,7 @@ public class TeleportToDungeon : MonoBehaviour
     private Player player;
 
     void Start(){
-        player = FindObjectOfType<Player>();
+        player = PlayerSingleton.Instance.player;
     }
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.tag == "player"){

@@ -23,24 +23,16 @@ public class Player : Character
     public int Gold { get { return gold;} set { gold += value; }}
     protected int souls;
     public int Souls { get { return souls;} set { souls += value; }}
-    protected int weight;
-    public int Weight { get { return weight;} set { weight += value; }}
     
     [Header("UI Panels")]
     [SerializeField] private UISingleton uISingleton;
-    [SerializeField] public Inventory Inventory;
-    [SerializeField] public EquipmentPanel EquipmentPanel;
-    [SerializeField] private StatPanel statPanel;
     [SerializeField] public SoulPanel soulPanel;
-    [SerializeField] private ShopPanel shopPanel;
     [SerializeField] private RecapUI recapUI;
     [SerializeField] private RelicUI relicUI;
     [SerializeField] private ItemTooltip itemTooltip;
     [SerializeField] private ItemSaveManager itemSaveManager;
     
     [Header("Etc")]
-    public Vector3 lastDungeonLocation;
-    public Vector3 LastDungeonLocation { get { return lastDungeonLocation; } set { lastDungeonLocation = value; } }
     public string scene;
     public bool backToDungeon;
     public Direction lastDirection;
@@ -114,79 +106,7 @@ public class Player : Character
 			itemTooltip.HideTooltip();
 		}
 	}
-	private void BeginDrag(BaseItemSlot itemSlot)
-	{
-		if (itemSlot.Item != null)
-		{
-			// draggedSlot = itemSlot;
-			// draggableItem.sprite = itemSlot.Item.Icon;
-			// draggableItem.transform.position = Input.mousePosition;
-			// draggableItem.gameObject.SetActive(true);
-		}
-	}
 
-    private void BeginDragEquipment(BaseItemSlot itemSlot)
-    {
-        if (itemSlot.Item != null)
-		{
-            // draggedSlot.dragType = SlotType.Equipment;
-            BeginDrag(itemSlot);
-        }
-    }
-    private void BeginDragInventory(BaseItemSlot itemSlot)
-    {
-        if (itemSlot.Item != null)
-		{
-            // draggedSlot.dragType = SlotType.Inventory;
-            BeginDrag(itemSlot);
-        }
-    }
-    private void BeginDragShop(BaseItemSlot itemSlot)
-    {
-        if (itemSlot.Item != null)
-		{
-            // draggedSlot.dragType = SlotType.Shop;
-            BeginDrag(itemSlot);
-        }
-    }
-    
-	private void Drag(BaseItemSlot itemSlot)
-	{
-		// draggableItem.transform.position = Input.mousePosition;
-	}
-	private void EndDrag(BaseItemSlot itemSlot)
-	{
-        // if (draggedSlot != null){
-        //     draggedSlot.dragType = SlotType.None;
-		//     draggedSlot = null;
-		    // draggableItem.gameObject.SetActive(false);
-        // }
-	}
-
-    private void DropShop(BaseItemSlot dropItemSlot){
-        // if (draggedSlot == null) return;
-        // if (dropItemSlot.dragType == SlotType.Equipment) return;
-        // if (dropItemSlot.dragType == SlotType.Shop) return;
-        // if (dropItemSlot.CanReceiveItem(dropItemSlot.Item)) {
-        //     AddCurrency(draggedSlot.Item);
-        //     SwapItems(dropItemSlot);
-        // }
-    }
-
-	private void Drop(BaseItemSlot dropItemSlot)
-	{
-		// if (draggedSlot == null) return;
-
-        // if (draggedSlot.dragType == SlotType.Shop && dropItemSlot.Item == null && CanAfford(draggedSlot)){
-        //     RemoveCurrency(draggedSlot.Item);
-        //     SwapItems(dropItemSlot);
-        // }
-
-		// else if (dropItemSlot.CanReceiveItem(draggedSlot.Item) && draggedSlot.CanReceiveItem(dropItemSlot.Item))
-		// {
-		// 	SwapItems(dropItemSlot);
-		// }
-	}
     public void SetPlayerCurrency(){
         soulPanel.SetCurrency(this.souls);
         soulPanel.UpdateCurrencyValues();
@@ -202,77 +122,7 @@ public class Player : Character
         Souls = Souls - item.soulValue;
         SetPlayerCurrency();
     }
-    private void BasicSwap(BaseItemSlot dropItemSlot){
-        // Item draggedItem = draggedSlot.Item;
-		// draggedSlot.Item = null;
-		// dropItemSlot.Item = draggedItem;
-    }
-    private void SwapItems(BaseItemSlot dropItemSlot)
-	{
-		// EquippableItem dragEquipItem = draggedSlot.Item as EquippableItem;
-		// EquippableItem dropEquipItem = dropItemSlot.Item as EquippableItem;
 
-		// if (dropItemSlot is EquipmentSlot)
-		// {
-		// 	if (dragEquipItem != null) dragEquipItem.Equip(this);
-		// 	if (dropEquipItem != null) dropEquipItem.Unequip(this);
-		// }
-		// if (draggedSlot is EquipmentSlot)
-		// {
-		// 	if (dragEquipItem != null) dragEquipItem.Unequip(this);
-		// 	if (dropEquipItem != null) dropEquipItem.Equip(this);
-		// }
-		// statPanel.UpdateStatValues();
-
-		// Item draggedItem = draggedSlot.Item;
-		// draggedSlot.Item = dropItemSlot.Item;
-		// dropItemSlot.Item = draggedItem;
-	}
-    private void InventoryRightClick(BaseItemSlot itemSlot){
-        EquippableItem equippableItem = itemSlot.Item as EquippableItem;
-        if(equippableItem != null){
-            Equip(equippableItem);
-        }
-        else if (itemSlot.Item is UsableItem){
-            UsableItem useableItem = (UsableItem) itemSlot.Item;
-            useableItem.Use(this);
-
-            if(useableItem.isConsumable){
-                Inventory.RemoveItem(useableItem);
-                useableItem.Destroy();
-            }
-        }
-    }
-    private void EquipmentPanelRightClick(BaseItemSlot itemSlot){
-        EquippableItem equippableItem = itemSlot.Item as EquippableItem;
-        if(equippableItem != null){
-            Unequip(equippableItem);
-        }
-    }
-    public void Equip(EquippableItem item){
-        if(Inventory.RemoveItem(item)){
-            EquippableItem previousItem;
-            if(EquipmentPanel.AddItem(item, out previousItem)){
-                if(previousItem != null){
-                    Inventory.AddItem(previousItem);
-                    previousItem.Unequip(this);
-                    statPanel.UpdateStatValues();
-                }
-                item.Equip(this);
-                statPanel.UpdateStatValues();
-            }
-            else {
-                Inventory.RemoveItem(item);
-            }
-        }
-    }
-    public void Unequip(EquippableItem item){
-        if(!Inventory.CanAddItem(item) && EquipmentPanel.RemoveItem(item)){
-            item.Unequip(this);
-            statPanel.UpdateStatValues();
-            Inventory.AddItem(item);
-        }
-    }
     private void Move()
     {
         movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
@@ -334,9 +184,6 @@ public class Player : Character
             yield return new WaitForSeconds(time);
             canInteract = true;
         }
-    }
-    public void UpdateStatValues(){
-        statPanel.UpdateStatValues();
     }
     public override void Hit(int damage){
         anim.SetTrigger("Blink");

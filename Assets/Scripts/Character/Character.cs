@@ -33,7 +33,6 @@ public class Character : MonoBehaviour
     protected virtual void Awake(){
         spriteRenderer = GetComponent<SpriteRenderer>();
         currentHealth = health;
-        speed  = 6;
         baseDamage = 1;
         mainHandMaxDamage = 1;
         mainHandMinDamage = 1;

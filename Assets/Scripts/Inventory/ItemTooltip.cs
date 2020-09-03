@@ -9,19 +9,23 @@ public class ItemTooltip : MonoBehaviour
     [SerializeField] Text ItemNameText;
     [SerializeField] Text ItemTypeText;
 	[SerializeField] Text ItemDescriptionText;
+    [SerializeField] CanvasGroup canvas;
 
     private StringBuilder sb = new StringBuilder();
 
+    void Start(){
+        canvas = GetComponent<CanvasGroup>();
+    }
     public void ShowTooltip(Item item)
     {   
         ItemNameText.text = item.name;
 		ItemTypeText.text = item.GetItemType();
 		ItemDescriptionText.text = item.GetDescription();
-		gameObject.SetActive(true);
+        canvas.alpha = 1;
     }
 
     public void HideTooltip(){
-        gameObject.SetActive(false);
+        canvas.alpha = 0;
     }
 
     private void AddStat(float value, string statName){

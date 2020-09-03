@@ -12,7 +12,7 @@ public class FloorSoul : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other){
         if (other.CompareTag("player")) AttractCurrency(other.transform);
-        if (Vector3.Distance(this.transform.position, other.transform.position) < 0.75){
+        if ((this.transform.position -other.transform.position).sqrMagnitude < 0.75 * 0.75){ 
             player.Souls = amount;
             player.SetPlayerCurrency();
             Destroy(this.gameObject);

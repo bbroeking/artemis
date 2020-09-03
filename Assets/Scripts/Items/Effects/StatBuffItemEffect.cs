@@ -17,7 +17,6 @@ public class StatBuffItemEffect : UsableItemEffect
                 StatModifier statModifier = new StatModifier(BuffAmount, StatModType.Flat, this);
                 player.strength.AddModifier(statModifier);
                 player.StartCoroutine(RemoveBuff(player, statModifier, Duration));
-                player.UpdateStatValues();
                 break;
             case StatType.Dexterity:
                 break;
@@ -38,6 +37,5 @@ public class StatBuffItemEffect : UsableItemEffect
     private IEnumerator RemoveBuff(Player player, StatModifier statModifier, float duration){
         yield return new WaitForSeconds(duration);
         player.strength.RemoveModifier(statModifier);
-        player.UpdateStatValues();
     }
 }
