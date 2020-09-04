@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Item Effects/Demonologies Relic/Imp")]
-public class ImpEmbersEffect : UsableItemEffect
+[CreateAssetMenu(menuName = "Item Effects/Venom Relic/Beam")]
+public class VenomBeamEffect : UsableItemEffect
 {
     public override void ExecuteEffect(UsableItem parentItem, Player player)
     {

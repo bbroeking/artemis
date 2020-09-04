@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VoidGuardianEffect : MonoBehaviour
+[CreateAssetMenu(menuName = "Item Effects/Demonologist Relic/VoidGuardian")]
+public class VoidGuardianEffect : UsableItemEffect
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void ExecuteEffect(UsableItem parentItem, Player player)
     {
-        
+        throw new System.NotImplementedException();
     }
 
-    // Update is called once per frame
-    void Update()
+    public override string GetDescription()
     {
-        
+        throw new System.NotImplementedException();
     }
 }
