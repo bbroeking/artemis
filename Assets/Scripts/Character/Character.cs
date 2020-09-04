@@ -48,37 +48,11 @@ public class Character : MonoBehaviour
 
     protected virtual void Start(){}
     protected virtual void Update(){}
-
-    public int CalculateDamage(){
-        int damageRoll = Random.Range(mainHandMinDamage, mainHandMaxDamage);
-        float damageCalc = (float)damageRoll * ((float)strength.BaseValue * strengthModifier);
-        return (int)Mathf.Ceil(damageCalc);
-    }
-    protected void CalculateBaseHealth(){
-        float healthCalc = 30f + 30f * ((float)vitality.BaseValue * vitalityModifier);
-        this.health = (int)Mathf.Ceil(healthCalc);
-    }
-    protected void CalculateInteralAttackCD(){
-        this.internalAttackCooldown = 2f * ((float)dexterity.BaseValue * dexterityModifier);
-    }
-    protected void CalculateSpellDamage(){
-        this.spellDamage = 1 + (int)this.intellect.Value;
-    }
-    protected void UpdateModifiers(){
-        CalculateBaseHealth();
-        CalculateInteralAttackCD();
-        CalculateSpellDamage();
-    }
     public float percentHealth(){
-        return (float)currentHealth / (float)health;
+        return (float) currentHealth / (float) health;
     }
-
-    public virtual void Hit(int damage){}
-    
-    public IEnumerator DisableDamage(float time){
-        isDamageDisabled = true;
-        yield return new WaitForSeconds(time);
-        isDamageDisabled = false;
+    public virtual void Hit(int damage){
+        Debug.LogWarning("Hit funciton is not implemented for object");
     }
     public virtual void TakeDamage(int damage){
         if (isDamageDisabled) return;
@@ -86,8 +60,12 @@ public class Character : MonoBehaviour
         this.currentHealth -= damage;
         if(this.currentHealth <= 0) this.isDead = true;
     }
-
+    public IEnumerator DisableDamage(float time){
+        isDamageDisabled = true;
+        yield return new WaitForSeconds(time);
+        isDamageDisabled = false;
+    }
     public virtual void Dead(){
-        return;
+        Debug.LogWarning("Dead funciton is not implemented for object");
     }
 }

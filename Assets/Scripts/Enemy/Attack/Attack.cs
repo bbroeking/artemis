@@ -5,11 +5,11 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     [Header("Attack")]
-    [SerializeField] private Animator anim;
-    [SerializeField] protected Transform attackPos;
-    [SerializeField] protected LayerMask whatIsEnemy;
-    [SerializeField] protected float attackRange;
-    [SerializeField] protected int damage;
+    // [SerializeField] private Animator anim;
+    // [SerializeField] protected Transform attackPos;
+    // [SerializeField] protected LayerMask whatIsEnemy;
+    // [SerializeField] protected int damage;
+    // protected Player player;
     public float baseCooldown = 2f;
     private float internalCooldown;
     private bool isInRange;
@@ -24,19 +24,15 @@ public class Attack : MonoBehaviour
     void Update()
     {
         if(internalCooldown <= 0 && isInRange){
-            anim.SetTrigger("Attack");
+            //anim.SetTrigger("Attack");
             TriggerAttack();
             internalCooldown = baseCooldown;
         } else {
             internalCooldown -= Time.deltaTime;
         }
     }
-    void OnDrawGizmosSelected(){
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPos.position, attackRange);
-    }
 
     protected virtual void TriggerAttack(){
-        return;
+        Debug.LogWarning("Trigger Attack funciton is not implemented for object");
     }
 }

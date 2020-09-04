@@ -33,8 +33,12 @@ public class Projectile : MonoBehaviour
         transform.position = pos;
     }
     protected virtual void OnCollisionEnter2D(Collision2D collision){
-        if(collision.gameObject.CompareTag(Tags.player)){
-            player.Hit(damage);
+        if(collision.gameObject.CompareTag(Tags.player) ||
+           collision.gameObject.CompareTag(Tags.imp) ||
+           collision.gameObject.CompareTag(Tags.infernal) || 
+           collision.gameObject.CompareTag(Tags.voidGuardian))
+        {
+            collision.gameObject.GetComponent<Character>().Hit(damage);
         }
         Destroy(gameObject);
     }

@@ -5,21 +5,19 @@ using UnityEngine;
 public class RangedAttack : Attack
 {
     [Header("Ranged Attack")]
-    [SerializeField] GameObject projectile;
-    [SerializeField] Collider2D chracterCollider;
-    [SerializeField] Enemy enemy;
+    [SerializeField] private GameObject projectile;
+    private Collider2D ignoredCharacterCollider;
 
     void Start(){
-        chracterCollider = GetComponent<Collider2D>();
-        enemy = GetComponent<Enemy>();
+        ignoredCharacterCollider = GetComponent<Collider2D>();
     }
     protected override void TriggerAttack(){
         for (int i = 0; i < 6; i++)
         {
-            GameObject spell = Instantiate(projectile, enemy.transform.position, Quaternion.identity);
-            Projectile pj = spell.GetComponent<Projectile>();
-            pj.ZRotation = 60f * i;
-            Physics2D.IgnoreCollision(spell.GetComponent<Collider2D>(), chracterCollider);
+            GameObject spell = Instantiate(projectile, this.transform.position, Quaternion.identity);
+            Projectile proj = spell.GetComponent<Projectile>();
+            proj.ZRotation = 60f * i;
+            Physics2D.IgnoreCollision(spell.GetComponent<Collider2D>(), ignoredCharacterCollider);
         }
     }
 }
