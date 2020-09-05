@@ -10,16 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae87a60a12c199a439338ce5cdd4182e, type: 3}
-  m_Name: Venom Nova
+  m_Name: ImpBrimstone
   m_EditorClassIdentifier: 
-  id: c7415c502494d8b4f89e1f1f14a1abc2
+  id: 95e6a32b5d877e241b62e468226cdc35
   ItemName: 
-  Icon: {fileID: 21300000, guid: 29cd69be99171c144b5635d230d3b1f9, type: 3}
-  MaximumStacks: 1
+  Icon: {fileID: 21300000, guid: 0715e5cc671558043983e9dcb505541a, type: 3}
   dropChance: 0
-  weight: 1
-  goldValue: 1
   soulValue: 0
   isConsumable: 0
   Effects:
-  - {fileID: 11400000, guid: 46d042a13187b284681a4ad82d482abb, type: 2}
+  - {fileID: 11400000, guid: 0e518dfa7ba3ca04592cef87f6ad29e6, type: 2}

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Pathfinding;
 using UnityEngine;
 
-public class Imp : Character
+public class Imp : Character, ISummonable
 {
     [Header("Imp")]
     [SerializeField] protected AIDestinationSetter aIDestination;
@@ -17,7 +17,6 @@ public class Imp : Character
 
         aIPath.maxSpeed = this.speed;
         aIDestination.target = player.transform;
-
     }
 
     // Update is called once per frame
@@ -35,5 +34,11 @@ public class Imp : Character
         Destroy(this.gameObject);
     }
 
+    public void Summon()
+    {
+        string pathToPrefab = "Demons/Imp";
+        GameObject demon = (GameObject) LoadPrefab.LoadPrefabFromFile(pathToPrefab);
+        Instantiate(demon, player.transform.position, Quaternion.identity);
+    }
 
 }

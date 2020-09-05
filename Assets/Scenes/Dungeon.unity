@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 902326347}
   m_Layer: 8
   m_Name: Imp
-  m_TagString: infernal
+  m_TagString: imp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -252,11 +252,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 902326346}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14de7e2e17cac31418f6f7f5ad5b3c2b, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ca1ae8811279fa42b6791e4ab16e9cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   baseCooldown: 2
-  projectile: {fileID: 5940879645747822041, guid: fbea0692a775ba74eae70674d15b8b51,
+  projectile: {fileID: 5940879645747822041, guid: b465e3451788c584d9f25b24c72004c5,
     type: 3}
 --- !u!114 &902326348
 MonoBehaviour:
@@ -377,7 +377,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 6935104067923976009, guid: f1d7d22837f0bf84191e4d007a225c67,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -398,7 +398,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902326346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.64, y: -0.7, z: 0}
+  m_LocalPosition: {x: -2.64, y: -2.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1439956774}
@@ -412,7 +412,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902326346}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -663,7 +663,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

@@ -14,7 +14,7 @@ public class Attack : MonoBehaviour
     private float internalCooldown;
     private bool isInRange;
     public bool IsInRange { get { return isInRange; } set { isInRange = value; } }
-
+    public Transform targetInRange;
     void Start()
     {
         internalCooldown = 0;

@@ -2,16 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Infernal : MonoBehaviour
+public class Infernal : Character, ISummonable
 {
+    public void Summon()
+    {
+        throw new System.NotImplementedException();
+    }
+
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
         
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
         
     }

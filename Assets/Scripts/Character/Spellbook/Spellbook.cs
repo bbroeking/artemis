@@ -10,6 +10,11 @@ public class Spellbook : MonoBehaviour
     [Header("Projectiles")]
     [SerializeField] GameObject projectilePrefab;
 
+    // Demons
+    [SerializeField] public Imp Imp;
+    [SerializeField] public VoidGuardian VoidGuardian;
+    [SerializeField] public Infernal Infernal;
+
     public void PoisonNova(Transform firePoint)
     {   
         for (int i = 0; i < 6; i++)

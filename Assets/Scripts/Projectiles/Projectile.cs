@@ -9,7 +9,8 @@ public class Projectile : MonoBehaviour
     [SerializeField] protected Animator animator;
     protected Vector3 pos;
     protected Vector3 direction = Vector3.up;
-    public float MoveSpeed = 2.0f;
+    public Vector3 Direction { get { return direction;} set { direction = value; }}
+    protected float MoveSpeed = 2.0f;
     protected int damage = 1;
     protected float duration = 3.0f;
     public int Damage { get { return damage;} set { damage = value; }}

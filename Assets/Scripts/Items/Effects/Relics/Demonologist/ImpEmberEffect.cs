@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Item Effects/Demonologies Relic/Imp")]
+[CreateAssetMenu(menuName = "Item Effects/Demonologist Relic/Imp")]
 public class ImpEmbersEffect : UsableItemEffect
 {
     public override void ExecuteEffect(UsableItem parentItem, Player player)
     {
-        throw new System.NotImplementedException();
+        player.spellbook.Imp.Summon();
     }
 
     public override string GetDescription()
     {
-        throw new System.NotImplementedException();
+        return "Summons an imp";
     }
 }

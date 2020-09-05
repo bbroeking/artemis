@@ -12,11 +12,13 @@ public class AttackTrigger : MonoBehaviour
     void Start(){
         attack = GetComponentInParent<Attack>();
     }
-    void OnTriggerEnter2D(){
+    void OnTriggerEnter2D(Collider2D collision){
         attack.IsInRange = true;
+        attack.targetInRange = collision.gameObject.transform;
     }
 
-    void OnTriggerExit2D(){
+    void OnTriggerExit2D(Collider2D collision){
        attack.IsInRange = false;
+       attack.targetInRange = null;
     }
 }

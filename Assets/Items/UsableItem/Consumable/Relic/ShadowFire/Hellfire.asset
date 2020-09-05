@@ -10,15 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae87a60a12c199a439338ce5cdd4182e, type: 3}
-  m_Name: Venom Fang
+  m_Name: Hellfire
   m_EditorClassIdentifier: 
   id: 
   ItemName: 
   Icon: {fileID: 0}
-  MaximumStacks: 1
   dropChance: 0
-  weight: 1
-  goldValue: 1
   soulValue: 0
   isConsumable: 0
   Effects: []
