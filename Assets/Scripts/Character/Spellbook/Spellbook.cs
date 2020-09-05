@@ -10,7 +10,7 @@ public class Spellbook : MonoBehaviour
     [Header("Projectiles")]
     [SerializeField] GameObject projectilePrefab;
 
-    // Demons
+    [Header("Demons")]
     [SerializeField] public Imp Imp;
     [SerializeField] public VoidGuardian VoidGuardian;
     [SerializeField] public Infernal Infernal;

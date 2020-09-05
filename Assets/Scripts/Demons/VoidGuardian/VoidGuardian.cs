@@ -1,26 +1,27 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-
-public class VoidGuardian :  Character, ISummonable
+﻿using UnityEngine;
+using Pathfinding;
+public class VoidGuardian : Demon, ISummonable
 {
-    protected Player player;
+    private VoidZone voidZone;
+    public bool isZoneDepleted;
 
     public void Summon(Player player)
     {
-        throw new System.NotImplementedException();
+        string pathToPrefab = "Singletons/Demons/VoidGuardianSingleton";
+        GameObject demon = (GameObject) LoadPrefab.LoadPrefabFromFile(pathToPrefab);
+        Instantiate(demon, player.transform.position, Quaternion.identity);
+        player.VoidGuardian = this;
     }
 
-    // Start is called before the first frame update
     protected override void Start()
     {
-        player = PlayerSingleton.Instance.player;
+        base.Start();
+        voidZone = GetComponentInChildren<VoidZone>();
     }
 
-    // Update is called once per frame
     protected override void Update()
     {
-        
+        base.Update();
+        if (isZoneDepleted) voidZone.gameObject.SetActive(false);
     }
 }

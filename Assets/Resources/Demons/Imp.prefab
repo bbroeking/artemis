@@ -98,11 +98,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5566121760222046959}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98c475a27ea1b2944b11d64f4817f18d, type: 3}
+  m_Script: {fileID: 11500000, guid: dc60ab206a7ca1140856999e92098d20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
   health: 3
+  currentHealth: 0
   speed: 4
   aIDestination: {fileID: 0}
   aIPath: {fileID: 0}
@@ -219,7 +220,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5566121760222046959}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ca1ae8811279fa42b6791e4ab16e9cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a65c18a28f32974785b1b8f647e60bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   baseCooldown: 2

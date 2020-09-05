@@ -34,6 +34,7 @@ public class Player : Character
     
     [Header("Demons")]
     public Imp Imp;
+    public VoidGuardian VoidGuardian;
 
     [Header("Etc")]
     public string scene;

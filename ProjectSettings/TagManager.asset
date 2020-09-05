@@ -26,6 +26,8 @@ TagManager:
   - imp
   - infernal
   - voidguardian
+  - enemyprojectile
+  - voidzone
   layers:
   - Default
   - TransparentFX

@@ -7,11 +7,11 @@ public class VoidGuardianEffect : UsableItemEffect
 {
     public override void ExecuteEffect(UsableItem parentItem, Player player)
     {
-        throw new System.NotImplementedException();
+        player.spellbook.VoidGuardian.Summon(player);
     }
 
     public override string GetDescription()
     {
-        throw new System.NotImplementedException();
+        return "Void Guardian Effect";
     }
 }

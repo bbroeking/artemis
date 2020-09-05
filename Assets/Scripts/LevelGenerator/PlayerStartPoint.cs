@@ -12,8 +12,13 @@ public class PlayerStartPoint : MonoBehaviour
         player = PlayerSingleton.Instance.player;
         if(player.lastDirection == comingFrom){
             player.transform.position = this.transform.position;
-            if(ImpSingleton.Instance != null && ImpSingleton.Instance.imp != null) {
+            if(ImpSingleton.Instance != null &&
+               ImpSingleton.Instance.imp != null) {
                 ImpSingleton.Instance.imp.transform.position = this.transform.position;
+            }
+            if(VoidGuardianSingleton.Instance != null &&
+               VoidGuardianSingleton.Instance.voidGuardian != null) {
+                VoidGuardianSingleton.Instance.voidGuardian.transform.position = this.transform.position;
             }
         }
     }

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -3139215706763277761}
   m_Layer: 14
   m_Name: Projectile
-  m_TagString: Untagged
+  m_TagString: enemyprojectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   rb: {fileID: 0}
-  MoveSpeed: 2
+  animator: {fileID: 0}
 --- !u!95 &-3139215706763277761
 Animator:
   serializedVersion: 3

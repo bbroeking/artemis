@@ -434,6 +434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
   health: 20
+  currentHealth: 0
   speed: 4
   castPos: {fileID: 2324115846911995302}
   rb: {fileID: 2324115847760642957}
@@ -448,6 +449,8 @@ MonoBehaviour:
   relicUI: {fileID: 0}
   itemTooltip: {fileID: 0}
   itemSaveManager: {fileID: 0}
+  Imp: {fileID: 0}
+  VoidGuardian: {fileID: 0}
   scene: 
   backToDungeon: 0
   lastDirection: 0
@@ -537,7 +540,8 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5940879645747822041, guid: 5be82dea52e786040afd4f6a74e919ee,
     type: 3}
   Imp: {fileID: 5566121760222046955, guid: f10e73c60787ea847a7e3d09e9b1dde3, type: 3}
-  VoidGuardian: {fileID: 0}
+  VoidGuardian: {fileID: 2376711040449669976, guid: f4be92cd8c17ffe4ca6743039fcef600,
+    type: 3}
   Infernal: {fileID: 0}
 --- !u!114 &8968071499135699373
 MonoBehaviour:
@@ -554,6 +558,7 @@ MonoBehaviour:
   relics:
   - {fileID: 11400000, guid: c7415c502494d8b4f89e1f1f14a1abc2, type: 2}
   - {fileID: 11400000, guid: 95e6a32b5d877e241b62e468226cdc35, type: 2}
+  - {fileID: 11400000, guid: 690ac519f06ac6045b350e87abafd97b, type: 2}
   relicUI: {fileID: 0}
 --- !u!1 &2324115848741333772
 GameObject:

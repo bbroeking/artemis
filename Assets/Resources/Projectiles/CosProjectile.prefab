@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4703236976237266594}
   m_Layer: 14
   m_Name: CosProjectile
-  m_TagString: Untagged
+  m_TagString: enemyprojectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   rb: {fileID: 0}
-  MoveSpeed: 2
+  animator: {fileID: 0}
   frequency: 5
   magnitude: 0.7
 --- !u!50 &9113804187242286676
