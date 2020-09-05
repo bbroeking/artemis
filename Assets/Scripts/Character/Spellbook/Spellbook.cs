@@ -32,4 +32,5 @@ public class Spellbook : MonoBehaviour
     public void GravityField(GameObject b, Transform firePoint, Collider2D playerCollider){
 
     }
+
 }

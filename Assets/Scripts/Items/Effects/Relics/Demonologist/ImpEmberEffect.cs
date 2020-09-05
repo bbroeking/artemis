@@ -7,7 +7,7 @@ public class ImpEmbersEffect : UsableItemEffect
 {
     public override void ExecuteEffect(UsableItem parentItem, Player player)
     {
-        player.spellbook.Imp.Summon();
+        player.spellbook.Imp.Summon(player);
     }
 
     public override string GetDescription()

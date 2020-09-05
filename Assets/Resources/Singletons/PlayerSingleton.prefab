@@ -536,7 +536,7 @@ MonoBehaviour:
   playerCollider: {fileID: 2324115847760642956}
   projectilePrefab: {fileID: 5940879645747822041, guid: 5be82dea52e786040afd4f6a74e919ee,
     type: 3}
-  Imp: {fileID: 0}
+  Imp: {fileID: 5566121760222046955, guid: f10e73c60787ea847a7e3d09e9b1dde3, type: 3}
   VoidGuardian: {fileID: 0}
   Infernal: {fileID: 0}
 --- !u!114 &8968071499135699373

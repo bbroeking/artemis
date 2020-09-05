@@ -1,4 +1,4 @@
 ﻿public interface ISummonable
 {
-    void Summon();
+    void Summon(Player player);
 }

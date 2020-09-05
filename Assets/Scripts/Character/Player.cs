@@ -32,6 +32,9 @@ public class Player : Character
     [SerializeField] private ItemTooltip itemTooltip;
     [SerializeField] private ItemSaveManager itemSaveManager;
     
+    [Header("Demons")]
+    public Imp Imp;
+
     [Header("Etc")]
     public string scene;
     public bool backToDungeon;
