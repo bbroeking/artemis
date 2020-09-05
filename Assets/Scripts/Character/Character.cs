@@ -7,7 +7,7 @@ public class Character : MonoBehaviour
     [Header("Character")]
     [SerializeField] SpriteRenderer spriteRenderer;
     public int health;
-    protected int currentHealth;
+    [SerializeField] protected int currentHealth;
     public int CurrentHealth { get { return currentHealth;} }
     public int speed; 
     protected int baseDamage;
@@ -55,6 +55,7 @@ public class Character : MonoBehaviour
         Debug.LogWarning("Hit funciton is not implemented for object");
     }
     public virtual void TakeDamage(int damage){
+        Debug.Log(damage.ToString());
         if (isDamageDisabled) return;
         StartCoroutine(DisableDamage(disableDamageDuration));
         this.currentHealth -= damage;

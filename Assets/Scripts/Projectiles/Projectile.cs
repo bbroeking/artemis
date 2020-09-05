@@ -39,6 +39,7 @@ public class Projectile : MonoBehaviour
            collision.gameObject.CompareTag(Tags.infernal) || 
            collision.gameObject.CompareTag(Tags.voidGuardian))
         {
+            Debug.Log(collision.gameObject.tag.ToString());
             collision.gameObject.GetComponent<Character>().Hit(damage);
         }
         Destroy(gameObject);
