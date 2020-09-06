@@ -5,13 +5,17 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Item Effects/Curse Relic/Lethargy")]
 public class CurseOfLethargy : UsableItemEffect
 {
+    private float slowPercentage = 0.5f;
     public override void ExecuteEffect(UsableItem parentItem, Player player)
     {
-        throw new System.NotImplementedException();
+        Enemy[] enemies = FindObjectsOfType<Enemy>();
+        foreach (Enemy enemy in enemies){
+            enemy.SlowUnit(slowPercentage);
+        }
     }
 
     public override string GetDescription()
     {
-        throw new System.NotImplementedException();
+        return "Slow all enemies within room by " + slowPercentage.ToString() + " percent";
     }
 }

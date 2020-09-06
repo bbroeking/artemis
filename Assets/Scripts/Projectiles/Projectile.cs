@@ -42,7 +42,6 @@ public class Projectile : MonoBehaviour
             collision.gameObject.GetComponent<Character>().Hit(damage);
         }
         if(collision.gameObject.CompareTag(Tags.voidZone)){
-            Debug.Log("zone");
             collision.gameObject.GetComponent<VoidZone>().RemoveVoidEnergy(damage);
         }
         Destroy(gameObject);

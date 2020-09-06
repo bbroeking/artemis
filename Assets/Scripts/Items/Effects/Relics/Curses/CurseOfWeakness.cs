@@ -7,11 +7,14 @@ public class CurseOfWeakness : UsableItemEffect
 {
     public override void ExecuteEffect(UsableItem parentItem, Player player)
     {
-        throw new System.NotImplementedException();
+        Enemy[] enemies = FindObjectsOfType<Enemy>();
+        foreach (Enemy enemy in enemies){
+            enemy.MakeBrittle();
+        }
     }
 
     public override string GetDescription()
     {
-        throw new System.NotImplementedException();
+        return "Reduces the health of all monsters in the room to 1";
     }
 }

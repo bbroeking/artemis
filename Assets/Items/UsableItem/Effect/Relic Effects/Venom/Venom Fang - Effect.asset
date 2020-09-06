@@ -9,13 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae87a60a12c199a439338ce5cdd4182e, type: 3}
-  m_Name: Weakness
+  m_Script: {fileID: 11500000, guid: c4368ddbab6df254ba7c90853b523b25, type: 3}
+  m_Name: Venom Fang - Effect
   m_EditorClassIdentifier: 
-  id: 
-  ItemName: 
-  Icon: {fileID: 0}
-  dropChance: 0
-  soulValue: 0
-  isConsumable: 0
-  Effects: []

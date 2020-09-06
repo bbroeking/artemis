@@ -22,6 +22,8 @@ public class Enemy : Character, IInteractable
     private float hitCooldown = 0.5f;
     protected bool isActivateDelay = true;
     protected float activateDelay = 1.15f;
+    private bool spawnBonusLoot = false;
+    public bool SpawnBonusLoot { get { return spawnBonusLoot; } set { spawnBonusLoot = value; }}
 
     protected override void Awake(){
         base.Awake();
@@ -33,7 +35,8 @@ public class Enemy : Character, IInteractable
         if (spawnLocation == null) spawnLocation = this.transform; // current location is spawn location if not spawned with spawner
         isInAggroRange = false;
         internalAggroCooldown = 0f;
-        GetComponent<AIPath>().maxSpeed = this.speed;
+        aIPath = GetComponent<AIPath>();
+        aIPath.maxSpeed = this.speed;
         StartCoroutine(ActivateEnemyDelay());
     }
 
@@ -105,5 +108,17 @@ public class Enemy : Character, IInteractable
     {
         yield return new WaitForSeconds (activateDelay);
         isActivateDelay = false;
+    }
+
+    public void SlowUnit(float percentSlow){
+        aIPath.maxSpeed = this.speed * percentSlow;
+    }
+
+    /*
+    Sets the unit's health to 1, used for the curse of weakness
+    */
+    public void MakeBrittle(){
+        this.health = 1;
+        this.currentHealth = 1;
     }
 }

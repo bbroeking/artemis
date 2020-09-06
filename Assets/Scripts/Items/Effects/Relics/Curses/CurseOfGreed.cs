@@ -7,11 +7,14 @@ public class CurseOfGreed : UsableItemEffect
 {
     public override void ExecuteEffect(UsableItem parentItem, Player player)
     {
-        throw new System.NotImplementedException();
+        Enemy[] enemies = FindObjectsOfType<Enemy>();
+        foreach (Enemy enemy in enemies){
+            enemy.SpawnBonusLoot = true; // TODO make monsters with this flag spawn more loot
+        }
     }
 
     public override string GetDescription()
     {
-        throw new System.NotImplementedException();
+        return "Filled with greed, monsters in this room don't hide their items. On death they lose it all";
     }
 }
