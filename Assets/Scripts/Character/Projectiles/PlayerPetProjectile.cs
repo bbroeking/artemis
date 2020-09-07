@@ -17,6 +17,6 @@ public class PlayerPetProjectile : Projectile
         if (collision.gameObject.CompareTag(Tags.enemy)) {
             collision.gameObject.GetComponent<Enemy>()?.Hit(5);
         }
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

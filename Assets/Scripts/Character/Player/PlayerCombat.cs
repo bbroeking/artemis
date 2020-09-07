@@ -100,9 +100,13 @@ public class PlayerCombat : MonoBehaviour
     }
     void Cast()
     {
-        int num = Random.Range(0, projectiles.Count);
-        GameObject cast = Instantiate(projectiles[num], castPos.position, castPos.rotation);
-        ProjectileHelpers.ObjectIgnores(cast, playerCollider);
+        int num = Random.Range(0, 3);
+        GameObject GO = ObjectPooler.SharedInstance.GetPooledObject(num * 2);
+        GO.transform.position = castPos.position;
+        GO.transform.rotation = castPos.rotation;
+        Debug.Log(GO.transform.position.ToString());
+        GO.SetActive(true);
+        ProjectileHelpers.ObjectIgnores(GO, playerCollider);
     }
     private IEnumerator Cooldown()
     {

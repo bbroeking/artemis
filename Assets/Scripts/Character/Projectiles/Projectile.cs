@@ -44,7 +44,7 @@ public class Projectile : MonoBehaviour
         if(collision.gameObject.CompareTag(Tags.voidZone)){
             collision.gameObject.GetComponent<VoidZone>().RemoveVoidEnergy(damage);
         }
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
     public virtual void SetDirection(Vector3 direction){
         this.direction = direction;
