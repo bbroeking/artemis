@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum RelicType {Fang, Nova};
+public enum RelicType {Fang, Nova, Beam};
 public class Spellbook : MonoBehaviour
 {
+    private Player player;
     [SerializeField] Collider2D playerCollider;
 
     [Header("Projectiles")]
@@ -14,6 +15,14 @@ public class Spellbook : MonoBehaviour
     [SerializeField] public Imp Imp;
     [SerializeField] public VoidGuardian VoidGuardian;
     [SerializeField] public Infernal Infernal;
+
+    [Header("Venom")]
+    [SerializeField] VenomBeam venomBeam;
+    private float poisonBeamDuration = 4f;
+
+    void Start(){
+        player = PlayerSingleton.Instance.player;
+    }
 
     public void PoisonNova(Transform firePoint)
     {   
@@ -29,8 +38,19 @@ public class Spellbook : MonoBehaviour
         }
     }
 
-    public void GravityField(GameObject b, Transform firePoint, Collider2D playerCollider){
+    public void PoisonFang(Transform firePoint){
 
+    }
+
+    public void PoisonBeam(Transform firePoint, MoveDirection dir){
+        Vector3 vec = ProjectileHelpers.moveDirectionToNormalVector(dir);
+        venomBeam.EnableBeam(firePoint, vec);
+        StartCoroutine(Duration(poisonBeamDuration));
+    }
+    private IEnumerator Duration(float cd)
+    {
+        yield return new WaitForSeconds(cd);
+        venomBeam.DisableBeam();
     }
 
 }

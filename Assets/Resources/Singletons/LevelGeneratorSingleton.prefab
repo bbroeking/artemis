@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e50294081a3d34986954172b0bb744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelGenerator: {fileID: 0}
+  levelGenerator: {fileID: 8445882662563549194}
 --- !u!1 &5514363007562654848
 GameObject:
   m_ObjectHideFlags: 0

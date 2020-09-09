@@ -7,7 +7,7 @@ public class VenomBeamEffect : UsableItemEffect
 {
     public override void ExecuteEffect(UsableItem parentItem, Player player)
     {
-        throw new System.NotImplementedException();
+        player.combat.ExecuteRelicEffect(RelicType.Beam);
     }
 
     public override string GetDescription()

@@ -13,4 +13,13 @@ public class ProjectileHelpers : MonoBehaviour
     public static Vector3 GenerateRandomOffset(){
         return Quaternion.Euler(random.Next(0, 360), random.Next(0, 360), random.Next(0, 360)) *directions[random.Next(0,4)];
     }
+
+    public static Vector3 moveDirectionToNormalVector(MoveDirection dir){
+        if (dir == MoveDirection.Up) return Vector3.up;
+        if (dir == MoveDirection.Down) return Vector3.down;
+        if (dir == MoveDirection.Right) return Vector3.right;
+        if (dir == MoveDirection.Left) return Vector3.left;
+        Debug.LogWarning("Did not pass a valid cardinal direction, returning zero vector");
+        return Vector3.zero;
+    }
 }

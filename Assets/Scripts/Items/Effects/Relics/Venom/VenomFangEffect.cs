@@ -7,7 +7,7 @@ public class VenomFangEffect : UsableItemEffect
 {
     public override void ExecuteEffect(UsableItem parentItem, Player player)
     {
-        throw new System.NotImplementedException();
+        player.combat.ExecuteRelicEffect(RelicType.Fang);
     }
 
     public override string GetDescription()

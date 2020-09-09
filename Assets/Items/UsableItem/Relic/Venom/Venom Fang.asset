@@ -19,4 +19,4 @@ MonoBehaviour:
   soulValue: 0
   isConsumable: 0
   Effects:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 1ddfd31a312499f4caf8c6f7bab07a6b, type: 2}
