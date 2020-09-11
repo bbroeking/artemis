@@ -18,7 +18,7 @@ public class Spellbook : MonoBehaviour
 
     [Header("Venom")]
     [SerializeField] VenomBeam venomBeam;
-    private float poisonBeamDuration = 4f;
+    private float poisonBeamDuration = 300f;
 
     void Start(){
         player = PlayerSingleton.Instance.player;

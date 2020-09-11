@@ -28,6 +28,7 @@ TagManager:
   - voidguardian
   - enemyprojectile
   - voidzone
+  - beam
   layers:
   - Default
   - TransparentFX

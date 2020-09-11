@@ -19152,7 +19152,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 25
+  m_SortingOrder: 19
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 5, y: 0, z: 1}
@@ -19295,7 +19295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5996359852924244141}
   - component: {fileID: 3501137641982400870}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: LeftHitBox
   m_TagString: hitbox
   m_Icon: {fileID: 0}
@@ -19326,7 +19326,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -19402,7 +19402,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8283411997937673185}
   - component: {fileID: 5076165132907627468}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: BackwardsHitBox
   m_TagString: hitbox
   m_Icon: {fileID: 0}
@@ -19433,7 +19433,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -19463,7 +19463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2423190343631241919}
   - component: {fileID: 8599004901007453897}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: ForwardHitBox
   m_TagString: hitbox
   m_Icon: {fileID: 0}
@@ -19494,7 +19494,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -19672,7 +19672,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.010227859, y: -0.22329152}
+  m_Offset: {x: 0.014187738, y: -0.24119174}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -19683,7 +19683,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 1
   serializedVersion: 2
-  m_Size: {x: 0.3296913, y: 0.55827594}
+  m_Size: {x: 0.39359197, y: 0.4873371}
   m_EdgeRadius: 0
 --- !u!50 &2324115847760642957
 Rigidbody2D:
@@ -24612,7 +24612,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3562201953830314459}
   - component: {fileID: 271706459007082700}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: RightHitBox
   m_TagString: hitbox
   m_Icon: {fileID: 0}
@@ -24643,7 +24643,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

@@ -80,12 +80,12 @@ public class VenomBeam : MonoBehaviour
 
     private void SetBoxCollider(Vector2 start, Vector2 end){
         float distance = Vector2.Distance(start, end);
-        if (dir.x < dir.y) box.size = new Vector2(lineRenderer.startWidth*2, distance);
-        else box.size = new Vector2(distance, lineRenderer.startWidth*2);
-        box.offset = start;
+        if (Mathf.Abs(dir.x) < Mathf.Abs(dir.y)) box.size = new Vector2(lineRenderer.startWidth, distance);
+        else box.size = new Vector2(distance, lineRenderer.startWidth);
+        box.offset = (start + end) /2f;
     }
     
-    protected void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag(Tags.enemy)) {
             collision.gameObject.GetComponent<Enemy>()?.Hit(venomBeamDamage);
