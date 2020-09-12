@@ -26,8 +26,12 @@ public class Projectile : MonoBehaviour
         pos = transform.position;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+    }
+
+    protected virtual void OnEnable(){
         Invoke("TriggerDestruction", duration);
     }
+
     protected virtual void Update(){
         pos += Quaternion.Euler(xRotation, yRotation, zRotation) * direction 
                 * Time.deltaTime * MoveSpeed;

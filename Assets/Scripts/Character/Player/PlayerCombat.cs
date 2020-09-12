@@ -104,7 +104,6 @@ public class PlayerCombat : MonoBehaviour
         GameObject GO = ObjectPooler.SharedInstance.GetPooledObject(num * 2);
         GO.transform.position = castPos.position;
         GO.transform.rotation = castPos.rotation;
-        Debug.Log(GO.transform.position.ToString());
         GO.SetActive(true);
         ProjectileHelpers.ObjectIgnores(GO, playerCollider);
     }

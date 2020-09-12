@@ -12,6 +12,6 @@ public class VenomBeamEffect : UsableItemEffect
 
     public override string GetDescription()
     {
-        throw new System.NotImplementedException();
+        return "to be written";
     }
 }

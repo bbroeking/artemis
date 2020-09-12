@@ -18,7 +18,8 @@ public class Spellbook : MonoBehaviour
 
     [Header("Venom")]
     [SerializeField] VenomBeam venomBeam;
-    private float poisonBeamDuration = 300f;
+    [SerializeField] string venomFangPrefabPath = "Projectiles/PlayerProjectiles/VenomFangProjectile";
+    private float poisonBeamDuration = 4f;
 
     void Start(){
         player = PlayerSingleton.Instance.player;
@@ -39,7 +40,27 @@ public class Spellbook : MonoBehaviour
     }
 
     public void PoisonFang(Transform firePoint){
+        if (player.lastMoveDirection == MoveDirection.Up ||
+            player.lastMoveDirection == MoveDirection.Down){
+            Vector2 offset = new Vector2(0.5f, 0);
+            SpawnFangsWithOffset((Vector2)firePoint.position, offset, player.lastMoveDirection);
+        }
+        else {
+            Vector2 offset = new Vector2(0, 0.5f);
+            SpawnFangsWithOffset((Vector2)firePoint.position, offset, player.lastMoveDirection);
+        }
+    }
 
+    private void SpawnFangsWithOffset(Vector2 position, Vector2 offset, MoveDirection moveDirection){
+        SpawnFang(position + offset, moveDirection);
+        SpawnFang(position - offset, moveDirection);
+    }
+    
+    public void SpawnFang(Vector2 position, MoveDirection moveDirection){
+        GameObject prefab = (GameObject) LoadPrefab.LoadPrefabFromFile("Projectiles/PlayerProjectiles/VenomFangProjectile");
+        GameObject GO = Instantiate(prefab, position, Quaternion.identity);
+        GO.GetComponent<VenomFangProjectile>().target = player.transform.position - ProjectileHelpers.moveDirectionToNormalVector(moveDirection);
+        GO.SetActive(true);
     }
 
     public void PoisonBeam(Transform firePoint, MoveDirection dir){

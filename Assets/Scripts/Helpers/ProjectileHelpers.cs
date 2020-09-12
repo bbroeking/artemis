@@ -22,4 +22,12 @@ public class ProjectileHelpers : MonoBehaviour
         Debug.LogWarning("Did not pass a valid cardinal direction, returning zero vector");
         return Vector3.zero;
     }
+
+    public static GameObject SetupProjectileFromPool(int spawnPoolIndex, Vector2 position){
+        GameObject GO = ObjectPooler.SharedInstance.GetPooledObject(spawnPoolIndex);
+        GO.transform.position = position;
+        GO.transform.rotation = Quaternion.identity;
+        GO.SetActive(true);
+        return GO;
+    }
 }

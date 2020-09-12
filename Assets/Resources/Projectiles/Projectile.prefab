@@ -145,8 +145,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  rb: {fileID: 0}
-  animator: {fileID: 0}
+  rb: {fileID: 7186273250579861452}
+  animator: {fileID: -3139215706763277761}
 --- !u!95 &-3139215706763277761
 Animator:
   serializedVersion: 3

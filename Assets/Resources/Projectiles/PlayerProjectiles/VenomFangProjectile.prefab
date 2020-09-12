@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 7186273250579861452}
   - component: {fileID: -1141728652423025735}
   - component: {fileID: 1573705848598644385}
-  - component: {fileID: 7396412452079804011}
+  - component: {fileID: -7716678367986319273}
   m_Layer: 13
-  m_Name: VoidProjectile
+  m_Name: VenomFangProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,8 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 6666804923165395517, guid: 6928a489fd5fc6e408de76a9389283d6,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0ab76864b9cd02c4ba30f7eb55fecfd4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -143,7 +142,7 @@ Animator:
   m_GameObject: {fileID: 5940879645747822041}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0b528b84199dfa6489351a97222bfee6, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5d43207c9173bad4baacbe80bfc8da8d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -152,7 +151,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7396412452079804011
+--- !u!114 &-7716678367986319273
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,9 +160,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5940879645747822041}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35edf732af428f245acb46381e87652c, type: 3}
+  m_Script: {fileID: 11500000, guid: 3642940a71542fc4b8f2c7b5e7e63487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   rb: {fileID: 7186273250579861452}
   animator: {fileID: 1573705848598644385}
+  target: {x: 0, y: 0, z: 0}

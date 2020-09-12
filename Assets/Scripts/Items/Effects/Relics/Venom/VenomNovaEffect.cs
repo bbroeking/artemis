@@ -12,6 +12,6 @@ public class VenomNovaEffect : UsableItemEffect
 
     public override string GetDescription()
     {
-        return "";
+        return "to be written";
     }
 }

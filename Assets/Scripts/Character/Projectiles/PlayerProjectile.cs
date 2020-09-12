@@ -12,7 +12,8 @@ public class PlayerProjectile : Projectile
     protected override void Update(){
         base.Update();
     }
-    void OnEnable(){
+    protected override void OnEnable(){
+        base.OnEnable();
         if (player != null) {
             pos = player.transform.position;
             SetVectorDirection();
