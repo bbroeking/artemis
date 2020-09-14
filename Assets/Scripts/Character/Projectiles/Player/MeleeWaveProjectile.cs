@@ -12,7 +12,7 @@ public class MeleeWaveProjectile : PlayerProjectile
         moveDirection = player.GetMoveDirection();
         SetVectorDirection();
         pos = player.castPos.position;
-        MoveSpeed = 14.0f;
+        bulletSpeed = 14.0f;
         rb = GetComponent<Rigidbody2D>();
         animator.Play("MeleeWave"); // don't call Destroy(), we destroy on the animation exit
     }

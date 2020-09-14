@@ -31,8 +31,6 @@ public class LevelGenerator : GenericSingleton
         else { Destroy(gameObject); }
     }
 
-
-
     public void GenerateLevel(){
         takenPositions = new List<Vector2>();
         toBeGeneratedPositions = new List<Vector2>();

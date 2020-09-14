@@ -7,10 +7,9 @@ public class Projectile : MonoBehaviour
     [SerializeField] protected Player player;
     [SerializeField] protected Rigidbody2D rb;
     [SerializeField] protected Animator animator;
-    protected Vector3 pos;
+    protected Vector3 pos = Vector3.zero;
     protected Vector3 direction = Vector3.up;
     public Vector3 Direction { get { return direction;} set { direction = value; }}
-    protected float MoveSpeed = 2.0f;
     protected int damage = 1;
     protected float duration = 3.0f;
     public int Damage { get { return damage;} set { damage = value; }}
@@ -20,6 +19,10 @@ public class Projectile : MonoBehaviour
     public float YRotation { get { return yRotation; } set { yRotation = value;}}
     protected float zRotation = 0f;
     public float ZRotation { get {return zRotation; } set {zRotation = value;}}
+    public float bulletSpeed = 2.0f;
+    public float spinRate = 0.0f;
+    public float bulletAcceleration = 0.0f;
+
 
     protected virtual void Start(){
         player = PlayerSingleton.Instance.player;
@@ -29,14 +32,18 @@ public class Projectile : MonoBehaviour
     }
 
     protected virtual void OnEnable(){
+        transform.position = pos;
         Invoke("TriggerDestruction", duration);
     }
 
     protected virtual void Update(){
         pos += Quaternion.Euler(xRotation, yRotation, zRotation) * direction 
-                * Time.deltaTime * MoveSpeed;
+                * Time.deltaTime * bulletSpeed;
+        bulletSpeed += Time.deltaTime * bulletSpeed;
+        zRotation += Time.deltaTime * spinRate;
         transform.position = pos;
     }
+
     protected virtual void OnCollisionEnter2D(Collision2D collision){
         if(collision.gameObject.CompareTag(Tags.player) ||
            collision.gameObject.CompareTag(Tags.imp) ||
@@ -50,10 +57,24 @@ public class Projectile : MonoBehaviour
         }
         gameObject.SetActive(false);
     }
+
     public virtual void SetDirection(Vector3 direction){
         this.direction = direction;
     }
+
     protected virtual void TriggerDestruction(){
         animator.SetBool("Expired", true);
+    }
+
+    public virtual void Init(float startingAngle, float spinRate,
+                             float bulletSpeed, float bulletAcceleration,
+                             int damage, Vector3 position,
+                             float frequency, float magnitude){
+        this.zRotation = startingAngle;
+        this.spinRate = spinRate;
+        this.bulletSpeed = bulletSpeed;
+        this.bulletAcceleration = bulletAcceleration;
+        this.damage = damage;
+        this.pos = position;
     }
 }

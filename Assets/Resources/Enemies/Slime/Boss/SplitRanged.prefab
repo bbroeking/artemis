@@ -74,9 +74,9 @@ GameObject:
   - component: {fileID: 219510735462146883}
   - component: {fileID: 7976816508443575299}
   - component: {fileID: 2722599429940130560}
-  - component: {fileID: 1973871216670185155}
   - component: {fileID: 1163065602598983679}
   - component: {fileID: -8979154105085331057}
+  - component: {fileID: 7204542705321259663}
   m_Layer: 9
   m_Name: SplitRanged
   m_TagString: Enemy
@@ -319,30 +319,6 @@ MonoBehaviour:
   droppedCurrency: {fileID: 4158551135748663218, guid: 5a9379fcff8121a44ba32746b3c08acb,
     type: 3}
   soul: {fileID: 4158551135748663218, guid: 78b8a56879526ed44bd01e4f7b003188, type: 3}
---- !u!114 &1973871216670185155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7127566634422829082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14de7e2e17cac31418f6f7f5ad5b3c2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 1163065602598983679}
-  attackPos: {fileID: 6007828239496480969}
-  whatIsEnemy:
-    serializedVersion: 2
-    m_Bits: 256
-  attackRange: 0
-  damage: 3
-  baseCooldown: 2
-  projectile: {fileID: 5940879645747822041, guid: f91ac82efba1e5e48a28d9c16b143922,
-    type: 3}
-  chracterCollider: {fileID: 0}
-  enemy: {fileID: 0}
 --- !u!95 &1163065602598983679
 Animator:
   serializedVersion: 3
@@ -376,6 +352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
   health: 5
+  currentHealth: 0
   speed: 1
   aIDestination: {fileID: 3850890619224503544}
   aIPath: {fileID: 5925134501717123139}
@@ -383,6 +360,32 @@ MonoBehaviour:
   lootTable: {fileID: 2722599429940130560}
   spawnLocation: {fileID: 0}
   canBeDamaged: 1
+--- !u!114 &7204542705321259663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7127566634422829082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a27833f17c80bd34287caf88e6ed1420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseCooldown: 2
+  targetInRange: {fileID: 0}
+  projectileType: 8
+  damage: 2
+  totalBulletArrays: 3
+  bulletsPerArray: 5
+  bulletArraySpread: 90
+  bulletSpread: 5
+  startingAngle: 30
+  spinRate: 0
+  bulletSpeed: 0
+  bulletAcceleration: 0
+  frequency: 5
+  magnitude: 2
 --- !u!1001 &1271987537501587888
 PrefabInstance:
   m_ObjectHideFlags: 0

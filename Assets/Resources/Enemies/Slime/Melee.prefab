@@ -424,7 +424,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 7004473854437749033}
   health: 1
-  speed: 1
+  currentHealth: 0
+  speed: 4
   aIDestination: {fileID: 7004473854437749025}
   aIPath: {fileID: 7004473854437749026}
   anim: {fileID: 1870554770}
