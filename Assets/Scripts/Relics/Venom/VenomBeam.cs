@@ -6,9 +6,10 @@ public class VenomBeam : MonoBehaviour
 {
     [SerializeField] LineRenderer lineRenderer;
     [SerializeField] BoxCollider2D box;
+    Vector3 dir;
     private Transform firePoint;
-    private Vector3 dir;
     private bool updateBeam;
+    private Player player;
 
     public GameObject startVFX;
     public GameObject endVFX;
@@ -18,6 +19,7 @@ public class VenomBeam : MonoBehaviour
     
     void Start()
     {
+        player = PlayerSingleton.Instance.player;
         FillLists();
         DisableBeam();
     }
@@ -27,14 +29,12 @@ public class VenomBeam : MonoBehaviour
         if (updateBeam) UpdateBeam();
     }
 
-    public void EnableBeam(Transform firePoint, Vector3 dir){
+    public void EnableBeam(Transform firePoint){
         // Enable Objects 
         lineRenderer.enabled = true;
         box.enabled = true;
 
         this.firePoint = firePoint;
-        this.dir = dir;
-
         updateBeam = true;
 
         for(int i = 0; i<particles.Count; i++)
@@ -42,6 +42,7 @@ public class VenomBeam : MonoBehaviour
     }
 
     private void UpdateBeam(){
+        dir = ProjectileHelpers.moveDirectionToNormalVector(player.lastMoveDirection);
         RaycastHit2D hit = Physics2D.Raycast((Vector2) firePoint.position, dir, Mathf.Infinity, 1 << LayerMask.NameToLayer("walls"));
         lineRenderer.SetPosition(0, (Vector2) firePoint.position);
         startVFX.transform.position = (Vector2) firePoint.position;
@@ -60,8 +61,6 @@ public class VenomBeam : MonoBehaviour
         updateBeam = false;
         firePoint = null;
         
-        this.dir = Vector3.zero;
-
         for(int i = 0; i<particles.Count; i++)
             particles[i].Stop();
     }

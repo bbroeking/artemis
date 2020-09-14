@@ -63,9 +63,8 @@ public class Spellbook : MonoBehaviour
         GO.SetActive(true);
     }
 
-    public void PoisonBeam(Transform firePoint, MoveDirection dir){
-        Vector3 vec = ProjectileHelpers.moveDirectionToNormalVector(dir);
-        venomBeam.EnableBeam(firePoint, vec);
+    public void PoisonBeam(Transform firePoint){
+        venomBeam.EnableBeam(firePoint);
         StartCoroutine(Duration(poisonBeamDuration));
     }
     private IEnumerator Duration(float cd)

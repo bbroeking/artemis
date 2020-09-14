@@ -116,7 +116,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void ExecuteRelicEffect(RelicType type){
         if (type == RelicType.Nova) spellbook.PoisonNova(castPos.transform);
-        if (type == RelicType.Beam) spellbook.PoisonBeam(castPos.transform, player.lastMoveDirection);
+        if (type == RelicType.Beam) spellbook.PoisonBeam(castPos.transform);
         if (type == RelicType.Fang) spellbook.PoisonFang(castPos.transform);
     }
 }
