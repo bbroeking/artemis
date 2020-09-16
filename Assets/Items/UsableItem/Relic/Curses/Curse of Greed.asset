@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae87a60a12c199a439338ce5cdd4182e, type: 3}
-  m_Name: Greed
+  m_Name: Curse of Greed
   m_EditorClassIdentifier: 
   id: a81c9d4be28f47e469ea2c6687ce42fc
   ItemName: 
-  Icon: {fileID: 21300000, guid: bdfd454fcc0e4344ea11f7c1dc7a686e, type: 3}
+  Icon: {fileID: 21300000, guid: 21d60ad3fcbf4254688cf0768976293d, type: 3}
   dropChance: 0
   soulValue: 0
   isConsumable: 0

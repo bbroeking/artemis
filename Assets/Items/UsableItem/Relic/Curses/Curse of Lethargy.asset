@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae87a60a12c199a439338ce5cdd4182e, type: 3}
-  m_Name: Lethargy
+  m_Name: Curse of Lethargy
   m_EditorClassIdentifier: 
   id: f9712cf1c30dc084b81fe2cbef8fc4c7
   ItemName: 
-  Icon: {fileID: 21300000, guid: 3c27ae4fa131bfb42aea378460bd4d1c, type: 3}
+  Icon: {fileID: 21300000, guid: 5fc794289121e604cb88cbaf7e3eff1d, type: 3}
   dropChance: 0
   soulValue: 0
   isConsumable: 0

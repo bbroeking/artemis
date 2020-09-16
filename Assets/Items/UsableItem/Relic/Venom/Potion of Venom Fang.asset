@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae87a60a12c199a439338ce5cdd4182e, type: 3}
-  m_Name: Venom Fang
+  m_Name: Potion of Venom Fang
   m_EditorClassIdentifier: 
   id: 523ea4732b160e541b5d10d5ff15dafb
   ItemName: 
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: fa7b432fb91e1d749b8729abfc6c9493, type: 3}
   dropChance: 0
   soulValue: 0
   isConsumable: 0

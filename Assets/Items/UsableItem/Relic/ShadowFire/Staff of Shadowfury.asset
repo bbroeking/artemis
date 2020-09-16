@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae87a60a12c199a439338ce5cdd4182e, type: 3}
-  m_Name: Shadowfury
+  m_Name: Staff of Shadowfury
   m_EditorClassIdentifier: 
-  id: 
+  id: 292a17a496893014d90345738a5275d7
   ItemName: 
   Icon: {fileID: 0}
   dropChance: 0

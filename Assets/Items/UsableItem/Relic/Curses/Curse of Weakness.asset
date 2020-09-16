@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae87a60a12c199a439338ce5cdd4182e, type: 3}
-  m_Name: Weakness
+  m_Name: Curse of Weakness
   m_EditorClassIdentifier: 
   id: 5188e8b5a19747447991235523edcbac
   ItemName: 
-  Icon: {fileID: 21300000, guid: acfa2df61f8e1b340817ffbad1cbfda1, type: 3}
+  Icon: {fileID: 21300000, guid: 3c27ae4fa131bfb42aea378460bd4d1c, type: 3}
   dropChance: 0
   soulValue: 0
   isConsumable: 0
