@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class Character : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class Character : MonoBehaviour
     protected bool isDead;
     protected bool isDamageDisabled;
     protected float disableDamageDuration = 0.75f;
+    [SerializeField] protected AIPath aIPath;
+    [SerializeField] protected Animator anim;
 
     protected virtual void Awake(){
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -49,6 +52,17 @@ public class Character : MonoBehaviour
         isDamageDisabled = true;
         yield return new WaitForSeconds(time);
         isDamageDisabled = false;
+    }
+    protected virtual void UpdateAnimationValues(){
+        Vector3 velo = aIPath.velocity;
+        anim.SetFloat("Horizontal", velo.x);
+        anim.SetFloat("Vertical", velo.y);
+        anim.SetFloat("Magnitude", velo.magnitude);
+
+        if (velo.x != 0.0f || velo.y != 0.0f){
+            anim.SetFloat("LastHorizontal", velo.x);
+            anim.SetFloat("LastVertical", velo.y);
+        }
     }
     public virtual void Dead(){
         Debug.LogWarning("Dead funciton is not implemented for object");

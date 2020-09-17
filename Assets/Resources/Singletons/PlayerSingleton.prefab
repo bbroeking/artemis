@@ -19093,9 +19093,10 @@ GameObject:
   - component: {fileID: 1751876693}
   - component: {fileID: 5103658176229719381}
   - component: {fileID: 1548059615}
+  - component: {fileID: 951508700}
   m_Layer: 8
   m_Name: Beam
-  m_TagString: Untagged
+  m_TagString: beam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19154,8 +19155,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 19
   m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 5, y: 0, z: 1}
+  - {x: 4.064157, y: 2.7878938, z: 0}
+  - {x: 4.064157, y: -4.000014, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.5
@@ -19164,13 +19165,31 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
+        value: 0.83599854
+        inSlope: 6.848597
+        outSlope: 6.848597
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.03474319
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.03998974
         value: 1
-        inSlope: 0
-        outSlope: 0
+        inSlope: 0.038334936
+        outSlope: 0.038334936
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.33333334
+        outWeight: 0.18114826
+      - serializedVersion: 3
+        time: 0.5030211
+        value: 1.0032154
+        inSlope: 10.110947
+        outSlope: 10.110947
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.024023987
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -19253,6 +19272,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &951508700
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751876691}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!1 &1875348870
 GameObject:
   m_ObjectHideFlags: 0
@@ -19722,9 +19762,10 @@ MonoBehaviour:
   health: 20
   currentHealth: 0
   speed: 4
+  aIPath: {fileID: 0}
+  anim: {fileID: 2324115848615046578}
   castPos: {fileID: 2324115846911995302}
   rb: {fileID: 2324115847760642957}
-  anim: {fileID: 2324115848615046578}
   combat: {fileID: 384647695801242384}
   resources: {fileID: 2324115847002498364}
   spellbook: {fileID: 2324115847002498365}
@@ -19737,6 +19778,7 @@ MonoBehaviour:
   itemSaveManager: {fileID: 0}
   Imp: {fileID: 0}
   VoidGuardian: {fileID: 0}
+  Infernal: {fileID: 0}
   scene: 
   backToDungeon: 0
   lastDirection: 0
@@ -19828,8 +19870,10 @@ MonoBehaviour:
   Imp: {fileID: 5566121760222046955, guid: f10e73c60787ea847a7e3d09e9b1dde3, type: 3}
   VoidGuardian: {fileID: 2376711040449669976, guid: f4be92cd8c17ffe4ca6743039fcef600,
     type: 3}
-  Infernal: {fileID: 0}
+  Infernal: {fileID: 8635549808922727721, guid: da3eb011154f5544f9fab964cee9d6ef,
+    type: 3}
   venomBeam: {fileID: 5103658176229719381}
+  venomFangPrefabPath: Projectiles/PlayerProjectiles/VenomFangProjectile
 --- !u!114 &8968071499135699373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19843,9 +19887,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   relics:
-  - {fileID: 11400000, guid: 5188e8b5a19747447991235523edcbac, type: 2}
+  - {fileID: 11400000, guid: 95e6a32b5d877e241b62e468226cdc35, type: 2}
+  - {fileID: 11400000, guid: b84bf96195bbe71479e2f810ce6eeb02, type: 2}
   - {fileID: 11400000, guid: f9712cf1c30dc084b81fe2cbef8fc4c7, type: 2}
-  - {fileID: 11400000, guid: a81c9d4be28f47e469ea2c6687ce42fc, type: 2}
   - {fileID: 11400000, guid: a76c5ec500e2ae442b49d2108de37422, type: 2}
   relicUI: {fileID: 0}
 --- !u!1 &2324115848741333772

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Item Effects/Demonologist Relic/Imp")]
-public class ImpEmbersEffect : UsableItemEffect
+public class ImpEffect : UsableItemEffect
 {
     public override void ExecuteEffect(UsableItem parentItem, Player player)
     {

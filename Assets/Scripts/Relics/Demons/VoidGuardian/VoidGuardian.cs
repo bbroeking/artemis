@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using Pathfinding;
+
 public class VoidGuardian : Demon, ISummonable
 {
     private VoidZone voidZone;

@@ -2,8 +2,9 @@
 
 public class AttackTrigger : MonoBehaviour
 {
-    private Attack attack;
-    [SerializeField] CircleCollider2D col;
+    protected Attack attack;
+    [SerializeField] protected GameObject target;
+    [SerializeField] protected CircleCollider2D col;
     [SerializeField] float attackTriggerRange = 1f;
     void OnValidate(){
         col = GetComponent<CircleCollider2D>();

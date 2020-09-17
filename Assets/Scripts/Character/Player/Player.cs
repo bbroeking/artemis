@@ -12,7 +12,6 @@ public class Player : Character
     [Header("Components")]
     public Transform castPos;
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private Animator anim;
     [SerializeField] public PlayerCombat combat;
     [SerializeField] protected PlayerResources resources;
     [SerializeField] public Spellbook spellbook;
@@ -35,6 +34,7 @@ public class Player : Character
     [Header("Demons")]
     public Imp Imp;
     public VoidGuardian VoidGuardian;
+    public Infernal Infernal;
 
     [Header("Etc")]
     public string scene;
@@ -54,10 +54,6 @@ public class Player : Character
     }
     protected override void Awake(){
         base.Awake();
-        strength = new CharacterStat(1);
-        dexterity = new CharacterStat(1);
-        intellect = new CharacterStat(1);
-        vitality = new CharacterStat(1);
     }
 
     protected override void Start()

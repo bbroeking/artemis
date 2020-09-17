@@ -5,13 +5,14 @@ public class Demon : Character
 {
     [Header("Demon")]
     [SerializeField] protected AIDestinationSetter aIDestination;
-    [SerializeField] protected AIPath aIPath;
+
     protected Player player;
     protected override void Start()
     {
         player = PlayerSingleton.Instance.player;
         aIDestination = GetComponent<AIDestinationSetter>();
         aIPath = GetComponent<AIPath>();
+        anim = GetComponent<Animator>();
 
         aIPath.maxSpeed = this.speed;
         aIDestination.target = player.transform;
@@ -20,6 +21,7 @@ public class Demon : Character
     // Update is called once per frame
     protected override void Update()
     {
+        UpdateAnimationValues();
         if(this.isDead) Dead();
     }
 

@@ -7,11 +7,11 @@ public class InfernalEffect : UsableItemEffect
 {
     public override void ExecuteEffect(UsableItem parentItem, Player player)
     {
-        throw new System.NotImplementedException();
+        player.spellbook.Infernal.Summon(player);
     }
 
     public override string GetDescription()
     {
-        throw new System.NotImplementedException();
+        return "Summons an infernal";
     }
 }
