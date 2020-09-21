@@ -25,7 +25,7 @@ public class Player : Character
     
     [Header("UI Panels")]
     [SerializeField] private UISingleton uISingleton;
-    [SerializeField] public SoulPanel soulPanel;
+    [SerializeField] public TextPanelUI soulPanel;
     [SerializeField] private RecapUI recapUI;
     [SerializeField] private RelicUI relicUI;
     [SerializeField] private ItemTooltip itemTooltip;
@@ -73,8 +73,8 @@ public class Player : Character
         // itemSaveManager.LoadInventory(this);
         // itemSaveManager.LoadCurrency(this);
 
-        soulPanel.SetCurrency(this.souls);
-        soulPanel.UpdateCurrencyValues();
+        soulPanel.SetTexts(this.souls);
+        soulPanel.UpdateTextsValues();
         backToDungeon = false;
         canInteract = true;
         lastDirection = Direction.North;
@@ -109,8 +109,8 @@ public class Player : Character
 	}
 
     public void SetPlayerCurrency(){
-        soulPanel.SetCurrency(this.souls);
-        soulPanel.UpdateCurrencyValues();
+        soulPanel.SetTexts(this.souls);
+        soulPanel.UpdateTextsValues();
     }
     private bool CanAfford(BaseItemSlot itemSlot){
         return itemSlot.Item.soulValue <= Souls;

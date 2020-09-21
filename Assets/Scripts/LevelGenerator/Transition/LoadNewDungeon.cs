@@ -19,6 +19,7 @@ public class LoadNewDungeon : MonoBehaviour
             levelGenerator.SetLevelSettings(10, 10, 5);
             levelGenerator.GenerateLevel();
             levelGenerator.currentLevel += 1;
+            levelGenerator.UpdateUI();
             player.map = levelGenerator.GetFirstRoom();
             SceneManager.LoadScene("Dungeon");
         }

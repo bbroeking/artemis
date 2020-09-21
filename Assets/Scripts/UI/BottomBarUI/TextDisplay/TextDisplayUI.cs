@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using TMPro;
 
-public class SoulDisplay : MonoBehaviour
+public class TextDisplayUI : MonoBehaviour
 {
     public TextMeshProUGUI ValueText;
 

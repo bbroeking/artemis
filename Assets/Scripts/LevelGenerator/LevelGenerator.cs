@@ -21,6 +21,10 @@ public class LevelGenerator : GenericSingleton
     private Room currentRoom;
     public Room CurrentRoom { get { return currentRoom; }}
 
+    [Header("UI Panels")]
+    UISingleton uISingleton;
+    LevelPanel levelPanel;
+
     public static LevelGenerator Instance { get; private set; } 
     void Awake(){
         if(Instance == null){
@@ -29,6 +33,19 @@ public class LevelGenerator : GenericSingleton
             DontDestroyOnLoad(this.gameObject);
         } 
         else { Destroy(gameObject); }
+    }
+
+    void Start(){
+        uISingleton = UISingleton.Instance;
+        // Find All UI Objects
+        levelPanel = uISingleton.GetComponentInChildren<LevelPanel>();
+        
+        UpdateUI();
+    }
+
+    public void UpdateUI(){
+        levelPanel.SetTexts(this.currentLevel);
+        levelPanel.UpdateTextsValues();
     }
 
     public void GenerateLevel(){
