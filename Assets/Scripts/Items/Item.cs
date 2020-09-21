@@ -4,6 +4,13 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
+public enum DemonType {
+    Imp,
+    Infernal,
+    VoidGuardian,
+    None
+}
+
 [CreateAssetMenu(menuName = "Items/Item")]
 public class Item : ScriptableObject
 {
@@ -13,6 +20,8 @@ public class Item : ScriptableObject
 	public Sprite Icon;
 	public int dropChance;
 	public int soulValue;
+	public DemonType demonType = DemonType.None;
+
 
 	protected static readonly StringBuilder sb = new StringBuilder();
 

@@ -11,8 +11,6 @@ public class BaseItemSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
 	public event Action<BaseItemSlot> OnPointerEnterEvent;
 	public event Action<BaseItemSlot> OnPointerExitEvent;
 	public event Action<BaseItemSlot> OnRightClickEvent;
-	public SlotType dragType;
-	public SlotType dropType;
 	protected bool isPointerOver;
 	protected Color normalColor = Color.white;
 	protected Color disabledColor = new Color(1, 1, 1, 0);

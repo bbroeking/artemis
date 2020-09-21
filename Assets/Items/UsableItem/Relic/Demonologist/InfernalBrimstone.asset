@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: InfernalBrimstone
   m_EditorClassIdentifier: 
   id: b84bf96195bbe71479e2f810ce6eeb02
-  ItemName: 
+  ItemName: Infernal Brimstone
   Icon: {fileID: 21300000, guid: d912cf3cd4222d34d8126ec288acbed0, type: 3}
   dropChance: 0
   soulValue: 0
   isConsumable: 0
+  demonType: 1
   Effects:
   - {fileID: 11400000, guid: a1a823cc7019f1545a1b25e4a76fa4c7, type: 2}
