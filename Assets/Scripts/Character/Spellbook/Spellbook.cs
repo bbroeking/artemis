@@ -20,6 +20,7 @@ public class Spellbook : MonoBehaviour
     [SerializeField] VenomBeam venomBeam;
     [SerializeField] string venomFangPrefabPath = "Projectiles/PlayerProjectiles/VenomFangProjectile";
     private float poisonBeamDuration = 4f;
+    private int numOfFangs = 3;
 
     void Start(){
         player = PlayerSingleton.Instance.player;
@@ -43,17 +44,21 @@ public class Spellbook : MonoBehaviour
         if (player.lastMoveDirection == MoveDirection.Up ||
             player.lastMoveDirection == MoveDirection.Down){
             Vector2 offset = new Vector2(0.5f, 0);
-            SpawnFangsWithOffset((Vector2)firePoint.position, offset, player.lastMoveDirection);
+            StartCoroutine(SpawnFangsWithOffset((Vector2)firePoint.position, offset, player.lastMoveDirection));
         }
         else {
             Vector2 offset = new Vector2(0, 0.5f);
-            SpawnFangsWithOffset((Vector2)firePoint.position, offset, player.lastMoveDirection);
+            StartCoroutine(SpawnFangsWithOffset((Vector2)firePoint.position, offset, player.lastMoveDirection));
         }
     }
 
-    private void SpawnFangsWithOffset(Vector2 position, Vector2 offset, MoveDirection moveDirection){
-        SpawnFang(position + offset, moveDirection);
-        SpawnFang(position - offset, moveDirection);
+    private IEnumerator SpawnFangsWithOffset(Vector2 position, Vector2 offset, MoveDirection moveDirection){
+        for(int fangs = 0; fangs < numOfFangs; fangs++){
+            SpawnFang(position + offset, moveDirection);
+            SpawnFang(position - offset, moveDirection);
+            yield return new WaitForSeconds(0.25f);
+        }
+        yield return new WaitForSeconds(0.25f);
     }
     
     public void SpawnFang(Vector2 position, MoveDirection moveDirection){

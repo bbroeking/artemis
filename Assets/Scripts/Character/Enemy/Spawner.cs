@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 
 public enum EnemyType {
-    Melee,
+    // Melee, No melee for now
     Ranged,
     Patrol
 }
@@ -47,10 +47,10 @@ public class Spawner : MonoBehaviour
     }
 
     void LoadEnemy(){
-        if (EnemyType.Melee == enemyType){
-            enemy = (GameObject) LoadPrefab.LoadPrefabFromFile("Enemies/Slime/Melee");
-        }
-        else if (EnemyType.Ranged == enemyType){
+        // if (EnemyType.Melee == enemyType){
+        //     enemy = (GameObject) LoadPrefab.LoadPrefabFromFile("Enemies/Slime/Melee");
+        // }
+        if (EnemyType.Ranged == enemyType){
             enemy = (GameObject) LoadPrefab.LoadPrefabFromFile("Enemies/Slime/Ranged");
         }
         else if (EnemyType.Patrol == enemyType){
