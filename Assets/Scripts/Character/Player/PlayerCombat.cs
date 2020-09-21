@@ -102,8 +102,10 @@ public class PlayerCombat : MonoBehaviour
     {
         int num = Random.Range(0, 3);
         GameObject GO = ObjectPooler.SharedInstance.GetPooledObject(num * 2);
-        GO.transform.position = castPos.position;
-        GO.transform.rotation = castPos.rotation;
+        Projectile projectile = GO.GetComponent<Projectile>();
+        projectile.Init(0, 0, 2,
+                        0, 1, this.transform.position,
+                        0, 0);
         GO.SetActive(true);
         ProjectileHelpers.ObjectIgnores(GO, playerCollider);
     }

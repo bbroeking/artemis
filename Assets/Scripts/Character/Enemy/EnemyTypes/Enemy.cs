@@ -8,6 +8,7 @@ public class Enemy : Character, IInteractable
     [SerializeField] protected AIDestinationSetter aIDestination;
     [SerializeField] protected LootTable lootTable;
     [SerializeField] public Transform spawnLocation;
+    [SerializeField] public Collider2D[] colliders;
     private Player player;
     private bool isInAggroRange;
     public bool IsInAggroRange { get { return isInAggroRange; } set { isInAggroRange = value; }}
@@ -26,6 +27,7 @@ public class Enemy : Character, IInteractable
     protected override void Awake(){
         base.Awake();
         lootTable = gameObject.GetComponentInParent<LootTable>();
+        colliders = GetComponents<BoxCollider2D>();
         player = PlayerSingleton.Instance.player;
     }
 
@@ -64,6 +66,7 @@ public class Enemy : Character, IInteractable
         StartCoroutine(HitCooldown());
         base.TakeDamage(damage);
         if (this.isDead){
+            foreach(Collider2D collider2D in colliders) collider2D.enabled = false;
             aIDestination.target = null;
             anim.SetTrigger("Dead");
         }

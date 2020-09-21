@@ -218,4 +218,10 @@ public class Player : Character
     public Vector3 GetShotDirection(){
         return combat.shotDirection;
     }
+
+    public void SetDemonLocations(){
+        if (Imp != null) Imp.gameObject.transform.position = this.gameObject.transform.position;
+        if (VoidGuardian != null) Imp.gameObject.transform.position = this.gameObject.transform.position;
+        if (Infernal != null) Imp.gameObject.transform.position = this.gameObject.transform.position;
+    }
 }

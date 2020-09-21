@@ -12,6 +12,15 @@ public class PlayerPetProjectile : Projectile
     {
         base.Update();
     }
+    protected override void OnEnable(){
+        base.OnEnable();
+        if (player != null) {
+            if (player.Imp != null) pos = player.Imp.transform.position;
+            else if (player.VoidGuardian != null) pos = player.VoidGuardian.transform.position;
+            else if (player.Infernal != null) pos = player.Infernal.transform.position; 
+        }
+        else Debug.LogWarning("Not setting new position due to null player object");
+    }
     protected override void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag(Tags.enemy)) {
