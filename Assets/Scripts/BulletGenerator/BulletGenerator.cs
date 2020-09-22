@@ -33,7 +33,7 @@ public class BulletGenerator : Attack
     public float frequency;
     public float magnitude;
 
-    protected override void TriggerAttack()
+    protected override void TriggerAttack(Vector3 target)
     {
         for (int array=0; array < totalBulletArrays; array++){
             for(int bullets=0; bullets < bulletsPerArray; bullets++){
@@ -42,7 +42,7 @@ public class BulletGenerator : Attack
                 float rotation = startingAngle + bullets*bulletSpread + array*bulletArraySpread;
                 projectile.Init(rotation, spinRate, bulletSpeed,
                                 bulletAcceleration, damage, this.transform.position,
-                                frequency, magnitude);
+                                frequency, magnitude, target);
                 GO.SetActive(true);
             }
         }

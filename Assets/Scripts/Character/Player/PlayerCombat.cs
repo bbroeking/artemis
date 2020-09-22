@@ -105,7 +105,7 @@ public class PlayerCombat : MonoBehaviour
         Projectile projectile = GO.GetComponent<Projectile>();
         projectile.Init(0, 0, 2,
                         0, 1, this.transform.position,
-                        0, 0);
+                        0, 0, Vector3.zero);
         GO.SetActive(true);
         ProjectileHelpers.ObjectIgnores(GO, playerCollider);
     }

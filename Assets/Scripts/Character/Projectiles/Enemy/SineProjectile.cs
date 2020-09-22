@@ -20,7 +20,7 @@ public class SineProjectile : Projectile {
     public override void Init(float startingAngle, float spinRate,
                              float bulletSpeed, float bulletAcceleration,
                              int damage, Vector3 position,
-                             float frequency, float magnitude){
+                             float frequency, float magnitude, Vector3 target){
         this.zRotation = startingAngle;
         this.spinRate = spinRate;
         this.bulletSpeed = bulletSpeed;

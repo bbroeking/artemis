@@ -9,6 +9,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] protected Animator animator;
     protected Vector3 pos = Vector3.zero;
     protected Vector3 direction = Vector3.up;
+    public Vector3 target;
     public Vector3 Direction { get { return direction;} set { direction = value; }}
     protected int damage = 1;
     protected float duration = 3.0f;
@@ -69,12 +70,13 @@ public class Projectile : MonoBehaviour
     public virtual void Init(float startingAngle, float spinRate,
                              float bulletSpeed, float bulletAcceleration,
                              int damage, Vector3 position,
-                             float frequency, float magnitude){
+                             float frequency, float magnitude, Vector3 target){
         this.zRotation = startingAngle;
         this.spinRate = spinRate;
         this.bulletSpeed = bulletSpeed;
         this.bulletAcceleration = bulletAcceleration;
         this.damage = damage;
         this.pos = position;
+        this.target = target;
     }
 }

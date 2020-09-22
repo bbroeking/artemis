@@ -19,14 +19,14 @@ public class Attack : MonoBehaviour
     void Update()
     {
         if(internalCooldown <= 0 && isInRange){
-            TriggerAttack();
+            TriggerAttack(targetInRange.transform.position);
             internalCooldown = baseCooldown;
         } else {
             internalCooldown -= Time.deltaTime;
         }
     }
 
-    protected virtual void TriggerAttack(){
+    protected virtual void TriggerAttack(Vector3 target){
         Debug.LogWarning("Trigger Attack funciton is not implemented for object");
     }
 }

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class VenomFangProjectile : Projectile
 {
-    public Vector3 target;
     private float speed = 10f;
     protected override void Start(){}
     protected override void Update(){}

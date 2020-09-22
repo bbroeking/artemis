@@ -15,7 +15,7 @@ public class Imp : Demon, ISummonable
 
     public void Summon(Player player)
     {
-        string pathToPrefab = "Singletons/Demons/ImpSingleton";
+        string pathToPrefab = PrefabPath.ImpSingleton;
         GameObject demon = (GameObject) LoadPrefab.LoadPrefabFromFile(pathToPrefab);
         Instantiate(demon, player.transform.position, Quaternion.identity);
         player.Imp = this;

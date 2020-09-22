@@ -234,11 +234,12 @@ MonoBehaviour:
   health: 1
   currentHealth: 0
   speed: 1
-  aIDestination: {fileID: 2818353076470021888}
   aIPath: {fileID: 2818353076470021903}
   anim: {fileID: 6050838144167032393}
+  aIDestination: {fileID: 2818353076470021888}
   lootTable: {fileID: 0}
   spawnLocation: {fileID: 0}
+  colliders: []
   canBeDamaged: 1
   patrolAnchors: []
 --- !u!114 &330573375
@@ -348,9 +349,9 @@ MonoBehaviour:
   damage: 2
   totalBulletArrays: 8
   bulletsPerArray: 2
-  bulletArraySpread: 40
+  bulletArraySpread: 45
   bulletSpread: 5
-  startingAngle: 45
+  startingAngle: 0
   spinRate: 0
   bulletSpeed: 2
   bulletAcceleration: 0

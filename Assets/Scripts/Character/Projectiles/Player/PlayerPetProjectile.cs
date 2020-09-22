@@ -8,9 +8,17 @@ public class PlayerPetProjectile : Projectile
     {
         base.Start();
     }
-    protected override void Update()
+    protected override void Update(){}
+    void FixedUpdate()
     {
-        base.Update();
+         // Calculate direction vector
+         Vector3 dir = target;
+         // Normalize resultant vector to unit Vector
+         dir = dir.normalized;
+         // Move in the direction of the direction vector every frame 
+         this.transform.position += dir * Time.deltaTime * bulletSpeed;
+
+         if (this.transform.position == target) TriggerDestruction();
     }
     protected override void OnEnable(){
         base.OnEnable();

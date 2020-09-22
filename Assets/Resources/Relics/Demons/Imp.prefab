@@ -253,7 +253,7 @@ MonoBehaviour:
   bulletSpread: 60
   startingAngle: 0
   spinRate: 0
-  bulletSpeed: 0
+  bulletSpeed: 2
   bulletAcceleration: 0
   frequency: 0
   magnitude: 0
