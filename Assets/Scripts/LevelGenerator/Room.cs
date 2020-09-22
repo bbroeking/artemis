@@ -6,8 +6,12 @@ public enum RoomType {
 }
 public class Room
 {
-    public static GeneratePath generalFloors = new GeneralFloors();
-    public static GeneratePath bossFloors = new BossFloors();
+    [Header("Floor Sets")]
+    public static FloorSet standardFloors = new StandardFloors();
+    public static FloorSet largeStandardFloors = new LargeStandardFloors();
+    public static FloorSet bossFloors = new BossFloors();
+
+    [Header("Room Attributes")]
     public Vector2 gridPos;
     public bool top, bottom, left, right;
     public bool isBossRoom;
@@ -23,9 +27,17 @@ public class Room
         this.right = right;
         this.isBossRoom = false;
         this.isCleared = false;
-        this.floorPath = generalFloors.GenerateRandomFloorPath();
-        if (Random.value <= 0.75f) roomType = RoomType.LargeStandard;
-        else roomType = RoomType.Standard;
+
+        // RoomType
+        if (Random.value <= 0.75f) {
+            roomType = RoomType.LargeStandard;
+            this.floorPath = largeStandardFloors.GenerateRandomFloorPath();
+        }
+        else{
+            roomType = RoomType.Standard;
+            this.floorPath = standardFloors.GenerateRandomFloorPath();
+
+        }
     }
 
     public override string ToString()

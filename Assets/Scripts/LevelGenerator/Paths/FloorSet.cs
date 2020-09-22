@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
 
-public abstract class GeneratePath
+public abstract class FloorSet
 {
+    public string floorSetPath;
     public List<string> floors;
 
     public virtual string GenerateRandomFloorPath(){
         var random = new System.Random();
         int index = random.Next(floors.Count);
-        return "Rooms/Maps/Floors/" + floors[index];
+        return floorSetPath + floors[index];
     }
 
 }

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-class BossFloors : GeneratePath {
+class BossFloors : FloorSet {
 
     public BossFloors(){
         this.floors = new List<string>{

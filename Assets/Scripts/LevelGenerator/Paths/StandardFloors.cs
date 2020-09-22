@@ -1,8 +1,10 @@
 using System.Collections.Generic;
 
-class GeneralFloors : GeneratePath {
+class StandardFloors : FloorSet {
 
-    public GeneralFloors(){
+    
+    public StandardFloors(){
+        this.floorSetPath = "Rooms/Maps/Floors/Standard/";
         this.floors = new List<string>{
             base1E,
             // base2E,

@@ -14,8 +14,11 @@ public class Map : MonoBehaviour
         string wallPath = room.GetWallPath();
         string floorPath = room.GetFloorPath();
         // Set Camera
-        if(room.roomType == RoomType.LargeStandard) player.cam.m_LookAt = player.transform;
-        else player.cam.m_LookAt = null;
+        if(room.roomType == RoomType.LargeStandard) player.cam.m_Follow = player.transform;
+        else {
+            player.cam.m_Follow = null;
+            player.cam.transform.position = new Vector3(0, -1, -10);
+        }
         // Load Room From Prefab
         GameObject wall = (GameObject) LoadPrefab.LoadPrefabFromFile(wallPath);
         Instantiate(wall, Vector3.zero, Quaternion.identity);
