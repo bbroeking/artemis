@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
-using System;
 
+public enum RoomType {
+    Standard,
+    LargeStandard
+}
 public class Room
 {
     public static GeneratePath generalFloors = new GeneralFloors();
@@ -10,6 +13,7 @@ public class Room
     public bool isBossRoom;
     public bool isCleared;
     public string floorPath;
+    public RoomType roomType;
     public Room(Vector2 _gridPos, bool top, bool bottom, bool left, bool right)
     {
         gridPos = _gridPos;
@@ -20,6 +24,8 @@ public class Room
         this.isBossRoom = false;
         this.isCleared = false;
         this.floorPath = generalFloors.GenerateRandomFloorPath();
+        if (Random.value <= 0.75f) roomType = RoomType.LargeStandard;
+        else roomType = RoomType.Standard;
     }
 
     public override string ToString()
@@ -36,7 +42,10 @@ public class Room
         if (bottom) wallPath = wallPath + "B";
         if (left) wallPath = wallPath + "L";
         if (right) wallPath = wallPath + "R";
-        return "Rooms/Maps/Walls/" + wallPath;
+        // Return Path
+        if (roomType == RoomType.Standard) return "Rooms/Maps/Walls/Standard/" + wallPath;
+        else if (roomType == RoomType.LargeStandard) return "Rooms/Maps/Walls/LargeStandard/" + wallPath;
+        else return null;
     }
 
     public string GetFloorPath(){

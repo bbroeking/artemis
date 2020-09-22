@@ -1,5 +1,4 @@
-﻿using Pathfinding.Util;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -92,10 +91,7 @@ public class LevelGenerator : GenericSingleton
 
     public void PlaceClosedTileInPosition(Vector2 vec, bool isBossRoom){
         Room nr = PlaceClosedTile(vec);
-        if(isBossRoom){
-            Debug.Log(nr.ToString());
-            nr.SetBossRoom();
-        }
+        if(isBossRoom) nr.SetBossRoom();
         rooms[(int)vec.x + gridSizeX, (int)vec.y + gridSizeY] = nr;
         takenPositions.Insert(0, vec);
     }
