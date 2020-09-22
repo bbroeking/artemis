@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
-using UnityEngine.UI;
+using Cinemachine;
 
 public enum MoveDirection { Up, Down, Left, Right }
 
@@ -16,6 +15,7 @@ public class Player : Character
     [SerializeField] protected PlayerResources resources;
     [SerializeField] public Spellbook spellbook;
     [SerializeField] public PlayerRelic relics;
+    [SerializeField] public CinemachineVirtualCamera cam;
     
     [Header("Currencies")]
     protected int gold;

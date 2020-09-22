@@ -33,7 +33,6 @@ public class LevelGenerator : GenericSingleton
         } 
         else { Destroy(gameObject); }
     }
-
     void Start(){
         uISingleton = UISingleton.Instance;
         // Find All UI Objects
@@ -41,12 +40,10 @@ public class LevelGenerator : GenericSingleton
         
         UpdateUI();
     }
-
     public void UpdateUI(){
         levelPanel.SetTexts(this.currentLevel);
         levelPanel.UpdateTextsValues();
     }
-
     public void GenerateLevel(){
         takenPositions = new List<Vector2>();
         toBeGeneratedPositions = new List<Vector2>();
@@ -74,13 +71,11 @@ public class LevelGenerator : GenericSingleton
         }
         PlaceClosedTileInPosition(toBeGeneratedPositions[toBeGeneratedPositions.Count - 1], true);
     }
-
     public void SetLevelSettings(int gridSizeX, int gridSizeY, int numberOfRooms){
         this.gridSizeX = gridSizeX;
         this.gridSizeY = gridSizeY;
         this.numberOfRooms = numberOfRooms;
     }
-
     public void PlaceTileInPosition(Vector2 vec){
         Room nr = PlaceTile(vec);
         Vector2 vecOffset = new Vector2((int)vec.x + gridSizeX, (int)vec.y + gridSizeY);

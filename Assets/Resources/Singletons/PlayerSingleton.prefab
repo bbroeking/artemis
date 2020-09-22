@@ -19335,6 +19335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5996359852924244141}
   - component: {fileID: 3501137641982400870}
+  - component: {fileID: 1820590080}
   m_Layer: 8
   m_Name: LeftHitBox
   m_TagString: hitbox
@@ -19386,6 +19387,19 @@ PolygonCollider2D:
       - {x: -1.0670478, y: -1.0844289}
       - {x: -0.18708205, y: -0.48277384}
       - {x: -0.16913855, y: 0.038720295}
+--- !u!114 &1820590080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345630201799865995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e97fddcb6937064d997193017e87eb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &616861075819714699
 GameObject:
   m_ObjectHideFlags: 0
@@ -19446,6 +19460,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8283411997937673185}
   - component: {fileID: 5076165132907627468}
+  - component: {fileID: 1883744200}
   m_Layer: 8
   m_Name: BackwardsHitBox
   m_TagString: hitbox
@@ -19497,6 +19512,19 @@ PolygonCollider2D:
       - {x: -0.18610582, y: 0.030469418}
       - {x: 0.2274299, y: 0.021003604}
       - {x: 0.9761429, y: 0.70537716}
+--- !u!114 &1883744200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638948147230741384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e97fddcb6937064d997193017e87eb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &2039621896727291370
 GameObject:
   m_ObjectHideFlags: 0
@@ -19507,6 +19535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2423190343631241919}
   - component: {fileID: 8599004901007453897}
+  - component: {fileID: 410928411}
   m_Layer: 8
   m_Name: ForwardHitBox
   m_TagString: hitbox
@@ -19558,6 +19587,19 @@ PolygonCollider2D:
       - {x: -0.0473332, y: -1.5669818}
       - {x: 1.0456856, y: -0.91760075}
       - {x: 0.24430178, y: -0.3315754}
+--- !u!114 &410928411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039621896727291370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e97fddcb6937064d997193017e87eb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &2324115846911995301
 GameObject:
   m_ObjectHideFlags: 0
@@ -19770,6 +19812,7 @@ MonoBehaviour:
   resources: {fileID: 2324115847002498364}
   spellbook: {fileID: 2324115847002498365}
   relics: {fileID: 8968071499135699373}
+  cam: {fileID: 0}
   uISingleton: {fileID: 0}
   soulPanel: {fileID: 0}
   recapUI: {fileID: 0}
@@ -19890,7 +19933,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 95e6a32b5d877e241b62e468226cdc35, type: 2}
   - {fileID: 11400000, guid: b84bf96195bbe71479e2f810ce6eeb02, type: 2}
   - {fileID: 11400000, guid: f9712cf1c30dc084b81fe2cbef8fc4c7, type: 2}
-  - {fileID: 11400000, guid: a76c5ec500e2ae442b49d2108de37422, type: 2}
+  - {fileID: 11400000, guid: 523ea4732b160e541b5d10d5ff15dafb, type: 2}
   relicUI: {fileID: 0}
 --- !u!1 &2324115848741333772
 GameObject:
@@ -24656,6 +24699,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3562201953830314459}
   - component: {fileID: 271706459007082700}
+  - component: {fileID: 1584970903}
   m_Layer: 8
   m_Name: RightHitBox
   m_TagString: hitbox
@@ -24707,3 +24751,16 @@ PolygonCollider2D:
       - {x: 0.20047319, y: -0.46869504}
       - {x: 1.1908493, y: -1.0024241}
       - {x: 1.735168, y: -0.11227733}
+--- !u!114 &1584970903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2924867621862956577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e97fddcb6937064d997193017e87eb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
