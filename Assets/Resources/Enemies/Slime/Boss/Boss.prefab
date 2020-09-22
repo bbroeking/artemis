@@ -353,11 +353,12 @@ MonoBehaviour:
   health: 10
   currentHealth: 0
   speed: 1
-  aIDestination: {fileID: 3850890619224503544}
   aIPath: {fileID: 5925134501717123139}
   anim: {fileID: 1163065602598983679}
+  aIDestination: {fileID: 3850890619224503544}
   lootTable: {fileID: 0}
   spawnLocation: {fileID: 0}
+  colliders: []
   canBeDamaged: 1
 --- !u!114 &1668196541337089961
 MonoBehaviour:
@@ -627,6 +628,11 @@ PrefabInstance:
       propertyPath: attackTriggerRange
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4101138986279720981, guid: 94e4699f0d43485458a8b027008ebe6f,
+        type: 3}
+      propertyPath: attack
+      value: 
+      objectReference: {fileID: 1668196541337089961}
     - target: {fileID: 5834786545787525211, guid: 94e4699f0d43485458a8b027008ebe6f,
         type: 3}
       propertyPath: m_Radius

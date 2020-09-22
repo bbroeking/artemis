@@ -23,6 +23,7 @@ public class PatrolEnemy : Enemy
             aIDestination.target = currentAnchor;
             SetTarget();
         }
+        UpdateAnimationValues();
     }
 
     protected override void SetTarget(){

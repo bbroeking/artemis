@@ -10,4 +10,5 @@ public static class PrefabPath
     // Enemies
     public static string RangedSlime = "Enemies/Slime/Ranged";
     public static string PatrolSlime = "Enemies/Slime/Patrol";
+    public static string SplitSlime = "Enemies/Slime/Boss/SplitRanged";
 }
