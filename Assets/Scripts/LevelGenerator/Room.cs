@@ -48,7 +48,7 @@ public class Room
     }
 
     public string GetWallPath(){
-        if (isBossRoom) return "Rooms/Maps/Walls/Boss";
+        if (isBossRoom) return "Rooms/Maps/Walls/LargeStandard/Enclosed";
         string wallPath = "";
         if (top) wallPath = wallPath + "T";
         if (bottom) wallPath = wallPath + "B";

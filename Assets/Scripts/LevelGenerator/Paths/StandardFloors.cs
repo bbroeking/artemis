@@ -7,8 +7,10 @@ class StandardFloors : FloorSet {
         this.floorSetPath = "Rooms/Maps/Floors/Standard/";
         this.floors = new List<string>{
             base1E,
-            // base2E,
-            // pit1E, pit2E, baseRocks,
+            //base2E,
+            //pit1E,
+            //pit2E,
+            //baseRocks,
             //spikes
         };
     }
