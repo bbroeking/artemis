@@ -8,6 +8,7 @@ public class PlayerProjectile : Projectile
         base.Start();
         SetVectorDirection();
         pos = player.transform.position;
+        duration = 1f;
     }
     protected override void Update(){
         base.Update();

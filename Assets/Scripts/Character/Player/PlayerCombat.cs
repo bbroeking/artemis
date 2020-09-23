@@ -64,6 +64,7 @@ public class PlayerCombat : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Alpha4)) UseRelicAbility(3);     
     }
 
+    
     private void UseRelicAbility(int index){
         UsableItem item = relic.GetRelic(index);
         if(item == null) return;

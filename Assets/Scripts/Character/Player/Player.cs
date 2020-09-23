@@ -64,11 +64,7 @@ public class Player : Character
         recapUI = uISingleton.GetComponentInChildren<RecapUI>();
         relicUI = uISingleton.GetComponentInChildren<RelicUI>();
         itemTooltip = uISingleton.GetComponentInChildren<ItemTooltip>();
-        itemSaveManager = FindObjectOfType<ItemSaveManager>();
-
-        // itemSaveManager.LoadEquipment(this);
-        // itemSaveManager.LoadInventory(this);
-        // itemSaveManager.LoadCurrency(this);
+        // itemSaveManager = FindObjectOfType<ItemSaveManager>(); TODO: Save System
 
         soulPanel.SetTexts(this.souls);
         soulPanel.UpdateTextsValues();
@@ -77,12 +73,6 @@ public class Player : Character
         lastDirection = Direction.North;
         map = new Room(new Vector2(0,0), true, true, true, true); // default path
     }
-    private void OnDestroy()
-	{
-        // itemSaveManager.SaveEquipment(this);
-        // itemSaveManager.SaveInventory(this);
-        // itemSaveManager.SaveCurrency(this);
-	}
     protected override void Update()
     {
         Dead();
