@@ -314,6 +314,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loot:
   - {fileID: 11400000, guid: c7415c502494d8b4f89e1f1f14a1abc2, type: 2}
+  - {fileID: 11400000, guid: 523ea4732b160e541b5d10d5ff15dafb, type: 2}
+  - {fileID: 11400000, guid: a76c5ec500e2ae442b49d2108de37422, type: 2}
+  - {fileID: 11400000, guid: a81c9d4be28f47e469ea2c6687ce42fc, type: 2}
+  - {fileID: 11400000, guid: f9712cf1c30dc084b81fe2cbef8fc4c7, type: 2}
+  - {fileID: 11400000, guid: 5188e8b5a19747447991235523edcbac, type: 2}
+  - {fileID: 11400000, guid: 95e6a32b5d877e241b62e468226cdc35, type: 2}
+  - {fileID: 11400000, guid: b84bf96195bbe71479e2f810ce6eeb02, type: 2}
+  - {fileID: 11400000, guid: 690ac519f06ac6045b350e87abafd97b, type: 2}
+  dropItem: 1
+  dropCurrency: 0
+  minCurrencyDrop: 0
+  maxCurrencyDrop: 0
   droppedItem: {fileID: 18156145653926270, guid: 4d4245c22262f064daf7075fb14c8cf0,
     type: 3}
   droppedCurrency: {fileID: 4158551135748663218, guid: 5a9379fcff8121a44ba32746b3c08acb,

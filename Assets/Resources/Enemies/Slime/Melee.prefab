@@ -402,9 +402,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b96dc59ee0da3f74c8853587d01fcf7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loot:
-  - {fileID: 11400000, guid: f4e1e915d353b0a438eef9d60b5caa79, type: 2}
-  - {fileID: 11400000, guid: 50ffd38af23f6974e8714eaf2219e7c7, type: 2}
+  loot: []
+  dropItem: 0
+  dropCurrency: 1
+  minCurrencyDrop: 1
+  maxCurrencyDrop: 5
   droppedItem: {fileID: 18156145653926270, guid: 4d4245c22262f064daf7075fb14c8cf0,
     type: 3}
   droppedCurrency: {fileID: 4158551135748663218, guid: 5a9379fcff8121a44ba32746b3c08acb,
@@ -426,11 +428,12 @@ MonoBehaviour:
   health: 1
   currentHealth: 0
   speed: 4
-  aIDestination: {fileID: 7004473854437749025}
   aIPath: {fileID: 7004473854437749026}
   anim: {fileID: 1870554770}
+  aIDestination: {fileID: 7004473854437749025}
   lootTable: {fileID: 0}
   spawnLocation: {fileID: 0}
+  colliders: []
   canBeDamaged: 1
 --- !u!95 &1870554770
 Animator:

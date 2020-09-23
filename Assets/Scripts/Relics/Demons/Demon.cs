@@ -18,7 +18,7 @@ public class Demon : Character
         // Link UI Component
         RelicItemSlot[] relicSlots = UISingleton.Instance.GetComponentsInChildren<RelicItemSlot>();
         foreach(RelicItemSlot relicSlot in relicSlots){
-            if (relicSlot.Item.demonType == demonType){
+            if (relicSlot.Item != null && relicSlot.Item.demonType == demonType){
                 associatedRelicSlot = relicSlot;
                 break;
             }

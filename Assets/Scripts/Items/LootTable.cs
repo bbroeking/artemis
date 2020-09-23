@@ -11,6 +11,11 @@ public class LootTable : MonoBehaviour
 
     [Header("Loot Table")]
     public List<Item> loot;
+    [SerializeField] private bool dropItem;
+    [SerializeField] private bool dropCurrency;
+    [SerializeField] private int minCurrencyDrop;
+    [SerializeField] private int maxCurrencyDrop;
+
 
     [Header("Drop Prefabs")]
     [SerializeField] GameObject droppedItem;
@@ -25,13 +30,13 @@ public class LootTable : MonoBehaviour
     }
 
     public void SpawnLoot(){
-        if(random.Next(0,1) == 0){
+        if(dropItem){
             Item drop = GenerateDrop();
             if (drop == null) return;
             GameObject loot = Instantiate(droppedItem, transform.position, Quaternion.identity);
             SetLoot(drop, loot);
         }
-        else {
+        else if (dropCurrency) {
             int souls = random.Next(1,11);
             for (int i = 0; i < souls; i++){
                 Instantiate(soul, 

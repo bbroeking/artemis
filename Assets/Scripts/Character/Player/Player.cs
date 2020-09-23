@@ -58,16 +58,13 @@ public class Player : Character
 
     protected override void Start()
     {
-        uISingleton = UISingleton.Instance;
         // Find All UI Objects
+        uISingleton = UISingleton.Instance;
         soulPanel = uISingleton.GetComponentInChildren<SoulPanel>();
         recapUI = uISingleton.GetComponentInChildren<RecapUI>();
         relicUI = uISingleton.GetComponentInChildren<RelicUI>();
         itemTooltip = uISingleton.GetComponentInChildren<ItemTooltip>();
         itemSaveManager = FindObjectOfType<ItemSaveManager>();
-
-        // statPanel.SetStats(strength, dexterity, intellect, vitality);
-        // statPanel.UpdateStatValues(); 
 
         // itemSaveManager.LoadEquipment(this);
         // itemSaveManager.LoadInventory(this);

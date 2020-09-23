@@ -7,6 +7,7 @@ public class Imp : Demon, ISummonable
     protected override void Start()
     {
         base.Start();
+        demonType = DemonType.Imp;
     }
     protected override void Update()
     {

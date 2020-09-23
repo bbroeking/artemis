@@ -13,14 +13,7 @@ public class RelicItemSlot : ItemSlot
         player = PlayerSingleton.Instance.player;
     }
 
-    void Update(){
-        if (((UsableItem) _item).demonType == DemonType.Imp) CheckImp();
-    }
-    private void CheckImp(){
-        
-    }
     public void SetHPActive(){
-        Debug.Log("active");
         minionHP.enabled = true;
     }
 

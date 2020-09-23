@@ -730,6 +730,31 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 616979287}
+    - target: {fileID: 8968071499135699373, guid: 3915d2dcd56efe142a69fed8319567f0,
+        type: 3}
+      propertyPath: relics.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968071499135699373, guid: 3915d2dcd56efe142a69fed8319567f0,
+        type: 3}
+      propertyPath: relics.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968071499135699373, guid: 3915d2dcd56efe142a69fed8319567f0,
+        type: 3}
+      propertyPath: relics.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968071499135699373, guid: 3915d2dcd56efe142a69fed8319567f0,
+        type: 3}
+      propertyPath: relics.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968071499135699373, guid: 3915d2dcd56efe142a69fed8319567f0,
+        type: 3}
+      propertyPath: relics.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9059215459429098144, guid: 3915d2dcd56efe142a69fed8319567f0,
         type: 3}
       propertyPath: m_LocalPosition.x

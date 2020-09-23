@@ -17,6 +17,7 @@ public class VoidGuardian : Demon, ISummonable
     {
         base.Start();
         voidZone = GetComponentInChildren<VoidZone>();
+        demonType = DemonType.VoidGuardian;
     }
 
     protected override void Update()

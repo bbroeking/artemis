@@ -18,6 +18,7 @@ public class Infernal : Demon, ISummonable
     protected override void Start()
     {
         base.Start();
+        demonType = DemonType.Infernal;
     }
 
     // Update is called once per frame

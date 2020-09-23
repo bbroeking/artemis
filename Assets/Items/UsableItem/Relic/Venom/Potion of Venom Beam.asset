@@ -15,8 +15,9 @@ MonoBehaviour:
   id: a76c5ec500e2ae442b49d2108de37422
   ItemName: 
   Icon: {fileID: 21300000, guid: ef36894c732e3a64ab4698f039caa9e8, type: 3}
-  dropChance: 0
+  dropChance: 1
   soulValue: 0
+  demonType: 3
   isConsumable: 0
   Effects:
   - {fileID: 11400000, guid: dcdc2c3f85ab07149a8a19153a9ad163, type: 2}
