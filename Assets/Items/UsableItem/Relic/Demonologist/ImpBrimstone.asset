@@ -19,5 +19,6 @@ MonoBehaviour:
   soulValue: 0
   demonType: 0
   isConsumable: 0
+  soulCost: 50
   Effects:
   - {fileID: 11400000, guid: 643c85be37c87b547b944d2501a44a6c, type: 2}

@@ -50,7 +50,6 @@ public class ItemSaveManager : MonoBehaviour
 	public void LoadCurrency(Player player){
 		CurrencySaveData save = ItemSaveIO.LoadCurrency(CurrencyFileName);
 		if (save == null) return;
-		player.Gold = save.gold;
 		player.Souls = save.souls;
 	}
 
@@ -63,11 +62,6 @@ public class ItemSaveManager : MonoBehaviour
 	// {
 	// 	SaveItems(player.EquipmentPanel.equipmentSlots, EquipmentFileName);
 	// }
-
-	public void SaveCurrency(Player player){
-		SaveCurrencies(player.Gold, player.Souls, CurrencyFileName);
-	}
-
 	private void SaveItems(IList<ItemSlot> itemSlots, string fileName)
 	{
 		var saveData = new ItemContainerSaveData(itemSlots.Count);

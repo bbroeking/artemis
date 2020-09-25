@@ -12,7 +12,6 @@ public class TeleportToDungeon : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.tag == "player"){
-            player.backToDungeon = true;
             SceneManager.LoadScene(player.scene);
         }
     }

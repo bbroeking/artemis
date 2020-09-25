@@ -19,9 +19,7 @@ public class Item : ScriptableObject
 	public string ItemName;
 	public Sprite Icon;
 	public int dropChance;
-	public int soulValue;
 	public DemonType demonType = DemonType.None;
-
 
 	protected static readonly StringBuilder sb = new StringBuilder();
 

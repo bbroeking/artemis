@@ -18,10 +18,8 @@ public class Player : Character
     [SerializeField] public CinemachineVirtualCamera cam;
     
     [Header("Currencies")]
-    protected int gold;
-    public int Gold { get { return gold;} set { gold += value; }}
     protected int souls;
-    public int Souls { get { return souls;} set { souls += value; }}
+    public int Souls { get { return souls;} set { souls = value; }}
     
     [Header("UI Panels")]
     [SerializeField] private UISingleton uISingleton;
@@ -36,16 +34,22 @@ public class Player : Character
     public VoidGuardian VoidGuardian;
     public Infernal Infernal;
 
-    [Header("Etc")]
-    public string scene;
-    public bool backToDungeon;
-    public Direction lastDirection;
-    public Room map;
-    private bool isMoveDisabled = false;
-    public MoveDirection lastMoveDirection = MoveDirection.Up;
+    [Header("Movements")]
     public Vector3 movement;
-    public bool canInteract;
+    public bool canInteract = true;
+    private bool isMoveDisabled = false;
+
+    [Header("Scenes")]
+    public Room map;
+    public Direction lastDirection;
+    public MoveDirection lastMoveDirection = MoveDirection.Up;
+
     private float disableTime = 0.25f;
+
+    [Header("Legacy & Future")]
+    public string scene;
+
+
 
     private void OnValidate(){
         if(itemTooltip == null){
@@ -66,10 +70,11 @@ public class Player : Character
         itemTooltip = uISingleton.GetComponentInChildren<ItemTooltip>();
         // itemSaveManager = FindObjectOfType<ItemSaveManager>(); TODO: Save System
 
+        // Set UI
         soulPanel.SetTexts(this.souls);
         soulPanel.UpdateTextsValues();
-        backToDungeon = false;
-        canInteract = true;
+
+        // TODO setting base values here is going to cause confusion
         lastDirection = Direction.North;
         map = new Room(new Vector2(0,0), true, true, true, true); // default path
     }
@@ -94,23 +99,10 @@ public class Player : Character
 			itemTooltip.HideTooltip();
 		}
 	}
-
     public void SetPlayerCurrency(){
         soulPanel.SetTexts(this.souls);
         soulPanel.UpdateTextsValues();
     }
-    private bool CanAfford(BaseItemSlot itemSlot){
-        return itemSlot.Item.soulValue <= Souls;
-    }
-    private void AddCurrency(Item item){
-        Souls = Souls + item.soulValue;
-        SetPlayerCurrency();
-    }
-    private void RemoveCurrency(Item item){
-        Souls = Souls - item.soulValue;
-        SetPlayerCurrency();
-    }
-
     private void Move()
     {
         movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
