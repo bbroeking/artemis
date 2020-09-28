@@ -14,6 +14,7 @@ public class UsableItem : Item
             if(p.Souls >= soulCost){
                 effect.ExecuteEffect(this, p);
                 p.Souls = p.Souls - soulCost;
+                p.SetPlayerCurrency();
             }
         }
     }

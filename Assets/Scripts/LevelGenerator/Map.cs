@@ -24,5 +24,8 @@ public class Map : MonoBehaviour
         Instantiate(wall, Vector3.zero, Quaternion.identity);
         GameObject floor = (GameObject) LoadPrefab.LoadPrefabFromFile(floorPath);
         Instantiate(floor, Vector3.zero, Quaternion.identity);
+        
+        player.remainingEnemies = floor.GetComponentsInChildren<Spawner>().Length;
+        player.portals = wall.GetComponentsInChildren<LoadNewArea>();
     }
 }

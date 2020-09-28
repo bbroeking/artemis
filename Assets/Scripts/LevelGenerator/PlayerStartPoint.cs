@@ -10,7 +10,7 @@ public class PlayerStartPoint : MonoBehaviour
     void Start()
     {
         player = PlayerSingleton.Instance.player;
-        if(player.lastDirection == comingFrom){
+        if(player.lastRoomDirection == comingFrom){
             player.transform.position = this.transform.position;
             player.SetDemonLocations();
         }

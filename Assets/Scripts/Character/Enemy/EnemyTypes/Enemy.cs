@@ -65,11 +65,14 @@ public class Enemy : Character, IInteractable
         if (isDead) return;
         StartCoroutine(HitCooldown());
         base.TakeDamage(damage);
-        if (this.isDead){
-            foreach(Collider2D collider2D in colliders) collider2D.enabled = false;
-            aIDestination.target = null;
-            anim.SetTrigger("Dead");
-        }
+        if (this.isDead) HandleDeath();
+    }
+
+    private void HandleDeath(){
+        foreach(Collider2D collider2D in colliders) collider2D.enabled = false;
+        aIDestination.target = null;
+        anim.SetTrigger("Dead");
+        player.RemoveEnemy();
     }
 
     public virtual void SpawnLoot()

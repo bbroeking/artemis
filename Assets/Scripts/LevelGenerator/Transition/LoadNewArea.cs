@@ -43,8 +43,6 @@ public class LoadNewArea : MonoBehaviour
                 break;
         }
         doorType = levelGenerator.GetDoorType(xoff, yoff);
-        if (doorType == DoorType.Boss) spriteRenderer.sprite = Resources.Load<Sprite>("Sprites/environment/interactables/portal_red");
-        else spriteRenderer.sprite = Resources.Load<Sprite>("Sprites/environment/interactables/portal_blue");
 
         // Rotate sprite if North/South
         if(direction == Direction.North || direction == Direction.South){
@@ -52,9 +50,19 @@ public class LoadNewArea : MonoBehaviour
         }
     }
 
+    public void EnablePortals(){
+        if (doorType == DoorType.Boss) {
+            spriteRenderer.sprite = Resources.Load<Sprite>(PrefabPath.RedPortal);
+        }
+        else {
+            Debug.Log("here");
+            spriteRenderer.sprite = Resources.Load<Sprite>(PrefabPath.BluePortal);
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D other){
-        if(other.gameObject.CompareTag(Tags.player)){
-            player.lastDirection = direction;
+        if(other.gameObject.CompareTag(Tags.player) && player.remainingEnemies <= 0){
+            player.lastRoomDirection = direction;
             player.map = levelGenerator.GetNextRoom(xoff, yoff);
             SceneManager.LoadScene("Dungeon");
         }

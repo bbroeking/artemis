@@ -38,13 +38,15 @@ public class Player : Character
     public Vector3 movement;
     public bool canInteract = true;
     private bool isMoveDisabled = false;
+    private float disableTime = 0.25f;
 
     [Header("Scenes")]
     public Room map;
     public Direction lastDirection;
+    public Direction lastRoomDirection = Direction.North;
     public MoveDirection lastMoveDirection = MoveDirection.Up;
-
-    private float disableTime = 0.25f;
+    public int remainingEnemies;
+    public LoadNewArea[] portals;
 
     [Header("Legacy & Future")]
     public string scene;
@@ -75,7 +77,6 @@ public class Player : Character
         soulPanel.UpdateTextsValues();
 
         // TODO setting base values here is going to cause confusion
-        lastDirection = Direction.North;
         map = new Room(new Vector2(0,0), true, true, true, true); // default path
     }
     protected override void Update()
@@ -83,6 +84,14 @@ public class Player : Character
         Dead();
         if (!isMoveDisabled && !isDead){
             Move();
+        }
+    }
+    public void RemoveEnemy(){
+        remainingEnemies -= 1;
+        if (remainingEnemies <= 0){
+            foreach(LoadNewArea portal in portals){
+                portal.EnablePortals();
+            }
         }
     }
 	private void ShowTooltip(BaseItemSlot itemSlot)

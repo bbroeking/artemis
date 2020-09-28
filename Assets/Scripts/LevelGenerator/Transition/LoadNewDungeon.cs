@@ -15,7 +15,7 @@ public class LoadNewDungeon : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.CompareTag(Tags.player)){
-            player.lastDirection = Direction.North;
+            player.lastRoomDirection = Direction.North;
 
             levelGenerator.SetLevelSettings(10, 10, 5);
             levelGenerator.GenerateLevel();
