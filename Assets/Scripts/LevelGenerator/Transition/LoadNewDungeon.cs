@@ -23,7 +23,11 @@ public class LoadNewDungeon : MonoBehaviour
             levelGenerator.UpdateUI();
             
             player.map = levelGenerator.GetFirstRoom();
-            SceneManager.LoadScene("Dungeon");
+            if (levelGenerator.currentLevel < 5){
+                SceneManager.LoadScene("Dungeon");
+            } else {
+                SceneManager.LoadScene("MainMenu");
+            }
         }
     }
 }
