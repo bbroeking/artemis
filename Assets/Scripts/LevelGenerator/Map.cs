@@ -26,6 +26,11 @@ public class Map : MonoBehaviour
         Instantiate(floor, Vector3.zero, Quaternion.identity);
         
         player.remainingEnemies = floor.GetComponentsInChildren<Spawner>().Length;
-        player.portals = wall.GetComponentsInChildren<LoadNewArea>();
+        List<GameObject> portals = new List<GameObject>();
+        portals.Add(GameObject.FindGameObjectWithTag("west"));
+        portals.Add(GameObject.FindGameObjectWithTag("east"));
+        portals.Add(GameObject.FindGameObjectWithTag("north"));
+        portals.Add(GameObject.FindGameObjectWithTag("south"));
+        player.portals = portals;
     }
 }

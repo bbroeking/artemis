@@ -2,6 +2,7 @@
 using System.Collections;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
+using System.Collections.Generic;
 using Cinemachine;
 
 public enum MoveDirection { Up, Down, Left, Right }
@@ -46,7 +47,7 @@ public class Player : Character
     public Direction lastRoomDirection = Direction.North;
     public MoveDirection lastMoveDirection = MoveDirection.Up;
     public int remainingEnemies;
-    public LoadNewArea[] portals;
+    public List<GameObject> portals;
 
     [Header("Legacy & Future")]
     public string scene;
@@ -89,8 +90,9 @@ public class Player : Character
     public void RemoveEnemy(){
         remainingEnemies -= 1;
         if (remainingEnemies <= 0){
-            foreach(LoadNewArea portal in portals){
-                portal.EnablePortals();
+            foreach(GameObject portal in portals){
+                LoadNewArea lna = portal.GetComponent<LoadNewArea>();
+                lna.EnablePortals();
             }
         }
     }

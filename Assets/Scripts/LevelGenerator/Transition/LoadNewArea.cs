@@ -6,6 +6,7 @@ public class LoadNewArea : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private LevelGenerator levelGenerator;
+    [SerializeField] private Animator animator;
     private Player player;
     private Direction direction;
     private int xoff;
@@ -13,11 +14,13 @@ public class LoadNewArea : MonoBehaviour
     private DoorType doorType;
 
     void Awake() {
-        player = PlayerSingleton.Instance.player;
-        levelGenerator = LevelGeneratorSingleton.Instance.levelGenerator;
+        
     }
 
     void Start(){
+        player = PlayerSingleton.Instance.player;
+        levelGenerator = LevelGeneratorSingleton.Instance.levelGenerator;
+
         switch(this.gameObject.tag){
             case "north":
                 yoff = 1;
@@ -52,11 +55,13 @@ public class LoadNewArea : MonoBehaviour
 
     public void EnablePortals(){
         if (doorType == DoorType.Boss) {
-            spriteRenderer.sprite = Resources.Load<Sprite>(PrefabPath.RedPortal);
+            animator.SetTrigger("boss");
+            // spriteRenderer.sprite = Resources.Load<Sprite>(PrefabPath.RedPortal);
         }
         else {
-            Debug.Log("here");
-            spriteRenderer.sprite = Resources.Load<Sprite>(PrefabPath.BluePortal);
+            Debug.Log("setting");
+            animator.SetTrigger("Standard");
+            // spriteRenderer.sprite = Resources.Load<Sprite>(PrefabPath.BluePortal);
         }
     }
 

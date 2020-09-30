@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7064464045352901846}
   - component: {fileID: 4827323759696159610}
   - component: {fileID: 291991871157281583}
+  - component: {fileID: -1342078749535261470}
   m_Layer: 12
   m_Name: LeftDoor
   m_TagString: west
@@ -43,7 +44,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -73,6 +74,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 291991871157281583}
   levelGenerator: {fileID: 0}
+  animator: {fileID: -1342078749535261470}
 --- !u!212 &291991871157281583
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -123,3 +125,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &-1342078749535261470
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5762801509945525646}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 554e5c23700e8784bb1ac7abd878bbfd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
